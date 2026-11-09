@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>[Your Product Name] · Building with AI (Fall 2026)</title>
+
+  <!-- Week 1: create your PostHog account only.
+       Build 2: paste your project's current PostHog web snippet here,
+       then install analytics in the local app and verify events. -->
+
+  <style>
+    :root {
+      --bg: #fafafa;
+      --card: #ffffff;
+      --text: #111827;
+      --muted: #4b5563;
+      --border: #e5e7eb;
+      --accent: #1d63dc;
+      --tag-bg: #eff6ff;
+      --tag-text: #1e40af;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "DM Sans", "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+    header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 28px;
+      margin-bottom: 32px;
+    }
+    .eyebrow {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      background: var(--tag-bg);
+      color: var(--tag-text);
+      padding: 4px 10px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-size: 36px;
+      line-height: 1.15;
+      margin: 0 0 12px;
+      letter-spacing: -0.02em;
+    }
+    .tagline {
+      font-size: 19px;
+      color: var(--muted);
+      margin: 0 0 20px;
+    }
+    .cta-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 15px;
+      text-decoration: none;
+      background: var(--accent);
+      color: #fff;
+    }
+    .btn-secondary {
+      background: var(--card);
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+    section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin-bottom: 24px;
+    }
+    h2 {
+      font-size: 20px;
+      margin: 0 0 14px;
+      letter-spacing: -0.01em;
+    }
+    h3 {
+      font-size: 16px;
+      margin: 18px 0 6px;
+    }
+    p, ul {
+      margin: 0 0 12px;
+      color: #1f2937;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+    .stat-box {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px 16px;
+      background: var(--bg);
+    }
+    .stat-label {
+      font-size: 12px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .stat-value {
+      font-size: 20px;
+      font-weight: 700;
+      margin-top: 4px;
+    }
+    .log-entry {
+      border-top: 1px solid var(--border);
+      padding-top: 16px;
+      margin-top: 16px;
+    }
+    .log-entry:first-of-type {
+      border-top: none;
+      padding-top: 0;
+      margin-top: 0;
+    }
+    .meta {
+      font-size: 13px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- HERO / PRODUCT PITCH -->
+    <header>
+      <span class="eyebrow">NYU Stern · Building with AI · Fall 2026</span>
+      <h1>[Your Product Name]</h1>
+      <p class="tagline">[One clear sentence: Who is this for, and what painful job does it do for them?]</p>
+      <div class="cta-row">
+        <a class="btn" href="#live-demo" onclick="window.posthog && posthog.capture('clicked_try_product')">See the Product →</a>
+        <a class="btn btn-secondary" href="#prd">Read the Living PRD</a>
+        <a class="btn btn-secondary" href="#build-log">Weekly Build Log</a>
+      </div>
+    </header>
+
+    <!-- DEMO / SCREENSHOT / VIDEO SHOWCASE -->
+    <section id="live-demo">
+      <h2>Product Showcase (Prototype / Live App / 2-Min Video)</h2>
+      <p>
+        <strong>Current Status:</strong> [Build 1: local prototype / Builds 2–4: local app / Build 5: cloud app]<br />
+        <strong>Demo:</strong> [Add a screenshot or GIF now; add the live cloud app URL in Build 5.]
+      </p>
+      <p class="meta">
+        Ask your coding agent to embed a screenshot or GIF of your local prototype for Build 1. Keep this evidence current, then add your cloud app link and two-minute video in Build 5.
+      </p>
+    </section>
+
+    <!-- LIVING PRD (Updated every week!) -->
+    <section id="prd">
+      <h2>Living PRD (Product Requirements Document)</h2>
+      <p class="meta">Updated every week as we test with real users and learn what works.</p>
+
+      <h3>1. Target User & The Job to Be Done</h3>
+      <p><strong>Who is this for?</strong> [Name a specific, reachable person or role you have direct access to.]</p>
+      <p><strong>The painful "Before" workflow:</strong> [How do they do this today, and why is it slow, manual, or broken?]</p>
+      <p><strong>The "After" workflow with this product:</strong> [What does your tool do for them in one sitting?]</p>
+
+      <h3>2. Scope & Explicit Non-Goals</h3>
+      <ul>
+        <li><strong>In Scope (Core Workflow):</strong> [The 1 main workflow this product does reliably]</li>
+        <li><strong>Out of Scope #1:</strong> [Feature you are deliberately NOT building in 6 weeks]</li>
+        <li><strong>Out of Scope #2:</strong> [Feature you are deliberately NOT building in 6 weeks]</li>
+        <li><strong>Out of Scope #3:</strong> [Feature you are deliberately NOT building in 6 weeks]</li>
+      </ul>
+
+      <h3>3. How It Works Under the Hood & Riskiest Assumption (Week 2+)</h3>
+      <p><strong>Riskiest Assumption:</strong> [What is the #1 technical or user risk that could sink this product?]</p>
+      <p><strong>Simple Architecture:</strong> [User Input] → [Your App / Server] → [AI Model / Tool] → [Output]</p>
+
+      <h3>4. Unit Economics & Analytics Snapshot (Updated Weekly)</h3>
+      <div class="grid-2">
+        <div class="stat-box">
+          <div class="stat-label">Cumulative Build Spend</div>
+          <div class="stat-value">[Record actual spend]</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">Est. Cost Per User Run</div>
+          <div class="stat-value">[Not yet estimated]</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">User Evidence (Analytics from Build 2)</div>
+          <div class="stat-value">[Not yet measured]</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">Sponsor Call (Week 6)</div>
+          <div class="stat-value">TBD</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WEEKLY BUILD LOG (Updated at least twice a week via Git commits) -->
+    <section id="build-log">
+      <h2>Weekly Build Log</h2>
+      <p class="meta">Build on at least two separate days each week outside class, including the November 3 break. Push commits and log actual progress, failures, PRD changes, costs, and hours here. All build deadlines are noon, New York time.</p>
+
+      <div class="log-entry">
+        <h3>Build 1 · Intent.md & Throwaway Prototype (Due Nov 9)</h3>
+        <ul>
+          <li><strong>What shipped:</strong> [What you actually built; link your local prototype screenshot or GIF above.]</li>
+          <li><strong>Things learned with AI:</strong> [What you learned from AI practice and Terminus Episodes 1 and 2.]</li>
+          <li><strong>What broke / changed in PRD:</strong> [Fill in]</li>
+          <li><strong>Cost & time this week:</strong> $[0.00] · [0] hours</li>
+        </ul>
+      </div>
+
+      <div class="log-entry">
+        <h3>Build 2 · Smallest Local Version & PostHog (Due Nov 16)</h3>
+        <ul>
+          <li><strong>What shipped:</strong> [Local working slice, PostHog verified on this page and the local app, PRD v2, and local setup in AGENTS.md]</li>
+          <li><strong>What broke / changed in PRD:</strong> [Fill in]</li>
+          <li><strong>Cost & time this week:</strong> $[0.00] · [0] hours</li>
+        </ul>
+      </div>
+
+      <div class="log-entry">
+        <h3>Build 3 · Build.exe: The Core Workflow (Due Nov 23)</h3>
+        <ul>
+          <li><strong>What shipped:</strong> [End-to-end workflow working with real inputs + PostHog funnel events]</li>
+          <li><strong>What broke / changed in PRD:</strong> [Fill in]</li>
+          <li><strong>Cost & time this week:</strong> $[0.00] · [0] hours</li>
+        </ul>
+      </div>
+
+      <div class="log-entry">
+        <h3>Build 4 · Test.py: Choose Track A or Track B (Due Nov 30)</h3>
+        <ul>
+          <li><strong>Chosen track:</strong> [A: 10-case domain eval and one outside target-user review; OR B: 3–5 outside users and replay findings]</li>
+          <li><strong>Results and improvements:</strong> [Before/after evidence; for Track B, fixes to the top three friction points]</li>
+          <li><strong>PRD v4 changes:</strong> [What the evidence changed]</li>
+          <li><strong>Cost & time this week:</strong> $[0.00] · [0] hours</li>
+        </ul>
+      </div>
+
+      <div class="log-entry">
+        <h3>Build 5 · Ship.installer: Launch Ops, Rollback Check & 2-Min Video (Due Dec 7)</h3>
+        <ul>
+          <li><strong>Launch Ops & Safety:</strong> [Verified no exposed keys, set spend cap, tested 2-minute rollback]</li>
+          <li><strong>2-Minute Video & Final Polish:</strong> [Link/embed above]</li>
+          <li><strong>Cost & time this week:</strong> $[0.00] · [0] hours</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

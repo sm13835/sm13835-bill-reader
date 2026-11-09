@@ -1,0 +1,30 @@
+# Secrets & Environment Variables (NEVER COMMIT THESE)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets.*
+credentials.json
+
+# AI Agent Local State / Logs (keep curated logs in journal/)
+.claude/
+.codex/
+.cursor/
+.opencode/
+
+# Dependencies & Virtual Environments
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Build Outputs & OS Files
+dist/
+build/
+.next/
+out/
+.DS_Store
+*.log
