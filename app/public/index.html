@@ -40,6 +40,17 @@
     tr.new-lines td { border-top: 2px solid var(--accent); }
     a { color: var(--accent); }
     li { margin-bottom: 8px; }
+    .map-card { display: flex; flex-wrap: wrap; align-items: center; gap: 20px; }
+    .map-card svg { height: 260px; width: auto; flex: none; display: block; }
+    .map-text { flex: 1 1 220px; }
+    .map-text strong { display: block; font-size: 24px; line-height: 1.2; }
+    .state { fill: #edece6; stroke: #a9a79c; stroke-width: 2; }
+    .district { fill: transparent; stroke: #cfcdc3; stroke-width: 1.5; }
+    .district.current { stroke: #5a6068; stroke-width: 2.5; }
+    .district.dem { fill: #c5daf3; }
+    .district.rep { fill: #f4c7c2; }
+    .district.ind { fill: #dedede; }
+    .map-label { font-size: 44px; font-weight: 700; fill: var(--text); text-anchor: middle; dominant-baseline: middle; }
     .sources a { font-size: 12px; white-space: nowrap; margin-right: 6px; }
   </style>
 </head>
@@ -116,6 +127,26 @@
           <p class="meta">Models: ${esc(brief.models.screen)}, ${esc(brief.models.deep)} · Run cost: $${esc(brief.cost_usd)} · Generated ${esc(brief.generated_at)}</p></div>`;
     }
 
+    function mapHtml(map, district) {
+      const party = { D: ['dem', 'Democrat'], R: ['rep', 'Republican'] }[district.party] || ['ind', 'Independent'];
+      const current = map.districts.find((d) => d.id === district.district);
+      const others = map.districts.filter((d) => d !== current);
+      const path = (d, cls) => `<path class="${cls}" d="${esc(d.path)}"><title>${esc(d.id)}</title></path>`;
+      return `<div class="card map-card">
+        <svg viewBox="${esc(map.viewBox)}" role="img" aria-label="Map of New Jersey with ${esc(district.district)} highlighted">
+          <path class="state" d="${esc(map.state_path)}" />
+          ${others.map((d) => path(d, 'district')).join('')}
+          ${path(current, `district current ${party[0]}`)}
+          <text class="map-label" x="${current.label_x}" y="${current.label_y}">${esc(current.id)}</text>
+        </svg>
+        <div class="map-text">
+          <strong>${esc(district.district)}</strong>
+          <p>${esc(district.member)}</p>
+          <p class="meta">Shaded in the member's party color: ${party[1]}.<br />Boundaries: ${link(map.source_url, 'U.S. Census Bureau')}, 119th Congress.</p>
+        </div>
+      </div>`;
+    }
+
     function districtHtml(district) {
       const rows = district.elections.map((e, i, all) => {
         const prev = all[i - 1];
@@ -145,6 +176,7 @@
           <h1>H.R. 1: One Big Beautiful Bill Act</h1>
           <div class="kicker">Personalized brief for ${esc(data.district.district)}, enrolled bill text</div>
         </header>
+        ${mapHtml(data.map, data.district)}
         ${briefHtml(data)}${districtHtml(data.district)}`;
     }).catch((error) => {
       document.getElementById('app').textContent = 'Could not load the brief: ' + error.message;

@@ -22,6 +22,7 @@ const server = http.createServer((req, res) => {
       district: readData('nj05.json'),
       promises: readData('promises.json'),
       brief: readData('brief-hr1.json'),
+      map: readData('nj-map.json'),
     };
     res.writeHead(200, { 'Content-Type': 'application/json' });
     res.end(JSON.stringify(payload));
