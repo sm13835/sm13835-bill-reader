@@ -2,9 +2,9 @@
 
 > **One-line pitch:** For members of Congress and their staff: turns a bill thousands of pages long into a plain-English brief on what helps or hurts their district, and flags where a yes vote would conflict with a public commitment.
 
-- **Builder:** Scott Mueller (`@github-handle`)
-- **Pod:** [Pod Name / Number]
-- **Product Page & Living PRD:** [Add your GitHub Pages URL]
+- **Builder:** Scott Mueller (`sm13835`)
+- **Pod:** Scott Mueller, Julia Simon, Sajan Patel, Jordan Steinroeder
+- **Product Page & Living PRD:** https://sm13835.github.io/sm13835-bill-reader/
 - **App:** runs locally through Week 4; add a cloud URL in Build 5.
 
 ## Start here: Build 1
