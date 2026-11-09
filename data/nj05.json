@@ -74,6 +74,13 @@
       "source": "ACS 2024 1-year estimates"
     },
     {
+      "key": "veterans_pct",
+      "label": "Civilian adults who are veterans",
+      "value": 3.0,
+      "display": "3.0% (19,109 veterans)",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
       "key": "race_white_pct",
       "label": "White, non-Hispanic",
       "value": 54.4,
