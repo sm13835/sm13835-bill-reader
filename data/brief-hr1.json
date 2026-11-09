@@ -1,0 +1,1183 @@
+{
+  "generated_at": "2026-11-09T14:18:25.059Z",
+  "models": {
+    "screen": "anthropic/claude-haiku-5.5",
+    "deep": "anthropic/claude-sonnet-5.5"
+  },
+  "overview": {
+    "what_it_does": [
+      "Among the provisions reviewed, the bill makes the 2017-era lower income tax rates and the larger standard deduction permanent. It also raises the cap on deducting state and local taxes from $10,000 to $40,000 for 2025 through 2029, then returns it to $10,000 in 2030.",
+      "It makes the child tax credit permanent at $2,200 per child, but requires Social Security numbers. It also creates temporary deductions through 2028 for tips, overtime pay, car loan interest, and seniors, and enlarges the child care credit starting in 2026.",
+      "It tightens SNAP (food benefits) with stricter work rules, narrower immigrant eligibility, and benefit growth limited to inflation. States would also take on part of benefit costs starting in 2028 and more administrative costs starting in 2027.",
+      "It changes Medicaid for expansion adults with work requirements starting around 2027, eligibility rechecks every six months, copays starting in 2028, and limits on the state health-care taxes that help fund the program.",
+      "It narrows who qualifies for Medicaid, Medicare, and ACA premium subsidies among lawfully present immigrants, and removes the cap on repaying excess ACA subsidies.",
+      "It ends or shortens several clean energy tax credits, including home solar after 2025, wind and solar projects placed in service after 2027, and electric vehicle credits."
+    ],
+    "district_bottom_line": "For this high-tax district, the higher SALT cap, permanent lower tax rates, and larger standard deduction are the main tax gains, but the SALT increase is temporary and shrinks for households earning over $500,000. The provisions reviewed also shift SNAP and Medicaid costs and paperwork onto New Jersey and could cost some residents coverage or food benefits, while ending credits for home solar and other clean energy."
+  },
+  "items": [
+    {
+      "effect": "helps",
+      "importance": 9,
+      "headline": "SALT deduction cap rises from $10,000 to $40,000 through 2029",
+      "plain_english": "For 2025 the cap on deducting state and local taxes goes from $10,000 to $40,000. It then rises 1% a year through 2029 and drops back to $10,000 in 2030. Households with income above $500,000 lose 30 cents of the higher cap for each dollar over that line, down to a $10,000 floor.",
+      "who_in_district": "Homeowners in the district, where the median property tax bill is in the $10,000-or-more top bracket, and most households earn well under the $500,000 phase-down line, would likely get the largest benefit.",
+      "district_facts": [
+        "median_property_tax",
+        "owner_occupied_pct",
+        "median_household_income",
+        "occ_management_pct",
+        "population"
+      ],
+      "bill_quote": "in the case of any taxable year beginning in calendar year 2025, $40,000, (ii) in the case of any taxable year beginning in calendar year 2026, $40,400",
+      "section_id": "70120",
+      "section_header": "Limitation on individual deductions for certain state and local taxes, etc"
+    },
+    {
+      "effect": "helps",
+      "importance": 8,
+      "headline": "Makes 2017-era lower income tax rates permanent for district households",
+      "plain_english": "The lower individual income tax rates set in 2017 were due to expire after 2025. This section removes the end date, so those rates continue for 2026 and later. It also changes how some brackets adjust for inflation, which can affect where higher brackets begin and end.",
+      "who_in_district": "Most households in this high-income, mostly owner-occupied district (median household income $130,387) keep the lower rates, especially the many management and professional workers.",
+      "district_facts": [
+        "median_household_income",
+        "occ_management_pct",
+        "owner_occupied_pct",
+        "population"
+      ],
+      "bill_quote": "in paragraph (1), by striking , and before January 1, 2026, and",
+      "section_id": "70101",
+      "section_header": "Extension and enhancement of reduced rates"
+    },
+    {
+      "effect": "hurts",
+      "importance": 7,
+      "headline": "Medicaid work requirements could cost some district adults their coverage",
+      "plain_english": "Starting around January 2027, adults 19-64 in the Medicaid expansion group must show 80 hours a month of work, community service, job programs, or school, or meet an income test, or they can lose coverage. Many people are exempt, including parents of children 13 and under, people who are medically frail, and people already meeting SNAP work rules. Others could be dropped over paperwork or verification problems even if they qualify.",
+      "who_in_district": "Low-income working-age adults on Medicaid, part of the 8.1% of residents (63,942 people) with Medicaid or other means-tested coverage, would face new reporting rules and some risk of losing coverage.",
+      "district_facts": [
+        "medicaid_coverage_pct",
+        "poverty_pct",
+        "snap_households_pct",
+        "occ_service_pct",
+        "median_household_income"
+      ],
+      "bill_quote": "a State shall provide, as a condition of eligibility for medical assistance for an applicable individual, that such individual is required to demonstrate community engagement",
+      "section_id": "71119",
+      "section_header": "Requirement for States to establish Medicaid community engagement requirements for certain individuals"
+    },
+    {
+      "effect": "hurts",
+      "importance": 7,
+      "headline": "Starting in 2028, New Jersey would pay part of SNAP food benefit costs",
+      "plain_english": "Today the federal government pays the full cost of SNAP food benefits. Starting in fiscal year 2028, a state with a payment error rate of 6 percent or more would pay 5, 10, or 15 percent of benefit costs, depending on how high its rate is. A state under 6 percent would pay nothing. The most this section can do is leave New Jersey's costs unchanged, and otherwise it adds state costs that could pressure the state budget or the program.",
+      "who_in_district": "The 12,817 SNAP households in the district (4.4% of households) are most exposed if the state responds to the new cost by tightening or cutting the program.",
+      "district_facts": [
+        "snap_households_pct",
+        "poverty_pct"
+      ],
+      "bill_quote": "the Federal share of the cost of the allotment described in paragraph (1) for that State in a fiscal year shall be 85 percent, and the State share shall be 15 percent",
+      "section_id": "10105",
+      "section_header": "Matching funds requirements"
+    },
+    {
+      "effect": "mixed",
+      "importance": 6,
+      "headline": "Child tax credit made permanent and raised to $2,200, with stricter SSN rules",
+      "plain_english": "The $2,000 child tax credit would no longer expire after 2025, and it rises to $2,200 per child, with inflation adjustments after that. The refundable portion stays capped at $1,400, also adjusted for inflation. To claim the credit, a parent (at least one spouse on a joint return) and each child must have a Social Security number. That could cost some immigrant families the credit.",
+      "who_in_district": "Families with children in this district's large middle- and upper-middle-income population gain from the higher, permanent credit, while families without the required Social Security numbers lose eligibility.",
+      "district_facts": [
+        "median_household_income",
+        "avg_household_size",
+        "race_hispanic_pct",
+        "race_asian_pct",
+        "poverty_pct",
+        "occ_management_pct"
+      ],
+      "bill_quote": "No credit shall be allowed under this section to a taxpayer with respect to any qualifying child unless the taxpayer includes on the return of tax for the taxable year—",
+      "section_id": "70104",
+      "section_header": "Extension and enhancement of increased child tax credit"
+    },
+    {
+      "effect": "hurts",
+      "importance": 6,
+      "headline": "Federal share of SNAP administrative costs drops from 50% to 25% in 2027",
+      "plain_english": "Starting in fiscal year 2027, the federal government would pay 25% of what states spend to run SNAP instead of 50%. New Jersey would have to cover the other 25% or cut back on administration, which could mean slower processing or higher state and county costs. Benefits themselves are not changed by this section.",
+      "who_in_district": "About 12,817 SNAP households in the district, plus state and county offices that process their applications, would be affected by any cost shift or service strain.",
+      "district_facts": [
+        "snap_households_pct",
+        "poverty_pct",
+        "medicaid_coverage_pct",
+        "median_household_income"
+      ],
+      "bill_quote": "agency, through fiscal year 2026, 50 percent, and for fiscal year 2027 and each fiscal year thereafter, 25 percent,",
+      "section_id": "10106",
+      "section_header": "Administrative cost sharing"
+    },
+    {
+      "effect": "hurts",
+      "importance": 6,
+      "headline": "Tightens SNAP work rules for adults and ends most local waivers",
+      "plain_english": "This section rewrites who is exempt from SNAP work requirements. Parents are exempt only if their youngest child is under 14, and the exemption list no longer names veterans, homeless people, or former foster youth. It also limits the high-unemployment waivers to states outside the contiguous 48, so New Jersey could no longer ask for one. People who can't meet the work rules could lose food benefits.",
+      "who_in_district": "Low-income adults under 65 without young children who rely on SNAP, including parents of children aged 14 to 17, are most exposed among the 12,817 SNAP households in the district.",
+      "district_facts": [
+        "snap_households_pct",
+        "poverty_pct",
+        "median_household_income",
+        "seniors_voting_age_pct",
+        "occ_service_pct"
+      ],
+      "bill_quote": "a parent or other member of a household with responsibility for a dependent child under 14 years of age;",
+      "section_id": "10102",
+      "section_header": "Modifications to SNAP work requirements for able-bodied adults"
+    },
+    {
+      "effect": "hurts",
+      "importance": 6,
+      "headline": "Medicaid expansion adults must reverify eligibility every six months, not yearly",
+      "plain_english": "Starting with redeterminations scheduled after 2026, New Jersey must recheck eligibility every 6 months for adults covered under the Medicaid expansion. More frequent paperwork means some people who are still eligible may lose coverage because they miss a notice or can't submit documents in time. The section also gives $75,000,000 to federal Medicaid officials to carry out the change.",
+      "who_in_district": "Low-income adults in the district's roughly 63,942 residents on Medicaid or other means-tested coverage, a share of whom are expansion adults, would face twice-yearly renewals.",
+      "district_facts": [
+        "medicaid_coverage_pct",
+        "poverty_pct",
+        "occ_service_pct",
+        "median_household_income"
+      ],
+      "bill_quote": "a State shall make such a redetermination once every 6 months for the following individuals: (I) Individuals enrolled under subsection (a)(10)(A)(i)(VIII).",
+      "section_id": "71107",
+      "section_header": "Eligibility redeterminations"
+    },
+    {
+      "effect": "mixed",
+      "importance": 6,
+      "headline": "Caps extra Medicaid hospital payments, phased down over time for existing ones",
+      "plain_english": "The bill limits the extra payments states direct to hospitals through Medicaid managed care plans. States that cover the expansion population (adults with low incomes) are capped at 100 percent of Medicare rates, and other states at 110 percent. Payments already approved before May 1, 2025 are kept at first, then cut by 10 percentage points a year starting in 2028 until they reach the cap. This could squeeze hospital finances over time, but the section does not say how much any hospital would lose.",
+      "who_in_district": "Medicaid enrollees (8.1% of residents, 63,942 people) and the local hospitals that serve them are most exposed, while the district's higher-income majority is affected only indirectly.",
+      "district_facts": [
+        "medicaid_coverage_pct",
+        "poverty_pct",
+        "median_household_income",
+        "seniors_voting_age_pct",
+        "population"
+      ],
+      "bill_quote": "the total amount of such payment shall be reduced by 10 percentage points each year until the total payment rate for such service is equal to the rate for such service specified in subsection (a).",
+      "section_id": "71116",
+      "section_header": "State directed payments"
+    },
+    {
+      "effect": "hurts",
+      "importance": 6,
+      "headline": "Caps and phases down state health-care taxes that help fund Medicaid",
+      "plain_english": "States like New Jersey that expanded Medicaid currently can tax hospitals and other providers up to 6% of their patient revenue to help pay for Medicaid. Starting in fiscal year 2028, that ceiling drops by half a point a year to 3.5% in 2032, and states cannot add new taxes or raise existing ones. Nursing home and similar facility taxes are kept at their current level. With less of this money available, the state may have to cut Medicaid spending, including payments to providers, or find other money.",
+      "who_in_district": "The 63,942 residents on Medicaid or other means-tested coverage, and the hospitals and other providers that serve them, are most exposed to any state cuts or funding gaps.",
+      "district_facts": [
+        "medicaid_coverage_pct",
+        "poverty_pct",
+        "seniors_voting_age_pct"
+      ],
+      "bill_quote": "for fiscal year 2032 and each subsequent fiscal year, 3.5 percent.",
+      "section_id": "71115",
+      "section_header": "Provider taxes"
+    },
+    {
+      "effect": "mixed",
+      "importance": 6,
+      "headline": "Student loan repayment overhaul: safety net for some, tighter terms for others",
+      "plain_english": "Starting in 2026, new federal loans can be repaid only through a fixed-term standard plan or a new income-based plan. That plan sets payments from 1% to 10% of income, with a $10 monthly minimum, a $50 reduction per dependent, and cancellation after 360 payments. Older income-contingent plans end by July 1, 2028, and parents' PLUS loans must use the standard plan with no income-based option.",
+      "who_in_district": "Households with student or parent loans are affected, including higher earners who would pay up to 10% of income and lower-income borrowers who get the $10 minimum payment and interest relief.",
+      "district_facts": [
+        "median_household_income",
+        "occ_management_pct",
+        "poverty_pct",
+        "avg_household_size",
+        "median_age"
+      ],
+      "bill_quote": "In the case of a borrower with an applicable monthly payment amount calculated under clause (i) that is less than $10, the applicable monthly payment of the borrower shall be $10.",
+      "section_id": "82001",
+      "section_header": "Loan repayment"
+    },
+    {
+      "effect": "mixed",
+      "importance": 5,
+      "headline": "Overtime pay deduction helps some workers, but few in this high-income district",
+      "plain_english": "From 2025 through 2028, workers can deduct the extra \"half\" part of legally required overtime pay, up to $12,500 ($25,000 for joint filers). The deduction shrinks for incomes above $150,000 ($300,000 joint) and requires a Social Security number and joint filing for married couples. It lowers taxes for eligible overtime earners but ends after 2028 and does not restore the SALT deduction.",
+      "who_in_district": "Hourly and non-exempt workers, such as the 12.6% in service jobs, 18.1% in sales and office jobs, and 5.1% in construction and maintenance, are the most likely to benefit, while the 56.6% in management and professional jobs are mostly salaried and less likely to qualify.",
+      "district_facts": [
+        "occ_service_pct",
+        "occ_sales_office_pct",
+        "occ_construction_pct",
+        "occ_production_pct",
+        "occ_management_pct",
+        "median_household_income"
+      ],
+      "bill_quote": "There shall be allowed as a deduction an amount equal to the qualified overtime compensation received during the taxable year and included on statements furnished to the individual",
+      "section_id": "70202",
+      "section_header": "No tax on overtime"
+    },
+    {
+      "effect": "mixed",
+      "importance": 5,
+      "headline": "Temporary $6,000 senior deduction; personal exemptions stay at zero permanently",
+      "plain_english": "The old personal exemption stays at zero permanently instead of returning after 2025. In its place, taxpayers 65 and older get a $6,000 deduction each for 2025 through 2028. That deduction shrinks as income rises above $75,000 for single filers or $150,000 for joint filers, and it requires a Social Security number on the return.",
+      "who_in_district": "Seniors with modest or middle incomes get the clearest benefit, while higher-income seniors and larger families get little or nothing extra.",
+      "district_facts": [
+        "seniors_voting_age_pct",
+        "median_household_income",
+        "avg_household_size"
+      ],
+      "bill_quote": "In the case of a taxable year beginning before January 1, 2029, there shall be allowed a deduction in an amount equal to $6,000 for each qualified individual with respect to the taxpayer.",
+      "section_id": "70103",
+      "section_header": "Termination of deduction for personal exemptions other than temporary senior deduction"
+    },
+    {
+      "effect": "hurts",
+      "importance": 5,
+      "headline": "Ends clean power credit for new wind and solar projects",
+      "plain_english": "New wind and solar projects that start construction more than a year after enactment would lose the federal clean electricity tax credit if they are placed in service after 2027. The section also bars the credit for leased rooftop solar and adds strict rules on Chinese and other foreign-linked equipment and companies. It makes some nuclear projects easier to qualify, but that is a small offset for a district that has talked up solar as a way to grow its energy supply.",
+      "who_in_district": "Homeowners considering rooftop solar, especially through a lease, and solar installers and developers would be most affected, while a small nuclear benefit is unlikely to reach many residents here.",
+      "district_facts": [
+        "owner_occupied_pct",
+        "median_household_income",
+        "median_property_tax"
+      ],
+      "bill_quote": "This section shall not apply with respect to any applicable facility placed in service after December 31, 2027.",
+      "section_id": "70512",
+      "section_header": "Termination and restrictions on clean electricity production credit"
+    },
+    {
+      "effect": "hurts",
+      "importance": 5,
+      "headline": "Limits SNAP to citizens, green card holders, and a few other groups",
+      "plain_english": "This section narrows who can get SNAP to U.S. citizens and nationals, lawful permanent residents, Cuban and Haitian entrants, and people from certain Pacific island nations under Compact agreements. Other lawfully present noncitizens, such as refugees and asylees, would lose eligibility. Their income and resources would still count when figuring the benefit for the rest of their household, which could shrink benefits for mixed-status families.",
+      "who_in_district": "The roughly 12,817 SNAP households in the district, especially immigrant families with refugees, asylees, or other noncitizens who would no longer qualify.",
+      "district_facts": [
+        "snap_households_pct",
+        "poverty_pct",
+        "race_hispanic_pct",
+        "race_asian_pct",
+        "avg_household_size"
+      ],
+      "bill_quote": "No individual who is a member of a household otherwise eligible to participate in the supplemental nutrition assistance program under this section shall be eligible to participate in the supplemental nutrition assistance program as a member of that or any other household unless he or she is—",
+      "section_id": "10108",
+      "section_header": "Alien SNAP eligibility"
+    },
+    {
+      "effect": "hurts",
+      "importance": 5,
+      "headline": "Caps SNAP benefit growth to inflation, limiting future food-benefit increases",
+      "plain_english": "This section ties SNAP benefits to the Thrifty Food Plan and allows only yearly inflation adjustments. Future re-evaluations of the food baskets, allowed no earlier than October 2027, cannot raise the plan's cost. SNAP benefits therefore cannot grow beyond inflation, even if a review finds that a healthy diet costs more.",
+      "who_in_district": "The 12,817 SNAP households in the district, 4.4% of all households, would see benefits limited to inflation adjustments over time.",
+      "district_facts": [
+        "snap_households_pct",
+        "poverty_pct",
+        "median_household_income",
+        "seniors_voting_age_pct"
+      ],
+      "bill_quote": "The Secretary shall not increase the cost of the thrifty food plan based on a re-evaluation under this paragraph.",
+      "section_id": "10101",
+      "section_header": "Re-evaluation of thrifty food plan"
+    },
+    {
+      "effect": "helps",
+      "importance": 5,
+      "headline": "Makes the larger standard deduction permanent and raises it starting in 2025",
+      "plain_english": "The bigger standard deduction from the 2017 tax law would have expired after 2025. This section keeps it permanently and raises it further, starting with the 2025 tax year. Households that take the standard deduction get more income shielded from federal tax. Homeowners with large property tax bills who itemize may gain less, because the standard deduction is now a higher bar to beat.",
+      "who_in_district": "Most middle- and upper-middle-income households, including many retirees, would see a lower federal tax bill, while the many high-property-tax homeowners who itemize would see a smaller benefit.",
+      "district_facts": [
+        "median_household_income",
+        "median_property_tax",
+        "owner_occupied_pct",
+        "seniors_voting_age_pct",
+        "avg_household_size"
+      ],
+      "bill_quote": "by striking $18,000 both places it appears in subparagraphs (A)(i) and (B)(ii) and inserting $23,625",
+      "section_id": "70102",
+      "section_header": "Extension and enhancement of increased standard deduction"
+    },
+    {
+      "effect": "mixed",
+      "importance": 5,
+      "headline": "Makes $750,000 mortgage interest cap permanent, but restores mortgage insurance deduction",
+      "plain_english": "The 2017 limit on deducting interest for mortgages above $750,000 was due to expire after 2025. This section makes it permanent, so the old $1 million limit does not return. It also keeps mortgage insurance premiums deductible as interest, which helps homeowners with small down payments. Both changes start in tax year 2026.",
+      "who_in_district": "Homeowners with large mortgages in a high-cost, high-income area lose the chance of a higher cap, while buyers with low down payments who pay mortgage insurance gain a deduction.",
+      "district_facts": [
+        "owner_occupied_pct",
+        "median_household_income",
+        "median_property_tax",
+        "occ_management_pct"
+      ],
+      "bill_quote": "Mortgage insurance premiums treated as interest Clause (iv) of subparagraph (E) shall not apply.",
+      "section_id": "70108",
+      "section_header": "Extension and modification of limitation on deduction for qualified residence interest"
+    },
+    {
+      "effect": "helps",
+      "importance": 5,
+      "headline": "Raises the child care tax credit rate for most working families",
+      "plain_english": "Starting in 2026, families can claim a larger share of their child and dependent care costs as a tax credit. The top rate is 50 percent for lower incomes, and it stays at 35 percent or higher until income passes $75,000 ($150,000 for joint filers). Above that it phases down, but never below 20 percent.",
+      "who_in_district": "Middle- and upper-middle-income working families with kids or dependents needing care, including many two-earner couples near the district's $130,387 median income, would see a larger credit.",
+      "district_facts": [
+        "median_household_income",
+        "avg_household_size",
+        "occ_management_pct"
+      ],
+      "bill_quote": "the term applicable percentage means 50 percent— (A) reduced (but not below 35 percent) by 1 percentage point for each $2,000 or fraction thereof by which the taxpayer's adjusted gross income for the taxable year exceeds $15,000",
+      "section_id": "70405",
+      "section_header": "Enhancement of child and dependent care tax credit"
+    },
+    {
+      "effect": "hurts",
+      "importance": 5,
+      "headline": "Ends the home solar and clean energy tax credit after 2025",
+      "plain_english": "The bill cuts off the homeowner tax credit for things like rooftop solar for any spending after December 31, 2025. The credit would otherwise have run through 2034 and is now 30 percent. Homeowners who install after that date lose the credit, which makes these upgrades more expensive for them.",
+      "who_in_district": "Homeowners, who are 71.7% of households in the district and have a median household income of $130,387, are the ones who would lose the credit if they install solar or similar systems after 2025.",
+      "district_facts": [
+        "owner_occupied_pct",
+        "median_household_income"
+      ],
+      "bill_quote": "Section 25D(h) is amended by striking to property placed in service after December 31, 2034 and inserting with respect to any expenditures made after December 31, 2025.",
+      "section_id": "70506",
+      "section_header": "Termination of residential clean energy credit"
+    },
+    {
+      "effect": "hurts",
+      "importance": 5,
+      "headline": "Clean electricity credit ends for wind and solar after 2027, with new limits",
+      "plain_english": "The bill ends the clean electricity investment credit for wind and solar projects that come online after 2027 and bars the credit for projects with material help from certain foreign entities. It also denies the credit for rooftop solar and similar property that is leased to a third party. Energy storage is exempt from the wind and solar cutoff, and fuel cells get a 30 percent credit.",
+      "who_in_district": "Homeowners considering leased rooftop solar and developers of solar projects in the district would face higher costs, while battery storage projects keep the credit.",
+      "district_facts": [
+        "owner_occupied_pct",
+        "median_household_income",
+        "median_property_tax",
+        "occ_construction_pct"
+      ],
+      "bill_quote": "This section shall not apply to any qualified property placed in service by the taxpayer after December 31, 2027, which is part of an applicable facility.",
+      "section_id": "70513",
+      "section_header": "Termination and restrictions on clean electricity investment credit"
+    },
+    {
+      "effect": "hurts",
+      "importance": 5,
+      "headline": "Limits federal Medicaid and CHIP funding to a narrower set of immigrants",
+      "plain_english": "Starting October 1, 2026, the federal government would pay a state's Medicaid and CHIP costs only for citizens, green card holders, Cuban and Haitian entrants, and people living here under Compacts of Free Association. Lawfully present immigrants in other categories would no longer be covered by federal funds, so New Jersey would have to pay their costs itself or end their coverage. The section references some exceptions but does not spell them out.",
+      "who_in_district": "Lawfully present noncitizens who are not green card holders and who rely on Medicaid or CHIP would be most at risk, along with the state budget that might have to cover them.",
+      "district_facts": [
+        "medicaid_coverage_pct",
+        "poverty_pct",
+        "race_hispanic_pct",
+        "race_asian_pct"
+      ],
+      "bill_quote": "in no event shall payment be made to a State under this section for medical assistance furnished to an individual unless such individual is",
+      "section_id": "71109",
+      "section_header": "Alien Medicaid eligibility"
+    },
+    {
+      "effect": "hurts",
+      "importance": 5,
+      "headline": "Pauses Medicaid and CHIP sign-up simplification rules through 2034",
+      "plain_english": "The section blocks the federal government from putting into effect parts of a 2024 rule that made it easier to enroll in and renew Medicaid, CHIP, and the Basic Health Program. The pause runs from enactment until September 30, 2034. Eligible people could face more paperwork and be more likely to lose coverage at renewal.",
+      "who_in_district": "The roughly 63,942 residents on Medicaid or other means-tested coverage, along with low-income families with children and seniors who depend on those programs, would be most affected.",
+      "district_facts": [
+        "medicaid_coverage_pct",
+        "poverty_pct",
+        "seniors_voting_age_pct",
+        "snap_households_pct"
+      ],
+      "bill_quote": "shall not, during the period beginning on the date of the enactment of this section and ending September 30, 2034, implement, administer, or enforce the amendments made by the provisions of the final rule",
+      "section_id": "71102",
+      "section_header": "Moratorium on implementation of rule relating to eligibility and enrollment for Medicaid, CHIP, and the Basic Health Program"
+    },
+    {
+      "effect": "helps",
+      "importance": 5,
+      "headline": "Keeps higher AMT exemption permanent, sparing many high-tax households a second tax calculation",
+      "plain_english": "The alternative minimum tax is a parallel tax calculation that can raise bills for households with large deductions, such as state and local taxes. This section makes the higher exemption levels from the 2017 tax law permanent instead of letting them lapse after 2025. Fewer households would owe the extra tax as a result. The phaseout rate also doubles to 50 percent for the very highest earners, so they lose the exemption faster, though the phaseout starts at a much higher income level.",
+      "who_in_district": "Higher-earning homeowners with large property tax bills benefit most, while only households with very high incomes would lose exemption value from the faster phaseout.",
+      "district_facts": [
+        "median_household_income",
+        "median_property_tax",
+        "owner_occupied_pct",
+        "occ_management_pct"
+      ],
+      "bill_quote": "by adding at the end the following new subclause: (IV) by substituting 50 percent for 25 percent, and.",
+      "section_id": "70107",
+      "section_header": "Extension of increased alternative minimum tax exemption amounts and modification of phaseout thresholds"
+    },
+    {
+      "effect": "helps",
+      "importance": 5,
+      "headline": "Pass-through business owners keep a bigger tax deduction, with a $400 minimum",
+      "plain_english": "The section widens the phase-in range for the pass-through business income deduction, so more owners of higher-earning businesses can keep more of it. It also sets a minimum deduction of $400 for owners who actively work in a business and earn at least $1,000 of business income. Both changes start with tax year 2026.",
+      "who_in_district": "Self-employed people, small business owners, and partners in firms in this affluent, professional district gain most, though small active owners with modest income also get the $400 floor.",
+      "district_facts": [
+        "median_household_income",
+        "occ_management_pct",
+        "occ_sales_office_pct"
+      ],
+      "bill_quote": "striking $50,000 ($100,000 in the case of a joint return) each place it appears and inserting $75,000 ($150,000 in the case of a joint return).",
+      "section_id": "70105",
+      "section_header": "Extension and enhancement of deduction for qualified business income"
+    },
+    {
+      "effect": "helps",
+      "importance": 5,
+      "headline": "Companies can again deduct U.S. research costs immediately, benefiting NJ-5's professional economy",
+      "plain_english": "The section lets businesses deduct U.S.-based research and software development costs in the year they spend the money, instead of spreading them over five years. It starts with 2025 tax years. Smaller businesses can apply it retroactively to 2022 and amend past returns. Research done overseas still has to be written off over 15 years.",
+      "who_in_district": "Employers and workers in research-, software-, and management-heavy fields, plus small businesses that invest in development, would see the most direct benefit.",
+      "district_facts": [
+        "occ_management_pct",
+        "median_household_income",
+        "work_from_home_pct"
+      ],
+      "bill_quote": "there shall be allowed as a deduction any domestic research or experimental expenditures which are paid or incurred by the taxpayer during the taxable year.",
+      "section_id": "70302",
+      "section_header": "Full expensing of domestic research and experimental expenditures"
+    },
+    {
+      "effect": "hurts",
+      "importance": 5,
+      "headline": "New 0.5%-of-income floor trims charitable deductions for itemizing donors",
+      "plain_english": "Starting in 2026, people who itemize could deduct charitable gifts only to the extent they exceed 0.5 percent of their income base. The first slice of giving would no longer count, so taxes would rise slightly for donors. The section also makes technical changes to the cash-gift limit and the carryover rules for gifts that can't be deducted in a given year.",
+      "who_in_district": "Higher-income, itemizing homeowners and older donors who give regularly to charities, churches and nonprofits would be affected most, while households that take the standard deduction would see little change.",
+      "district_facts": [
+        "median_household_income",
+        "median_property_tax",
+        "owner_occupied_pct",
+        "occ_management_pct",
+        "seniors_voting_age_pct"
+      ],
+      "bill_quote": "shall be allowed only to the extent that the aggregate of such contributions exceeds 0.5 percent of the taxpayer's contribution base for the taxable year",
+      "section_id": "70425",
+      "section_header": "0.5 percent floor on deduction of contributions made by individuals"
+    },
+    {
+      "effect": "helps",
+      "importance": 4,
+      "headline": "Tipped workers can deduct up to $25,000 of tips through 2028",
+      "plain_english": "Workers in jobs that customarily get tips can deduct up to $25,000 a year of cash tips from their taxable income, even if they don't itemize. The deduction shrinks for higher earners (starting at $150,000, or $300,000 for joint filers) and ends after 2028. Married couples must file jointly, a Social Security number is required, and tips earned in certain professional service businesses don't count.",
+      "who_in_district": "Servers, bartenders, salon workers, and delivery drivers in the district's 12.6% service-occupation workforce would benefit, while the 56.6% of workers in management and professional jobs are mostly unaffected.",
+      "district_facts": [
+        "occ_service_pct",
+        "median_household_income",
+        "occ_management_pct",
+        "poverty_pct"
+      ],
+      "bill_quote": "The term qualified tips means cash tips received by an individual in an occupation which customarily and regularly received tips on or before December 31, 2024, as provided by the Secretary.",
+      "section_id": "70201",
+      "section_header": "No tax on tips"
+    },
+    {
+      "effect": "hurts",
+      "importance": 4,
+      "headline": "Medicaid expansion adults above poverty line face required copays starting 2028",
+      "plain_english": "Starting October 1, 2028, states must charge copays to expansion adults with incomes above the poverty line, up to $35 per service. Primary care, mental health, substance use care, and community health center visits are exempt. Total cost sharing is capped at 5 percent of family income, and providers may refuse care if the copay isn't paid.",
+      "who_in_district": "Working-age adults in the district's Medicaid population (63,942 people on Medicaid or other means-tested coverage) with incomes just above the poverty line would face new out-of-pocket costs.",
+      "district_facts": [
+        "medicaid_coverage_pct",
+        "poverty_pct",
+        "median_household_income"
+      ],
+      "bill_quote": "a State may permit a provider participating under the State plan to require, as a condition for the provision of care, items, or services to a specified individual",
+      "section_id": "71120",
+      "section_header": "Modifying cost sharing requirements for certain expansion individuals under the Medicaid program"
+    },
+    {
+      "effect": "mixed",
+      "importance": 4,
+      "headline": "Makes 100% first-year write-offs for business equipment permanent",
+      "plain_english": "This section lets businesses deduct the full cost of qualifying equipment and other eligible property in the year they buy it, with no phase-down, for property acquired after January 19, 2025. Businesses that invest in equipment can lower their tax bills, which fits the lower-taxes message. It does nothing for the SALT deduction, and it mainly helps owners and firms that buy equipment, not wage earners or households.",
+      "who_in_district": "Business owners and firms that buy equipment, including professional and management-sector employers and smaller manufacturers and contractors, would gain most, while most wage-earning households see no direct change.",
+      "district_facts": [
+        "occ_management_pct",
+        "occ_construction_pct",
+        "occ_production_pct",
+        "median_household_income",
+        "owner_occupied_pct"
+      ],
+      "bill_quote": "in paragraph (1)(A), by striking the applicable percentage and inserting 100 percent",
+      "section_id": "70301",
+      "section_header": "Full expensing for certain business property"
+    },
+    {
+      "effect": "mixed",
+      "importance": 4,
+      "headline": "Pauses nursing home staffing rule through 2034, easing facility costs but delaying staffing gains",
+      "plain_english": "The section bars HHS from putting in place, running, or enforcing the 2024 federal minimum staffing rule for nursing homes until September 30, 2034. Nursing homes avoid the cost and hiring burden of the mandate. Residents and families lose the added staffing requirements the rule would have set.",
+      "who_in_district": "Older residents in nursing homes and their families are most affected, in a district where 26.7% of voting-age citizens are 65 or older, along with local nursing home operators and staff.",
+      "district_facts": [
+        "seniors_voting_age_pct",
+        "median_age",
+        "medicaid_coverage_pct",
+        "occ_service_pct"
+      ],
+      "bill_quote": "shall not, during the period beginning on the date of the enactment of this section and ending September 30, 2034, implement, administer, or enforce the amendments made by the provisions of the final rule",
+      "section_id": "71111",
+      "section_header": "Moratorium on implementation of rule relating to staffing standards for long-term care facilities under the Medicare and Medicaid programs"
+    },
+    {
+      "effect": "mixed",
+      "importance": 4,
+      "headline": "Medicare would be limited to citizens and certain lawful immigrants",
+      "plain_english": "Medicare enrollment would be restricted to U.S. citizens, green card holders, Cuban and Haitian entrants, and certain residents from Pacific island nations with Compact of Free Association agreements. People already on Medicare who do not fit those groups would lose coverage 18 months after enactment. Social Security would review current enrollees within a year and send notices to those affected.",
+      "who_in_district": "Immigrants in the district who are legally present but not in the listed categories would lose Medicare, while citizens and green card holders on Medicare, including the large senior population, keep coverage.",
+      "district_facts": [
+        "seniors_voting_age_pct",
+        "population",
+        "race_asian_pct",
+        "race_hispanic_pct",
+        "median_age"
+      ],
+      "bill_quote": "an individual may be entitled to, or enrolled for, benefits under this title only if the individual is— (1) a citizen or national of the United States;",
+      "section_id": "71201",
+      "section_header": "Limiting Medicare coverage of certain individuals"
+    },
+    {
+      "effect": "hurts",
+      "importance": 4,
+      "headline": "Cuts ACA insurance subsidies for many lawfully present immigrants starting 2027",
+      "plain_english": "Starting in 2027, only green card holders, Cuban and Haitian entrants, and people living here under Compact of Free Association agreements could get ACA premium subsidies. Other legally present immigrants, such as refugees and asylees, would lose eligibility and could face much higher premiums or go uninsured. The section also adds immigration-status checks to the marketplace sign-up process.",
+      "who_in_district": "The people most affected would be legally present immigrants who buy marketplace coverage but are not green card holders, in a district where 19.1% of residents are Hispanic and 17.5% are Asian.",
+      "district_facts": [
+        "race_hispanic_pct",
+        "race_asian_pct",
+        "population",
+        "median_household_income",
+        "medicaid_coverage_pct"
+      ],
+      "bill_quote": "An individual who is an alien and lawfully present shall be treated as an eligible alien if such individual is, and is reasonably expected to be for the entire period of enrollment",
+      "section_id": "71301",
+      "section_header": "Permitting premium tax credit only for certain individuals"
+    },
+    {
+      "effect": "helps",
+      "importance": 4,
+      "headline": "One-year 2.5% Medicare pay bump for doctors in 2026",
+      "plain_english": "The section raises what Medicare pays doctors and other clinicians under the physician fee schedule by 2.5 percent for services in 2026 only. This offsets a scheduled pay cut and helps practices keep seeing Medicare patients. The increase ends after one year, so the pay question returns in 2027.",
+      "who_in_district": "Medicare patients, a large share of whom are among the 26.7% of voting-age citizens who are 65 or older, along with the doctors and medical practices that serve them.",
+      "district_facts": [
+        "seniors_voting_age_pct",
+        "occ_management_pct",
+        "median_age"
+      ],
+      "bill_quote": "such services furnished on or after January 1, 2026, and before January 1, 2027, by 2.5 percent.",
+      "section_id": "71202",
+      "section_header": "Temporary payment increase under the medicare physician fee schedule to account for exceptional circumstances"
+    },
+    {
+      "effect": "hurts",
+      "importance": 4,
+      "headline": "Ends the home energy efficiency tax credit after 2025",
+      "plain_english": "This section ends the tax credit for energy-efficient home improvements, such as qualifying furnaces, boilers, and other upgrades, for property placed in service after December 31, 2025. Under current law the credit would have run through 2032. Homeowners who plan upgrades in 2026 or later would lose a tax break that lowers what they pay for these projects.",
+      "who_in_district": "Homeowners, who occupy 71.7% of district homes, and especially those with older oil or gas heating systems or those planning efficiency upgrades, would lose this credit after 2025.",
+      "district_facts": [
+        "owner_occupied_pct",
+        "median_property_tax",
+        "median_household_income",
+        "median_age"
+      ],
+      "bill_quote": "Section 25C(h) is amended by striking placed in service and all that follows through December 31, 2032 and inserting placed in service after December 31, 2025.",
+      "section_id": "70505",
+      "section_header": "Termination of energy efficient home improvement credit"
+    },
+    {
+      "effect": "helps",
+      "importance": 4,
+      "headline": "New car loan interest becomes deductible for most district households through 2028",
+      "plain_english": "For 2025 through 2028, buyers can deduct up to $10,000 a year in interest on a loan for a new, U.S.-assembled personal vehicle, even if they don't itemize. The deduction shrinks by $200 for every $1,000 of income above $100,000 ($200,000 for joint filers) and ends entirely at higher incomes. Used cars, leases, and foreign-assembled vehicles don't qualify, and the tax return must list the vehicle identification number.",
+      "who_in_district": "Middle- and upper-middle-income households buying new U.S.-assembled cars get the most benefit, while higher earners lose part or all of it and used-car or lease customers get none.",
+      "district_facts": [
+        "median_household_income",
+        "commute_transit_pct",
+        "work_from_home_pct",
+        "owner_occupied_pct",
+        "avg_household_size"
+      ],
+      "bill_quote": "the term personal interest shall not include qualified passenger vehicle loan interest",
+      "section_id": "70203",
+      "section_header": "No tax on car loan interest"
+    },
+    {
+      "effect": "helps",
+      "importance": 4,
+      "headline": "Creates child savings accounts with a $1,000 federal seed for 2025–2028 births",
+      "plain_english": "The section sets up tax-advantaged investment accounts for children under 18. Families can put in up to $5,000 a year, and employers can add up to $2,500 tax-free. Children born from 2025 through 2028 who are U.S. citizens can get a $1,000 federal deposit if a parent elects it. Money generally stays locked until the year the child turns 18.",
+      "who_in_district": "Families with young children, especially those with a child born 2025–2028, and workers at employers that choose to contribute, stand to gain; the 56.6% of workers in management, business, science and arts jobs may be the likeliest to have employers offering contributions.",
+      "district_facts": [
+        "median_household_income",
+        "avg_household_size",
+        "occ_management_pct",
+        "median_age",
+        "population"
+      ],
+      "bill_quote": "Gross income of an employee does not include amounts paid by the employer as a contribution to the Trump account of such employee or of any dependent of such employee",
+      "section_id": "70204",
+      "section_header": "Trump accounts and contribution pilot program"
+    },
+    {
+      "effect": "helps",
+      "importance": 4,
+      "headline": "Raises the tax-free dependent care account limit from $5,000 to $7,500",
+      "plain_english": "Workers whose employers offer a dependent care assistance program can set aside up to $7,500 tax-free for child or dependent care, up from $5,000. The limit for married people filing separately rises from $2,500 to $3,750. It starts in tax years after December 31, 2025.",
+      "who_in_district": "Working families with employer dependent care benefits benefit most, especially higher earners in a district where 56.6% of workers are in management, business, science and arts jobs and the median household income is $130,387.",
+      "district_facts": [
+        "median_household_income",
+        "occ_management_pct",
+        "avg_household_size",
+        "work_from_home_pct",
+        "poverty_pct"
+      ],
+      "bill_quote": "Section 129(a)(2)(A) is amended by striking $5,000 ($2,500 and inserting $7,500 ($3,750.",
+      "section_id": "70404",
+      "section_header": "Enhancement of the dependent care assistance program"
+    },
+    {
+      "effect": "helps",
+      "importance": 4,
+      "headline": "529 savings accounts can cover more K-12 costs, with a $20,000 limit",
+      "plain_english": "Families can use 529 accounts tax-free for more K-12 costs, such as books, curriculum, tutoring, test fees, dual enrollment and therapies for students with disabilities. The yearly limit on K-12 spending from these accounts doubles from $10,000 to $20,000 starting in 2026. This helps families who already have 529 accounts or can afford to save, and does nothing for those who can't.",
+      "who_in_district": "Higher-income, owner-occupied households with children in private, religious or public schools stand to gain most, and families of students with disabilities can use the new therapy coverage.",
+      "district_facts": [
+        "median_household_income",
+        "owner_occupied_pct",
+        "occ_management_pct",
+        "poverty_pct",
+        "median_property_tax"
+      ],
+      "bill_quote": "Educational therapies for students with disabilities provided by a licensed or accredited practitioner or provider, including occupational, behavioral, physical, and speech-language therapies.",
+      "section_id": "70413",
+      "section_header": "Additional expenses treated as qualified higher education expenses for purposes of 529 accounts"
+    },
+    {
+      "effect": "mixed",
+      "importance": 4,
+      "headline": "New $1,700 credit for school scholarship donations, only if New Jersey opts in",
+      "plain_english": "Starting in 2027, individuals who give cash to approved scholarship groups could claim a federal tax credit of up to $1,700 a year. The credit is reduced by any state credit for the same gift, and the gift cannot also be deducted as a charitable contribution. Scholarships go to students from households earning up to 300 percent of area median income and can cover K-12 school expenses. The scholarship money is not taxed to the family. None of this applies in New Jersey unless the governor opts in and lists qualifying groups.",
+      "who_in_district": "Higher-earning donors and families who qualify for scholarships could gain if New Jersey participates, while the district's relatively small low-income population and the state opt-in requirement limit how many residents are affected.",
+      "district_facts": [
+        "median_household_income",
+        "poverty_pct",
+        "occ_management_pct",
+        "owner_occupied_pct"
+      ],
+      "bill_quote": "The credit allowed under subsection (a) to any taxpayer for any taxable year shall not exceed $1,700.",
+      "section_id": "70411",
+      "section_header": "Tax credit for contributions of individuals to scholarship granting organizations"
+    },
+    {
+      "effect": "hurts",
+      "importance": 4,
+      "headline": "Pauses rule that eased enrollment in Medicare cost-help programs until 2034",
+      "plain_english": "This section blocks the federal government from putting into effect a 2023 rule meant to make it easier and faster for low-income Medicare beneficiaries to enroll in Medicare Savings Programs, which help pay Medicare premiums. The pause lasts until September 30, 2034. Eligible seniors and people with disabilities could find it harder to get or keep this help.",
+      "who_in_district": "Low-income seniors and people with disabilities on Medicare who may qualify for premium help, in a district where 26.7% of voting-age citizens are 65 or older and 5.6% of residents live below the poverty line.",
+      "district_facts": [
+        "seniors_voting_age_pct",
+        "poverty_pct",
+        "medicaid_coverage_pct",
+        "median_age"
+      ],
+      "bill_quote": "shall not, during the period beginning on the date of the enactment of this section and ending September 30, 2034, implement, administer, or enforce the amendments made by the provisions of the final rule",
+      "section_id": "71101",
+      "section_header": "Moratorium on implementation of rule relating to eligibility and enrollment in Medicare Savings Programs"
+    },
+    {
+      "effect": "hurts",
+      "importance": 4,
+      "headline": "Shortens Medicaid retroactive coverage, leaving some new enrollees with unpaid bills",
+      "plain_english": "Today Medicaid can cover medical bills from up to three months before someone applies. This section cuts that to one month for people covered under the expansion (adults who qualify mainly because of income), and to two months for everyone else. People who sign up late, such as after a sudden hospital stay, could be left with bills from the earlier months. The change applies to applications made after 2026, and the CHIP (children's health insurance) rules are cut to two months as well.",
+      "who_in_district": "The roughly 63,942 residents on Medicaid or other means-tested coverage, plus the hospitals and providers that treat patients who apply for Medicaid after care has already been delivered.",
+      "district_facts": [
+        "medicaid_coverage_pct",
+        "poverty_pct",
+        "seniors_voting_age_pct",
+        "median_household_income"
+      ],
+      "bill_quote": "such assistance will be made available to the individual for care and services included under the plan and furnished in or after the month before the month in which the individual made application",
+      "section_id": "71112",
+      "section_header": "Reducing State Medicaid costs"
+    },
+    {
+      "effect": "hurts",
+      "importance": 4,
+      "headline": "One-year Medicaid funding ban on Planned Parenthood-type providers",
+      "plain_english": "For one year, federal Medicaid money cannot pay certain nonprofit family planning providers that perform abortions beyond rape, incest, or life-threatening cases. The ban covers large providers that received over $800,000 in Medicaid payments in fiscal year 2023. Medicaid patients who use these clinics would need to go elsewhere or pay on their own.",
+      "who_in_district": "Medicaid enrollees in the district, about 63,942 people on Medicaid or other means-tested coverage, who use these clinics for family planning and related care.",
+      "district_facts": [
+        "medicaid_coverage_pct",
+        "poverty_pct",
+        "median_household_income"
+      ],
+      "bill_quote": "No Federal funds that are considered direct spending and provided to carry out a State plan under title XIX of the Social Security Act or a waiver of such a plan shall be used to make payments to a prohibited entity",
+      "section_id": "71113",
+      "section_header": "Federal payments to prohibited entities"
+    },
+    {
+      "effect": "hurts",
+      "importance": 4,
+      "headline": "Removes the cap on repaying excess health insurance subsidies",
+      "plain_english": "Today, people who get monthly Affordable Care Act premium help and end up with more than they qualified for must repay it, but the repayment is capped for lower- and moderate-income households. This section removes that cap, so anyone whose income came in higher than estimated would owe back the full excess at tax time. It applies starting with the 2026 tax year.",
+      "who_in_district": "Marketplace enrollees whose income swings during the year, such as self-employed workers, small business owners and gig workers, would face the biggest surprise tax bills.",
+      "district_facts": [
+        "median_household_income",
+        "poverty_pct",
+        "medicaid_coverage_pct"
+      ],
+      "bill_quote": "The amendments made by this section shall apply to taxable years beginning after December 31, 2025.",
+      "section_id": "71305",
+      "section_header": "Eliminating limitation on recapture of advance payment of premium tax credit"
+    },
+    {
+      "effect": "helps",
+      "importance": 3,
+      "headline": "Makes the disaster loss tax deduction permanent and adds state-declared disasters",
+      "plain_english": "The tax deduction for property losses from disasters would no longer expire after 2025. It would also cover disasters declared by a state governor, not just federally declared ones. Homeowners hit by a flood, storm, or fire that the governor and Treasury recognize could then claim the deduction.",
+      "who_in_district": "Homeowners in the district, where 71.7% of homes are owner-occupied, would gain from a permanent deduction that also covers flood, storm, and fire losses declared by the governor.",
+      "district_facts": [
+        "owner_occupied_pct",
+        "median_property_tax",
+        "median_household_income"
+      ],
+      "bill_quote": "any natural catastrophe (including any hurricane, tornado, storm, high water, wind-driven water, tidal wave, tsunami, earthquake, volcanic eruption, landslide, mudslide, snowstorm, or drought), or, regardless of cause, any fire, flood, or explosion",
+      "section_id": "70109",
+      "section_header": "Extension and modification of limitation on casualty loss deduction"
+    },
+    {
+      "effect": "mixed",
+      "importance": 3,
+      "headline": "Keeps job-expense deductions off the books for good, except for teachers",
+      "plain_english": "Deductions for things like unreimbursed job expenses, which were paused through 2025, would stay suspended permanently rather than returning in 2026. Teachers and other school staff get a carve-out: they can keep deducting classroom expenses without a dollar cap, and the carve-out is widened to include sports coaches and some nonathletic instructional supplies. Most other taxpayers lose a deduction that would otherwise have come back.",
+      "who_in_district": "Households that itemize and have significant job-related or similar expenses lose a deduction that would have returned, while teachers, counselors and school coaches gain a clear, uncapped deduction.",
+      "district_facts": [
+        "median_household_income",
+        "owner_occupied_pct",
+        "median_property_tax",
+        "occ_management_pct"
+      ],
+      "bill_quote": "For purposes of subsection (b)(13), the term educator expenses means expenses of a type which would be described in section 62(a)(2)(D) if—",
+      "section_id": "70110",
+      "section_header": "Termination of miscellaneous itemized deductions other than educator expenses"
+    },
+    {
+      "effect": "hurts",
+      "importance": 3,
+      "headline": "Trims deduction value for the highest-income itemizers starting in 2026",
+      "plain_english": "Starting in 2026, taxpayers in the top 37% bracket lose part of their itemized deductions, such as state and local taxes and mortgage interest. In practice, those deductions save them less tax than they otherwise would. Filers below the top bracket are not affected.",
+      "who_in_district": "Only the small group of very high earners who itemize, likely among the district's many management and professional workers and homeowners with large property tax bills, would see a smaller tax benefit.",
+      "district_facts": [
+        "median_household_income",
+        "median_property_tax",
+        "occ_management_pct",
+        "owner_occupied_pct"
+      ],
+      "bill_quote": "In the case of an individual, the amount of the itemized deductions otherwise allowable for the taxable year (determined without regard to this section) shall be reduced by 2/37 of the lesser of",
+      "section_id": "70111",
+      "section_header": "Limitation on tax benefit of itemized deductions"
+    },
+    {
+      "effect": "mixed",
+      "importance": 3,
+      "headline": "Business interest deduction rules loosen for some firms, with a carve-out for RV dealers",
+      "plain_english": "The section lets businesses add back depreciation and amortization when figuring how much interest they can deduct, starting in 2025. That is a more generous measure of income than the current one. It also lets dealers who borrow to stock trailers and campers treat that borrowing as vehicle inventory financing. Both changes help businesses that carry a lot of debt. The effects on ordinary households are indirect.",
+      "who_in_district": "The main beneficiaries are the district's many managers and business owners, and any local capital-heavy firms or RV and camper dealers, while most households would see little direct change.",
+      "district_facts": [
+        "occ_management_pct",
+        "median_household_income",
+        "occ_sales_office_pct"
+      ],
+      "bill_quote": "Such term shall also include any trailer or camper which is designed to provide temporary living quarters for recreational, camping, or seasonal use and is designed to be towed by, or affixed to, a motor vehicle.",
+      "section_id": "70303",
+      "section_header": "Modification of limitation on business interest"
+    },
+    {
+      "effect": "helps",
+      "importance": 3,
+      "headline": "Small businesses can write off more equipment purchases immediately",
+      "plain_english": "The section raises the amount a business can deduct right away for equipment and similar assets from $1,000,000 to $2,500,000. The point at which that deduction starts to phase out rises from $2,500,000 to $4,000,000. Both limits adjust for inflation going forward, and the change applies to property placed in service in tax years starting after December 31, 2024.",
+      "who_in_district": "Owners of small and mid-sized businesses that buy equipment benefit most, and the district has many workers in management, business, science and arts jobs (56.6%).",
+      "district_facts": [
+        "occ_management_pct",
+        "median_household_income",
+        "occ_construction_pct",
+        "occ_production_pct"
+      ],
+      "bill_quote": "in paragraph (1), by striking $1,000,000 and inserting $2,500,000, and (2) in paragraph (2), by striking $2,500,000 and inserting $4,000,000.",
+      "section_id": "70306",
+      "section_header": "Increased dollar limitations for expensing of certain depreciable business assets"
+    },
+    {
+      "effect": "helps",
+      "importance": 3,
+      "headline": "Expands and extends a tax credit for employers offering paid family leave",
+      "plain_english": "Employers that give paid family and medical leave get a tax credit, and this section widens it and drops the subsection that ends it. Employers can now claim the credit on insurance premiums they pay for leave coverage, not just on wages paid during leave. They can also count workers after 6 months on the job, and part-time workers who average at least 20 hours a week. Leave paid by a state or local government, or required by state or local law, does not count toward the credit, which limits the benefit where state programs already cover leave. The changes start in tax year 2026.",
+      "who_in_district": "Employers that offer paid leave, and their employees, benefit most, which matters in a district where 56.6% of workers are in management, business, science and arts jobs, though state-required leave does not earn the credit.",
+      "district_facts": [
+        "occ_management_pct",
+        "median_household_income",
+        "occ_service_pct"
+      ],
+      "bill_quote": "the paid family and medical leave credit is an amount equal to either of the following (as elected by such employer)",
+      "section_id": "70304",
+      "section_header": "Extension and enhancement of paid family and medical leave credit"
+    },
+    {
+      "effect": "helps",
+      "importance": 3,
+      "headline": "Bigger tax credit for employers who provide child care",
+      "plain_english": "Employers that pay for child care for their workers could claim a larger tax credit. The credit rises from 25% to 40% of qualifying costs, or 50% for small businesses. The yearly cap rises to $500,000, or $600,000 for small businesses, and it adjusts for inflation after 2026. The section also lets employers use outside intermediaries and share ownership of a child care facility and still qualify.",
+      "who_in_district": "Employers in the district that offer or could start child care benefits, especially small businesses, and the working families who use that care.",
+      "district_facts": [
+        "median_household_income",
+        "occ_management_pct",
+        "avg_household_size",
+        "work_from_home_pct"
+      ],
+      "bill_quote": "The credit allowable under subsection (a) for any taxable year shall not exceed $500,000 ($600,000 in the case of an eligible small business).",
+      "section_id": "70401",
+      "section_header": "Enhancement of employer-provided child care credit"
+    },
+    {
+      "effect": "helps",
+      "importance": 3,
+      "headline": "529 savings accounts could pay for job credentials and certifications",
+      "plain_english": "Families could use 529 college savings accounts, tax-free, for approved job training and credential programs. Covered costs include tuition, books, equipment, and required testing and continuing education fees for things like apprenticeships, professional licenses, and industry certifications. This applies to withdrawals made after the bill becomes law.",
+      "who_in_district": "Higher-income homeowners who already use 529 accounts gain the most, along with workers and families pursuing trade, technical, or licensed careers, including the 5.1% of workers in construction and maintenance and the 7.6% in production and transportation.",
+      "district_facts": [
+        "median_household_income",
+        "owner_occupied_pct",
+        "occ_construction_pct",
+        "occ_production_pct",
+        "occ_service_pct"
+      ],
+      "bill_quote": "fees for testing if such testing is required to obtain or maintain a recognized postsecondary credential, and",
+      "importance_note": null,
+      "section_id": "70414",
+      "section_header": "Certain postsecondary credentialing expenses treated as qualified higher education expenses for purposes of 529 accounts"
+    },
+    {
+      "effect": "mixed",
+      "importance": 3,
+      "headline": "Raises the reporting threshold for payment apps and online marketplaces to $20,000 and 200 transactions",
+      "plain_english": "Payment apps and online marketplaces like Venmo, PayPal business accounts, or Etsy-style platforms would only have to send tax forms to sellers with more than $20,000 in payments and more than 200 transactions. The bill reverses the 2021 change that dropped this to $600 with no transaction minimum. Casual and small side-income sellers would get fewer forms and less backup withholding, though they still owe tax on what they earn. Less third-party reporting could make income harder to track.",
+      "who_in_district": "Side-gig workers, small online sellers, and the 15.7% of workers who work from home would see fewer tax forms and less paperwork, while the many management and professional households in the district are largely unaffected.",
+      "district_facts": [
+        "work_from_home_pct",
+        "occ_management_pct",
+        "median_household_income"
+      ],
+      "bill_quote": "only if— (1) the amount which would otherwise be reported under subsection (a)(2) with respect to such transactions exceeds $20,000, and (2) the aggregate number of such transactions exceeds 200.",
+      "section_id": "70432",
+      "section_header": "Repeal of revision to de minimis rules for third party network transactions"
+    },
+    {
+      "effect": "mixed",
+      "importance": 3,
+      "headline": "Bigger tax break on gains from selling small-company stock",
+      "plain_english": "The bill lets investors in qualifying small companies exclude more of their gain from tax. Stock bought after enactment could get a 50% exclusion after 3 years, 75% after 4, and 100% after 5. The cap per company rises from $10 million to $15 million, and the company size limit rises from $50 million to $75 million in assets. The benefit goes to people who hold startup or small-company stock and sell at a large gain, not to most households.",
+      "who_in_district": "Founders, early employees and investors in small companies, likely concentrated among the 56.6% of workers in management, business, science and arts, would gain most, while most residents would see no direct change.",
+      "district_facts": [
+        "occ_management_pct",
+        "median_household_income",
+        "poverty_pct"
+      ],
+      "bill_quote": "the applicable percentage of any gain from the sale or exchange of qualified small business stock acquired after the applicable date and held for at least 3 years.",
+      "section_id": "70431",
+      "section_header": "Expansion of qualified small business stock gain exclusion"
+    },
+    {
+      "effect": "hurts",
+      "importance": 3,
+      "headline": "Ends the EV charger and alternative fuel pump tax credit early",
+      "plain_english": "The tax credit for installing EV chargers and other alternative fuel refueling equipment would end on June 30, 2026 instead of December 31, 2032. That is more than six years sooner. Businesses and property owners in the district would have less time and less incentive to build charging and fueling stations.",
+      "who_in_district": "Property owners, businesses and drivers in a district where 56.6% of workers are in management and professional jobs and 71.7% of homes are owner-occupied would see the incentive for charging installations shortened.",
+      "district_facts": [
+        "owner_occupied_pct",
+        "occ_management_pct",
+        "median_household_income"
+      ],
+      "bill_quote": "Section 30C(i) is amended by striking December 31, 2032 and inserting June 30, 2026.",
+      "section_id": "70504",
+      "section_header": "Termination of alternative fuel vehicle refueling property credit"
+    },
+    {
+      "effect": "hurts",
+      "importance": 3,
+      "headline": "Ends the used electric vehicle tax credit about seven years early",
+      "plain_english": "This section moves the end date of the tax credit for buying a used clean vehicle from December 31, 2032 to September 30, 2025. Residents who buy a used electric or other clean vehicle after that date would no longer get the credit, which lowers the purchase cost. The effect is probably modest because the credit has income limits and only applies to certain used-car purchases.",
+      "who_in_district": "The people most affected are middle-income households shopping for a used electric vehicle, while higher-income households in a district with a $130,387 median household income may already be over the credit's income limits.",
+      "district_facts": [
+        "median_household_income",
+        "poverty_pct",
+        "commute_transit_pct"
+      ],
+      "bill_quote": "Section 25E(g) is amended by striking December 31, 2032 and inserting September 30, 2025.",
+      "section_id": "70501",
+      "section_header": "Termination of previously-owned clean vehicle credit"
+    },
+    {
+      "effect": "hurts",
+      "importance": 3,
+      "headline": "Commercial clean vehicle tax credit ends early, in September 2025",
+      "plain_english": "This section moves up the end date of the federal tax credit for businesses that buy qualified commercial clean vehicles. The credit now stops on September 30, 2025 instead of December 31, 2032. Businesses in the district that planned to buy electric or other clean trucks and vans after that date would lose the credit, which could make those purchases cost more.",
+      "who_in_district": "Local businesses, delivery and service fleets, and contractors that planned to buy clean commercial vehicles after September 2025 would lose the credit, though only a small share of workers are in fleet-heavy jobs.",
+      "district_facts": [
+        "occ_management_pct",
+        "occ_construction_pct",
+        "occ_production_pct",
+        "occ_service_pct"
+      ],
+      "bill_quote": "Section 45W(g) is amended by striking December 31, 2032 and inserting September 30, 2025.",
+      "section_id": "70503",
+      "section_header": "Termination of qualified commercial clean vehicles credit"
+    },
+    {
+      "effect": "mixed",
+      "importance": 3,
+      "headline": "New 1% tax on cash-funded money transfers sent abroad",
+      "plain_english": "The bill puts a 1 percent tax on remittances, meaning money sent abroad, when the sender pays with cash, a money order, a cashier's check, or a similar physical instrument. Transfers paid from a bank account or with a U.S.-issued debit or credit card are exempt. The tax starts for transfers made after December 31, 2025, and the company handling the transfer collects it from the sender.",
+      "who_in_district": "Immigrant households and workers who send cash abroad through money transfer shops would pay the tax, while residents who send money from bank accounts or with U.S. cards would not.",
+      "district_facts": [
+        "race_hispanic_pct",
+        "race_asian_pct",
+        "occ_service_pct",
+        "occ_construction_pct",
+        "median_household_income"
+      ],
+      "bill_quote": "The tax imposed under subsection (a) shall apply only to any remittance transfer for which the sender provides cash, a money order, a cashier's check, or any other similar physical instrument",
+      "section_id": "70604",
+      "section_header": "Excise tax on certain remittance transfers"
+    },
+    {
+      "effect": "hurts",
+      "importance": 3,
+      "headline": "Low-income lawfully present immigrants lose health insurance subsidies starting in 2026",
+      "plain_english": "The section deletes a rule that let lawfully present immigrants with very low incomes get help paying for marketplace health plans when their immigration status keeps them out of Medicaid. Starting in 2026, those people would lose that help. Some would likely face much higher premiums or go uninsured.",
+      "who_in_district": "The people affected are lawfully present immigrants with very low incomes who are not yet eligible for Medicaid, a small group within the 5.6% of residents below the poverty line.",
+      "district_facts": [
+        "poverty_pct",
+        "medicaid_coverage_pct",
+        "race_hispanic_pct",
+        "race_asian_pct"
+      ],
+      "bill_quote": "The amendments made by this section shall apply to taxable years beginning after December 31, 2025.",
+      "section_id": "71302",
+      "section_header": "Disallowing premium tax credit during periods of medicaid ineligibility due to alien status"
+    },
+    {
+      "effect": "neutral",
+      "importance": 2,
+      "headline": "Technical tax change on how businesses count capitalized interest under the interest cap",
+      "plain_english": "This section changes the order in which businesses apply the cap on deducting business interest. The cap now covers interest a business would add to the cost of an asset, not just interest it would deduct right away. Certain interest tied to specific property and trading rules is left out of the cap. The change starts in tax year 2026 and mostly affects accounting for larger real estate, construction, and investment businesses.",
+      "who_in_district": "The effect falls mainly on businesses with large borrowing and construction or inventory costs, such as developers and finance firms, in a district where 56.6% of workers are in management, business, science and arts jobs.",
+      "district_facts": [
+        "occ_management_pct",
+        "occ_construction_pct",
+        "median_household_income"
+      ],
+      "bill_quote": "the limitation under paragraph (1) shall apply to business interest without regard to whether the taxpayer would otherwise deduct such business interest or capitalize such business interest under an interest capitalization provision",
+      "section_id": "70341",
+      "section_header": "Coordination of business interest limitation with interest capitalization provisions"
+    }
+  ],
+  "promise_alerts": [
+    {
+      "promise_id": "protect-medicaid-snap",
+      "severity": "direct",
+      "explanation": "The commitment was to fight to protect programs Jersey families depend on, and H.R. 1 makes cuts to several of them. It adds Medicaid work requirements (71119) and six-month reverification (71107). It phases down state provider taxes (71115) and shifts SNAP benefit and administrative costs to New Jersey (10105, 10106). It also tightens SNAP work rules and eligibility (10102, 10108). The bill does include offsets such as a higher SALT cap, a larger child tax credit, and expanded child care credits, but these are tax provisions and do not protect the Medicaid and SNAP programs it cuts.",
+      "section_ids": [
+        "71119",
+        "10105",
+        "71115",
+        "10102"
+      ]
+    },
+    {
+      "promise_id": "salt-2021-reconciliation",
+      "severity": "possible",
+      "explanation": "The pledge was about the 2021 Build Back Better reconciliation package, not this bill, so it does not clearly cover this vote. The bill only partly restores SALT. It raises the cap from $10,000 to $40,000 for 2025 and rises 1% a year through 2029, phases the higher cap down for households above $500,000, and returns it to $10,000 in 2030. It does not repeal the cap, and it separately trims itemized deductions for top-bracket filers. Whether this counts as \"reinstating SALT\" depends on how the pledge is read and whether it carries over to a different package.",
+      "section_ids": [
+        "70120",
+        "70111",
+        "70102"
+      ]
+    },
+    {
+      "promise_id": "salt-no-dice",
+      "severity": "possible",
+      "explanation": "The bill changes the tax code in ways that affect families, and the pledge ties support to reinstating SALT. Section 70120 raises the cap from $10,000 to $40,000, but only through 2029. The cap reverts to $10,000 in 2030, and it phases down for households earning over $500,000. Whether that counts as 'reinstating SALT' or falls short of a full restoration depends on how the pledge is read. The pledge was also made in 2021, not about this bill.",
+      "section_ids": [
+        "70120",
+        "70111",
+        "70102",
+        "70107"
+      ]
+    },
+    {
+      "promise_id": "salt-full-restoration-2025",
+      "severity": "possible",
+      "explanation": "The commitment calls an earlier SALT increase a \"down payment\" toward fully restoring the deduction in 2025. Section 70120 raises the cap from $10,000 to $40,000 for 2025, but it does not restore the full deduction. It phases the higher cap down for households above $500,000 of income, applies a 1% annual increase through 2029, and returns the cap to $10,000 in 2030. Because the bill's 2025 outcome is a capped, partial deduction, it falls short of the stated goal of full restoration.",
+      "section_ids": [
+        "70120",
+        "70111",
+        "70102"
+      ]
+    },
+    {
+      "promise_id": "lower-costs-cut-taxes",
+      "severity": "possible",
+      "explanation": "The commitment is a general statement about the House-passed H.R. 1, with three parts: cut taxes, lower costs, and don't abandon seniors and hungry children. The bill does cut taxes, including the higher SALT cap, permanent 2017 rates, and a larger standard deduction. It also makes SNAP changes (state cost-sharing, tighter work rules, a benefit-growth cap, narrower immigrant eligibility), Medicaid changes (work requirements, six-month rechecks, provider-tax limits), and a cut to Medicare eligibility for some immigrants. Whether this conflicts depends on how one reads \"abandon vulnerable seniors and hungry children,\" since the commitment names no specific provision or vote.",
+      "section_ids": [
+        "10105",
+        "10102",
+        "71119",
+        "71201"
+      ]
+    },
+    {
+      "promise_id": "solar-energy",
+      "severity": "possible",
+      "explanation": "The commitment says the House-passed H.R. 1 \"defunds key investments in alternative energy, including solar projects.\" The findings support this. Section 70512 ends the clean electricity credit for new solar and wind projects placed in service after 2027 and bars it for leased rooftop solar. Section 70513 does the same, and section 70506 ends the homeowner solar credit after 2025. The bill does keep or add some energy credits (storage, fuel cells, some nuclear), but these do not offset the solar cuts. \"Defunds\" is loose wording for ending tax credits rather than cutting appropriations.",
+      "section_ids": [
+        "70512",
+        "70513",
+        "70506",
+        "70505"
+      ]
+    },
+    {
+      "promise_id": "lower-taxes-affordability",
+      "severity": "possible",
+      "explanation": "The commitment is a general pledge to fight for lower taxes for families and small businesses and to make life more affordable. The bill meets the tax half: it makes the 2017 rates and the larger standard deduction permanent, raises the SALT cap to $40,000, raises the child tax credit to $2,200, and expands small-business expensing and the pass-through deduction. On affordability, it also adds costs and cuts for many households, including SNAP cost-sharing and tighter work rules, Medicaid work requirements and copays, the end of several energy credits, and an uncapped repayment of excess ACA subsidies. Whether it conflicts depends on how broadly \"affordable\" is read, because the commitment is not tied to any specific provision.",
+      "section_ids": [
+        "70120",
+        "70101",
+        "10105",
+        "71119"
+      ]
+    },
+    {
+      "promise_id": "campaign-lower-taxes",
+      "severity": "possible",
+      "explanation": "The commitment is a broad campaign slogan about \"lower taxes\" and \"Jersey Values\", not a pledge about a specific vote. The bill does lower taxes in many ways: the SALT cap rises to $40,000 through 2029, the 2017 rates and the larger standard deduction become permanent, and the child tax credit is raised. It also cuts Medicaid and SNAP, ends clean energy credits, and shifts costs onto New Jersey, so whether it conflicts depends on what \"Jersey Values\" means and how the tax cuts are weighed against those cuts.",
+      "section_ids": [
+        "70120",
+        "70101",
+        "71119",
+        "10105"
+      ]
+    }
+  ],
+  "coverage": {
+    "not_covered_headers": [
+      "Sec. 71303: Requiring verification of eligibility for premium tax credit",
+      "Sec. 71304: Disallowing premium tax credit in case of certain coverage enrolled in during special enrollment period",
+      "Sec. 10104: Restrictions on internet expenses",
+      "Sec. 10103: Availability of standard utility allowances based on receipt of energy assistance",
+      "Sec. 30002: Rescission of funds for Green and Resilient Retrofit Program for Multifamily Housing",
+      "Sec. 60002: Repeal of Greenhouse Gas Reduction Fund",
+      "Sec. 50402: Repeals; rescissions",
+      "Sec. 60004: Rescission of funding to address air pollution",
+      "Sec. 70412: Exclusion for employer payments of student loans",
+      "Sec. 70422: Permanent enhancement of low-income housing tax credit",
+      "Sec. 70433: Increase in threshold for requiring information reporting with respect to certain payees",
+      "Sec. 70502: Termination of clean vehicle credit",
+      "Sec. 70509: Termination of cost recovery for energy property",
+      "Sec. 70606: Social security number requirement for American Opportunity and Lifetime Learning credits",
+      "Sec. 71103: Reducing duplicate enrollment under the Medicaid and CHIP programs",
+      "Sec. 71106: Payment reduction related to certain erroneous excess payments under Medicaid",
+      "Sec. 71110: Expansion FMAP for emergency Medicaid",
+      "Sec. 71108: Revising home equity limit for determining eligibility for long-term care services under the Medicaid program",
+      "Sec. 71118: Requiring budget neutrality for Medicaid demonstration projects under section 1115",
+      "Sec. 71117: Requirements regarding waiver of uniform tax requirement for Medicaid provider tax",
+      "Sec. 71121: Making certain adjustments to coverage of home or community-based services under Medicaid",
+      "Sec. 71203: Expanding and clarifying the exclusion for orphan drugs under the Drug Price Negotiation Program",
+      "Sec. 71306: Permanent extension of safe harbor for absence of deductible for telehealth services",
+      "Sec. 81001: Establishment of loan limits for graduate and professional students and parent borrowers; termination of graduate and professional PLUS loans",
+      "Sec. 82002: Deferment; forbearance",
+      "Sec. 83001: Eligibility",
+      "Sec. 100013: Fees relating to applications for adjustment of status",
+      "Sec. 40003: Air traffic control improvements",
+      "Sec. 40002: Spectrum auctions",
+      "Sec. 90005: State and local assistance",
+      "Sec. 100052: Appropriation for U.S. Immigration and Customs Enforcement",
+      "Sec. 100051: Appropriation for the Department of Homeland Security",
+      "Sec. 100055: Bridging Immigration-related Deficits Experienced Nationwide Reimbursement Fund",
+      "Sec. 100054: Appropriation for the Department of Justice",
+      "Sec. 70307: Special depreciation allowance for qualified production property",
+      "Sec. 70421: Permanent renewal and enhancement of opportunity zones",
+      "Sec. 70424: Permanent and expanded reinstatement of partial deduction for charitable contributions of individuals who do not elect to itemize",
+      "Sec. 70507: Termination of energy efficient commercial buildings deduction",
+      "Sec. 10107: National education and obesity prevention grant program",
+      "Sec. 10605: Energy",
+      "Sec. 50302: Renewable energy fees on Federal land",
+      "Sec. 50303: Renewable energy revenue sharing",
+      "Sec. 60001: Rescission of funding for clean heavy-duty vehicles",
+      "Sec. 60006: Rescission of funding for the low emissions electricity program",
+      "Sec. 60005: Rescission of funding to address air pollution at schools",
+      "Sec. 60013: Rescission of funding for greenhouse gas air pollution plans and implementation grants",
+      "Sec. 60014: Rescission of funding for environmental protection agency efficient, accurate, and timely reviews",
+      "Sec. 60020: Rescission of funding for Federal building assistance",
+      "Sec. 60021: Rescission of funding for low-carbon materials for Federal buildings",
+      "Sec. 60022: Rescission of funding for GSA emerging and sustainable technologies",
+      "Sec. 60024: Rescission of low-carbon transportation materials grants",
+      "Sec. 70106: Extension and enhancement of increased estate and gift tax exemption amounts",
+      "Sec. 70116: Extension and enhancement of savers credit allowed for ABLE contributions",
+      "Sec. 70114: Extension and modification of limitation on wagering losses",
+      "Sec. 70113: Extension and modification of limitation on deduction and exclusion for moving expenses",
+      "Sec. 70115: Extension and enhancement of increased limitation on contributions to ABLE accounts",
+      "Sec. 70118: Extension of treatment of certain individuals performing services in the Sinai Peninsula and enhancement to include additional areas",
+      "Sec. 70112: Extension and modification of qualified transportation fringe benefits",
+      "Sec. 70119: Extension and modification of exclusion from gross income of student loans discharged on account of death or disability",
+      "Sec. 70308: Enhancement of advanced manufacturing investment credit",
+      "Sec. 70311: Modifications related to foreign tax credit limitation",
+      "Sec. 70313: Sourcing certain income from the sale of inventory produced in the United States",
+      "Sec. 70322: Determination of deduction eligible income",
+      "Sec. 70312: Modifications to determination of deemed paid credit for taxes properly attributable to tested income",
+      "Sec. 70331: Extension and modification of base erosion minimum tax amount",
+      "Sec. 70321: Modification of deduction for foreign-derived deduction eligible income and net CFC tested income",
+      "Sec. 70352: Repeal of election for 1-month deferral in determination of taxable year of specified foreign corporations",
+      "Sec. 70342: Definition of adjusted taxable income for business interest limitation",
+      "Sec. 70351: Permanent extension of look-thru rule for related controlled foreign corporations",
+      "Sec. 70323: Rules related to deemed intangible income",
+      "Sec. 70354: Modifications to pro rata share rules",
+      "Sec. 70402: Enhancement of adoption credit",
+      "Sec. 70423: Permanent extension of new markets tax credit",
+      "Sec. 70416: Expanding application of tax on excess compensation within tax-exempt organizations",
+      "Sec. 70426: 1-percent floor on deduction of charitable contributions made by corporations",
+      "Sec. 70430: Exception to percentage of completion method of accounting for certain residential construction contracts",
+      "Sec. 70434: Treatment of certain qualified sound recording productions",
+      "Sec. 70438: Extension of rules for treatment of certain disaster-related personal casualty losses",
+      "Sec. 70436: Reduction of transfer and manufacturing taxes for certain devices",
+      "Sec. 70437: Treatment of capital gains from the sale of certain farmland property",
+      "Sec. 70435: Exclusion of interest on loans secured by rural or agricultural real property",
+      "Sec. 70439: Restoration of taxable REIT subsidiary asset test",
+      "Sec. 70508: Termination of new energy efficient home credit",
+      "Sec. 70511: Termination of clean hydrogen production credit",
+      "Sec. 70515: Restriction on the extension of advanced energy project credit program",
+      "Sec. 70521: Extension and modification of clean fuel production credit",
+      "Sec. 70522: Restrictions on carbon oxide sequestration credit",
+      "Sec. 70523: Intangible drilling and development costs taken into account for purposes of computing adjusted financial statement income",
+      "Sec. 70524: Income from hydrogen storage, carbon capture, advanced nuclear, hydropower, and geothermal energy added to qualifying income of certain publicly traded partnerships",
+      "Sec. 70602: Treatment of payments from partnerships to partners for property or services",
+      "Sec. 70601: Modification and extension of limitation on excess business losses of noncorporate taxpayers",
+      "Sec. 70603: Excessive employee remuneration from controlled group members and allocation of deduction",
+      "Sec. 71104: Ensuring deceased individuals do not remain enrolled",
+      "Sec. 71114: Sunsetting increased FMAP incentive",
+      "Sec. 71307: Allowance of bronze and catastrophic plans in connection with health savings accounts",
+      "Sec. 71308: Treatment of direct primary care service arrangements",
+      "Sec. 83003: Pell shortfall",
+      "Sec. 100012: Fee relating to renewal and extension of employment authorization for aliens granted temporary protected status"
+    ],
+    "promise_failures": [],
+    "dropped_alerts": [],
+    "promises_checked": 8,
+    "sections_total": 309,
+    "sections_screened": 309,
+    "screen_failures": [],
+    "flagged": 158,
+    "analyzed": 60,
+    "not_analyzed_due_to_cap": 98,
+    "deep_failures": [],
+    "dropped_by_verification": [],
+    "promises_reviewed": 8
+  },
+  "cost_usd": 1.1225
+}

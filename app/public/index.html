@@ -48,15 +48,16 @@
       ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
     const link = (url, label) => `<a href="${esc(url)}" target="_blank" rel="noopener">${esc(label)}</a>`;
 
-    function alertCard(item, conflict, promise) {
-      return `<div class="card alert ${esc(conflict.severity)}">
-        <span class="tag ${esc(conflict.severity)}">${conflict.severity === 'direct' ? 'Direct conflict' : 'Possible tension'}</span>
-        <h3>${esc(promise.topic)}: Sec. ${esc(item.section_id)}, ${esc(item.section_header)}</h3>
-        <p>${esc(conflict.explanation)}</p>
+    function alertCard(alert, promise, items) {
+      const cited = alert.section_ids.map((id) => items.find((i) => i.section_id === id)).filter(Boolean);
+      return `<div class="card alert ${esc(alert.severity)}">
+        <span class="tag ${esc(alert.severity)}">${alert.severity === 'direct' ? 'Direct conflict' : 'Possible tension'}</span>
+        <h3>${esc(promise.topic)}</h3>
+        <p>${esc(alert.explanation)}</p>
         <blockquote>“${esc(promise.quote)}”
           <div class="meta">${esc(promise.strength)} · ${esc(promise.source_type)}, ${esc(promise.date)} · ${link(promise.url, 'source')}<br />Scope: ${esc(promise.scope)}</div>
         </blockquote>
-        <blockquote>“${esc(item.bill_quote)}”<div class="meta">Bill text, Sec. ${esc(item.section_id)}</div></blockquote>
+        ${cited.map((i) => `<blockquote>“${esc(i.bill_quote)}”<div class="meta">Bill text, Sec. ${esc(i.section_id)}, ${esc(i.section_header)}</div></blockquote>`).join('')}
       </div>`;
     }
 
@@ -79,22 +80,24 @@
           <p>Add your OpenRouter key to <code>.env</code>, then run <code>node app/analyze.js</code> and reload this page.</p></div>`;
       }
       const c = brief.coverage;
-      const conflicts = brief.items.flatMap((item) => item.promise_conflicts.map((conflict) => ({
-        item, conflict, promise: promises.find((p) => p.id === conflict.promise_id),
-      }))).sort((a, b) => (a.conflict.severity === 'direct' ? -1 : 1) - (b.conflict.severity === 'direct' ? -1 : 1));
+      const alerts = brief.promise_alerts || [];
+      const notCovered = c.not_covered_headers || [];
       const incomplete = c.screen_failures.length + c.deep_failures.length + c.not_analyzed_due_to_cap;
       const hurts = brief.items.filter((i) => i.effect === 'hurts').slice(0, 6);
       const helps = brief.items.filter((i) => i.effect === 'helps').slice(0, 6);
       const mixed = brief.items.filter((i) => i.effect === 'mixed').slice(0, 4);
       return `
+        ${notCovered.length ? `<div class="card alert possible"><strong>This brief is not complete.</strong>
+          ${notCovered.length} sections flagged as relevant to this district were not analyzed in depth, so the findings below may leave out important effects.
+          <details><summary>See the sections not covered</summary><ul>${notCovered.map((h) => `<li>${esc(h)}</li>`).join('')}</ul></details></div>` : ''}
         <h2>What this bill does</h2>
         <div class="card"><ul>${brief.overview.what_it_does.map((b) => `<li>${esc(b)}</li>`).join('')}</ul>
           <p><strong>For NJ-5:</strong> ${esc(brief.overview.district_bottom_line)}</p></div>
 
         <h2>Promise alerts if you vote yes</h2>
-        ${conflicts.map((x) => alertCard(x.item, x.conflict, x.promise)).join('') ||
-          `<div class="card">None found among the ${c.promises_reviewed} commitments reviewed. This does not mean no conflict exists.</div>`}
-        <p class="meta">Based on ${c.promises_reviewed} commitments reviewed. A commitment that is not in this set cannot trigger an alert.</p>
+        ${alerts.map((a) => alertCard(a, promises.find((p) => p.id === a.promise_id), brief.items)).join('') ||
+          `<div class="card">None found among the ${c.promises_checked} commitments reviewed. This does not mean no conflict exists.</div>`}
+        <p class="meta">${c.promises_checked} of ${c.promises_reviewed} commitments checked against the whole bill. A commitment that is not in this set cannot trigger an alert.</p>
 
         <h2>Most harmful to your district</h2>
         ${hurts.map((i) => itemCard(i, district.facts)).join('') || '<div class="card">None identified.</div>'}

@@ -5,6 +5,7 @@
     "strength": "Explicit vote pledge",
     "date": "2021-09-17",
     "scope": "The 2021 reconciliation package (Build Back Better), not H.R. 1",
+    "other_bill": true,
     "source_type": "Official press release",
     "quote": "We will only vote for a reconciliation package on the house floor that reinstates SALT.",
     "url": "https://gottheimer.house.gov/posts/release-new-jersey-congressional-delegation-members-fighting-to-repeal-the-cap-on-salt-deduction-oppose-reconciliation-unless-salt-deduction-restored"

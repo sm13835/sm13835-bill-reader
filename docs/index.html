@@ -158,10 +158,11 @@
       <h2>Product Showcase (Prototype / Live App / 2-Min Video)</h2>
       <p>
         <strong>Current Status:</strong> Build 1 local prototype, using H.R. 1 (119th Congress) and public data for NJ-5. An independent student project, not affiliated with or endorsed by Rep. Gottheimer or his office.<br />
-        <strong>Demo:</strong> [Add a screenshot or GIF now; add the live cloud app URL in Build 5.]
+        <strong>Demo:</strong> Screenshot of the local prototype below. A live cloud app comes in Build 5.
       </p>
+      <img src="prototype.png" alt="Bill Reader prototype showing a personalized H.R. 1 brief for NJ-5: an incomplete-coverage warning, a plain-English summary, and a direct conflict alert quoting the member's commitment beside the bill text." style="max-width: 100%; height: auto; border: 1px solid var(--border); border-radius: 8px;" />
       <p class="meta">
-        Ask your coding agent to embed a screenshot or GIF of your local prototype for Build 1. Keep this evidence current, then add your cloud app link and two-minute video in Build 5.
+        Build 1 local prototype. The warning at the top is real: 98 of the 158 sections flagged as relevant were not analyzed in depth in this run.
       </p>
     </section>
 
@@ -191,11 +192,11 @@
       <div class="grid-2">
         <div class="stat-box">
           <div class="stat-label">Cumulative Build Spend</div>
-          <div class="stat-value">[Record actual spend]</div>
+          <div class="stat-value">$1.48 OpenRouter, excluding coding agent</div>
         </div>
         <div class="stat-box">
           <div class="stat-label">Est. Cost Per User Run</div>
-          <div class="stat-value">[Not yet estimated]</div>
+          <div class="stat-value">$1.12 for one H.R. 1 brief</div>
         </div>
         <div class="stat-box">
           <div class="stat-label">User Evidence (Analytics from Build 2)</div>
@@ -216,10 +217,10 @@
       <div class="log-entry">
         <h3>Build 1 · Intent.md & Throwaway Prototype (Due Nov 9)</h3>
         <ul>
-          <li><strong>What shipped:</strong> A local prototype for H.R. 1 and NJ-5: the bill split into 309 sections, ACS 2024 district data, ten House elections from 2006 to 2024, the member's two roll call votes, eight sourced commitments, a screening and analysis pipeline, and automated tests of the citation checks.</li>
+          <li><strong>What shipped:</strong> A local prototype for H.R. 1 and NJ-5: the bill split into 309 sections, ACS 2024 district data, ten House elections from 2006 to 2024, the member's two roll call votes, eight sourced commitments, a screening and analysis pipeline, a generated brief with 60 citation-checked findings, and automated tests of the citation and alert rules.</li>
           <li><strong>Things learned with AI:</strong> [What you learned from AI practice and Terminus Episodes 1 and 2.]</li>
-          <li><strong>What broke / changed in PRD:</strong> [Fill in]</li>
-          <li><strong>Cost & time this week:</strong> $[0.00] · [0] hours</li>
+          <li><strong>What broke / changed in PRD:</strong> The first run hit a rate limit on new accounts and left out Medicaid entirely, so requests are now paced and the brief states what it did not cover. Alerts repeated the same promises across sections, so each commitment is now judged once against the whole bill, and code limits "direct conflict" to explicit pledges. Still open: all 8 commitments triggered an alert, which is too sensitive, and 98 flagged sections were not analyzed in depth.</li>
+          <li><strong>Cost & time this week:</strong> $1.48 OpenRouter, excluding coding agent · [0] hours</li>
         </ul>
       </div>
 
