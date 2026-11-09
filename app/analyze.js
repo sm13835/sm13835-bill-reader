@@ -23,7 +23,7 @@ const DEEP_MODEL_GAP_MS = 3500; // About 17 requests a minute; new accounts are 
 const DIRECT_STRENGTHS = new Set(['Explicit vote pledge', 'Explicit commitment']);
 const MAX_TAG_COST_USD = 0.25; // Hard stop for the issue-sorting step.
 const TAG_BATCH_SIZE = 30;
-const TAG_TEXT_CHARS = 500; // The opening of each section is enough to identify its subject.
+const TAG_BATCH_CHARS = 40000; // Keeps each request small enough to be read carefully.
 const MAX_ISSUES_PER_SECTION = 3;
 const OTHER_ISSUE = 'Other';
 // A fixed list keeps filter names consistent from bill to bill. The page shows only those a bill contains.
@@ -262,7 +262,7 @@ function deepSystem(context) {
 }
 
 function issueSystem() {
-  return `You sort sections of a House bill by policy issue.\n${DATA_ONLY}\n\nAllowed issues:\n${ISSUES.join('\n')}\n\nReturn {"tags":[{"id":"section id","issues":["1 to ${MAX_ISSUES_PER_SECTION} allowed issues"]}]} with one entry for every section.\n\nRules:\n- Use the issue names exactly as written.\n- Tag what a section is really about, even when its title is vague. A tax on firearms is both Tax and Gun Control. A tax credit for solar power is Tax, Energy and Environment/Climate.\n- Use Tax only if the section changes a tax, credit, deduction or tax rule.\n- Use Environment/Climate for anything that expands or ends support for clean energy, renewable power, clean vehicles, energy efficiency or emissions cuts, as well as conservation and pollution.\n- Use ${OTHER_ISSUE} only if nothing else fits.`;
+  return `You sort sections of a House bill by policy issue.\n${DATA_ONLY}\n\nAllowed issues:\n${ISSUES.join('\n')}\n\nReturn {"tags":[{"id":"section id","issues":["1 to ${MAX_ISSUES_PER_SECTION} allowed issues"]}]} with one entry for every section.\n\nRules:\n- Use the issue names exactly as written.\n- Tag what a section is really about, even when its title is vague. A tax on firearms is both Tax and Gun Control. A tax credit for solar power is Tax, Energy and Environment/Climate.\n- Read each section to the end. Also tag an issue when a specific provision or funding line addresses it, even if the rest of the section is about something else. $450 million for AI in naval shipbuilding is both Defense & National Security and AI & Technology.\n- Use Tax only if the section changes a tax, credit, deduction or tax rule.\n- Use Environment/Climate for anything that expands or ends support for clean energy, renewable power, clean vehicles, energy efficiency or emissions cuts, as well as conservation and pollution.\n- Use ${OTHER_ISSUE} only if nothing else fits.`;
 }
 
 function promiseSystem() {
@@ -319,19 +319,34 @@ async function regenerateOverview() {
   console.log(`Done. ${brief.overview.what_it_does.length} bullets, ${brief.overview.dropped_bullets} dropped, this update cost $${runCost.toFixed(4)}`);
 }
 
+// Groups sections so no request is too long. A section larger than the limit goes alone, uncut.
+function tagBatches(sections, maxCount = TAG_BATCH_SIZE, maxChars = TAG_BATCH_CHARS) {
+  const groups = [];
+  let current = [];
+  let chars = 0;
+  for (const section of sections) {
+    if (current.length && (current.length >= maxCount || chars + section.text.length > maxChars)) {
+      groups.push(current);
+      current = [];
+      chars = 0;
+    }
+    current.push(section);
+    chars += section.text.length;
+  }
+  if (current.length) groups.push(current);
+  return groups.map((group, i) => ({ id: `batch-${i + 1}`, sections: group }));
+}
+
 // Sorts every section in the bill by issue, in batches. A failed batch is recorded, not fatal.
 async function tagSections(sections, pageMap) {
   console.log(`Sorting ${sections.length} sections by issue...`);
-  const batches = [];
-  for (let i = 0; i < sections.length; i += TAG_BATCH_SIZE) {
-    batches.push({ id: `batch-${batches.length + 1}`, sections: sections.slice(i, i + TAG_BATCH_SIZE) });
-  }
+  const batches = tagBatches(sections);
   const spendLimit = runCost + MAX_TAG_COST_USD;
   const { results, failures } = await mapLimit(
     batches,
     async (batch) => {
       const text = batch.sections
-        .map((s) => `Section ${s.id} [${s.part}]: ${s.header}\n${s.text.slice(0, TAG_TEXT_CHARS)}`)
+        .map((s) => `Section ${s.id} [${s.part}]: ${s.header}\n${s.text}`)
         .join('\n\n---\n\n');
       const reply = await callModel(SCREEN_MODEL, issueSystem(), text, spendLimit);
       return reply.tags || [];
@@ -357,6 +372,10 @@ async function regenerateIssues() {
   const file = path.join(DATA, 'brief-hr1.json');
   const brief = JSON.parse(fs.readFileSync(file, 'utf8'));
   const tagged = await tagSections(sections, pageMap);
+  if (tagged.coverage.untagged.length) {
+    console.error(`Stopped: ${tagged.coverage.untagged.length} sections could not be sorted, so the saved brief was not changed. This attempt cost $${runCost.toFixed(4)}`);
+    process.exit(1);
+  }
   brief.items = withIssues(brief.items, tagged.bySection);
   brief.issues = tagged.issues;
   brief.coverage.issue_tagging = tagged.coverage;
@@ -492,4 +511,4 @@ if (require.main === module) {
   });
 }
 
-module.exports = { normalize, verifyItems, verifyAlerts, verifyOverview, verifyIssueTags, buildIssueIndex, withIssues };
+module.exports = { normalize, verifyItems, verifyAlerts, verifyOverview, verifyIssueTags, buildIssueIndex, withIssues, tagBatches };

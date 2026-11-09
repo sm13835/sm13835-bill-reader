@@ -129,10 +129,11 @@
       if (!issues.length) return '';
       const button = (value, label, cls) =>
         `<button type="button" class="filter-btn ${cls}" data-issue="${esc(value)}" aria-pressed="${value === active}">${esc(label)}</button>`;
+      const plural = (n, word) => `${n} ${word}${n === 1 ? '' : 's'}`;
       return `<div class="filter"><div class="filter-label">Filter by issue</div>
         <div class="filter-row">${button('', 'All issues', '')}${issues.map((i) =>
-          button(i.name, `${i.name} (${i.count})`, i.count ? '' : 'no-findings')).join('')}</div>
-        <p class="meta filter-note">Counts are findings analyzed for your district. A dashed button means the bill touches that issue but this brief has no district finding on it yet.</p></div>`;
+          button(i.name, `${i.name} · ${plural(i.sections.length, 'section')} · ${plural(i.count, 'finding')}`, i.count ? '' : 'no-findings')).join('')}</div>
+        <p class="meta filter-note">Sections are the parts of the bill that touch an issue. Findings are the ones analyzed for how they affect your district. A dashed button means the bill touches that issue but this brief has no district finding on it yet.</p></div>`;
     }
 
     // Written so an empty result can never be read as "this issue has no effect."

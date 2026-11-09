@@ -9,6 +9,7 @@ const {
   verifyIssueTags,
   buildIssueIndex,
   withIssues,
+  tagBatches,
 } = require('../app/analyze.js');
 
 const inputs = {
@@ -159,4 +160,12 @@ test('a finding takes on the issues of its section', () => {
   const [tagged, untagged] = withIssues([{ section_id: '2' }, { section_id: '3' }], { 2: ['Tax'] });
   assert.deepStrictEqual(tagged.issues, ['Tax']);
   assert.deepStrictEqual(untagged.issues, []);
+});
+
+test('batches keep every section, whole and in order, within the limits', () => {
+  const sections = [{ text: 'a'.repeat(60) }, { text: 'b'.repeat(50) }, { text: 'c'.repeat(500) }, { text: 'd' }, { text: 'e' }];
+  const batches = tagBatches(sections, 2, 100);
+  assert.deepStrictEqual(batches.map((b) => b.sections.length), [1, 1, 1, 2]);
+  assert.deepStrictEqual(batches.flatMap((b) => b.sections), sections);
+  assert.strictEqual(batches[2].sections[0].text.length, 500);
 });
