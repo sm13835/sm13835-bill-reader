@@ -188,7 +188,10 @@
       ],
       "bill_quote": "in the case of any taxable year beginning in calendar year 2025, $40,000, (ii) in the case of any taxable year beginning in calendar year 2026, $40,400",
       "section_id": "70120",
-      "section_header": "Limitation on individual deductions for certain state and local taxes, etc"
+      "section_header": "Limitation on individual deductions for certain state and local taxes, etc",
+      "issues": [
+        "Tax"
+      ]
     },
     {
       "effect": "helps",
@@ -204,7 +207,10 @@
       ],
       "bill_quote": "in paragraph (1), by striking , and before January 1, 2026, and",
       "section_id": "70101",
-      "section_header": "Extension and enhancement of reduced rates"
+      "section_header": "Extension and enhancement of reduced rates",
+      "issues": [
+        "Tax"
+      ]
     },
     {
       "effect": "hurts",
@@ -221,7 +227,11 @@
       ],
       "bill_quote": "a State shall provide, as a condition of eligibility for medical assistance for an applicable individual, that such individual is required to demonstrate community engagement",
       "section_id": "71119",
-      "section_header": "Requirement for States to establish Medicaid community engagement requirements for certain individuals"
+      "section_header": "Requirement for States to establish Medicaid community engagement requirements for certain individuals",
+      "issues": [
+        "Health Care",
+        "Food & Income Assistance"
+      ]
     },
     {
       "effect": "hurts",
@@ -235,7 +245,10 @@
       ],
       "bill_quote": "the Federal share of the cost of the allotment described in paragraph (1) for that State in a fiscal year shall be 85 percent, and the State share shall be 15 percent",
       "section_id": "10105",
-      "section_header": "Matching funds requirements"
+      "section_header": "Matching funds requirements",
+      "issues": [
+        "Food & Income Assistance"
+      ]
     },
     {
       "effect": "mixed",
@@ -253,7 +266,11 @@
       ],
       "bill_quote": "No credit shall be allowed under this section to a taxpayer with respect to any qualifying child unless the taxpayer includes on the return of tax for the taxable year—",
       "section_id": "70104",
-      "section_header": "Extension and enhancement of increased child tax credit"
+      "section_header": "Extension and enhancement of increased child tax credit",
+      "issues": [
+        "Tax",
+        "Families & Children"
+      ]
     },
     {
       "effect": "hurts",
@@ -269,7 +286,10 @@
       ],
       "bill_quote": "agency, through fiscal year 2026, 50 percent, and for fiscal year 2027 and each fiscal year thereafter, 25 percent,",
       "section_id": "10106",
-      "section_header": "Administrative cost sharing"
+      "section_header": "Administrative cost sharing",
+      "issues": [
+        "Food & Income Assistance"
+      ]
     },
     {
       "effect": "hurts",
@@ -286,7 +306,11 @@
       ],
       "bill_quote": "a parent or other member of a household with responsibility for a dependent child under 14 years of age;",
       "section_id": "10102",
-      "section_header": "Modifications to SNAP work requirements for able-bodied adults"
+      "section_header": "Modifications to SNAP work requirements for able-bodied adults",
+      "issues": [
+        "Food & Income Assistance",
+        "Labor & Jobs"
+      ]
     },
     {
       "effect": "hurts",
@@ -302,7 +326,10 @@
       ],
       "bill_quote": "a State shall make such a redetermination once every 6 months for the following individuals: (I) Individuals enrolled under subsection (a)(10)(A)(i)(VIII).",
       "section_id": "71107",
-      "section_header": "Eligibility redeterminations"
+      "section_header": "Eligibility redeterminations",
+      "issues": [
+        "Health Care"
+      ]
     },
     {
       "effect": "mixed",
@@ -319,7 +346,10 @@
       ],
       "bill_quote": "the total amount of such payment shall be reduced by 10 percentage points each year until the total payment rate for such service is equal to the rate for such service specified in subsection (a).",
       "section_id": "71116",
-      "section_header": "State directed payments"
+      "section_header": "State directed payments",
+      "issues": [
+        "Health Care"
+      ]
     },
     {
       "effect": "hurts",
@@ -334,7 +364,11 @@
       ],
       "bill_quote": "for fiscal year 2032 and each subsequent fiscal year, 3.5 percent.",
       "section_id": "71115",
-      "section_header": "Provider taxes"
+      "section_header": "Provider taxes",
+      "issues": [
+        "Health Care",
+        "Tax"
+      ]
     },
     {
       "effect": "mixed",
@@ -351,7 +385,10 @@
       ],
       "bill_quote": "In the case of a borrower with an applicable monthly payment amount calculated under clause (i) that is less than $10, the applicable monthly payment of the borrower shall be $10.",
       "section_id": "82001",
-      "section_header": "Loan repayment"
+      "section_header": "Loan repayment",
+      "issues": [
+        "Education & Student Loans"
+      ]
     },
     {
       "effect": "mixed",
@@ -369,7 +406,11 @@
       ],
       "bill_quote": "There shall be allowed as a deduction an amount equal to the qualified overtime compensation received during the taxable year and included on statements furnished to the individual",
       "section_id": "70202",
-      "section_header": "No tax on overtime"
+      "section_header": "No tax on overtime",
+      "issues": [
+        "Tax",
+        "Labor & Jobs"
+      ]
     },
     {
       "effect": "mixed",
@@ -384,7 +425,11 @@
       ],
       "bill_quote": "In the case of a taxable year beginning before January 1, 2029, there shall be allowed a deduction in an amount equal to $6,000 for each qualified individual with respect to the taxpayer.",
       "section_id": "70103",
-      "section_header": "Termination of deduction for personal exemptions other than temporary senior deduction"
+      "section_header": "Termination of deduction for personal exemptions other than temporary senior deduction",
+      "issues": [
+        "Tax",
+        "Seniors & Social Security"
+      ]
     },
     {
       "effect": "hurts",
@@ -399,7 +444,12 @@
       ],
       "bill_quote": "This section shall not apply with respect to any applicable facility placed in service after December 31, 2027.",
       "section_id": "70512",
-      "section_header": "Termination and restrictions on clean electricity production credit"
+      "section_header": "Termination and restrictions on clean electricity production credit",
+      "issues": [
+        "Tax",
+        "Energy",
+        "Environment/Climate"
+      ]
     },
     {
       "effect": "hurts",
@@ -416,7 +466,11 @@
       ],
       "bill_quote": "No individual who is a member of a household otherwise eligible to participate in the supplemental nutrition assistance program under this section shall be eligible to participate in the supplemental nutrition assistance program as a member of that or any other household unless he or she is—",
       "section_id": "10108",
-      "section_header": "Alien SNAP eligibility"
+      "section_header": "Alien SNAP eligibility",
+      "issues": [
+        "Immigration",
+        "Food & Income Assistance"
+      ]
     },
     {
       "effect": "hurts",
@@ -432,7 +486,10 @@
       ],
       "bill_quote": "The Secretary shall not increase the cost of the thrifty food plan based on a re-evaluation under this paragraph.",
       "section_id": "10101",
-      "section_header": "Re-evaluation of thrifty food plan"
+      "section_header": "Re-evaluation of thrifty food plan",
+      "issues": [
+        "Food & Income Assistance"
+      ]
     },
     {
       "effect": "helps",
@@ -449,7 +506,10 @@
       ],
       "bill_quote": "by striking $18,000 both places it appears in subparagraphs (A)(i) and (B)(ii) and inserting $23,625",
       "section_id": "70102",
-      "section_header": "Extension and enhancement of increased standard deduction"
+      "section_header": "Extension and enhancement of increased standard deduction",
+      "issues": [
+        "Tax"
+      ]
     },
     {
       "effect": "mixed",
@@ -465,7 +525,11 @@
       ],
       "bill_quote": "Mortgage insurance premiums treated as interest Clause (iv) of subparagraph (E) shall not apply.",
       "section_id": "70108",
-      "section_header": "Extension and modification of limitation on deduction for qualified residence interest"
+      "section_header": "Extension and modification of limitation on deduction for qualified residence interest",
+      "issues": [
+        "Tax",
+        "Housing"
+      ]
     },
     {
       "effect": "helps",
@@ -480,7 +544,11 @@
       ],
       "bill_quote": "the term applicable percentage means 50 percent— (A) reduced (but not below 35 percent) by 1 percentage point for each $2,000 or fraction thereof by which the taxpayer's adjusted gross income for the taxable year exceeds $15,000",
       "section_id": "70405",
-      "section_header": "Enhancement of child and dependent care tax credit"
+      "section_header": "Enhancement of child and dependent care tax credit",
+      "issues": [
+        "Tax",
+        "Families & Children"
+      ]
     },
     {
       "effect": "hurts",
@@ -494,7 +562,12 @@
       ],
       "bill_quote": "Section 25D(h) is amended by striking to property placed in service after December 31, 2034 and inserting with respect to any expenditures made after December 31, 2025.",
       "section_id": "70506",
-      "section_header": "Termination of residential clean energy credit"
+      "section_header": "Termination of residential clean energy credit",
+      "issues": [
+        "Tax",
+        "Energy",
+        "Environment/Climate"
+      ]
     },
     {
       "effect": "hurts",
@@ -510,7 +583,12 @@
       ],
       "bill_quote": "This section shall not apply to any qualified property placed in service by the taxpayer after December 31, 2027, which is part of an applicable facility.",
       "section_id": "70513",
-      "section_header": "Termination and restrictions on clean electricity investment credit"
+      "section_header": "Termination and restrictions on clean electricity investment credit",
+      "issues": [
+        "Tax",
+        "Energy",
+        "Environment/Climate"
+      ]
     },
     {
       "effect": "hurts",
@@ -526,7 +604,11 @@
       ],
       "bill_quote": "in no event shall payment be made to a State under this section for medical assistance furnished to an individual unless such individual is",
       "section_id": "71109",
-      "section_header": "Alien Medicaid eligibility"
+      "section_header": "Alien Medicaid eligibility",
+      "issues": [
+        "Health Care",
+        "Immigration"
+      ]
     },
     {
       "effect": "hurts",
@@ -542,7 +624,10 @@
       ],
       "bill_quote": "shall not, during the period beginning on the date of the enactment of this section and ending September 30, 2034, implement, administer, or enforce the amendments made by the provisions of the final rule",
       "section_id": "71102",
-      "section_header": "Moratorium on implementation of rule relating to eligibility and enrollment for Medicaid, CHIP, and the Basic Health Program"
+      "section_header": "Moratorium on implementation of rule relating to eligibility and enrollment for Medicaid, CHIP, and the Basic Health Program",
+      "issues": [
+        "Health Care"
+      ]
     },
     {
       "effect": "helps",
@@ -558,7 +643,10 @@
       ],
       "bill_quote": "by adding at the end the following new subclause: (IV) by substituting 50 percent for 25 percent, and.",
       "section_id": "70107",
-      "section_header": "Extension of increased alternative minimum tax exemption amounts and modification of phaseout thresholds"
+      "section_header": "Extension of increased alternative minimum tax exemption amounts and modification of phaseout thresholds",
+      "issues": [
+        "Tax"
+      ]
     },
     {
       "effect": "helps",
@@ -573,7 +661,11 @@
       ],
       "bill_quote": "striking $50,000 ($100,000 in the case of a joint return) each place it appears and inserting $75,000 ($150,000 in the case of a joint return).",
       "section_id": "70105",
-      "section_header": "Extension and enhancement of deduction for qualified business income"
+      "section_header": "Extension and enhancement of deduction for qualified business income",
+      "issues": [
+        "Tax",
+        "Small Business"
+      ]
     },
     {
       "effect": "helps",
@@ -588,7 +680,11 @@
       ],
       "bill_quote": "there shall be allowed as a deduction any domestic research or experimental expenditures which are paid or incurred by the taxpayer during the taxable year.",
       "section_id": "70302",
-      "section_header": "Full expensing of domestic research and experimental expenditures"
+      "section_header": "Full expensing of domestic research and experimental expenditures",
+      "issues": [
+        "Tax",
+        "Small Business"
+      ]
     },
     {
       "effect": "hurts",
@@ -605,7 +701,10 @@
       ],
       "bill_quote": "shall be allowed only to the extent that the aggregate of such contributions exceeds 0.5 percent of the taxpayer's contribution base for the taxable year",
       "section_id": "70425",
-      "section_header": "0.5 percent floor on deduction of contributions made by individuals"
+      "section_header": "0.5 percent floor on deduction of contributions made by individuals",
+      "issues": [
+        "Tax"
+      ]
     },
     {
       "effect": "helps",
@@ -621,7 +720,11 @@
       ],
       "bill_quote": "The term qualified tips means cash tips received by an individual in an occupation which customarily and regularly received tips on or before December 31, 2024, as provided by the Secretary.",
       "section_id": "70201",
-      "section_header": "No tax on tips"
+      "section_header": "No tax on tips",
+      "issues": [
+        "Tax",
+        "Labor & Jobs"
+      ]
     },
     {
       "effect": "hurts",
@@ -636,7 +739,10 @@
       ],
       "bill_quote": "a State may permit a provider participating under the State plan to require, as a condition for the provision of care, items, or services to a specified individual",
       "section_id": "71120",
-      "section_header": "Modifying cost sharing requirements for certain expansion individuals under the Medicaid program"
+      "section_header": "Modifying cost sharing requirements for certain expansion individuals under the Medicaid program",
+      "issues": [
+        "Health Care"
+      ]
     },
     {
       "effect": "mixed",
@@ -653,7 +759,11 @@
       ],
       "bill_quote": "in paragraph (1)(A), by striking the applicable percentage and inserting 100 percent",
       "section_id": "70301",
-      "section_header": "Full expensing for certain business property"
+      "section_header": "Full expensing for certain business property",
+      "issues": [
+        "Tax",
+        "Small Business"
+      ]
     },
     {
       "effect": "mixed",
@@ -669,7 +779,11 @@
       ],
       "bill_quote": "shall not, during the period beginning on the date of the enactment of this section and ending September 30, 2034, implement, administer, or enforce the amendments made by the provisions of the final rule",
       "section_id": "71111",
-      "section_header": "Moratorium on implementation of rule relating to staffing standards for long-term care facilities under the Medicare and Medicaid programs"
+      "section_header": "Moratorium on implementation of rule relating to staffing standards for long-term care facilities under the Medicare and Medicaid programs",
+      "issues": [
+        "Health Care",
+        "Seniors & Social Security"
+      ]
     },
     {
       "effect": "mixed",
@@ -686,7 +800,11 @@
       ],
       "bill_quote": "an individual may be entitled to, or enrolled for, benefits under this title only if the individual is— (1) a citizen or national of the United States;",
       "section_id": "71201",
-      "section_header": "Limiting Medicare coverage of certain individuals"
+      "section_header": "Limiting Medicare coverage of certain individuals",
+      "issues": [
+        "Health Care",
+        "Immigration"
+      ]
     },
     {
       "effect": "hurts",
@@ -703,7 +821,12 @@
       ],
       "bill_quote": "An individual who is an alien and lawfully present shall be treated as an eligible alien if such individual is, and is reasonably expected to be for the entire period of enrollment",
       "section_id": "71301",
-      "section_header": "Permitting premium tax credit only for certain individuals"
+      "section_header": "Permitting premium tax credit only for certain individuals",
+      "issues": [
+        "Tax",
+        "Immigration",
+        "Health Care"
+      ]
     },
     {
       "effect": "helps",
@@ -718,7 +841,11 @@
       ],
       "bill_quote": "such services furnished on or after January 1, 2026, and before January 1, 2027, by 2.5 percent.",
       "section_id": "71202",
-      "section_header": "Temporary payment increase under the medicare physician fee schedule to account for exceptional circumstances"
+      "section_header": "Temporary payment increase under the medicare physician fee schedule to account for exceptional circumstances",
+      "issues": [
+        "Health Care",
+        "Seniors & Social Security"
+      ]
     },
     {
       "effect": "hurts",
@@ -734,7 +861,11 @@
       ],
       "bill_quote": "Section 25C(h) is amended by striking placed in service and all that follows through December 31, 2032 and inserting placed in service after December 31, 2025.",
       "section_id": "70505",
-      "section_header": "Termination of energy efficient home improvement credit"
+      "section_header": "Termination of energy efficient home improvement credit",
+      "issues": [
+        "Tax",
+        "Environment/Climate"
+      ]
     },
     {
       "effect": "helps",
@@ -751,7 +882,10 @@
       ],
       "bill_quote": "the term personal interest shall not include qualified passenger vehicle loan interest",
       "section_id": "70203",
-      "section_header": "No tax on car loan interest"
+      "section_header": "No tax on car loan interest",
+      "issues": [
+        "Tax"
+      ]
     },
     {
       "effect": "helps",
@@ -768,7 +902,11 @@
       ],
       "bill_quote": "Gross income of an employee does not include amounts paid by the employer as a contribution to the Trump account of such employee or of any dependent of such employee",
       "section_id": "70204",
-      "section_header": "Trump accounts and contribution pilot program"
+      "section_header": "Trump accounts and contribution pilot program",
+      "issues": [
+        "Tax",
+        "Families & Children"
+      ]
     },
     {
       "effect": "helps",
@@ -785,7 +923,11 @@
       ],
       "bill_quote": "Section 129(a)(2)(A) is amended by striking $5,000 ($2,500 and inserting $7,500 ($3,750.",
       "section_id": "70404",
-      "section_header": "Enhancement of the dependent care assistance program"
+      "section_header": "Enhancement of the dependent care assistance program",
+      "issues": [
+        "Tax",
+        "Families & Children"
+      ]
     },
     {
       "effect": "helps",
@@ -802,7 +944,11 @@
       ],
       "bill_quote": "Educational therapies for students with disabilities provided by a licensed or accredited practitioner or provider, including occupational, behavioral, physical, and speech-language therapies.",
       "section_id": "70413",
-      "section_header": "Additional expenses treated as qualified higher education expenses for purposes of 529 accounts"
+      "section_header": "Additional expenses treated as qualified higher education expenses for purposes of 529 accounts",
+      "issues": [
+        "Tax",
+        "Education & Student Loans"
+      ]
     },
     {
       "effect": "mixed",
@@ -818,7 +964,11 @@
       ],
       "bill_quote": "The credit allowed under subsection (a) to any taxpayer for any taxable year shall not exceed $1,700.",
       "section_id": "70411",
-      "section_header": "Tax credit for contributions of individuals to scholarship granting organizations"
+      "section_header": "Tax credit for contributions of individuals to scholarship granting organizations",
+      "issues": [
+        "Tax",
+        "Education & Student Loans"
+      ]
     },
     {
       "effect": "hurts",
@@ -834,7 +984,10 @@
       ],
       "bill_quote": "shall not, during the period beginning on the date of the enactment of this section and ending September 30, 2034, implement, administer, or enforce the amendments made by the provisions of the final rule",
       "section_id": "71101",
-      "section_header": "Moratorium on implementation of rule relating to eligibility and enrollment in Medicare Savings Programs"
+      "section_header": "Moratorium on implementation of rule relating to eligibility and enrollment in Medicare Savings Programs",
+      "issues": [
+        "Health Care"
+      ]
     },
     {
       "effect": "hurts",
@@ -850,7 +1003,10 @@
       ],
       "bill_quote": "such assistance will be made available to the individual for care and services included under the plan and furnished in or after the month before the month in which the individual made application",
       "section_id": "71112",
-      "section_header": "Reducing State Medicaid costs"
+      "section_header": "Reducing State Medicaid costs",
+      "issues": [
+        "Health Care"
+      ]
     },
     {
       "effect": "hurts",
@@ -865,7 +1021,10 @@
       ],
       "bill_quote": "No Federal funds that are considered direct spending and provided to carry out a State plan under title XIX of the Social Security Act or a waiver of such a plan shall be used to make payments to a prohibited entity",
       "section_id": "71113",
-      "section_header": "Federal payments to prohibited entities"
+      "section_header": "Federal payments to prohibited entities",
+      "issues": [
+        "Health Care"
+      ]
     },
     {
       "effect": "hurts",
@@ -880,7 +1039,11 @@
       ],
       "bill_quote": "The amendments made by this section shall apply to taxable years beginning after December 31, 2025.",
       "section_id": "71305",
-      "section_header": "Eliminating limitation on recapture of advance payment of premium tax credit"
+      "section_header": "Eliminating limitation on recapture of advance payment of premium tax credit",
+      "issues": [
+        "Tax",
+        "Health Care"
+      ]
     },
     {
       "effect": "helps",
@@ -895,7 +1058,10 @@
       ],
       "bill_quote": "any natural catastrophe (including any hurricane, tornado, storm, high water, wind-driven water, tidal wave, tsunami, earthquake, volcanic eruption, landslide, mudslide, snowstorm, or drought), or, regardless of cause, any fire, flood, or explosion",
       "section_id": "70109",
-      "section_header": "Extension and modification of limitation on casualty loss deduction"
+      "section_header": "Extension and modification of limitation on casualty loss deduction",
+      "issues": [
+        "Tax"
+      ]
     },
     {
       "effect": "mixed",
@@ -911,7 +1077,11 @@
       ],
       "bill_quote": "For purposes of subsection (b)(13), the term educator expenses means expenses of a type which would be described in section 62(a)(2)(D) if—",
       "section_id": "70110",
-      "section_header": "Termination of miscellaneous itemized deductions other than educator expenses"
+      "section_header": "Termination of miscellaneous itemized deductions other than educator expenses",
+      "issues": [
+        "Tax",
+        "Education & Student Loans"
+      ]
     },
     {
       "effect": "hurts",
@@ -927,7 +1097,10 @@
       ],
       "bill_quote": "In the case of an individual, the amount of the itemized deductions otherwise allowable for the taxable year (determined without regard to this section) shall be reduced by 2/37 of the lesser of",
       "section_id": "70111",
-      "section_header": "Limitation on tax benefit of itemized deductions"
+      "section_header": "Limitation on tax benefit of itemized deductions",
+      "issues": [
+        "Tax"
+      ]
     },
     {
       "effect": "mixed",
@@ -942,7 +1115,11 @@
       ],
       "bill_quote": "Such term shall also include any trailer or camper which is designed to provide temporary living quarters for recreational, camping, or seasonal use and is designed to be towed by, or affixed to, a motor vehicle.",
       "section_id": "70303",
-      "section_header": "Modification of limitation on business interest"
+      "section_header": "Modification of limitation on business interest",
+      "issues": [
+        "Tax",
+        "Small Business"
+      ]
     },
     {
       "effect": "helps",
@@ -958,7 +1135,11 @@
       ],
       "bill_quote": "in paragraph (1), by striking $1,000,000 and inserting $2,500,000, and (2) in paragraph (2), by striking $2,500,000 and inserting $4,000,000.",
       "section_id": "70306",
-      "section_header": "Increased dollar limitations for expensing of certain depreciable business assets"
+      "section_header": "Increased dollar limitations for expensing of certain depreciable business assets",
+      "issues": [
+        "Tax",
+        "Small Business"
+      ]
     },
     {
       "effect": "helps",
@@ -973,7 +1154,12 @@
       ],
       "bill_quote": "the paid family and medical leave credit is an amount equal to either of the following (as elected by such employer)",
       "section_id": "70304",
-      "section_header": "Extension and enhancement of paid family and medical leave credit"
+      "section_header": "Extension and enhancement of paid family and medical leave credit",
+      "issues": [
+        "Tax",
+        "Families & Children",
+        "Labor & Jobs"
+      ]
     },
     {
       "effect": "helps",
@@ -989,7 +1175,11 @@
       ],
       "bill_quote": "The credit allowable under subsection (a) for any taxable year shall not exceed $500,000 ($600,000 in the case of an eligible small business).",
       "section_id": "70401",
-      "section_header": "Enhancement of employer-provided child care credit"
+      "section_header": "Enhancement of employer-provided child care credit",
+      "issues": [
+        "Tax",
+        "Families & Children"
+      ]
     },
     {
       "effect": "helps",
@@ -1007,7 +1197,11 @@
       "bill_quote": "fees for testing if such testing is required to obtain or maintain a recognized postsecondary credential, and",
       "importance_note": null,
       "section_id": "70414",
-      "section_header": "Certain postsecondary credentialing expenses treated as qualified higher education expenses for purposes of 529 accounts"
+      "section_header": "Certain postsecondary credentialing expenses treated as qualified higher education expenses for purposes of 529 accounts",
+      "issues": [
+        "Tax",
+        "Education & Student Loans"
+      ]
     },
     {
       "effect": "mixed",
@@ -1022,7 +1216,10 @@
       ],
       "bill_quote": "only if— (1) the amount which would otherwise be reported under subsection (a)(2) with respect to such transactions exceeds $20,000, and (2) the aggregate number of such transactions exceeds 200.",
       "section_id": "70432",
-      "section_header": "Repeal of revision to de minimis rules for third party network transactions"
+      "section_header": "Repeal of revision to de minimis rules for third party network transactions",
+      "issues": [
+        "Tax"
+      ]
     },
     {
       "effect": "mixed",
@@ -1037,7 +1234,11 @@
       ],
       "bill_quote": "the applicable percentage of any gain from the sale or exchange of qualified small business stock acquired after the applicable date and held for at least 3 years.",
       "section_id": "70431",
-      "section_header": "Expansion of qualified small business stock gain exclusion"
+      "section_header": "Expansion of qualified small business stock gain exclusion",
+      "issues": [
+        "Tax",
+        "Small Business"
+      ]
     },
     {
       "effect": "hurts",
@@ -1052,7 +1253,11 @@
       ],
       "bill_quote": "Section 30C(i) is amended by striking December 31, 2032 and inserting June 30, 2026.",
       "section_id": "70504",
-      "section_header": "Termination of alternative fuel vehicle refueling property credit"
+      "section_header": "Termination of alternative fuel vehicle refueling property credit",
+      "issues": [
+        "Tax",
+        "Environment/Climate"
+      ]
     },
     {
       "effect": "hurts",
@@ -1067,7 +1272,11 @@
       ],
       "bill_quote": "Section 25E(g) is amended by striking December 31, 2032 and inserting September 30, 2025.",
       "section_id": "70501",
-      "section_header": "Termination of previously-owned clean vehicle credit"
+      "section_header": "Termination of previously-owned clean vehicle credit",
+      "issues": [
+        "Tax",
+        "Environment/Climate"
+      ]
     },
     {
       "effect": "hurts",
@@ -1083,7 +1292,11 @@
       ],
       "bill_quote": "Section 45W(g) is amended by striking December 31, 2032 and inserting September 30, 2025.",
       "section_id": "70503",
-      "section_header": "Termination of qualified commercial clean vehicles credit"
+      "section_header": "Termination of qualified commercial clean vehicles credit",
+      "issues": [
+        "Tax",
+        "Environment/Climate"
+      ]
     },
     {
       "effect": "mixed",
@@ -1100,7 +1313,11 @@
       ],
       "bill_quote": "The tax imposed under subsection (a) shall apply only to any remittance transfer for which the sender provides cash, a money order, a cashier's check, or any other similar physical instrument",
       "section_id": "70604",
-      "section_header": "Excise tax on certain remittance transfers"
+      "section_header": "Excise tax on certain remittance transfers",
+      "issues": [
+        "Tax",
+        "Immigration"
+      ]
     },
     {
       "effect": "hurts",
@@ -1116,7 +1333,12 @@
       ],
       "bill_quote": "The amendments made by this section shall apply to taxable years beginning after December 31, 2025.",
       "section_id": "71302",
-      "section_header": "Disallowing premium tax credit during periods of medicaid ineligibility due to alien status"
+      "section_header": "Disallowing premium tax credit during periods of medicaid ineligibility due to alien status",
+      "issues": [
+        "Tax",
+        "Immigration",
+        "Health Care"
+      ]
     },
     {
       "effect": "neutral",
@@ -1131,7 +1353,10 @@
       ],
       "bill_quote": "the limitation under paragraph (1) shall apply to business interest without regard to whether the taxpayer would otherwise deduct such business interest or capitalize such business interest under an interest capitalization provision",
       "section_id": "70341",
-      "section_header": "Coordination of business interest limitation with interest capitalization provisions"
+      "section_header": "Coordination of business interest limitation with interest capitalization provisions",
+      "issues": [
+        "Tax"
+      ]
     }
   ],
   "promise_alerts": [
@@ -1334,8 +1559,2471 @@
     "not_analyzed_due_to_cap": 98,
     "deep_failures": [],
     "dropped_by_verification": [],
-    "promises_reviewed": 8
+    "promises_reviewed": 8,
+    "issue_tagging": {
+      "sections_tagged": 309,
+      "untagged": [],
+      "unknown_labels": [],
+      "batch_failures": []
+    }
   },
-  "cost_usd": 1.15,
-  "bill_pdf_url": "https://www.govinfo.gov/content/pkg/BILLS-119hr1enr/pdf/BILLS-119hr1enr.pdf"
+  "cost_usd": 1.1829,
+  "bill_pdf_url": "https://www.govinfo.gov/content/pkg/BILLS-119hr1enr/pdf/BILLS-119hr1enr.pdf",
+  "issues": [
+    {
+      "name": "Tax",
+      "sections": [
+        {
+          "section_id": "70001",
+          "header": "References to the Internal Revenue Code of 1986, etc",
+          "page": 87
+        },
+        {
+          "section_id": "70101",
+          "header": "Extension and enhancement of reduced rates",
+          "page": 87
+        },
+        {
+          "section_id": "70102",
+          "header": "Extension and enhancement of increased standard deduction",
+          "page": 87
+        },
+        {
+          "section_id": "70103",
+          "header": "Termination of deduction for personal exemptions other than temporary senior deduction",
+          "page": 88
+        },
+        {
+          "section_id": "70104",
+          "header": "Extension and enhancement of increased child tax credit",
+          "page": 89
+        },
+        {
+          "section_id": "70105",
+          "header": "Extension and enhancement of deduction for qualified business income",
+          "page": 90
+        },
+        {
+          "section_id": "70106",
+          "header": "Extension and enhancement of increased estate and gift tax exemption amounts",
+          "page": 91
+        },
+        {
+          "section_id": "70107",
+          "header": "Extension of increased alternative minimum tax exemption amounts and modification of phaseout thresholds",
+          "page": 91
+        },
+        {
+          "section_id": "70108",
+          "header": "Extension and modification of limitation on deduction for qualified residence interest",
+          "page": 92
+        },
+        {
+          "section_id": "70109",
+          "header": "Extension and modification of limitation on casualty loss deduction",
+          "page": 92
+        },
+        {
+          "section_id": "70110",
+          "header": "Termination of miscellaneous itemized deductions other than educator expenses",
+          "page": 93
+        },
+        {
+          "section_id": "70111",
+          "header": "Limitation on tax benefit of itemized deductions",
+          "page": 93
+        },
+        {
+          "section_id": "70112",
+          "header": "Extension and modification of qualified transportation fringe benefits",
+          "page": 94
+        },
+        {
+          "section_id": "70113",
+          "header": "Extension and modification of limitation on deduction and exclusion for moving expenses",
+          "page": 94
+        },
+        {
+          "section_id": "70114",
+          "header": "Extension and modification of limitation on wagering losses",
+          "page": 95
+        },
+        {
+          "section_id": "70115",
+          "header": "Extension and enhancement of increased limitation on contributions to ABLE accounts",
+          "page": 95
+        },
+        {
+          "section_id": "70116",
+          "header": "Extension and enhancement of savers credit allowed for ABLE contributions",
+          "page": 95
+        },
+        {
+          "section_id": "70117",
+          "header": "Extension of rollovers from qualified tuition programs to ABLE accounts permitted",
+          "page": 96
+        },
+        {
+          "section_id": "70118",
+          "header": "Extension of treatment of certain individuals performing services in the Sinai Peninsula and enhancement to include additional areas",
+          "page": 96
+        },
+        {
+          "section_id": "70119",
+          "header": "Extension and modification of exclusion from gross income of student loans discharged on account of death or disability",
+          "page": 97
+        },
+        {
+          "section_id": "70120",
+          "header": "Limitation on individual deductions for certain state and local taxes, etc",
+          "page": 98
+        },
+        {
+          "section_id": "70201",
+          "header": "No tax on tips",
+          "page": 99
+        },
+        {
+          "section_id": "70202",
+          "header": "No tax on overtime",
+          "page": 103
+        },
+        {
+          "section_id": "70203",
+          "header": "No tax on car loan interest",
+          "page": 105
+        },
+        {
+          "section_id": "70204",
+          "header": "Trump accounts and contribution pilot program",
+          "page": 108
+        },
+        {
+          "section_id": "70301",
+          "header": "Full expensing for certain business property",
+          "page": 117
+        },
+        {
+          "section_id": "70302",
+          "header": "Full expensing of domestic research and experimental expenditures",
+          "page": 119
+        },
+        {
+          "section_id": "70303",
+          "header": "Modification of limitation on business interest",
+          "page": 124
+        },
+        {
+          "section_id": "70304",
+          "header": "Extension and enhancement of paid family and medical leave credit",
+          "page": 124
+        },
+        {
+          "section_id": "70305",
+          "header": "Exceptions from limitations on deduction for business meals",
+          "page": 126
+        },
+        {
+          "section_id": "70306",
+          "header": "Increased dollar limitations for expensing of certain depreciable business assets",
+          "page": 126
+        },
+        {
+          "section_id": "70307",
+          "header": "Special depreciation allowance for qualified production property",
+          "page": 127
+        },
+        {
+          "section_id": "70308",
+          "header": "Enhancement of advanced manufacturing investment credit",
+          "page": 130
+        },
+        {
+          "section_id": "70309",
+          "header": "Spaceports are treated like airports under exempt facility bond rules",
+          "page": 130
+        },
+        {
+          "section_id": "70311",
+          "header": "Modifications related to foreign tax credit limitation",
+          "page": 131
+        },
+        {
+          "section_id": "70312",
+          "header": "Modifications to determination of deemed paid credit for taxes properly attributable to tested income",
+          "page": 132
+        },
+        {
+          "section_id": "70313",
+          "header": "Sourcing certain income from the sale of inventory produced in the United States",
+          "page": 132
+        },
+        {
+          "section_id": "70321",
+          "header": "Modification of deduction for foreign-derived deduction eligible income and net CFC tested income",
+          "page": 133
+        },
+        {
+          "section_id": "70322",
+          "header": "Determination of deduction eligible income",
+          "page": 133
+        },
+        {
+          "section_id": "70323",
+          "header": "Rules related to deemed intangible income",
+          "page": 134
+        },
+        {
+          "section_id": "70331",
+          "header": "Extension and modification of base erosion minimum tax amount",
+          "page": 135
+        },
+        {
+          "section_id": "70341",
+          "header": "Coordination of business interest limitation with interest capitalization provisions",
+          "page": 136
+        },
+        {
+          "section_id": "70342",
+          "header": "Definition of adjusted taxable income for business interest limitation",
+          "page": 137
+        },
+        {
+          "section_id": "70351",
+          "header": "Permanent extension of look-thru rule for related controlled foreign corporations",
+          "page": 137
+        },
+        {
+          "section_id": "70352",
+          "header": "Repeal of election for 1-month deferral in determination of taxable year of specified foreign corporations",
+          "page": 137
+        },
+        {
+          "section_id": "70353",
+          "header": "Restoration of limitation on downward attribution of stock ownership in applying constructive ownership rules",
+          "page": 138
+        },
+        {
+          "section_id": "70354",
+          "header": "Modifications to pro rata share rules",
+          "page": 139
+        },
+        {
+          "section_id": "70401",
+          "header": "Enhancement of employer-provided child care credit",
+          "page": 141
+        },
+        {
+          "section_id": "70402",
+          "header": "Enhancement of adoption credit",
+          "page": 142
+        },
+        {
+          "section_id": "70403",
+          "header": "Recognizing Indian tribal governments for purposes of determining whether a child has special needs for purposes of the adoption credit",
+          "page": 143
+        },
+        {
+          "section_id": "70404",
+          "header": "Enhancement of the dependent care assistance program",
+          "page": 143
+        },
+        {
+          "section_id": "70405",
+          "header": "Enhancement of child and dependent care tax credit",
+          "page": 143
+        },
+        {
+          "section_id": "70411",
+          "header": "Tax credit for contributions of individuals to scholarship granting organizations",
+          "page": 144
+        },
+        {
+          "section_id": "70412",
+          "header": "Exclusion for employer payments of student loans",
+          "page": 147
+        },
+        {
+          "section_id": "70413",
+          "header": "Additional expenses treated as qualified higher education expenses for purposes of 529 accounts",
+          "page": 147
+        },
+        {
+          "section_id": "70414",
+          "header": "Certain postsecondary credentialing expenses treated as qualified higher education expenses for purposes of 529 accounts",
+          "page": 148
+        },
+        {
+          "section_id": "70415",
+          "header": "Modification of excise tax on investment income of certain private colleges and universities",
+          "page": 150
+        },
+        {
+          "section_id": "70416",
+          "header": "Expanding application of tax on excess compensation within tax-exempt organizations",
+          "page": 152
+        },
+        {
+          "section_id": "70421",
+          "header": "Permanent renewal and enhancement of opportunity zones",
+          "page": 152
+        },
+        {
+          "section_id": "70422",
+          "header": "Permanent enhancement of low-income housing tax credit",
+          "page": 163
+        },
+        {
+          "section_id": "70423",
+          "header": "Permanent extension of new markets tax credit",
+          "page": 164
+        },
+        {
+          "section_id": "70424",
+          "header": "Permanent and expanded reinstatement of partial deduction for charitable contributions of individuals who do not elect to itemize",
+          "page": 164
+        },
+        {
+          "section_id": "70425",
+          "header": "0.5 percent floor on deduction of contributions made by individuals",
+          "page": 164
+        },
+        {
+          "section_id": "70426",
+          "header": "1-percent floor on deduction of charitable contributions made by corporations",
+          "page": 166
+        },
+        {
+          "section_id": "70427",
+          "header": "Permanent increase in limitation on cover over of tax on distilled spirits",
+          "page": 167
+        },
+        {
+          "section_id": "70428",
+          "header": "Nonprofit community development activities in remote native villages",
+          "page": 167
+        },
+        {
+          "section_id": "70429",
+          "header": "Adjustment of charitable deduction for certain expenses incurred in support of Native Alaskan subsistence whaling",
+          "page": 168
+        },
+        {
+          "section_id": "70430",
+          "header": "Exception to percentage of completion method of accounting for certain residential construction contracts",
+          "page": 168
+        },
+        {
+          "section_id": "70431",
+          "header": "Expansion of qualified small business stock gain exclusion",
+          "page": 169
+        },
+        {
+          "section_id": "70432",
+          "header": "Repeal of revision to de minimis rules for third party network transactions",
+          "page": 172
+        },
+        {
+          "section_id": "70433",
+          "header": "Increase in threshold for requiring information reporting with respect to certain payees",
+          "page": 172
+        },
+        {
+          "section_id": "70434",
+          "header": "Treatment of certain qualified sound recording productions",
+          "page": 173
+        },
+        {
+          "section_id": "70435",
+          "header": "Exclusion of interest on loans secured by rural or agricultural real property",
+          "page": 174
+        },
+        {
+          "section_id": "70436",
+          "header": "Reduction of transfer and manufacturing taxes for certain devices",
+          "page": 176
+        },
+        {
+          "section_id": "70437",
+          "header": "Treatment of capital gains from the sale of certain farmland property",
+          "page": 177
+        },
+        {
+          "section_id": "70438",
+          "header": "Extension of rules for treatment of certain disaster-related personal casualty losses",
+          "page": 179
+        },
+        {
+          "section_id": "70439",
+          "header": "Restoration of taxable REIT subsidiary asset test",
+          "page": 179
+        },
+        {
+          "section_id": "70501",
+          "header": "Termination of previously-owned clean vehicle credit",
+          "page": 179
+        },
+        {
+          "section_id": "70502",
+          "header": "Termination of clean vehicle credit",
+          "page": 179
+        },
+        {
+          "section_id": "70503",
+          "header": "Termination of qualified commercial clean vehicles credit",
+          "page": 180
+        },
+        {
+          "section_id": "70504",
+          "header": "Termination of alternative fuel vehicle refueling property credit",
+          "page": 180
+        },
+        {
+          "section_id": "70505",
+          "header": "Termination of energy efficient home improvement credit",
+          "page": 180
+        },
+        {
+          "section_id": "70506",
+          "header": "Termination of residential clean energy credit",
+          "page": 180
+        },
+        {
+          "section_id": "70507",
+          "header": "Termination of energy efficient commercial buildings deduction",
+          "page": 180
+        },
+        {
+          "section_id": "70508",
+          "header": "Termination of new energy efficient home credit",
+          "page": 180
+        },
+        {
+          "section_id": "70509",
+          "header": "Termination of cost recovery for energy property",
+          "page": 180
+        },
+        {
+          "section_id": "70510",
+          "header": "Modifications of zero-emission nuclear power production credit",
+          "page": 181
+        },
+        {
+          "section_id": "70511",
+          "header": "Termination of clean hydrogen production credit",
+          "page": 181
+        },
+        {
+          "section_id": "70512",
+          "header": "Termination and restrictions on clean electricity production credit",
+          "page": 181
+        },
+        {
+          "section_id": "70513",
+          "header": "Termination and restrictions on clean electricity investment credit",
+          "page": 199
+        },
+        {
+          "section_id": "70514",
+          "header": "Phase-out and restrictions on advanced manufacturing production credit",
+          "page": 202
+        },
+        {
+          "section_id": "70515",
+          "header": "Restriction on the extension of advanced energy project credit program",
+          "page": 205
+        },
+        {
+          "section_id": "70521",
+          "header": "Extension and modification of clean fuel production credit",
+          "page": 205
+        },
+        {
+          "section_id": "70522",
+          "header": "Restrictions on carbon oxide sequestration credit",
+          "page": 208
+        },
+        {
+          "section_id": "70523",
+          "header": "Intangible drilling and development costs taken into account for purposes of computing adjusted financial statement income",
+          "page": 210
+        },
+        {
+          "section_id": "70524",
+          "header": "Income from hydrogen storage, carbon capture, advanced nuclear, hydropower, and geothermal energy added to qualifying income of certain publicly traded partnerships",
+          "page": 210
+        },
+        {
+          "section_id": "70525",
+          "header": "Allow for payments to certain individuals who dye fuel",
+          "page": 211
+        },
+        {
+          "section_id": "70601",
+          "header": "Modification and extension of limitation on excess business losses of noncorporate taxpayers",
+          "page": 212
+        },
+        {
+          "section_id": "70602",
+          "header": "Treatment of payments from partnerships to partners for property or services",
+          "page": 213
+        },
+        {
+          "section_id": "70603",
+          "header": "Excessive employee remuneration from controlled group members and allocation of deduction",
+          "page": 213
+        },
+        {
+          "section_id": "70604",
+          "header": "Excise tax on certain remittance transfers",
+          "page": 214
+        },
+        {
+          "section_id": "70605",
+          "header": "Enforcement provisions with respect to COVID-related employee retention credits",
+          "page": 215
+        },
+        {
+          "section_id": "70606",
+          "header": "Social security number requirement for American Opportunity and Lifetime Learning credits",
+          "page": 218
+        },
+        {
+          "section_id": "70607",
+          "header": "Task force on the replacement of Direct File",
+          "page": 218
+        },
+        {
+          "section_id": "71115",
+          "header": "Provider taxes",
+          "page": 230
+        },
+        {
+          "section_id": "71117",
+          "header": "Requirements regarding waiver of uniform tax requirement for Medicaid provider tax",
+          "page": 233
+        },
+        {
+          "section_id": "71301",
+          "header": "Permitting premium tax credit only for certain individuals",
+          "page": 250
+        },
+        {
+          "section_id": "71302",
+          "header": "Disallowing premium tax credit during periods of medicaid ineligibility due to alien status",
+          "page": 251
+        },
+        {
+          "section_id": "71303",
+          "header": "Requiring verification of eligibility for premium tax credit",
+          "page": 252
+        },
+        {
+          "section_id": "71304",
+          "header": "Disallowing premium tax credit in case of certain coverage enrolled in during special enrollment period",
+          "page": 253
+        },
+        {
+          "section_id": "71305",
+          "header": "Eliminating limitation on recapture of advance payment of premium tax credit",
+          "page": 253
+        },
+        {
+          "section_id": "71306",
+          "header": "Permanent extension of safe harbor for absence of deductible for telehealth services",
+          "page": 254
+        },
+        {
+          "section_id": "71307",
+          "header": "Allowance of bronze and catastrophic plans in connection with health savings accounts",
+          "page": 254
+        },
+        {
+          "section_id": "71308",
+          "header": "Treatment of direct primary care service arrangements",
+          "page": 254
+        }
+      ]
+    },
+    {
+      "name": "Environment/Climate",
+      "sections": [
+        {
+          "section_id": "10201",
+          "header": "Rescission of amounts for forestry",
+          "page": 14
+        },
+        {
+          "section_id": "10601",
+          "header": "Conservation",
+          "page": 36
+        },
+        {
+          "section_id": "30002",
+          "header": "Rescission of funds for Green and Resilient Retrofit Program for Multifamily Housing",
+          "page": 55
+        },
+        {
+          "section_id": "40006",
+          "header": "Corporate average fuel economy civil penalties",
+          "page": 65
+        },
+        {
+          "section_id": "40008",
+          "header": "Rescission of certain amounts for the National Oceanic and Atmospheric Administration",
+          "page": 65
+        },
+        {
+          "section_id": "40010",
+          "header": "Treatment of unobligated funds for alternative fuel and low-emission aviation technology",
+          "page": 66
+        },
+        {
+          "section_id": "50101",
+          "header": "Onshore oil and gas leasing",
+          "page": 66
+        },
+        {
+          "section_id": "50102",
+          "header": "Offshore oil and gas leasing",
+          "page": 68
+        },
+        {
+          "section_id": "50103",
+          "header": "Royalties on extracted methane",
+          "page": 71
+        },
+        {
+          "section_id": "50104",
+          "header": "Alaska oil and gas leasing",
+          "page": 71
+        },
+        {
+          "section_id": "50105",
+          "header": "National Petroleum Reserve–Alaska",
+          "page": 72
+        },
+        {
+          "section_id": "50201",
+          "header": "Coal leasing",
+          "page": 73
+        },
+        {
+          "section_id": "50202",
+          "header": "Coal royalty",
+          "page": 74
+        },
+        {
+          "section_id": "50203",
+          "header": "Leases for known recoverable coal resources",
+          "page": 75
+        },
+        {
+          "section_id": "50204",
+          "header": "Authorization to mine Federal coal",
+          "page": 75
+        },
+        {
+          "section_id": "50301",
+          "header": "Timber sales and long-term contracting for the Forest Service and the Bureau of Land Management",
+          "page": 75
+        },
+        {
+          "section_id": "50302",
+          "header": "Renewable energy fees on Federal land",
+          "page": 77
+        },
+        {
+          "section_id": "50303",
+          "header": "Renewable energy revenue sharing",
+          "page": 79
+        },
+        {
+          "section_id": "50304",
+          "header": "Rescission of National Park Service and Bureau of Land Management funds",
+          "page": 80
+        },
+        {
+          "section_id": "50402",
+          "header": "Repeals; rescissions",
+          "page": 81
+        },
+        {
+          "section_id": "60001",
+          "header": "Rescission of funding for clean heavy-duty vehicles",
+          "page": 83
+        },
+        {
+          "section_id": "60002",
+          "header": "Repeal of Greenhouse Gas Reduction Fund",
+          "page": 83
+        },
+        {
+          "section_id": "60003",
+          "header": "Rescission of funding for diesel emissions reductions",
+          "page": 84
+        },
+        {
+          "section_id": "60004",
+          "header": "Rescission of funding to address air pollution",
+          "page": 84
+        },
+        {
+          "section_id": "60005",
+          "header": "Rescission of funding to address air pollution at schools",
+          "page": 84
+        },
+        {
+          "section_id": "60006",
+          "header": "Rescission of funding for the low emissions electricity program",
+          "page": 84
+        },
+        {
+          "section_id": "60007",
+          "header": "Rescission of funding for section 211(o) of the Clean Air Act",
+          "page": 84
+        },
+        {
+          "section_id": "60008",
+          "header": "Rescission of funding for implementation of the American Innovation and Manufacturing Act",
+          "page": 84
+        },
+        {
+          "section_id": "60009",
+          "header": "Rescission of funding for enforcement technology and public information",
+          "page": 84
+        },
+        {
+          "section_id": "60010",
+          "header": "Rescission of funding for greenhouse gas corporate reporting",
+          "page": 84
+        },
+        {
+          "section_id": "60011",
+          "header": "Rescission of funding for environmental product declaration assistance",
+          "page": 84
+        },
+        {
+          "section_id": "60012",
+          "header": "Rescission of funding for methane emissions and waste reduction incentive program for petroleum and natural gas systems",
+          "page": 84
+        },
+        {
+          "section_id": "60013",
+          "header": "Rescission of funding for greenhouse gas air pollution plans and implementation grants",
+          "page": 85
+        },
+        {
+          "section_id": "60014",
+          "header": "Rescission of funding for environmental protection agency efficient, accurate, and timely reviews",
+          "page": 85
+        },
+        {
+          "section_id": "60015",
+          "header": "Rescission of funding for low-embodied carbon labeling for construction materials",
+          "page": 85
+        },
+        {
+          "section_id": "60016",
+          "header": "Rescission of funding for environmental and climate justice block grants",
+          "page": 85
+        },
+        {
+          "section_id": "60017",
+          "header": "Rescission of funding for ESA recovery plans",
+          "page": 85
+        },
+        {
+          "section_id": "60018",
+          "header": "Rescission of funding for environmental and climate data collection",
+          "page": 85
+        },
+        {
+          "section_id": "60020",
+          "header": "Rescission of funding for Federal building assistance",
+          "page": 85
+        },
+        {
+          "section_id": "60021",
+          "header": "Rescission of funding for low-carbon materials for Federal buildings",
+          "page": 85
+        },
+        {
+          "section_id": "60022",
+          "header": "Rescission of funding for GSA emerging and sustainable technologies",
+          "page": 85
+        },
+        {
+          "section_id": "60024",
+          "header": "Rescission of low-carbon transportation materials grants",
+          "page": 86
+        },
+        {
+          "section_id": "70501",
+          "header": "Termination of previously-owned clean vehicle credit",
+          "page": 179
+        },
+        {
+          "section_id": "70502",
+          "header": "Termination of clean vehicle credit",
+          "page": 179
+        },
+        {
+          "section_id": "70503",
+          "header": "Termination of qualified commercial clean vehicles credit",
+          "page": 180
+        },
+        {
+          "section_id": "70504",
+          "header": "Termination of alternative fuel vehicle refueling property credit",
+          "page": 180
+        },
+        {
+          "section_id": "70505",
+          "header": "Termination of energy efficient home improvement credit",
+          "page": 180
+        },
+        {
+          "section_id": "70506",
+          "header": "Termination of residential clean energy credit",
+          "page": 180
+        },
+        {
+          "section_id": "70507",
+          "header": "Termination of energy efficient commercial buildings deduction",
+          "page": 180
+        },
+        {
+          "section_id": "70508",
+          "header": "Termination of new energy efficient home credit",
+          "page": 180
+        },
+        {
+          "section_id": "70512",
+          "header": "Termination and restrictions on clean electricity production credit",
+          "page": 181
+        },
+        {
+          "section_id": "70513",
+          "header": "Termination and restrictions on clean electricity investment credit",
+          "page": 199
+        },
+        {
+          "section_id": "70522",
+          "header": "Restrictions on carbon oxide sequestration credit",
+          "page": 208
+        },
+        {
+          "section_id": "100204",
+          "header": "Claims relating to Manhattan Project waste",
+          "page": 327
+        }
+      ]
+    },
+    {
+      "name": "Health Care",
+      "sections": [
+        {
+          "section_id": "10107",
+          "header": "National education and obesity prevention grant program",
+          "page": 14
+        },
+        {
+          "section_id": "71101",
+          "header": "Moratorium on implementation of rule relating to eligibility and enrollment in Medicare Savings Programs",
+          "page": 219
+        },
+        {
+          "section_id": "71102",
+          "header": "Moratorium on implementation of rule relating to eligibility and enrollment for Medicaid, CHIP, and the Basic Health Program",
+          "page": 219
+        },
+        {
+          "section_id": "71103",
+          "header": "Reducing duplicate enrollment under the Medicaid and CHIP programs",
+          "page": 220
+        },
+        {
+          "section_id": "71104",
+          "header": "Ensuring deceased individuals do not remain enrolled",
+          "page": 222
+        },
+        {
+          "section_id": "71105",
+          "header": "Ensuring deceased providers do not remain enrolled",
+          "page": 223
+        },
+        {
+          "section_id": "71106",
+          "header": "Payment reduction related to certain erroneous excess payments under Medicaid",
+          "page": 224
+        },
+        {
+          "section_id": "71107",
+          "header": "Eligibility redeterminations",
+          "page": 224
+        },
+        {
+          "section_id": "71108",
+          "header": "Revising home equity limit for determining eligibility for long-term care services under the Medicaid program",
+          "page": 225
+        },
+        {
+          "section_id": "71109",
+          "header": "Alien Medicaid eligibility",
+          "page": 226
+        },
+        {
+          "section_id": "71110",
+          "header": "Expansion FMAP for emergency Medicaid",
+          "page": 227
+        },
+        {
+          "section_id": "71111",
+          "header": "Moratorium on implementation of rule relating to staffing standards for long-term care facilities under the Medicare and Medicaid programs",
+          "page": 227
+        },
+        {
+          "section_id": "71112",
+          "header": "Reducing State Medicaid costs",
+          "page": 227
+        },
+        {
+          "section_id": "71113",
+          "header": "Federal payments to prohibited entities",
+          "page": 229
+        },
+        {
+          "section_id": "71114",
+          "header": "Sunsetting increased FMAP incentive",
+          "page": 230
+        },
+        {
+          "section_id": "71115",
+          "header": "Provider taxes",
+          "page": 230
+        },
+        {
+          "section_id": "71116",
+          "header": "State directed payments",
+          "page": 232
+        },
+        {
+          "section_id": "71117",
+          "header": "Requirements regarding waiver of uniform tax requirement for Medicaid provider tax",
+          "page": 233
+        },
+        {
+          "section_id": "71118",
+          "header": "Requiring budget neutrality for Medicaid demonstration projects under section 1115",
+          "page": 235
+        },
+        {
+          "section_id": "71119",
+          "header": "Requirement for States to establish Medicaid community engagement requirements for certain individuals",
+          "page": 235
+        },
+        {
+          "section_id": "71120",
+          "header": "Modifying cost sharing requirements for certain expansion individuals under the Medicaid program",
+          "page": 244
+        },
+        {
+          "section_id": "71121",
+          "header": "Making certain adjustments to coverage of home or community-based services under Medicaid",
+          "page": 246
+        },
+        {
+          "section_id": "71201",
+          "header": "Limiting Medicare coverage of certain individuals",
+          "page": 248
+        },
+        {
+          "section_id": "71202",
+          "header": "Temporary payment increase under the medicare physician fee schedule to account for exceptional circumstances",
+          "page": 249
+        },
+        {
+          "section_id": "71203",
+          "header": "Expanding and clarifying the exclusion for orphan drugs under the Drug Price Negotiation Program",
+          "page": 249
+        },
+        {
+          "section_id": "71301",
+          "header": "Permitting premium tax credit only for certain individuals",
+          "page": 250
+        },
+        {
+          "section_id": "71302",
+          "header": "Disallowing premium tax credit during periods of medicaid ineligibility due to alien status",
+          "page": 251
+        },
+        {
+          "section_id": "71303",
+          "header": "Requiring verification of eligibility for premium tax credit",
+          "page": 252
+        },
+        {
+          "section_id": "71304",
+          "header": "Disallowing premium tax credit in case of certain coverage enrolled in during special enrollment period",
+          "page": 253
+        },
+        {
+          "section_id": "71305",
+          "header": "Eliminating limitation on recapture of advance payment of premium tax credit",
+          "page": 253
+        },
+        {
+          "section_id": "71306",
+          "header": "Permanent extension of safe harbor for absence of deductible for telehealth services",
+          "page": 254
+        },
+        {
+          "section_id": "71307",
+          "header": "Allowance of bronze and catastrophic plans in connection with health savings accounts",
+          "page": 254
+        },
+        {
+          "section_id": "71308",
+          "header": "Treatment of direct primary care service arrangements",
+          "page": 254
+        },
+        {
+          "section_id": "71401",
+          "header": "Rural Health Transformation Program",
+          "page": 256
+        },
+        {
+          "section_id": "90101",
+          "header": "FEHB improvements",
+          "page": 291
+        },
+        {
+          "section_id": "100201",
+          "header": "Extension of fund",
+          "page": 323
+        },
+        {
+          "section_id": "100202",
+          "header": "Claims relating to atmospheric testing",
+          "page": 323
+        },
+        {
+          "section_id": "100203",
+          "header": "Claims relating to uranium mining",
+          "page": 325
+        },
+        {
+          "section_id": "100204",
+          "header": "Claims relating to Manhattan Project waste",
+          "page": 327
+        },
+        {
+          "section_id": "100205",
+          "header": "Limitations on claims",
+          "page": 330
+        }
+      ]
+    },
+    {
+      "name": "Immigration",
+      "sections": [
+        {
+          "section_id": "10108",
+          "header": "Alien SNAP eligibility",
+          "page": 14
+        },
+        {
+          "section_id": "20011",
+          "header": "Improving Department of Defense border support and counter-drug missions",
+          "page": 54
+        },
+        {
+          "section_id": "70604",
+          "header": "Excise tax on certain remittance transfers",
+          "page": 214
+        },
+        {
+          "section_id": "71109",
+          "header": "Alien Medicaid eligibility",
+          "page": 226
+        },
+        {
+          "section_id": "71110",
+          "header": "Expansion FMAP for emergency Medicaid",
+          "page": 227
+        },
+        {
+          "section_id": "71201",
+          "header": "Limiting Medicare coverage of certain individuals",
+          "page": 248
+        },
+        {
+          "section_id": "71301",
+          "header": "Permitting premium tax credit only for certain individuals",
+          "page": 250
+        },
+        {
+          "section_id": "71302",
+          "header": "Disallowing premium tax credit during periods of medicaid ineligibility due to alien status",
+          "page": 251
+        },
+        {
+          "section_id": "83001",
+          "header": "Eligibility",
+          "page": 278
+        },
+        {
+          "section_id": "87001",
+          "header": "Potential sponsor vetting for unaccompanied alien children appropriation",
+          "page": 285
+        },
+        {
+          "section_id": "90001",
+          "header": "Border infrastructure and wall system",
+          "page": 286
+        },
+        {
+          "section_id": "90002",
+          "header": "U.S. Customs and Border Protection personnel, fleet vehicles, and facilities",
+          "page": 287
+        },
+        {
+          "section_id": "90003",
+          "header": "Detention capacity",
+          "page": 287
+        },
+        {
+          "section_id": "90004",
+          "header": "Border security, technology, and screening",
+          "page": 288
+        },
+        {
+          "section_id": "90007",
+          "header": "Department of Homeland Security appropriations for border support",
+          "page": 290
+        },
+        {
+          "section_id": "100001",
+          "header": "Applicability of the immigration laws",
+          "page": 293
+        },
+        {
+          "section_id": "100002",
+          "header": "Asylum fee",
+          "page": 293
+        },
+        {
+          "section_id": "100003",
+          "header": "Employment authorization document fees",
+          "page": 294
+        },
+        {
+          "section_id": "100004",
+          "header": "Immigration parole fee",
+          "page": 296
+        },
+        {
+          "section_id": "100005",
+          "header": "Special immigrant juvenile fee",
+          "page": 297
+        },
+        {
+          "section_id": "100006",
+          "header": "Temporary protected status fee",
+          "page": 298
+        },
+        {
+          "section_id": "100007",
+          "header": "Visa integrity fee",
+          "page": 299
+        },
+        {
+          "section_id": "100008",
+          "header": "Form I–94 fee",
+          "page": 299
+        },
+        {
+          "section_id": "100009",
+          "header": "Annual asylum fee",
+          "page": 300
+        },
+        {
+          "section_id": "100010",
+          "header": "Fee relating to renewal and extension of employment authorization for parolees",
+          "page": 301
+        },
+        {
+          "section_id": "100011",
+          "header": "Fee relating to renewal or extension of employment authorization for asylum applicants",
+          "page": 301
+        },
+        {
+          "section_id": "100012",
+          "header": "Fee relating to renewal and extension of employment authorization for aliens granted temporary protected status",
+          "page": 302
+        },
+        {
+          "section_id": "100013",
+          "header": "Fees relating to applications for adjustment of status",
+          "page": 303
+        },
+        {
+          "section_id": "100014",
+          "header": "Electronic System for Travel Authorization fee",
+          "page": 311
+        },
+        {
+          "section_id": "100015",
+          "header": "Electronic Visa Update System fee",
+          "page": 311
+        },
+        {
+          "section_id": "100016",
+          "header": "Fee for aliens ordered removed in absentia",
+          "page": 313
+        },
+        {
+          "section_id": "100017",
+          "header": "Inadmissible alien apprehension fee",
+          "page": 313
+        },
+        {
+          "section_id": "100018",
+          "header": "Amendment to authority to apply for asylum",
+          "page": 314
+        },
+        {
+          "section_id": "100051",
+          "header": "Appropriation for the Department of Homeland Security",
+          "page": 314
+        },
+        {
+          "section_id": "100052",
+          "header": "Appropriation for U.S. Immigration and Customs Enforcement",
+          "page": 316
+        },
+        {
+          "section_id": "100054",
+          "header": "Appropriation for the Department of Justice",
+          "page": 318
+        },
+        {
+          "section_id": "100055",
+          "header": "Bridging Immigration-related Deficits Experienced Nationwide Reimbursement Fund",
+          "page": 321
+        }
+      ]
+    },
+    {
+      "name": "Agriculture",
+      "sections": [
+        {
+          "section_id": "10201",
+          "header": "Rescission of amounts for forestry",
+          "page": 14
+        },
+        {
+          "section_id": "10301",
+          "header": "Effective reference price; reference price",
+          "page": 15
+        },
+        {
+          "section_id": "10302",
+          "header": "Base acres",
+          "page": 15
+        },
+        {
+          "section_id": "10303",
+          "header": "Producer election",
+          "page": 18
+        },
+        {
+          "section_id": "10304",
+          "header": "Price loss coverage",
+          "page": 19
+        },
+        {
+          "section_id": "10305",
+          "header": "Agriculture risk coverage",
+          "page": 19
+        },
+        {
+          "section_id": "10306",
+          "header": "Equitable treatment of certain entities",
+          "page": 20
+        },
+        {
+          "section_id": "10307",
+          "header": "Payment limitations",
+          "page": 21
+        },
+        {
+          "section_id": "10308",
+          "header": "Adjusted gross income limitation",
+          "page": 21
+        },
+        {
+          "section_id": "10309",
+          "header": "Marketing loans",
+          "page": 22
+        },
+        {
+          "section_id": "10310",
+          "header": "Repayment of marketing loans",
+          "page": 23
+        },
+        {
+          "section_id": "10311",
+          "header": "Economic adjustment assistance for textile mills",
+          "page": 25
+        },
+        {
+          "section_id": "10312",
+          "header": "Sugar program updates",
+          "page": 25
+        },
+        {
+          "section_id": "10313",
+          "header": "Dairy policy updates",
+          "page": 28
+        },
+        {
+          "section_id": "10314",
+          "header": "Implementation",
+          "page": 29
+        },
+        {
+          "section_id": "10401",
+          "header": "Supplemental agricultural disaster assistance",
+          "page": 30
+        },
+        {
+          "section_id": "10501",
+          "header": "Beginning farmer and rancher benefit",
+          "page": 32
+        },
+        {
+          "section_id": "10502",
+          "header": "Area-based crop insurance coverage and affordability",
+          "page": 33
+        },
+        {
+          "section_id": "10503",
+          "header": "Administrative and operating expense adjustments",
+          "page": 33
+        },
+        {
+          "section_id": "10504",
+          "header": "Premium support",
+          "page": 35
+        },
+        {
+          "section_id": "10505",
+          "header": "Program compliance and integrity",
+          "page": 35
+        },
+        {
+          "section_id": "10506",
+          "header": "Reviews, compliance, and integrity",
+          "page": 35
+        },
+        {
+          "section_id": "10507",
+          "header": "Poultry insurance pilot program",
+          "page": 35
+        },
+        {
+          "section_id": "10601",
+          "header": "Conservation",
+          "page": 36
+        },
+        {
+          "section_id": "10602",
+          "header": "Supplemental agricultural trade promotion program",
+          "page": 37
+        },
+        {
+          "section_id": "10603",
+          "header": "Nutrition",
+          "page": 37
+        },
+        {
+          "section_id": "10604",
+          "header": "Research",
+          "page": 38
+        },
+        {
+          "section_id": "10605",
+          "header": "Energy",
+          "page": 38
+        },
+        {
+          "section_id": "10606",
+          "header": "Horticulture",
+          "page": 39
+        },
+        {
+          "section_id": "10607",
+          "header": "Miscellaneous",
+          "page": 39
+        },
+        {
+          "section_id": "50301",
+          "header": "Timber sales and long-term contracting for the Forest Service and the Bureau of Land Management",
+          "page": 75
+        },
+        {
+          "section_id": "50501",
+          "header": "Water conveyance and surface water storage enhancement",
+          "page": 83
+        },
+        {
+          "section_id": "70428",
+          "header": "Nonprofit community development activities in remote native villages",
+          "page": 167
+        },
+        {
+          "section_id": "70435",
+          "header": "Exclusion of interest on loans secured by rural or agricultural real property",
+          "page": 174
+        },
+        {
+          "section_id": "70437",
+          "header": "Treatment of capital gains from the sale of certain farmland property",
+          "page": 177
+        },
+        {
+          "section_id": "70521",
+          "header": "Extension and modification of clean fuel production credit",
+          "page": 205
+        },
+        {
+          "section_id": "80001",
+          "header": "Exemption of certain assets",
+          "page": 262
+        }
+      ]
+    },
+    {
+      "name": "Energy",
+      "sections": [
+        {
+          "section_id": "10605",
+          "header": "Energy",
+          "page": 38
+        },
+        {
+          "section_id": "40006",
+          "header": "Corporate average fuel economy civil penalties",
+          "page": 65
+        },
+        {
+          "section_id": "50101",
+          "header": "Onshore oil and gas leasing",
+          "page": 66
+        },
+        {
+          "section_id": "50102",
+          "header": "Offshore oil and gas leasing",
+          "page": 68
+        },
+        {
+          "section_id": "50103",
+          "header": "Royalties on extracted methane",
+          "page": 71
+        },
+        {
+          "section_id": "50104",
+          "header": "Alaska oil and gas leasing",
+          "page": 71
+        },
+        {
+          "section_id": "50105",
+          "header": "National Petroleum Reserve–Alaska",
+          "page": 72
+        },
+        {
+          "section_id": "50201",
+          "header": "Coal leasing",
+          "page": 73
+        },
+        {
+          "section_id": "50202",
+          "header": "Coal royalty",
+          "page": 74
+        },
+        {
+          "section_id": "50203",
+          "header": "Leases for known recoverable coal resources",
+          "page": 75
+        },
+        {
+          "section_id": "50204",
+          "header": "Authorization to mine Federal coal",
+          "page": 75
+        },
+        {
+          "section_id": "50302",
+          "header": "Renewable energy fees on Federal land",
+          "page": 77
+        },
+        {
+          "section_id": "50303",
+          "header": "Renewable energy revenue sharing",
+          "page": 79
+        },
+        {
+          "section_id": "50401",
+          "header": "Strategic Petroleum Reserve",
+          "page": 81
+        },
+        {
+          "section_id": "50402",
+          "header": "Repeals; rescissions",
+          "page": 81
+        },
+        {
+          "section_id": "50403",
+          "header": "Energy dominance financing",
+          "page": 81
+        },
+        {
+          "section_id": "60006",
+          "header": "Rescission of funding for the low emissions electricity program",
+          "page": 84
+        },
+        {
+          "section_id": "60007",
+          "header": "Rescission of funding for section 211(o) of the Clean Air Act",
+          "page": 84
+        },
+        {
+          "section_id": "60012",
+          "header": "Rescission of funding for methane emissions and waste reduction incentive program for petroleum and natural gas systems",
+          "page": 84
+        },
+        {
+          "section_id": "70506",
+          "header": "Termination of residential clean energy credit",
+          "page": 180
+        },
+        {
+          "section_id": "70509",
+          "header": "Termination of cost recovery for energy property",
+          "page": 180
+        },
+        {
+          "section_id": "70510",
+          "header": "Modifications of zero-emission nuclear power production credit",
+          "page": 181
+        },
+        {
+          "section_id": "70511",
+          "header": "Termination of clean hydrogen production credit",
+          "page": 181
+        },
+        {
+          "section_id": "70512",
+          "header": "Termination and restrictions on clean electricity production credit",
+          "page": 181
+        },
+        {
+          "section_id": "70513",
+          "header": "Termination and restrictions on clean electricity investment credit",
+          "page": 199
+        },
+        {
+          "section_id": "70514",
+          "header": "Phase-out and restrictions on advanced manufacturing production credit",
+          "page": 202
+        },
+        {
+          "section_id": "70515",
+          "header": "Restriction on the extension of advanced energy project credit program",
+          "page": 205
+        },
+        {
+          "section_id": "70521",
+          "header": "Extension and modification of clean fuel production credit",
+          "page": 205
+        },
+        {
+          "section_id": "70523",
+          "header": "Intangible drilling and development costs taken into account for purposes of computing adjusted financial statement income",
+          "page": 210
+        },
+        {
+          "section_id": "70524",
+          "header": "Income from hydrogen storage, carbon capture, advanced nuclear, hydropower, and geothermal energy added to qualifying income of certain publicly traded partnerships",
+          "page": 210
+        }
+      ]
+    },
+    {
+      "name": "Education & Student Loans",
+      "sections": [
+        {
+          "section_id": "60005",
+          "header": "Rescission of funding to address air pollution at schools",
+          "page": 84
+        },
+        {
+          "section_id": "70110",
+          "header": "Termination of miscellaneous itemized deductions other than educator expenses",
+          "page": 93
+        },
+        {
+          "section_id": "70119",
+          "header": "Extension and modification of exclusion from gross income of student loans discharged on account of death or disability",
+          "page": 97
+        },
+        {
+          "section_id": "70411",
+          "header": "Tax credit for contributions of individuals to scholarship granting organizations",
+          "page": 144
+        },
+        {
+          "section_id": "70412",
+          "header": "Exclusion for employer payments of student loans",
+          "page": 147
+        },
+        {
+          "section_id": "70413",
+          "header": "Additional expenses treated as qualified higher education expenses for purposes of 529 accounts",
+          "page": 147
+        },
+        {
+          "section_id": "70414",
+          "header": "Certain postsecondary credentialing expenses treated as qualified higher education expenses for purposes of 529 accounts",
+          "page": 148
+        },
+        {
+          "section_id": "70415",
+          "header": "Modification of excise tax on investment income of certain private colleges and universities",
+          "page": 150
+        },
+        {
+          "section_id": "70606",
+          "header": "Social security number requirement for American Opportunity and Lifetime Learning credits",
+          "page": 218
+        },
+        {
+          "section_id": "80001",
+          "header": "Exemption of certain assets",
+          "page": 262
+        },
+        {
+          "section_id": "81001",
+          "header": "Establishment of loan limits for graduate and professional students and parent borrowers; termination of graduate and professional PLUS loans",
+          "page": 263
+        },
+        {
+          "section_id": "82001",
+          "header": "Loan repayment",
+          "page": 266
+        },
+        {
+          "section_id": "82002",
+          "header": "Deferment; forbearance",
+          "page": 277
+        },
+        {
+          "section_id": "82003",
+          "header": "Loan rehabilitation",
+          "page": 277
+        },
+        {
+          "section_id": "82004",
+          "header": "Public service loan forgiveness",
+          "page": 277
+        },
+        {
+          "section_id": "82005",
+          "header": "Student loan servicing",
+          "page": 278
+        },
+        {
+          "section_id": "83001",
+          "header": "Eligibility",
+          "page": 278
+        },
+        {
+          "section_id": "83002",
+          "header": "Workforce Pell Grants",
+          "page": 279
+        },
+        {
+          "section_id": "83003",
+          "header": "Pell shortfall",
+          "page": 282
+        },
+        {
+          "section_id": "83004",
+          "header": "Federal Pell Grant exclusion relating to other grant aid",
+          "page": 282
+        },
+        {
+          "section_id": "84001",
+          "header": "Ineligibility based on low earning outcomes",
+          "page": 282
+        },
+        {
+          "section_id": "85001",
+          "header": "Delay of rule relating to borrower defense to repayment",
+          "page": 284
+        },
+        {
+          "section_id": "85002",
+          "header": "Delay of rule relating to closed school discharges",
+          "page": 285
+        }
+      ]
+    },
+    {
+      "name": "Defense & National Security",
+      "sections": [
+        {
+          "section_id": "20001",
+          "header": "Enhancement of Department of Defense resources for improving the quality of life for military personnel",
+          "page": 41
+        },
+        {
+          "section_id": "20002",
+          "header": "Enhancement of Department of Defense resources for shipbuilding",
+          "page": 42
+        },
+        {
+          "section_id": "20003",
+          "header": "Enhancement of Department of Defense resources for integrated air and missile defense",
+          "page": 44
+        },
+        {
+          "section_id": "20004",
+          "header": "Enhancement of Department of Defense resources for munitions and defense supply chain resiliency",
+          "page": 44
+        },
+        {
+          "section_id": "20005",
+          "header": "Enhancement of Department of Defense resources for scaling low-cost weapons into production",
+          "page": 48
+        },
+        {
+          "section_id": "20006",
+          "header": "Enhancement of Department of Defense resources for improving the efficiency and cybersecurity of the Department of Defense",
+          "page": 49
+        },
+        {
+          "section_id": "20007",
+          "header": "Enhancement of Department of Defense resources for air superiority",
+          "page": 50
+        },
+        {
+          "section_id": "20008",
+          "header": "Enhancement of resources for nuclear forces",
+          "page": 50
+        },
+        {
+          "section_id": "20009",
+          "header": "Enhancement of Department of Defense resources to improve capabilities of United States Indo-Pacific Command",
+          "page": 52
+        },
+        {
+          "section_id": "20010",
+          "header": "Enhancement of Department of Defense resources for improving the readiness of the Department of Defense",
+          "page": 53
+        },
+        {
+          "section_id": "20011",
+          "header": "Improving Department of Defense border support and counter-drug missions",
+          "page": 54
+        },
+        {
+          "section_id": "20012",
+          "header": "Department of Defense oversight",
+          "page": 54
+        },
+        {
+          "section_id": "20013",
+          "header": "Military construction projects authorized",
+          "page": 54
+        },
+        {
+          "section_id": "30004",
+          "header": "Appropriations for Defense Production Act",
+          "page": 55
+        },
+        {
+          "section_id": "40001",
+          "header": "Coast Guard mission readiness",
+          "page": 56
+        },
+        {
+          "section_id": "50401",
+          "header": "Strategic Petroleum Reserve",
+          "page": 81
+        },
+        {
+          "section_id": "70118",
+          "header": "Extension of treatment of certain individuals performing services in the Sinai Peninsula and enhancement to include additional areas",
+          "page": 96
+        },
+        {
+          "section_id": "90004",
+          "header": "Border security, technology, and screening",
+          "page": 288
+        },
+        {
+          "section_id": "90005",
+          "header": "State and local assistance",
+          "page": 288
+        },
+        {
+          "section_id": "90007",
+          "header": "Department of Homeland Security appropriations for border support",
+          "page": 290
+        },
+        {
+          "section_id": "100057",
+          "header": "Appropriation for the United States Secret Service",
+          "page": 322
+        }
+      ]
+    },
+    {
+      "name": "Small Business",
+      "sections": [
+        {
+          "section_id": "10507",
+          "header": "Poultry insurance pilot program",
+          "page": 35
+        },
+        {
+          "section_id": "70105",
+          "header": "Extension and enhancement of deduction for qualified business income",
+          "page": 90
+        },
+        {
+          "section_id": "70301",
+          "header": "Full expensing for certain business property",
+          "page": 117
+        },
+        {
+          "section_id": "70302",
+          "header": "Full expensing of domestic research and experimental expenditures",
+          "page": 119
+        },
+        {
+          "section_id": "70303",
+          "header": "Modification of limitation on business interest",
+          "page": 124
+        },
+        {
+          "section_id": "70305",
+          "header": "Exceptions from limitations on deduction for business meals",
+          "page": 126
+        },
+        {
+          "section_id": "70306",
+          "header": "Increased dollar limitations for expensing of certain depreciable business assets",
+          "page": 126
+        },
+        {
+          "section_id": "70307",
+          "header": "Special depreciation allowance for qualified production property",
+          "page": 127
+        },
+        {
+          "section_id": "70308",
+          "header": "Enhancement of advanced manufacturing investment credit",
+          "page": 130
+        },
+        {
+          "section_id": "70423",
+          "header": "Permanent extension of new markets tax credit",
+          "page": 164
+        },
+        {
+          "section_id": "70430",
+          "header": "Exception to percentage of completion method of accounting for certain residential construction contracts",
+          "page": 168
+        },
+        {
+          "section_id": "70431",
+          "header": "Expansion of qualified small business stock gain exclusion",
+          "page": 169
+        },
+        {
+          "section_id": "70601",
+          "header": "Modification and extension of limitation on excess business losses of noncorporate taxpayers",
+          "page": 212
+        },
+        {
+          "section_id": "80001",
+          "header": "Exemption of certain assets",
+          "page": 262
+        }
+      ]
+    },
+    {
+      "name": "Government Reform",
+      "sections": [
+        {
+          "section_id": "20006",
+          "header": "Enhancement of Department of Defense resources for improving the efficiency and cybersecurity of the Department of Defense",
+          "page": 49
+        },
+        {
+          "section_id": "20012",
+          "header": "Department of Defense oversight",
+          "page": 54
+        },
+        {
+          "section_id": "30001",
+          "header": "Funding cap for the Bureau of Consumer Financial Protection",
+          "page": 55
+        },
+        {
+          "section_id": "30003",
+          "header": "Securities and Exchange Commission Reserve Fund",
+          "page": 55
+        },
+        {
+          "section_id": "60014",
+          "header": "Rescission of funding for environmental protection agency efficient, accurate, and timely reviews",
+          "page": 85
+        },
+        {
+          "section_id": "60022",
+          "header": "Rescission of funding for GSA emerging and sustainable technologies",
+          "page": 85
+        },
+        {
+          "section_id": "60026",
+          "header": "Project sponsor opt-in fees for environmental reviews",
+          "page": 86
+        },
+        {
+          "section_id": "72001",
+          "header": "Modification of limitation on the public debt",
+          "page": 261
+        },
+        {
+          "section_id": "90101",
+          "header": "FEHB improvements",
+          "page": 291
+        },
+        {
+          "section_id": "90102",
+          "header": "Pandemic Response Accountability Committee",
+          "page": 292
+        },
+        {
+          "section_id": "90103",
+          "header": "Appropriation for the Office of Management and Budget",
+          "page": 292
+        },
+        {
+          "section_id": "100101",
+          "header": "Appropriation to the Administrative Office of the United States Courts",
+          "page": 323
+        },
+        {
+          "section_id": "100102",
+          "header": "Appropriation to the Federal Judicial Center",
+          "page": 323
+        }
+      ]
+    },
+    {
+      "name": "Public Safety",
+      "sections": [
+        {
+          "section_id": "40001",
+          "header": "Coast Guard mission readiness",
+          "page": 56
+        },
+        {
+          "section_id": "90001",
+          "header": "Border infrastructure and wall system",
+          "page": 286
+        },
+        {
+          "section_id": "90002",
+          "header": "U.S. Customs and Border Protection personnel, fleet vehicles, and facilities",
+          "page": 287
+        },
+        {
+          "section_id": "90005",
+          "header": "State and local assistance",
+          "page": 288
+        },
+        {
+          "section_id": "90006",
+          "header": "Presidential residence protection",
+          "page": 290
+        },
+        {
+          "section_id": "100017",
+          "header": "Inadmissible alien apprehension fee",
+          "page": 313
+        },
+        {
+          "section_id": "100051",
+          "header": "Appropriation for the Department of Homeland Security",
+          "page": 314
+        },
+        {
+          "section_id": "100052",
+          "header": "Appropriation for U.S. Immigration and Customs Enforcement",
+          "page": 316
+        },
+        {
+          "section_id": "100053",
+          "header": "Appropriation for Federal Law Enforcement Training Centers",
+          "page": 318
+        },
+        {
+          "section_id": "100054",
+          "header": "Appropriation for the Department of Justice",
+          "page": 318
+        },
+        {
+          "section_id": "100055",
+          "header": "Bridging Immigration-related Deficits Experienced Nationwide Reimbursement Fund",
+          "page": 321
+        },
+        {
+          "section_id": "100056",
+          "header": "Appropriation for the Bureau of Prisons",
+          "page": 321
+        },
+        {
+          "section_id": "100057",
+          "header": "Appropriation for the United States Secret Service",
+          "page": 322
+        }
+      ]
+    },
+    {
+      "name": "Transportation & Infrastructure",
+      "sections": [
+        {
+          "section_id": "40003",
+          "header": "Air traffic control improvements",
+          "page": 60
+        },
+        {
+          "section_id": "40004",
+          "header": "Space launch and reentry licensing and permitting user fees",
+          "page": 61
+        },
+        {
+          "section_id": "40007",
+          "header": "Payments for lease of Metropolitan Washington Airports",
+          "page": 65
+        },
+        {
+          "section_id": "40010",
+          "header": "Treatment of unobligated funds for alternative fuel and low-emission aviation technology",
+          "page": 66
+        },
+        {
+          "section_id": "50501",
+          "header": "Water conveyance and surface water storage enhancement",
+          "page": 83
+        },
+        {
+          "section_id": "60001",
+          "header": "Rescission of funding for clean heavy-duty vehicles",
+          "page": 83
+        },
+        {
+          "section_id": "60019",
+          "header": "Rescission of neighborhood access and equity grant program",
+          "page": 85
+        },
+        {
+          "section_id": "60023",
+          "header": "Rescission of environmental review implementation funds",
+          "page": 86
+        },
+        {
+          "section_id": "60024",
+          "header": "Rescission of low-carbon transportation materials grants",
+          "page": 86
+        },
+        {
+          "section_id": "60026",
+          "header": "Project sponsor opt-in fees for environmental reviews",
+          "page": 86
+        },
+        {
+          "section_id": "70112",
+          "header": "Extension and modification of qualified transportation fringe benefits",
+          "page": 94
+        },
+        {
+          "section_id": "70309",
+          "header": "Spaceports are treated like airports under exempt facility bond rules",
+          "page": 130
+        },
+        {
+          "section_id": "70525",
+          "header": "Allow for payments to certain individuals who dye fuel",
+          "page": 211
+        }
+      ]
+    },
+    {
+      "name": "Families & Children",
+      "sections": [
+        {
+          "section_id": "70104",
+          "header": "Extension and enhancement of increased child tax credit",
+          "page": 89
+        },
+        {
+          "section_id": "70115",
+          "header": "Extension and enhancement of increased limitation on contributions to ABLE accounts",
+          "page": 95
+        },
+        {
+          "section_id": "70116",
+          "header": "Extension and enhancement of savers credit allowed for ABLE contributions",
+          "page": 95
+        },
+        {
+          "section_id": "70117",
+          "header": "Extension of rollovers from qualified tuition programs to ABLE accounts permitted",
+          "page": 96
+        },
+        {
+          "section_id": "70204",
+          "header": "Trump accounts and contribution pilot program",
+          "page": 108
+        },
+        {
+          "section_id": "70304",
+          "header": "Extension and enhancement of paid family and medical leave credit",
+          "page": 124
+        },
+        {
+          "section_id": "70401",
+          "header": "Enhancement of employer-provided child care credit",
+          "page": 141
+        },
+        {
+          "section_id": "70402",
+          "header": "Enhancement of adoption credit",
+          "page": 142
+        },
+        {
+          "section_id": "70403",
+          "header": "Recognizing Indian tribal governments for purposes of determining whether a child has special needs for purposes of the adoption credit",
+          "page": 143
+        },
+        {
+          "section_id": "70404",
+          "header": "Enhancement of the dependent care assistance program",
+          "page": 143
+        },
+        {
+          "section_id": "70405",
+          "header": "Enhancement of child and dependent care tax credit",
+          "page": 143
+        },
+        {
+          "section_id": "87001",
+          "header": "Potential sponsor vetting for unaccompanied alien children appropriation",
+          "page": 285
+        }
+      ]
+    },
+    {
+      "name": "Food & Income Assistance",
+      "sections": [
+        {
+          "section_id": "10101",
+          "header": "Re-evaluation of thrifty food plan",
+          "page": 9
+        },
+        {
+          "section_id": "10102",
+          "header": "Modifications to SNAP work requirements for able-bodied adults",
+          "page": 10
+        },
+        {
+          "section_id": "10103",
+          "header": "Availability of standard utility allowances based on receipt of energy assistance",
+          "page": 12
+        },
+        {
+          "section_id": "10104",
+          "header": "Restrictions on internet expenses",
+          "page": 12
+        },
+        {
+          "section_id": "10105",
+          "header": "Matching funds requirements",
+          "page": 12
+        },
+        {
+          "section_id": "10106",
+          "header": "Administrative cost sharing",
+          "page": 14
+        },
+        {
+          "section_id": "10107",
+          "header": "National education and obesity prevention grant program",
+          "page": 14
+        },
+        {
+          "section_id": "10108",
+          "header": "Alien SNAP eligibility",
+          "page": 14
+        },
+        {
+          "section_id": "10603",
+          "header": "Nutrition",
+          "page": 37
+        },
+        {
+          "section_id": "71119",
+          "header": "Requirement for States to establish Medicaid community engagement requirements for certain individuals",
+          "page": 235
+        }
+      ]
+    },
+    {
+      "name": "Trade",
+      "sections": [
+        {
+          "section_id": "10311",
+          "header": "Economic adjustment assistance for textile mills",
+          "page": 25
+        },
+        {
+          "section_id": "10312",
+          "header": "Sugar program updates",
+          "page": 25
+        },
+        {
+          "section_id": "10602",
+          "header": "Supplemental agricultural trade promotion program",
+          "page": 37
+        },
+        {
+          "section_id": "70311",
+          "header": "Modifications related to foreign tax credit limitation",
+          "page": 131
+        },
+        {
+          "section_id": "70312",
+          "header": "Modifications to determination of deemed paid credit for taxes properly attributable to tested income",
+          "page": 132
+        },
+        {
+          "section_id": "70313",
+          "header": "Sourcing certain income from the sale of inventory produced in the United States",
+          "page": 132
+        },
+        {
+          "section_id": "70321",
+          "header": "Modification of deduction for foreign-derived deduction eligible income and net CFC tested income",
+          "page": 133
+        },
+        {
+          "section_id": "70322",
+          "header": "Determination of deduction eligible income",
+          "page": 133
+        },
+        {
+          "section_id": "70427",
+          "header": "Permanent increase in limitation on cover over of tax on distilled spirits",
+          "page": 167
+        },
+        {
+          "section_id": "70531",
+          "header": "Modifications to de minimis entry privilege for commercial shipments",
+          "page": 212
+        }
+      ]
+    },
+    {
+      "name": "Labor & Jobs",
+      "sections": [
+        {
+          "section_id": "10102",
+          "header": "Modifications to SNAP work requirements for able-bodied adults",
+          "page": 10
+        },
+        {
+          "section_id": "70201",
+          "header": "No tax on tips",
+          "page": 99
+        },
+        {
+          "section_id": "70202",
+          "header": "No tax on overtime",
+          "page": 103
+        },
+        {
+          "section_id": "70304",
+          "header": "Extension and enhancement of paid family and medical leave credit",
+          "page": 124
+        },
+        {
+          "section_id": "73001",
+          "header": "Ending unemployment payments to jobless millionaires",
+          "page": 261
+        },
+        {
+          "section_id": "83002",
+          "header": "Workforce Pell Grants",
+          "page": 279
+        }
+      ]
+    },
+    {
+      "name": "Seniors & Social Security",
+      "sections": [
+        {
+          "section_id": "70103",
+          "header": "Termination of deduction for personal exemptions other than temporary senior deduction",
+          "page": 88
+        },
+        {
+          "section_id": "71108",
+          "header": "Revising home equity limit for determining eligibility for long-term care services under the Medicaid program",
+          "page": 225
+        },
+        {
+          "section_id": "71111",
+          "header": "Moratorium on implementation of rule relating to staffing standards for long-term care facilities under the Medicare and Medicaid programs",
+          "page": 227
+        },
+        {
+          "section_id": "71121",
+          "header": "Making certain adjustments to coverage of home or community-based services under Medicaid",
+          "page": 246
+        },
+        {
+          "section_id": "71202",
+          "header": "Temporary payment increase under the medicare physician fee schedule to account for exceptional circumstances",
+          "page": 249
+        }
+      ]
+    },
+    {
+      "name": "AI & Technology",
+      "sections": [
+        {
+          "section_id": "40002",
+          "header": "Spectrum auctions",
+          "page": 57
+        },
+        {
+          "section_id": "40011",
+          "header": "Rescission of amounts appropriated to Public Wireless Supply Chain Innovation Fund",
+          "page": 66
+        },
+        {
+          "section_id": "50404",
+          "header": "Transformational artificial intelligence models",
+          "page": 82
+        },
+        {
+          "section_id": "90004",
+          "header": "Border security, technology, and screening",
+          "page": 288
+        }
+      ]
+    },
+    {
+      "name": "Housing",
+      "sections": [
+        {
+          "section_id": "30002",
+          "header": "Rescission of funds for Green and Resilient Retrofit Program for Multifamily Housing",
+          "page": 55
+        },
+        {
+          "section_id": "70108",
+          "header": "Extension and modification of limitation on deduction for qualified residence interest",
+          "page": 92
+        },
+        {
+          "section_id": "70422",
+          "header": "Permanent enhancement of low-income housing tax credit",
+          "page": 163
+        }
+      ]
+    },
+    {
+      "name": "Foreign Policy",
+      "sections": [
+        {
+          "section_id": "20009",
+          "header": "Enhancement of Department of Defense resources to improve capabilities of United States Indo-Pacific Command",
+          "page": 52
+        },
+        {
+          "section_id": "70522",
+          "header": "Restrictions on carbon oxide sequestration credit",
+          "page": 208
+        }
+      ]
+    },
+    {
+      "name": "Life Sciences & Biology",
+      "sections": [
+        {
+          "section_id": "10604",
+          "header": "Research",
+          "page": 38
+        }
+      ]
+    },
+    {
+      "name": "Gun Control",
+      "sections": [
+        {
+          "section_id": "70436",
+          "header": "Reduction of transfer and manufacturing taxes for certain devices",
+          "page": 176
+        }
+      ]
+    },
+    {
+      "name": "Other",
+      "sections": [
+        {
+          "section_id": "40005",
+          "header": "Mars missions, Artemis missions, and Moon to Mars program",
+          "page": 62
+        },
+        {
+          "section_id": "40009",
+          "header": "Reduction in annual transfers to Travel Promotion Fund",
+          "page": 65
+        },
+        {
+          "section_id": "50305",
+          "header": "Celebrating America's 250th anniversary",
+          "page": 81
+        },
+        {
+          "section_id": "60025",
+          "header": "John F. Kennedy Center for the Performing Arts",
+          "page": 86
+        },
+        {
+          "section_id": "86001",
+          "header": "Garden of Heroes",
+          "page": 285
+        }
+      ]
+    }
+  ]
 }

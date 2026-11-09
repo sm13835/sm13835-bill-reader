@@ -60,6 +60,18 @@
     .district.ind { fill: #dedede; }
     .map-label { font-size: 44px; font-weight: 700; fill: var(--text); text-anchor: middle; dominant-baseline: middle; }
     .sources a { font-size: 12px; white-space: nowrap; margin-right: 6px; }
+    .filter { margin-top: 24px; }
+    .filter-label { font-size: 14px; font-weight: 700; color: var(--accent); margin-bottom: 8px; }
+    .filter-row { display: flex; flex-wrap: wrap; gap: 8px; }
+    .filter-btn { font: inherit; font-size: 13px; min-height: 32px; padding: 4px 12px; border-radius: 999px; cursor: pointer;
+      background: var(--card); color: var(--text); border: 1px solid var(--border); }
+    .filter-btn:hover { border-color: var(--accent); }
+    .filter-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .filter-btn.no-findings { color: var(--muted); border-style: dashed; }
+    .filter-btn[aria-pressed="true"] { background: var(--accent); color: #fff; border: 1px solid var(--accent); }
+    .filter-note { margin-top: 12px; }
+    .filter-note ul { margin: 8px 0 0; padding-left: 20px; }
+    .filter-note li { margin-bottom: 4px; }
   </style>
 </head>
 <body>
@@ -69,8 +81,14 @@
       ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
     const link = (url, label) => `<a href="${esc(url)}" target="_blank" rel="noopener">${esc(label)}</a>`;
 
+    const citedItems = (alert, items) => alert.section_ids.map((id) => items.find((i) => i.section_id === id)).filter(Boolean);
+
+    // An alert belongs to every issue of the bill sections it cites.
+    const alertIssues = (alert, items) => [...new Set(citedItems(alert, items).flatMap((i) => i.issues || []))];
+
     function alertCard(alert, promise, items) {
-      const cited = alert.section_ids.map((id) => items.find((i) => i.section_id === id)).filter(Boolean);
+      const cited = citedItems(alert, items);
+      const issues = alertIssues(alert, items);
       return `<div class="card alert ${esc(alert.severity)}">
         <span class="tag ${esc(alert.severity)}">${alert.severity === 'direct' ? 'Direct conflict' : 'Possible tension'}</span>
         <h3>${esc(promise.topic)}</h3>
@@ -79,6 +97,7 @@
           <div class="meta">${esc(promise.strength)} · ${esc(promise.source_type)}, ${esc(promise.date)} · ${link(promise.url, 'source')}<br />Scope: ${esc(promise.scope)}</div>
         </blockquote>
         ${cited.map((i) => `<blockquote>“${esc(i.bill_quote)}”<div class="meta">Bill text, Sec. ${esc(i.section_id)}, ${esc(i.section_header)}</div></blockquote>`).join('')}
+        ${issues.length ? `<div class="chips">Issues: ${issues.map(esc).join(' · ')}</div>` : ''}
       </div>`;
     }
 
@@ -92,21 +111,106 @@
         <p>${esc(item.who_in_district)}</p>
         <blockquote>“${esc(item.bill_quote)}”<div class="meta">Sec. ${esc(item.section_id)}, ${esc(item.section_header)}</div></blockquote>
         <div class="chips">District evidence: ${cited}</div>
+        ${(item.issues || []).length ? `<div class="chips">Issues: ${item.issues.map(esc).join(' · ')}</div>` : ''}
       </div>`;
     }
 
-    function briefHtml({ brief, district, promises }) {
+    const shownEffects = new Set(['helps', 'hurts', 'mixed']);
+
+    // The analyzed findings a reader can see, narrowed to one issue if one is chosen.
+    function findingsFor(brief, issue) {
+      return brief.items.filter((i) => shownEffects.has(i.effect) && (!issue || (i.issues || []).includes(issue)));
+    }
+
+    // Issues with findings come first, most findings first. Other always goes last.
+    function filterHtml(brief, active) {
+      const issues = (brief.issues || []).map((issue) => ({ ...issue, count: findingsFor(brief, issue.name).length }))
+        .sort((a, b) => (a.name === 'Other') - (b.name === 'Other') || b.count - a.count || b.sections.length - a.sections.length);
+      if (!issues.length) return '';
+      const button = (value, label, cls) =>
+        `<button type="button" class="filter-btn ${cls}" data-issue="${esc(value)}" aria-pressed="${value === active}">${esc(label)}</button>`;
+      return `<div class="filter"><div class="filter-label">Filter by issue</div>
+        <div class="filter-row">${button('', 'All issues', '')}${issues.map((i) =>
+          button(i.name, `${i.name} (${i.count})`, i.count ? '' : 'no-findings')).join('')}</div>
+        <p class="meta filter-note">Counts are findings analyzed for your district. A dashed button means the bill touches that issue but this brief has no district finding on it yet.</p></div>`;
+    }
+
+    // Written so an empty result can never be read as "this issue has no effect."
+    function issueNote(brief, issue, findings) {
+      if (!issue) {
+        const total = findingsFor(brief).length;
+        return `<p class="meta filter-note">Showing the highest-priority findings out of ${total}. Choose an issue to see every finding on it.</p>`;
+      }
+      const shown = new Set(findings.map((i) => i.section_id));
+      const entry = brief.issues.find((i) => i.name === issue);
+      const others = entry.sections.filter((s) => !shown.has(s.section_id));
+      const count = `${others.length} section${others.length === 1 ? '' : 's'}`;
+      const sourceLink = (s) => s.page ? link(`${brief.bill_pdf_url}#page=${s.page}`, `Sec. ${s.section_id} (p. ${s.page})`) : `Sec. ${esc(s.section_id)}`;
+      const list = `<ul>${others.map((s) => `<li>${sourceLink(s)}: ${esc(s.header)}</li>`).join('')}</ul>`;
+      if (!findings.length) {
+        return `<div class="card alert possible filter-note"><strong>No district finding on ${esc(issue)} yet.</strong>
+          The bill has ${count} on this issue, but this brief did not analyze them for your district. That does not mean they have no effect here.${list}</div>`;
+      }
+      if (!others.length) return '';
+      return `<div class="card filter-note"><strong>Not reflected below:</strong> ${count} on ${esc(issue)} with no district finding in this brief. That does not mean they have no effect here.
+        <details><summary>See these sections</summary>${list}</details></div>`;
+    }
+
+    function findingsHtml({ brief, district }, issue) {
+      const findings = findingsFor(brief, issue);
+      if (issue && !findings.length) return issueNote(brief, issue, findings);
+      const byEffect = (effect, limit) => {
+        const matching = findings.filter((i) => i.effect === effect);
+        return issue ? matching : matching.slice(0, limit); // A chosen issue shows every finding on it.
+      };
+      const cards = (items) => items.map((i) => itemCard(i, district.facts)).join('');
+      const none = '<div class="card">None identified.</div>';
+      const mixed = byEffect('mixed', 4);
+      return `${issueNote(brief, issue, findings)}
+        <div class="columns">
+          <div><h2>Most harmful to your district</h2>${cards(byEffect('hurts', 6)) || none}</div>
+          <div><h2>Most helpful to your district</h2>${cards(byEffect('helps', 6)) || none}</div>
+        </div>
+        ${mixed.length ? `<h2>Mixed effects</h2><div class="card-grid">${cards(mixed)}</div>` : ''}`;
+    }
+
+    // Written so an empty result can never be read as "no conflict on this issue."
+    function alertsHtml({ brief, promises }, issue) {
+      const c = brief.coverage;
+      const all = brief.promise_alerts || [];
+      const alerts = issue ? all.filter((a) => alertIssues(a, brief.items).includes(issue)) : all;
+      const empty = issue && all.length
+        ? `No promise alert cites a section on ${esc(issue)}. This does not mean no conflict exists: alerts can only cite sections analyzed in depth, and only ${c.promises_checked} commitments were reviewed.`
+        : `None found among the ${c.promises_checked} commitments reviewed. This does not mean no conflict exists.`;
+      return `<h2>Promise alerts if you vote yes</h2>
+        ${issue && alerts.length ? `<p class="meta">Showing ${alerts.length} of ${all.length} alerts: those citing a section on ${esc(issue)}.</p>` : ''}
+        <div class="card-grid">${alerts.map((a) => alertCard(a, promises.find((p) => p.id === a.promise_id), brief.items)).join('') ||
+          `<div class="card">${empty}</div>`}</div>
+        <p class="meta">${c.promises_checked} of ${c.promises_reviewed} commitments checked against the whole bill. A commitment that is not in this set cannot trigger an alert.</p>`;
+    }
+
+    // Filtering redraws only the findings and alerts; the rest of the page stays where it is.
+    function wireFilter(data) {
+      const row = document.querySelector('.filter-row');
+      if (!row) return;
+      row.addEventListener('click', (event) => {
+        const chosen = event.target.closest('.filter-btn');
+        if (!chosen) return;
+        row.querySelectorAll('.filter-btn').forEach((b) => b.setAttribute('aria-pressed', String(b === chosen)));
+        document.getElementById('findings').innerHTML = findingsHtml(data, chosen.dataset.issue);
+        document.getElementById('alerts').innerHTML = alertsHtml(data, chosen.dataset.issue);
+      });
+    }
+
+    function briefHtml(data) {
+      const { brief } = data;
       if (!brief) {
         return { details: '', summary: `<div class="card"><h3>No brief generated yet</h3>
           <p>Add your OpenRouter key to <code>.env</code>, then run <code>node app/analyze.js</code> and reload this page.</p></div>` };
       }
       const c = brief.coverage;
-      const alerts = brief.promise_alerts || [];
       const notCovered = c.not_covered_headers || [];
       const incomplete = c.screen_failures.length + c.deep_failures.length + c.not_analyzed_due_to_cap;
-      const hurts = brief.items.filter((i) => i.effect === 'hurts').slice(0, 6);
-      const helps = brief.items.filter((i) => i.effect === 'helps').slice(0, 6);
-      const mixed = brief.items.filter((i) => i.effect === 'mixed').slice(0, 4);
       const summary = `
         <h2>What this bill does</h2>
         ${notCovered.length ? `<div class="card alert possible"><strong>This brief is not complete.</strong>
@@ -117,18 +221,9 @@
           <p class="meta">Links open the official bill text on GovInfo at the page where each section begins.</p>
           <p><strong>For NJ-5:</strong> ${esc(brief.overview.district_bottom_line)}</p></div>`;
       const details = `
-        <div class="columns">
-          <div><h2>Most harmful to your district</h2>
-            ${hurts.map((i) => itemCard(i, district.facts)).join('') || '<div class="card">None identified.</div>'}</div>
-          <div><h2>Most helpful to your district</h2>
-            ${helps.map((i) => itemCard(i, district.facts)).join('') || '<div class="card">None identified.</div>'}</div>
-        </div>
-        ${mixed.length ? `<h2>Mixed effects</h2><div class="card-grid">${mixed.map((i) => itemCard(i, district.facts)).join('')}</div>` : ''}
-
-        <h2>Promise alerts if you vote yes</h2>
-        <div class="card-grid">${alerts.map((a) => alertCard(a, promises.find((p) => p.id === a.promise_id), brief.items)).join('') ||
-          `<div class="card">None found among the ${c.promises_checked} commitments reviewed. This does not mean no conflict exists.</div>`}</div>
-        <p class="meta">${c.promises_checked} of ${c.promises_reviewed} commitments checked against the whole bill. A commitment that is not in this set cannot trigger an alert.</p>
+        ${filterHtml(brief, '')}
+        <div id="findings">${findingsHtml(data, '')}</div>
+        <div id="alerts">${alertsHtml(data, '')}</div>
 
         <h2>What was reviewed</h2>
         <div class="card"><p>${c.sections_screened} of ${c.sections_total} sections screened; ${c.flagged} flagged; ${c.analyzed} analyzed in depth.
@@ -192,6 +287,7 @@
         ${mapHtml(data.map, data.district)}
         </div><div>${summary}</div></div>
         ${details}${districtHtml(data.district)}`;
+      if (data.brief) wireFilter(data);
     }).catch((error) => {
       document.getElementById('app').textContent = 'Could not load the brief: ' + error.message;
     });

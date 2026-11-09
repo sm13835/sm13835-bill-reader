@@ -5,6 +5,9 @@
 //   2. Analyze: a stronger model reads only the sections flagged in step 1.
 //   3. Verify: plain code drops anything whose citations do not check out.
 //   4. Overview: the plain-English summary, written only from what survived step 3.
+//   5. Issues: a cheap model sorts every section by issue, which drives the page's filters.
+//
+// To add issues to an existing brief without a full run: node app/analyze.js --tags-only
 const fs = require('fs');
 const path = require('path');
 
@@ -18,6 +21,40 @@ const DEEP_RESERVE_USD = 0.5; // Section analysis stops early so promise checks 
 const CONCURRENCY = 10;
 const DEEP_MODEL_GAP_MS = 3500; // About 17 requests a minute; new accounts are limited to 20.
 const DIRECT_STRENGTHS = new Set(['Explicit vote pledge', 'Explicit commitment']);
+const MAX_TAG_COST_USD = 0.25; // Hard stop for the issue-sorting step.
+const TAG_BATCH_SIZE = 30;
+const TAG_TEXT_CHARS = 500; // The opening of each section is enough to identify its subject.
+const MAX_ISSUES_PER_SECTION = 3;
+const OTHER_ISSUE = 'Other';
+// A fixed list keeps filter names consistent from bill to bill. The page shows only those a bill contains.
+const ISSUES = [
+  'Tax',
+  'Environment/Climate',
+  'Public Safety',
+  'Gun Control',
+  'Energy',
+  'Government Reform',
+  'Campaign Finance',
+  'AI & Technology',
+  'Life Sciences & Biology',
+  'Health Care',
+  'Food & Income Assistance',
+  'Immigration',
+  'Education & Student Loans',
+  'Housing',
+  'Transportation & Infrastructure',
+  'Defense & National Security',
+  'Agriculture',
+  'Labor & Jobs',
+  'Small Business',
+  'Families & Children',
+  'Seniors & Social Security',
+  'Veterans',
+  'Trade',
+  'Foreign Policy',
+  'Civil Rights',
+  OTHER_ISSUE,
+];
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 let runCost = 0;
@@ -111,6 +148,41 @@ function verifyOverview(overview, { items, pages }) {
   return { what_it_does, district_bottom_line: overview.district_bottom_line, dropped_bullets };
 }
 
+// Keeps only issue names from the fixed list. A section the model answered for but
+// could not place goes to Other; a section it never answered for is reported as untagged.
+function verifyIssueTags(tags, sections) {
+  const allowed = new Set(ISSUES);
+  const known = new Set(sections.map((s) => s.id));
+  const bySection = {};
+  const unknownLabels = new Set();
+
+  for (const tag of tags) {
+    if (!known.has(tag.id)) continue;
+    const labels = [...new Set(tag.issues || [])];
+    labels.filter((label) => !allowed.has(label)).forEach((label) => unknownLabels.add(label));
+    const specific = labels.filter((label) => allowed.has(label) && label !== OTHER_ISSUE);
+    bySection[tag.id] = specific.length ? specific.slice(0, MAX_ISSUES_PER_SECTION) : [OTHER_ISSUE];
+  }
+  const untagged = sections.filter((s) => !bySection[s.id]).map((s) => s.id);
+  return { bySection, untagged, unknown_labels: [...unknownLabels] };
+}
+
+// One entry per issue actually found in this bill, largest first, with Other last.
+function buildIssueIndex(bySection, sections, pages) {
+  const issues = new Map();
+  for (const section of sections) {
+    for (const name of bySection[section.id] || []) {
+      if (!issues.has(name)) issues.set(name, []);
+      issues.get(name).push({ section_id: section.id, header: section.header, page: pages[section.id] ?? null });
+    }
+  }
+  return [...issues]
+    .map(([name, list]) => ({ name, sections: list }))
+    .sort((a, b) => (a.name === OTHER_ISSUE) - (b.name === OTHER_ISSUE) || b.sections.length - a.sections.length);
+}
+
+const withIssues = (items, bySection) => items.map((item) => ({ ...item, issues: bySection[item.section_id] || [] }));
+
 async function callModel(model, system, user, spendLimit = MAX_RUN_COST_USD) {
   for (let attempt = 1; ; attempt++) {
     if (runCost >= spendLimit) throw new Error(`Run spending limit of $${spendLimit} reached`);
@@ -189,6 +261,10 @@ function deepSystem(context) {
   return `You brief a member of Congress on how one bill section affects their district, in plain English with no legislative jargon.\n${DATA_ONLY}\n\n${context}\n\nReturn:\n{"effect":"helps|hurts|mixed|neutral","importance":1-10,"headline":"under 12 words","plain_english":"2-3 short sentences","who_in_district":"one sentence","district_facts":["fact keys from DISTRICT FACTS that support this"],"bill_quote":"an exact, contiguous 10-40 word quote copied from the section"}\n\nRules:\n- Judge effects on this district's residents. Do not recommend a vote.\n- Use only numbers that appear in the section or in DISTRICT FACTS. Do not estimate local dollar impacts.`;
 }
 
+function issueSystem() {
+  return `You sort sections of a House bill by policy issue.\n${DATA_ONLY}\n\nAllowed issues:\n${ISSUES.join('\n')}\n\nReturn {"tags":[{"id":"section id","issues":["1 to ${MAX_ISSUES_PER_SECTION} allowed issues"]}]} with one entry for every section.\n\nRules:\n- Use the issue names exactly as written.\n- Tag what a section is really about, even when its title is vague. A tax on firearms is both Tax and Gun Control. A tax credit for solar power is Tax, Energy and Environment/Climate.\n- Use Tax only if the section changes a tax, credit, deduction or tax rule.\n- Use Environment/Climate for anything that expands or ends support for clean energy, renewable power, clean vehicles, energy efficiency or emissions cuts, as well as conservation and pollution.\n- Use ${OTHER_ISSUE} only if nothing else fits.`;
+}
+
 function promiseSystem() {
   return `You check one public commitment by a member of Congress against a whole bill, using verified findings about the bill.\n${DATA_ONLY}\n\nReturn {"verdict":"direct|possible|none","explanation":"2-3 plain sentences","section_ids":["up to 4 section ids, from the findings, that matter most"]}\n\nRules:\n- Judge a YES vote on the bill as a whole, not one section at a time.\n- "direct": the commitment explicitly addresses this kind of vote or provision, its scope covers this bill, and the bill clearly goes against it.\n- "possible": the conflict depends on interpretation, or the commitment was about a different bill. Say which.\n- "none": the findings show no real conflict.\n- If the bill partly meets the commitment, say exactly what it does and does not do.\n- Do not recommend a vote.`;
 }
@@ -243,6 +319,52 @@ async function regenerateOverview() {
   console.log(`Done. ${brief.overview.what_it_does.length} bullets, ${brief.overview.dropped_bullets} dropped, this update cost $${runCost.toFixed(4)}`);
 }
 
+// Sorts every section in the bill by issue, in batches. A failed batch is recorded, not fatal.
+async function tagSections(sections, pageMap) {
+  console.log(`Sorting ${sections.length} sections by issue...`);
+  const batches = [];
+  for (let i = 0; i < sections.length; i += TAG_BATCH_SIZE) {
+    batches.push({ id: `batch-${batches.length + 1}`, sections: sections.slice(i, i + TAG_BATCH_SIZE) });
+  }
+  const spendLimit = runCost + MAX_TAG_COST_USD;
+  const { results, failures } = await mapLimit(
+    batches,
+    async (batch) => {
+      const text = batch.sections
+        .map((s) => `Section ${s.id} [${s.part}]: ${s.header}\n${s.text.slice(0, TAG_TEXT_CHARS)}`)
+        .join('\n\n---\n\n');
+      const reply = await callModel(SCREEN_MODEL, issueSystem(), text, spendLimit);
+      return reply.tags || [];
+    },
+    DEEP_MODEL_GAP_MS
+  );
+  const { bySection, untagged, unknown_labels } = verifyIssueTags(results.flat(), sections);
+  return {
+    bySection,
+    issues: buildIssueIndex(bySection, sections, pageMap.pages),
+    coverage: { sections_tagged: sections.length - untagged.length, untagged, unknown_labels, batch_failures: failures },
+  };
+}
+
+// Adds issues to the saved brief. Existing findings and alerts are left as they are.
+async function regenerateIssues() {
+  const available = await checkAvailableCredits();
+  if (available < 0.25) {
+    console.error(`Stopped: only $${available.toFixed(2)} in credits remains.`);
+    process.exit(1);
+  }
+  const { sections, pageMap } = loadInputs();
+  const file = path.join(DATA, 'brief-hr1.json');
+  const brief = JSON.parse(fs.readFileSync(file, 'utf8'));
+  const tagged = await tagSections(sections, pageMap);
+  brief.items = withIssues(brief.items, tagged.bySection);
+  brief.issues = tagged.issues;
+  brief.coverage.issue_tagging = tagged.coverage;
+  brief.cost_usd = Number((brief.cost_usd + runCost).toFixed(4));
+  fs.writeFileSync(file, JSON.stringify(brief, null, 2));
+  console.log(`Done. ${tagged.coverage.sections_tagged} of ${sections.length} sections sorted into ${tagged.issues.length} issues, this update cost $${runCost.toFixed(4)}`);
+}
+
 async function main() {
   try {
     process.loadEnvFile(path.join(ROOT, '.env'));
@@ -256,6 +378,10 @@ async function main() {
 
   if (process.argv.includes('--overview-only')) {
     await regenerateOverview();
+    return;
+  }
+  if (process.argv.includes('--tags-only')) {
+    await regenerateIssues();
     return;
   }
 
@@ -327,13 +453,15 @@ async function main() {
   const notCovered = [...notReached, ...sections.filter((s) => failedIds.has(s.id))];
 
   const overview = await writeOverview(sections, items, pageMap);
+  const tagged = await tagSections(sections, pageMap);
 
   const brief = {
     generated_at: new Date().toISOString(),
     models: { screen: SCREEN_MODEL, deep: DEEP_MODEL },
     bill_pdf_url: pageMap.pdf_url,
     overview,
-    items,
+    items: withIssues(items, tagged.bySection),
+    issues: tagged.issues,
     promise_alerts: alerts.sort((a, b) => (a.severity === 'direct' ? 0 : 1) - (b.severity === 'direct' ? 0 : 1)),
     coverage: {
       not_covered_headers: notCovered.map((s) => `Sec. ${s.id}: ${s.header}`),
@@ -349,6 +477,7 @@ async function main() {
       deep_failures: deep.failures,
       dropped_by_verification: dropped,
       promises_reviewed: promises.length,
+      issue_tagging: tagged.coverage,
     },
     cost_usd: Number(runCost.toFixed(4)),
   };
@@ -363,4 +492,4 @@ if (require.main === module) {
   });
 }
 
-module.exports = { normalize, verifyItems, verifyAlerts, verifyOverview };
+module.exports = { normalize, verifyItems, verifyAlerts, verifyOverview, verifyIssueTags, buildIssueIndex, withIssues };

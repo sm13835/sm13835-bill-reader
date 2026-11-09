@@ -2,7 +2,14 @@
 // These check the code that decides whether a model's citation can be trusted.
 const test = require('node:test');
 const assert = require('node:assert');
-const { verifyItems, verifyAlerts, verifyOverview } = require('../app/analyze.js');
+const {
+  verifyItems,
+  verifyAlerts,
+  verifyOverview,
+  verifyIssueTags,
+  buildIssueIndex,
+  withIssues,
+} = require('../app/analyze.js');
 
 const inputs = {
   sections: [{ id: '70120', text: 'The cap shall be increased to\n$40,000 for “taxable years” beginning in 2025.' }],
@@ -107,4 +114,49 @@ test('drops an alert that cites no analyzed section', () => {
   const { alerts, dropped } = verifyAlerts([unanalyzed], alertInputs);
   assert.strictEqual(alerts.length, 0);
   assert.match(dropped[0].reason, /no analyzed section/);
+});
+
+const tagSections = [
+  { id: '1', header: 'One' },
+  { id: '2', header: 'Two' },
+  { id: '3', header: 'Three' },
+];
+
+test('removes an issue name that is not on the list and reports it', () => {
+  const tags = [{ id: '1', issues: ['Tax', 'Space Pirates'] }];
+  const result = verifyIssueTags(tags, tagSections);
+  assert.deepStrictEqual(result.bySection['1'], ['Tax']);
+  assert.deepStrictEqual(result.unknown_labels, ['Space Pirates']);
+});
+
+test('a section with no valid issue goes to Other', () => {
+  const { bySection } = verifyIssueTags([{ id: '1', issues: ['Space Pirates'] }], tagSections);
+  assert.deepStrictEqual(bySection['1'], ['Other']);
+});
+
+test('allows at most three issues per section, and drops Other when a real issue exists', () => {
+  const tags = [{ id: '1', issues: ['Other', 'Tax', 'Tax', 'Energy', 'Housing', 'Trade'] }];
+  const { bySection } = verifyIssueTags(tags, tagSections);
+  assert.deepStrictEqual(bySection['1'], ['Tax', 'Energy', 'Housing']);
+});
+
+test('reports a section the model skipped and ignores one that does not exist', () => {
+  const tags = [{ id: '1', issues: ['Tax'] }, { id: '99', issues: ['Tax'] }];
+  const { bySection, untagged } = verifyIssueTags(tags, tagSections);
+  assert.strictEqual(bySection['99'], undefined);
+  assert.deepStrictEqual(untagged, ['2', '3']);
+});
+
+test('only issues found in the bill become filters, largest first and Other last', () => {
+  const bySection = { 1: ['Other'], 2: ['Tax', 'Energy'], 3: ['Energy'] };
+  const index = buildIssueIndex(bySection, tagSections, { 2: 40 });
+  assert.deepStrictEqual(index.map((i) => i.name), ['Energy', 'Tax', 'Other']);
+  assert.deepStrictEqual(index[1].sections, [{ section_id: '2', header: 'Two', page: 40 }]);
+  assert.strictEqual(index[2].sections[0].page, null);
+});
+
+test('a finding takes on the issues of its section', () => {
+  const [tagged, untagged] = withIssues([{ section_id: '2' }, { section_id: '3' }], { 2: ['Tax'] });
+  assert.deepStrictEqual(tagged.issues, ['Tax']);
+  assert.deepStrictEqual(untagged.issues, []);
 });
