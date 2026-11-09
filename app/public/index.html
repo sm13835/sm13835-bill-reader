@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bill Reader</title>
+  <style>
+    :root {
+      --bg: #f6f5f1; --card: #ffffff; --text: #1a1d21; --muted: #5a6068; --border: #dfddd5;
+      --accent: #1f3a5f; --bad: #a12a22; --bad-bg: #fbeeec; --warn: #8a5a00; --warn-bg: #fdf4e0;
+      --good: #1e6b45; --good-bg: #e9f5ee;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); line-height: 1.55;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    main { max-width: 880px; margin: 0 auto; padding: 32px 16px 80px; }
+    header { border-bottom: 2px solid var(--accent); padding-bottom: 16px; margin-bottom: 24px; }
+    .kicker { font-size: 13px; color: var(--muted); }
+    h1 { font-size: 30px; line-height: 1.2; margin: 4px 0; letter-spacing: -0.01em; }
+    h2 { font-size: 20px; margin: 32px 0 12px; color: var(--accent); }
+    h3 { font-size: 16px; margin: 0 0 6px; }
+    p { margin: 0 0 8px; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 16px 18px; margin-bottom: 12px; }
+    .alert.direct { background: var(--bad-bg); border-color: var(--bad); }
+    .alert.possible { background: var(--warn-bg); border-color: var(--warn); }
+    .tag { display: inline-block; font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 4px; margin-bottom: 6px; }
+    .tag.direct, .tag.hurts { background: var(--bad); color: #fff; }
+    .tag.possible, .tag.mixed { background: var(--warn); color: #fff; }
+    .tag.helps { background: var(--good); color: #fff; }
+    blockquote { margin: 8px 0; padding-left: 12px; border-left: 3px solid var(--border); font-size: 15px; }
+    .meta { font-size: 13px; color: var(--muted); }
+    .facts { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 8px; }
+    .fact { background: var(--card); border: 1px solid var(--border); border-radius: 6px; padding: 10px 12px; }
+    .fact strong { display: block; font-size: 17px; }
+    .chips { margin-top: 8px; font-size: 13px; color: var(--muted); }
+    .scroll { overflow-x: auto; }
+    table { border-collapse: collapse; width: 100%; font-size: 14px; background: var(--card); }
+    th, td { border-bottom: 1px solid var(--border); padding: 7px 10px; text-align: left; white-space: nowrap; }
+    td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+    tr.new-lines td { border-top: 2px solid var(--accent); }
+    a { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <main id="app"><p>Loading…</p></main>
+  <script>
+    const esc = (value) => String(value ?? '').replace(/[&<>"']/g, (c) =>
+      ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+    const link = (url, label) => `<a href="${esc(url)}" target="_blank" rel="noopener">${esc(label)}</a>`;
+
+    function alertCard(item, conflict, promise) {
+      return `<div class="card alert ${esc(conflict.severity)}">
+        <span class="tag ${esc(conflict.severity)}">${conflict.severity === 'direct' ? 'Direct conflict' : 'Possible tension'}</span>
+        <h3>${esc(promise.topic)}: Sec. ${esc(item.section_id)}, ${esc(item.section_header)}</h3>
+        <p>${esc(conflict.explanation)}</p>
+        <blockquote>“${esc(promise.quote)}”
+          <div class="meta">${esc(promise.strength)} · ${esc(promise.source_type)}, ${esc(promise.date)} · ${link(promise.url, 'source')}<br />Scope: ${esc(promise.scope)}</div>
+        </blockquote>
+        <blockquote>“${esc(item.bill_quote)}”<div class="meta">Bill text, Sec. ${esc(item.section_id)}</div></blockquote>
+      </div>`;
+    }
+
+    function itemCard(item, facts) {
+      const cited = item.district_facts.map((key) => facts.find((f) => f.key === key))
+        .filter(Boolean).map((f) => `${esc(f.label)}: <strong>${esc(f.display)}</strong>`).join(' · ');
+      return `<div class="card">
+        <span class="tag ${esc(item.effect)}">${esc(item.effect)}</span>
+        <h3>${esc(item.headline)}</h3>
+        <p>${esc(item.plain_english)}</p>
+        <p>${esc(item.who_in_district)}</p>
+        <blockquote>“${esc(item.bill_quote)}”<div class="meta">Sec. ${esc(item.section_id)}, ${esc(item.section_header)}</div></blockquote>
+        <div class="chips">District evidence: ${cited}</div>
+      </div>`;
+    }
+
+    function briefHtml({ brief, district, promises }) {
+      if (!brief) {
+        return `<div class="card"><h3>No brief generated yet</h3>
+          <p>Add your OpenRouter key to <code>.env</code>, then run <code>node app/analyze.js</code> and reload this page.</p></div>`;
+      }
+      const c = brief.coverage;
+      const conflicts = brief.items.flatMap((item) => item.promise_conflicts.map((conflict) => ({
+        item, conflict, promise: promises.find((p) => p.id === conflict.promise_id),
+      }))).sort((a, b) => (a.conflict.severity === 'direct' ? -1 : 1) - (b.conflict.severity === 'direct' ? -1 : 1));
+      const incomplete = c.screen_failures.length + c.deep_failures.length + c.not_analyzed_due_to_cap;
+      const hurts = brief.items.filter((i) => i.effect === 'hurts').slice(0, 6);
+      const helps = brief.items.filter((i) => i.effect === 'helps').slice(0, 6);
+      const mixed = brief.items.filter((i) => i.effect === 'mixed').slice(0, 4);
+      return `
+        <h2>What this bill does</h2>
+        <div class="card"><ul>${brief.overview.what_it_does.map((b) => `<li>${esc(b)}</li>`).join('')}</ul>
+          <p><strong>For NJ-5:</strong> ${esc(brief.overview.district_bottom_line)}</p></div>
+
+        <h2>Promise alerts if you vote yes</h2>
+        ${conflicts.map((x) => alertCard(x.item, x.conflict, x.promise)).join('') ||
+          `<div class="card">None found among the ${c.promises_reviewed} commitments reviewed. This does not mean no conflict exists.</div>`}
+        <p class="meta">Based on ${c.promises_reviewed} commitments reviewed. A commitment that is not in this set cannot trigger an alert.</p>
+
+        <h2>Most harmful to your district</h2>
+        ${hurts.map((i) => itemCard(i, district.facts)).join('') || '<div class="card">None identified.</div>'}
+        <h2>Most helpful to your district</h2>
+        ${helps.map((i) => itemCard(i, district.facts)).join('') || '<div class="card">None identified.</div>'}
+        ${mixed.length ? `<h2>Mixed effects</h2>${mixed.map((i) => itemCard(i, district.facts)).join('')}` : ''}
+
+        <h2>What was reviewed</h2>
+        <div class="card"><p>${c.sections_screened} of ${c.sections_total} sections screened; ${c.flagged} flagged; ${c.analyzed} analyzed in depth.
+          ${c.dropped_by_verification.length} findings removed because their citations failed verification.</p>
+          ${incomplete ? `<p><strong>Incomplete:</strong> ${c.screen_failures.length} sections failed screening, ${c.deep_failures.length} failed analysis, and ${c.not_analyzed_due_to_cap} flagged sections exceeded the analysis cap.</p>` : ''}
+          <p class="meta">Models: ${esc(brief.models.screen)}, ${esc(brief.models.deep)} · Run cost: $${esc(brief.cost_usd)} · Generated ${esc(brief.generated_at)}</p></div>`;
+    }
+
+    function districtHtml(district) {
+      const rows = district.elections.map((e, i, all) => {
+        const prev = all[i - 1];
+        const change = prev ? (e.margin_pts - prev.margin_pts).toFixed(1) : '';
+        const sign = (n) => (n > 0 ? '+' : '') + n;
+        return `<tr class="${e.new_lines ? 'new-lines' : ''}">
+          <td>${e.year}${e.new_lines ? ' (new lines)' : ''}</td><td>${esc(e.dem)}</td><td class="num">${e.dem_pct}%</td>
+          <td>${esc(e.rep)}</td><td class="num">${e.rep_pct}%</td><td class="num">${e.total_votes.toLocaleString()}</td>
+          <td class="num">D ${sign(e.margin_pts)}</td><td class="num">${change === '' ? '' : (e.new_lines ? 'n/a' : sign(Number(change)))}</td></tr>`;
+      }).join('');
+      return `
+        <h2>District profile: ${esc(district.district)}</h2>
+        <div class="facts">${district.facts.map((f) => `<div class="fact"><strong>${esc(f.display)}</strong><span class="meta">${esc(f.label)}</span></div>`).join('')}</div>
+        <h2>House elections, 2006–2024</h2>
+        <div class="scroll"><table><thead><tr><th>Year</th><th>Democrat</th><th class="num">%</th><th>Republican</th><th class="num">%</th>
+          <th class="num">Total votes</th><th class="num">Margin</th><th class="num">Change</th></tr></thead><tbody>${rows}</tbody></table></div>
+        <p class="meta">District lines were redrawn for 2012 and 2022, so changes across those years are not like-for-like and are not calculated.</p>
+        <h2>This member's votes on this bill</h2>
+        <div class="card">${district.votes_on_bill.map((v) => `<p>${esc(v.date)} · ${esc(v.question)}: <strong>${esc(v.vote)}</strong> (${link(v.url, 'Roll Call ' + v.roll)})</p>`).join('')}</div>
+        <p class="meta">Sources: ${district.sources.map((s) => link(s.url, s.name)).join(' · ')}</p>`;
+    }
+
+    fetch('/api/brief').then((r) => r.json()).then((data) => {
+      document.getElementById('app').innerHTML = `
+        <header>
+          <div class="kicker">Prototype · no login · viewing as ${esc(data.district.member)}, ${esc(data.district.district)}</div>
+          <h1>H.R. 1: One Big Beautiful Bill Act</h1>
+          <div class="kicker">Personalized brief for ${esc(data.district.district)}, enrolled bill text</div>
+        </header>
+        ${briefHtml(data)}${districtHtml(data.district)}`;
+    }).catch((error) => {
+      document.getElementById('app').textContent = 'Could not load the brief: ' + error.message;
+    });
+  </script>
+</body>
+</html>

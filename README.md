@@ -1,8 +1,8 @@
-# [Project Name]
+# Bill Reader
 
-> **One-line pitch:** [Who is this for, and what job does it do for them?]
+> **One-line pitch:** For members of Congress and their staff: turns a bill thousands of pages long into a plain-English brief on what helps or hurts their district, and flags where a yes vote would conflict with a public commitment.
 
-- **Builder:** [Your Name] (`@github-handle`)
+- **Builder:** Scott Mueller (`@github-handle`)
 - **Pod:** [Pod Name / Number]
 - **Product Page & Living PRD:** [Add your GitHub Pages URL]
 - **App:** runs locally through Week 4; add a cloud URL in Build 5.
@@ -35,11 +35,15 @@ Create your PostHog account in Week 1. Install it on the Product Page and local 
 
 ## Local setup
 
-Clone **your own repository** and ask your coding agent to document the exact install and run commands here and in `AGENTS.md`.
+Requires Node 24. There are no packages to install.
 
 ```bash
-git clone https://github.com/building-with-ai-f26/<your-repo-name>.git
-cd <your-repo-name>
+git clone https://github.com/sm13835/sm13835-bill-reader.git
+cd sm13835-bill-reader
+cp .env.example .env        # then add your OpenRouter key to .env
+node app/analyze.js         # generates the brief (paid model calls)
+node app/server.js          # open http://localhost:3000
+node --test                 # checks the citation verification code
 ```
 
 If your app needs API keys, use a local environment file such as `.env`. Keep private keys out of source code, browser code, screenshots, and commits. The template ignores `.env`; `.env.example` contains placeholders only.

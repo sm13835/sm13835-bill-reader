@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>[Your Product Name] · Building with AI (Fall 2026)</title>
+  <title>Bill Reader · Building with AI (Fall 2026)</title>
 
   <!-- Week 1: create your PostHog account only.
        Build 2: paste your project's current PostHog web snippet here,
@@ -144,8 +144,8 @@
     <!-- HERO / PRODUCT PITCH -->
     <header>
       <span class="eyebrow">NYU Stern · Building with AI · Fall 2026</span>
-      <h1>[Your Product Name]</h1>
-      <p class="tagline">[One clear sentence: Who is this for, and what painful job does it do for them?]</p>
+      <h1>Bill Reader</h1>
+      <p class="tagline">For members of Congress and their staff: a plain-English brief on any long bill, showing what helps or hurts their district and where a yes vote would conflict with a public commitment.</p>
       <div class="cta-row">
         <a class="btn" href="#live-demo" onclick="window.posthog && posthog.capture('clicked_try_product')">See the Product →</a>
         <a class="btn btn-secondary" href="#prd">Read the Living PRD</a>
@@ -157,7 +157,7 @@
     <section id="live-demo">
       <h2>Product Showcase (Prototype / Live App / 2-Min Video)</h2>
       <p>
-        <strong>Current Status:</strong> [Build 1: local prototype / Builds 2–4: local app / Build 5: cloud app]<br />
+        <strong>Current Status:</strong> Build 1 local prototype, using H.R. 1 (119th Congress) and public data for NJ-5. An independent student project, not affiliated with or endorsed by Rep. Gottheimer or his office.<br />
         <strong>Demo:</strong> [Add a screenshot or GIF now; add the live cloud app URL in Build 5.]
       </p>
       <p class="meta">
@@ -171,21 +171,21 @@
       <p class="meta">Updated every week as we test with real users and learn what works.</p>
 
       <h3>1. Target User & The Job to Be Done</h3>
-      <p><strong>Who is this for?</strong> [Name a specific, reachable person or role you have direct access to.]</p>
-      <p><strong>The painful "Before" workflow:</strong> [How do they do this today, and why is it slow, manual, or broken?]</p>
-      <p><strong>The "After" workflow with this product:</strong> [What does your tool do for them in one sitting?]</p>
+      <p><strong>Who is this for?</strong> Members of the U.S. House and their legislative staff. The prototype is built around one real district, NJ-5. No congressional office has tested it yet.</p>
+      <p><strong>The painful "Before" workflow:</strong> Bills can run to thousands of pages and often reach the floor with little time to read them. Members rely on staff memos and party summaries, and someone has to work out by hand how each provision lands in the district and whether it matches what the member has said publicly.</p>
+      <p><strong>The "After" workflow with this product:</strong> The member opens one brief that explains the bill without jargon, ranks the provisions most helpful and most harmful to their district with evidence, and flags any conflict with a public commitment, quoting both the commitment and the bill text.</p>
 
       <h3>2. Scope & Explicit Non-Goals</h3>
       <ul>
-        <li><strong>In Scope (Core Workflow):</strong> [The 1 main workflow this product does reliably]</li>
-        <li><strong>Out of Scope #1:</strong> [Feature you are deliberately NOT building in 6 weeks]</li>
-        <li><strong>Out of Scope #2:</strong> [Feature you are deliberately NOT building in 6 weeks]</li>
-        <li><strong>Out of Scope #3:</strong> [Feature you are deliberately NOT building in 6 weeks]</li>
+        <li><strong>In Scope (Core Workflow):</strong> Take one House bill and produce a personalized, cited brief for one member's district and public commitments.</li>
+        <li><strong>Out of Scope #1:</strong> Telling members how to vote. The product shows who is affected and the evidence.</li>
+        <li><strong>Out of Scope #2:</strong> The Senate. House members only.</li>
+        <li><strong>Out of Scope #3:</strong> Exhaustive monitoring of all social media and TV. Platform access is restricted, so sources are added selectively and every commitment must have a citation.</li>
       </ul>
 
       <h3>3. How It Works Under the Hood & Riskiest Assumption (Week 2+)</h3>
-      <p><strong>Riskiest Assumption:</strong> [What is the #1 technical or user risk that could sink this product?]</p>
-      <p><strong>Simple Architecture:</strong> [User Input] → [Your App / Server] → [AI Model / Tool] → [Output]</p>
+      <p><strong>Riskiest Assumption:</strong> That promise alerts can be accurate enough to trust. A false alarm costs the member's confidence, and a missed conflict is worse, so the brief never claims there are no conflicts, only that none were found among the commitments reviewed.</p>
+      <p><strong>Simple Architecture:</strong> Bill text, district data and cited commitments → a cheap model screens every section → a stronger model analyzes flagged sections → code verifies every quote and citation → plain-English brief</p>
 
       <h3>4. Unit Economics & Analytics Snapshot (Updated Weekly)</h3>
       <div class="grid-2">
@@ -216,7 +216,7 @@
       <div class="log-entry">
         <h3>Build 1 · Intent.md & Throwaway Prototype (Due Nov 9)</h3>
         <ul>
-          <li><strong>What shipped:</strong> [What you actually built; link your local prototype screenshot or GIF above.]</li>
+          <li><strong>What shipped:</strong> A local prototype for H.R. 1 and NJ-5: the bill split into 309 sections, ACS 2024 district data, ten House elections from 2006 to 2024, the member's two roll call votes, eight sourced commitments, a screening and analysis pipeline, and automated tests of the citation checks.</li>
           <li><strong>Things learned with AI:</strong> [What you learned from AI practice and Terminus Episodes 1 and 2.]</li>
           <li><strong>What broke / changed in PRD:</strong> [Fill in]</li>
           <li><strong>Cost & time this week:</strong> $[0.00] · [0] hours</li>

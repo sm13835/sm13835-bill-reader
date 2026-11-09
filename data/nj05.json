@@ -1,0 +1,339 @@
+{
+  "member": "Rep. Josh Gottheimer (D)",
+  "district": "NJ-5",
+  "facts": [
+    {
+      "key": "population",
+      "label": "Total population",
+      "value": 794119.0,
+      "display": "794,119",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "median_age",
+      "label": "Median age",
+      "value": 43.2,
+      "display": "43.2 years",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "median_household_income",
+      "label": "Median household income",
+      "value": 130387.0,
+      "display": "$130,387",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "avg_household_size",
+      "label": "Average household size",
+      "value": 2.69,
+      "display": "2.69",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "median_property_tax",
+      "label": "Median annual real estate taxes (owner-occupied homes)",
+      "value": 10000,
+      "display": "$10,000 or more (the Census top bracket)",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "owner_occupied_pct",
+      "label": "Homes that are owner-occupied",
+      "value": 71.7,
+      "display": "71.7%",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "snap_households_pct",
+      "label": "Households receiving SNAP",
+      "value": 4.4,
+      "display": "4.4% (12,817 households)",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "medicaid_coverage_pct",
+      "label": "Residents with Medicaid or other means-tested coverage",
+      "value": 8.1,
+      "display": "8.1% (63,942 people)",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "poverty_pct",
+      "label": "Residents below the poverty line",
+      "value": 5.6,
+      "display": "5.6%",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "seniors_voting_age_pct",
+      "label": "Citizens of voting age who are 65 or older",
+      "value": 26.7,
+      "display": "26.7%",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "race_white_pct",
+      "label": "White, non-Hispanic",
+      "value": 54.4,
+      "display": "54.4%",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "race_asian_pct",
+      "label": "Asian, non-Hispanic",
+      "value": 17.5,
+      "display": "17.5%",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "race_black_pct",
+      "label": "Black, non-Hispanic",
+      "value": 5.5,
+      "display": "5.5%",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "race_hispanic_pct",
+      "label": "Hispanic or Latino, any race",
+      "value": 19.1,
+      "display": "19.1%",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "occ_management_pct",
+      "label": "Workers in management, business, science and arts",
+      "value": 56.6,
+      "display": "56.6%",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "occ_service_pct",
+      "label": "Workers in service occupations",
+      "value": 12.6,
+      "display": "12.6%",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "occ_sales_office_pct",
+      "label": "Workers in sales and office occupations",
+      "value": 18.1,
+      "display": "18.1%",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "occ_construction_pct",
+      "label": "Workers in construction and maintenance",
+      "value": 5.1,
+      "display": "5.1%",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "occ_production_pct",
+      "label": "Workers in production and transportation",
+      "value": 7.6,
+      "display": "7.6%",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "commute_transit_pct",
+      "label": "Commuters using public transit",
+      "value": 10.8,
+      "display": "10.8% (43,925 people)",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "commute_rail_pct",
+      "label": "Commuters using commuter rail",
+      "value": 2.3,
+      "display": "2.3%",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "work_from_home_pct",
+      "label": "Workers who work from home",
+      "value": 15.7,
+      "display": "15.7%",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "margin_2024",
+      "label": "2024 House race margin",
+      "value": 11.3,
+      "display": "Gottheimer +11.3 points",
+      "source": "Clerk of the House"
+    },
+    {
+      "key": "turnout_2024",
+      "label": "2024 House votes as a share of citizens of voting age",
+      "value": 67.6,
+      "display": "67.6% (381,889 votes)",
+      "source": "Clerk of the House; ACS 2024 citizen voting-age population"
+    }
+  ],
+  "elections": [
+    {
+      "year": 2006,
+      "dem": "Paul Aronsohn",
+      "dem_votes": 89503,
+      "rep": "Scott Garrett",
+      "rep_votes": 112142,
+      "other_votes": 2597,
+      "total_votes": 204242,
+      "dem_pct": 43.8,
+      "rep_pct": 54.9,
+      "margin_pts": -11.1,
+      "new_lines": false
+    },
+    {
+      "year": 2008,
+      "dem": "Dennis Shulman",
+      "dem_votes": 131033,
+      "rep": "Scott Garrett",
+      "rep_votes": 172653,
+      "other_votes": 5321,
+      "total_votes": 309007,
+      "dem_pct": 42.4,
+      "rep_pct": 55.9,
+      "margin_pts": -13.5,
+      "new_lines": false
+    },
+    {
+      "year": 2010,
+      "dem": "Tod Theise",
+      "dem_votes": 62634,
+      "rep": "Scott Garrett",
+      "rep_votes": 124030,
+      "other_votes": 4329,
+      "total_votes": 190993,
+      "dem_pct": 32.8,
+      "rep_pct": 64.9,
+      "margin_pts": -32.1,
+      "new_lines": false
+    },
+    {
+      "year": 2012,
+      "dem": "Adam Gussen",
+      "dem_votes": 130100,
+      "rep": "Scott Garrett",
+      "rep_votes": 167501,
+      "other_votes": 6770,
+      "total_votes": 304371,
+      "dem_pct": 42.7,
+      "rep_pct": 55.0,
+      "margin_pts": -12.3,
+      "new_lines": true
+    },
+    {
+      "year": 2014,
+      "dem": "Roy Cho",
+      "dem_votes": 81808,
+      "rep": "Scott Garrett",
+      "rep_votes": 104678,
+      "other_votes": 2435,
+      "total_votes": 188921,
+      "dem_pct": 43.3,
+      "rep_pct": 55.4,
+      "margin_pts": -12.1,
+      "new_lines": false
+    },
+    {
+      "year": 2016,
+      "dem": "Josh Gottheimer",
+      "dem_votes": 172587,
+      "rep": "Scott Garrett",
+      "rep_votes": 157690,
+      "other_votes": 7424,
+      "total_votes": 337701,
+      "dem_pct": 51.1,
+      "rep_pct": 46.7,
+      "margin_pts": 4.4,
+      "new_lines": false
+    },
+    {
+      "year": 2018,
+      "dem": "Josh Gottheimer",
+      "dem_votes": 169546,
+      "rep": "John J. McCann, Jr.",
+      "rep_votes": 128255,
+      "other_votes": 4022,
+      "total_votes": 301823,
+      "dem_pct": 56.2,
+      "rep_pct": 42.5,
+      "margin_pts": 13.7,
+      "new_lines": false
+    },
+    {
+      "year": 2020,
+      "dem": "Josh Gottheimer",
+      "dem_votes": 225175,
+      "rep": "Frank T. Pallotta",
+      "rep_votes": 193333,
+      "other_votes": 5128,
+      "total_votes": 423636,
+      "dem_pct": 53.2,
+      "rep_pct": 45.6,
+      "margin_pts": 7.5,
+      "new_lines": false
+    },
+    {
+      "year": 2022,
+      "dem": "Josh Gottheimer",
+      "dem_votes": 145559,
+      "rep": "Frank T. Pallotta",
+      "rep_votes": 117873,
+      "other_votes": 2511,
+      "total_votes": 265943,
+      "dem_pct": 54.7,
+      "rep_pct": 44.3,
+      "margin_pts": 10.4,
+      "new_lines": true
+    },
+    {
+      "year": 2024,
+      "dem": "Josh Gottheimer",
+      "dem_votes": 208359,
+      "rep": "Mary Jo Guinchard",
+      "rep_votes": 165287,
+      "other_votes": 8243,
+      "total_votes": 381889,
+      "dem_pct": 54.6,
+      "rep_pct": 43.3,
+      "margin_pts": 11.3,
+      "new_lines": false
+    }
+  ],
+  "votes_on_bill": [
+    {
+      "date": "2025-05-22",
+      "question": "On Passage (House version)",
+      "roll": 145,
+      "vote": "Nay",
+      "url": "https://clerk.house.gov/evs/2025/roll145.xml"
+    },
+    {
+      "date": "2025-07-03",
+      "question": "On Motion to Concur in the Senate Amendment (final bill)",
+      "roll": 190,
+      "vote": "No",
+      "url": "https://clerk.house.gov/evs/2025/roll190.xml"
+    }
+  ],
+  "infrastructure": [
+    {
+      "name": "Gateway / Hudson Tunnel Project",
+      "note": "Regional rail link; the member has repeatedly cited it as critical to North Jersey jobs. Full infrastructure inventory is planned for Build 3.",
+      "url": "https://gottheimer.house.gov/posts/photo-release-gottheimer-hosts-roundtable-withlocal-labor-leaders-during-government-shutdown"
+    }
+  ],
+  "sources": [
+    {
+      "name": "Census ACS 2024 1-year, via Census Reporter",
+      "url": "https://censusreporter.org/profiles/50000US3405/"
+    },
+    {
+      "name": "Clerk of the House, Statistics of the Congressional Election (2006-2024)",
+      "url": "https://history.house.gov/Institution/Election-Statistics/"
+    }
+  ]
+}
