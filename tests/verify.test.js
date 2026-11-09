@@ -2,7 +2,7 @@
 // These check the code that decides whether a model's citation can be trusted.
 const test = require('node:test');
 const assert = require('node:assert');
-const { verifyItems, verifyAlerts } = require('../app/analyze.js');
+const { verifyItems, verifyAlerts, verifyOverview } = require('../app/analyze.js');
 
 const inputs = {
   sections: [{ id: '70120', text: 'The cap shall be increased to\n$40,000 for “taxable years” beginning in 2025.' }],
@@ -79,6 +79,27 @@ test('drops an alert for a promise we do not have', () => {
   const { alerts, dropped } = verifyAlerts([verdict('invented')], alertInputs);
   assert.strictEqual(alerts.length, 0);
   assert.match(dropped[0].reason, /does not exist/);
+});
+
+const overviewInputs = { items: [{ section_id: '70120' }], pages: { 70120: 98, 71119: 235 } };
+
+test('a summary bullet links to the page of each real section', () => {
+  const overview = { what_it_does: [{ text: 'x', section_ids: ['70120'] }] };
+  const result = verifyOverview(overview, overviewInputs);
+  assert.deepStrictEqual(result.what_it_does[0].sources, [{ section_id: '70120', page: 98 }]);
+});
+
+test('removes a section reference that was not analyzed, but keeps the bullet', () => {
+  const overview = { what_it_does: [{ text: 'x', section_ids: ['70120', '71119', '99999'] }] };
+  const result = verifyOverview(overview, overviewInputs);
+  assert.strictEqual(result.what_it_does[0].sources.length, 1);
+});
+
+test('does not show a summary bullet with no real source', () => {
+  const overview = { what_it_does: [{ text: 'x', section_ids: ['99999'] }] };
+  const result = verifyOverview(overview, overviewInputs);
+  assert.strictEqual(result.what_it_does.length, 0);
+  assert.strictEqual(result.dropped_bullets, 1);
 });
 
 test('drops an alert that cites no analyzed section', () => {

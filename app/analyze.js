@@ -93,6 +93,24 @@ function verifyAlerts(verdicts, { promises, items }) {
   return { alerts, dropped };
 }
 
+// Each summary bullet must name the analyzed sections behind it. Invented section
+// references are removed, and a bullet left with no real source is not shown.
+function verifyOverview(overview, { items, pages }) {
+  const analyzed = new Set(items.map((i) => i.section_id));
+  const what_it_does = [];
+  let dropped_bullets = 0;
+
+  for (const bullet of overview.what_it_does || []) {
+    const ids = [...new Set(bullet.section_ids || [])].filter((id) => analyzed.has(id) && pages[id]);
+    if (ids.length === 0) {
+      dropped_bullets++;
+      continue;
+    }
+    what_it_does.push({ text: bullet.text, sources: ids.map((id) => ({ section_id: id, page: pages[id] })) });
+  }
+  return { what_it_does, district_bottom_line: overview.district_bottom_line, dropped_bullets };
+}
+
 async function callModel(model, system, user, spendLimit = MAX_RUN_COST_USD) {
   for (let attempt = 1; ; attempt++) {
     if (runCost >= spendLimit) throw new Error(`Run spending limit of $${spendLimit} reached`);
@@ -184,9 +202,45 @@ async function checkAvailableCredits() {
   return data.total_credits - data.total_usage;
 }
 
+const readData = (name) => JSON.parse(fs.readFileSync(path.join(DATA, name), 'utf8'));
+
 function loadInputs() {
-  const read = (name) => JSON.parse(fs.readFileSync(path.join(DATA, name), 'utf8'));
-  return { sections: read('hr1-sections.json'), district: read('nj05.json'), promises: read('promises.json') };
+  return {
+    sections: readData('hr1-sections.json'),
+    district: readData('nj05.json'),
+    promises: readData('promises.json'),
+    pageMap: readData('hr1-pages.json'),
+  };
+}
+
+const findingsText = (items) =>
+  items.map((i) => `${i.section_id} [${i.effect}] ${i.headline}: ${i.plain_english}`).join('\n');
+
+async function writeOverview(sections, items, pageMap) {
+  console.log('Writing overview...');
+  const overview = await callModel(
+    DEEP_MODEL,
+    `You write the plain-English opening of a bill brief for a member of Congress. No jargon. Do not recommend a vote. Use only the information provided. Do not imply the findings cover the entire bill. ${DATA_ONLY}`,
+    `Bill: H.R. 1 (119th Congress)\nMajor parts: ${[...new Set(sections.map((s) => s.part))].join('; ')}\n\nVerified findings (each line starts with its section id):\n${findingsText(items)}\n\nReturn {"what_it_does":[{"text":"one short bullet","section_ids":["every section id from the findings that this bullet relies on, at most 6"]}],"district_bottom_line":"two sentences on what matters most for this district"}\nWrite 4-6 bullets. Section numbers belong only in section_ids, never in the text.`
+  );
+  return verifyOverview(overview, { items, pages: pageMap.pages });
+}
+
+// Redoes only the summary from the saved findings: one model call instead of a full run.
+async function regenerateOverview() {
+  const available = await checkAvailableCredits();
+  if (available < 0.25) {
+    console.error(`Stopped: only $${available.toFixed(2)} in credits remains.`);
+    process.exit(1);
+  }
+  const { sections, pageMap } = loadInputs();
+  const file = path.join(DATA, 'brief-hr1.json');
+  const brief = JSON.parse(fs.readFileSync(file, 'utf8'));
+  brief.overview = await writeOverview(sections, brief.items, pageMap);
+  brief.bill_pdf_url = pageMap.pdf_url;
+  brief.cost_usd = Number((brief.cost_usd + runCost).toFixed(4));
+  fs.writeFileSync(file, JSON.stringify(brief, null, 2));
+  console.log(`Done. ${brief.overview.what_it_does.length} bullets, ${brief.overview.dropped_bullets} dropped, this update cost $${runCost.toFixed(4)}`);
 }
 
 async function main() {
@@ -200,13 +254,18 @@ async function main() {
     process.exit(1);
   }
 
+  if (process.argv.includes('--overview-only')) {
+    await regenerateOverview();
+    return;
+  }
+
   const available = await checkAvailableCredits();
   if (available < MAX_RUN_COST_USD) {
     console.error(`Stopped: $${available.toFixed(2)} in credits is below the $${MAX_RUN_COST_USD} needed for a run.`);
     process.exit(1);
   }
 
-  const { sections, district, promises } = loadInputs();
+  const { sections, district, promises, pageMap } = loadInputs();
   const context = promptContext(district, promises);
 
   console.log(`Screening ${sections.length} sections...`);
@@ -246,9 +305,7 @@ async function main() {
 
   const { verified, dropped } = verifyItems(deep.results, { sections, facts: district.facts });
   const items = verified.sort((a, b) => b.importance - a.importance);
-  const findings = items
-    .map((i) => `${i.section_id} [${i.effect}] ${i.headline}: ${i.plain_english}`)
-    .join('\n');
+  const findings = findingsText(items);
 
   console.log(`Checking ${promises.length} commitments against the whole bill...`);
   const verdicts = await mapLimit(
@@ -269,16 +326,12 @@ async function main() {
   const failedIds = new Set([...screen.failures, ...deep.failures].map((f) => f.id));
   const notCovered = [...notReached, ...sections.filter((s) => failedIds.has(s.id))];
 
-  console.log('Writing overview...');
-  const overview = await callModel(
-    DEEP_MODEL,
-    `You write the plain-English opening of a bill brief for a member of Congress. No jargon. Do not recommend a vote. Use only the information provided. Do not imply the findings cover the entire bill. ${DATA_ONLY}`,
-    `Bill: H.R. 1 (119th Congress)\nMajor parts: ${[...new Set(sections.map((s) => s.part))].join('; ')}\n\nVerified findings:\n${findings}\n\nReturn {"what_it_does":["4-6 short bullets"],"district_bottom_line":"two sentences on what matters most for this district"}`
-  );
+  const overview = await writeOverview(sections, items, pageMap);
 
   const brief = {
     generated_at: new Date().toISOString(),
     models: { screen: SCREEN_MODEL, deep: DEEP_MODEL },
+    bill_pdf_url: pageMap.pdf_url,
     overview,
     items,
     promise_alerts: alerts.sort((a, b) => (a.severity === 'direct' ? 0 : 1) - (b.severity === 'direct' ? 0 : 1)),
@@ -310,4 +363,4 @@ if (require.main === module) {
   });
 }
 
-module.exports = { normalize, verifyItems, verifyAlerts };
+module.exports = { normalize, verifyItems, verifyAlerts, verifyOverview };

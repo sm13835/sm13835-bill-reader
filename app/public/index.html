@@ -39,6 +39,8 @@
     td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
     tr.new-lines td { border-top: 2px solid var(--accent); }
     a { color: var(--accent); }
+    li { margin-bottom: 8px; }
+    .sources a { font-size: 12px; white-space: nowrap; margin-right: 6px; }
   </style>
 </head>
 <body>
@@ -91,7 +93,9 @@
           ${notCovered.length} sections flagged as relevant to this district were not analyzed in depth, so the findings below may leave out important effects.
           <details><summary>See the sections not covered</summary><ul>${notCovered.map((h) => `<li>${esc(h)}</li>`).join('')}</ul></details></div>` : ''}
         <h2>What this bill does</h2>
-        <div class="card"><ul>${brief.overview.what_it_does.map((b) => `<li>${esc(b)}</li>`).join('')}</ul>
+        <div class="card"><ul>${brief.overview.what_it_does.map((b) => `<li>${esc(b.text)}
+          <span class="sources">${b.sources.map((s) => link(`${brief.bill_pdf_url}#page=${s.page}`, `Sec. ${s.section_id} (p. ${s.page})`)).join(' ')}</span></li>`).join('')}</ul>
+          <p class="meta">Links open the official bill text on GovInfo at the page where each section begins.</p>
           <p><strong>For NJ-5:</strong> ${esc(brief.overview.district_bottom_line)}</p></div>
 
         <h2>Promise alerts if you vote yes</h2>

@@ -6,14 +6,171 @@
   },
   "overview": {
     "what_it_does": [
-      "Among the provisions reviewed, the bill makes the 2017-era lower income tax rates and the larger standard deduction permanent. It also raises the cap on deducting state and local taxes from $10,000 to $40,000 for 2025 through 2029, then returns it to $10,000 in 2030.",
-      "It makes the child tax credit permanent at $2,200 per child, but requires Social Security numbers. It also creates temporary deductions through 2028 for tips, overtime pay, car loan interest, and seniors, and enlarges the child care credit starting in 2026.",
-      "It tightens SNAP (food benefits) with stricter work rules, narrower immigrant eligibility, and benefit growth limited to inflation. States would also take on part of benefit costs starting in 2028 and more administrative costs starting in 2027.",
-      "It changes Medicaid for expansion adults with work requirements starting around 2027, eligibility rechecks every six months, copays starting in 2028, and limits on the state health-care taxes that help fund the program.",
-      "It narrows who qualifies for Medicaid, Medicare, and ACA premium subsidies among lawfully present immigrants, and removes the cap on repaying excess ACA subsidies.",
-      "It ends or shortens several clean energy tax credits, including home solar after 2025, wind and solar projects placed in service after 2027, and electric vehicle credits."
+      {
+        "text": "Makes many 2017-era individual tax cuts permanent, including lower rates, a larger standard deduction, and a higher alternative minimum tax exemption. It also raises the cap on deducting state and local taxes to $40,000 through 2029, then returns it to $10,000 in 2030.",
+        "sources": [
+          {
+            "section_id": "70101",
+            "page": 87
+          },
+          {
+            "section_id": "70102",
+            "page": 87
+          },
+          {
+            "section_id": "70107",
+            "page": 91
+          },
+          {
+            "section_id": "70120",
+            "page": 98
+          }
+        ]
+      },
+      {
+        "text": "Adds temporary deductions through 2028 for tips, overtime pay, new car loan interest, and a $6,000 deduction for people 65 and older. It also raises the child tax credit to $2,200 and expands child care credits and savings accounts.",
+        "sources": [
+          {
+            "section_id": "70201",
+            "page": 99
+          },
+          {
+            "section_id": "70202",
+            "page": 103
+          },
+          {
+            "section_id": "70203",
+            "page": 105
+          },
+          {
+            "section_id": "70103",
+            "page": 88
+          },
+          {
+            "section_id": "70104",
+            "page": 89
+          },
+          {
+            "section_id": "70405",
+            "page": 143
+          }
+        ]
+      },
+      {
+        "text": "Cuts SNAP in several ways. States would pay more of the administrative costs and, starting in 2028, part of the benefit costs if their error rates are high. Work rules tighten, eligibility narrows for some noncitizens, and benefit growth is limited to inflation.",
+        "sources": [
+          {
+            "section_id": "10101",
+            "page": 9
+          },
+          {
+            "section_id": "10102",
+            "page": 10
+          },
+          {
+            "section_id": "10105",
+            "page": 12
+          },
+          {
+            "section_id": "10106",
+            "page": 14
+          },
+          {
+            "section_id": "10108",
+            "page": 14
+          }
+        ]
+      },
+      {
+        "text": "Changes Medicaid for expansion adults, with work requirements, eligibility checks every six months, copays, and shorter retroactive coverage. It also caps state provider taxes and extra hospital payments, which could reduce the money states have for Medicaid.",
+        "sources": [
+          {
+            "section_id": "71119",
+            "page": 235
+          },
+          {
+            "section_id": "71107",
+            "page": 224
+          },
+          {
+            "section_id": "71120",
+            "page": 244
+          },
+          {
+            "section_id": "71112",
+            "page": 227
+          },
+          {
+            "section_id": "71115",
+            "page": 230
+          },
+          {
+            "section_id": "71116",
+            "page": 232
+          }
+        ]
+      },
+      {
+        "text": "Narrows health coverage and subsidies for many lawfully present immigrants in Medicaid, Medicare, and ACA marketplace plans. It also removes the repayment cap on excess marketplace subsidies.",
+        "sources": [
+          {
+            "section_id": "71109",
+            "page": 226
+          },
+          {
+            "section_id": "71201",
+            "page": 248
+          },
+          {
+            "section_id": "71301",
+            "page": 250
+          },
+          {
+            "section_id": "71302",
+            "page": 251
+          },
+          {
+            "section_id": "71305",
+            "page": 253
+          }
+        ]
+      },
+      {
+        "text": "Ends or shortens several clean energy tax credits, including those for home solar, home efficiency upgrades, EV chargers, clean vehicles, and wind and solar projects. It also expands business write-offs for equipment and research costs.",
+        "sources": [
+          {
+            "section_id": "70506",
+            "page": 180
+          },
+          {
+            "section_id": "70505",
+            "page": 180
+          },
+          {
+            "section_id": "70504",
+            "page": 180
+          },
+          {
+            "section_id": "70501",
+            "page": 179
+          },
+          {
+            "section_id": "70512",
+            "page": 181
+          },
+          {
+            "section_id": "70302",
+            "page": 119
+          },
+          {
+            "section_id": "70301",
+            "page": 117
+          }
+        ]
+      }
     ],
-    "district_bottom_line": "For this high-tax district, the higher SALT cap, permanent lower tax rates, and larger standard deduction are the main tax gains, but the SALT increase is temporary and shrinks for households earning over $500,000. The provisions reviewed also shift SNAP and Medicaid costs and paperwork onto New Jersey and could cost some residents coverage or food benefits, while ending credits for home solar and other clean energy."
+    "district_bottom_line": "Many households in this high-tax district would gain from the larger SALT cap, the permanent lower tax rates, and the expanded child and dependent care tax breaks. But the bill also puts pressure on New Jersey's budget through SNAP cost-sharing, Medicaid funding limits, and added health and food program rules, and it raises costs for residents who want solar or efficiency upgrades.",
+    "dropped_bullets": 0
   },
   "items": [
     {
@@ -1179,5 +1336,6 @@
     "dropped_by_verification": [],
     "promises_reviewed": 8
   },
-  "cost_usd": 1.1225
+  "cost_usd": 1.15,
+  "bill_pdf_url": "https://www.govinfo.gov/content/pkg/BILLS-119hr1enr/pdf/BILLS-119hr1enr.pdf"
 }
