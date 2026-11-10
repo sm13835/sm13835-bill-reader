@@ -1,0 +1,33 @@
+{
+  "id": "van-drew",
+  "name": "Jeff Van Drew",
+  "title": "Rep.",
+  "party": "R",
+  "district": "NJ-2",
+  "congress": "119th",
+  "bioguide_id": "V000133",
+  "note": null,
+  "votes_on_bill": [
+    {
+      "date": "2025-05-22",
+      "question": "On Passage (House version)",
+      "roll": 145,
+      "vote": "Yea",
+      "url": "https://clerk.house.gov/evs/2025/roll145.xml"
+    },
+    {
+      "date": "2025-07-03",
+      "question": "On Motion to Concur in the Senate Amendment (final bill)",
+      "roll": 190,
+      "vote": "Aye",
+      "url": "https://clerk.house.gov/evs/2025/roll190.xml"
+    }
+  ],
+  "promises": [],
+  "sources": [
+    {
+      "name": "Clerk of the House, roll calls 145 and 190 (2025)",
+      "url": "https://clerk.house.gov/Votes"
+    }
+  ]
+}

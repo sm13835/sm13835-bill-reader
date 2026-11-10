@@ -1,0 +1,1161 @@
+{
+ "model": "anthropic/claude-haiku-5.5",
+ "by_section": {
+  "10101": [
+   "Food & Income Assistance"
+  ],
+  "10102": [
+   "Food & Income Assistance",
+   "Labor & Jobs"
+  ],
+  "10103": [
+   "Energy",
+   "Food & Income Assistance"
+  ],
+  "10104": [
+   "Food & Income Assistance"
+  ],
+  "10105": [
+   "Food & Income Assistance",
+   "Government Reform"
+  ],
+  "10106": [
+   "Food & Income Assistance",
+   "Government Reform"
+  ],
+  "10107": [
+   "Health Care",
+   "Food & Income Assistance"
+  ],
+  "10108": [
+   "Immigration",
+   "Food & Income Assistance"
+  ],
+  "10201": [
+   "Environment/Climate",
+   "Agriculture"
+  ],
+  "10301": [
+   "Agriculture"
+  ],
+  "10302": [
+   "Agriculture"
+  ],
+  "10303": [
+   "Agriculture"
+  ],
+  "10304": [
+   "Agriculture"
+  ],
+  "10305": [
+   "Agriculture"
+  ],
+  "10306": [
+   "Tax",
+   "Agriculture"
+  ],
+  "10307": [
+   "Agriculture"
+  ],
+  "10308": [
+   "Agriculture"
+  ],
+  "10309": [
+   "Agriculture",
+   "Trade"
+  ],
+  "10310": [
+   "Agriculture",
+   "Trade"
+  ],
+  "10311": [
+   "Agriculture",
+   "Trade"
+  ],
+  "10312": [
+   "Agriculture",
+   "Trade"
+  ],
+  "10313": [
+   "Agriculture",
+   "Food & Income Assistance"
+  ],
+  "10314": [
+   "Agriculture"
+  ],
+  "10401": [
+   "Agriculture"
+  ],
+  "10501": [
+   "Agriculture"
+  ],
+  "10502": [
+   "Agriculture"
+  ],
+  "10503": [
+   "Agriculture"
+  ],
+  "10504": [
+   "Agriculture"
+  ],
+  "10505": [
+   "Agriculture"
+  ],
+  "10506": [
+   "Agriculture"
+  ],
+  "10507": [
+   "Agriculture"
+  ],
+  "10601": [
+   "Environment/Climate",
+   "Agriculture"
+  ],
+  "10602": [
+   "Agriculture",
+   "Trade"
+  ],
+  "10603": [
+   "Food & Income Assistance"
+  ],
+  "10604": [
+   "Agriculture"
+  ],
+  "10605": [
+   "Energy",
+   "Agriculture"
+  ],
+  "10606": [
+   "Agriculture"
+  ],
+  "10607": [
+   "Agriculture"
+  ],
+  "20001": [
+   "Defense & National Security",
+   "Families & Children",
+   "Housing"
+  ],
+  "20002": [
+   "Defense & National Security",
+   "Labor & Jobs",
+   "AI & Technology"
+  ],
+  "20003": [
+   "Defense & National Security"
+  ],
+  "20004": [
+   "Defense & National Security",
+   "Labor & Jobs",
+   "Trade"
+  ],
+  "20005": [
+   "Energy",
+   "Defense & National Security",
+   "AI & Technology"
+  ],
+  "20006": [
+   "Defense & National Security",
+   "Government Reform",
+   "AI & Technology"
+  ],
+  "20007": [
+   "Defense & National Security"
+  ],
+  "20008": [
+   "Energy",
+   "Defense & National Security",
+   "AI & Technology"
+  ],
+  "20009": [
+   "Defense & National Security",
+   "Foreign Policy"
+  ],
+  "20010": [
+   "Defense & National Security"
+  ],
+  "20011": [
+   "Immigration",
+   "Defense & National Security"
+  ],
+  "20012": [
+   "Defense & National Security",
+   "Government Reform"
+  ],
+  "20013": [
+   "Defense & National Security"
+  ],
+  "30001": [
+   "Government Reform"
+  ],
+  "30002": [
+   "Environment/Climate",
+   "Housing"
+  ],
+  "30003": [
+   "Government Reform"
+  ],
+  "30004": [
+   "Defense & National Security"
+  ],
+  "40001": [
+   "Defense & National Security",
+   "Transportation & Infrastructure",
+   "Public Safety"
+  ],
+  "40002": [
+   "Defense & National Security",
+   "AI & Technology"
+  ],
+  "40003": [
+   "Transportation & Infrastructure"
+  ],
+  "40004": [
+   "Transportation & Infrastructure"
+  ],
+  "40005": [
+   "Transportation & Infrastructure"
+  ],
+  "40006": [
+   "Environment/Climate",
+   "Energy"
+  ],
+  "40007": [
+   "Government Reform",
+   "Transportation & Infrastructure"
+  ],
+  "40008": [
+   "Environment/Climate"
+  ],
+  "40009": [
+   "Other"
+  ],
+  "40010": [
+   "Environment/Climate",
+   "Energy"
+  ],
+  "40011": [
+   "Trade",
+   "AI & Technology"
+  ],
+  "50101": [
+   "Environment/Climate",
+   "Energy"
+  ],
+  "50102": [
+   "Energy"
+  ],
+  "50103": [
+   "Environment/Climate",
+   "Energy"
+  ],
+  "50104": [
+   "Energy"
+  ],
+  "50105": [
+   "Energy"
+  ],
+  "50201": [
+   "Energy"
+  ],
+  "50202": [
+   "Energy"
+  ],
+  "50203": [
+   "Energy"
+  ],
+  "50204": [
+   "Energy"
+  ],
+  "50301": [
+   "Environment/Climate",
+   "Agriculture"
+  ],
+  "50302": [
+   "Environment/Climate",
+   "Energy"
+  ],
+  "50303": [
+   "Environment/Climate",
+   "Energy"
+  ],
+  "50304": [
+   "Environment/Climate"
+  ],
+  "50305": [
+   "Other"
+  ],
+  "50401": [
+   "Energy",
+   "Defense & National Security"
+  ],
+  "50402": [
+   "Environment/Climate",
+   "Energy"
+  ],
+  "50403": [
+   "Environment/Climate",
+   "Energy"
+  ],
+  "50404": [
+   "Energy",
+   "AI & Technology"
+  ],
+  "50501": [
+   "Transportation & Infrastructure"
+  ],
+  "60001": [
+   "Environment/Climate",
+   "Transportation & Infrastructure"
+  ],
+  "60002": [
+   "Environment/Climate"
+  ],
+  "60003": [
+   "Environment/Climate"
+  ],
+  "60004": [
+   "Environment/Climate"
+  ],
+  "60005": [
+   "Environment/Climate",
+   "Education & Student Loans"
+  ],
+  "60006": [
+   "Environment/Climate",
+   "Energy"
+  ],
+  "60007": [
+   "Environment/Climate",
+   "Energy"
+  ],
+  "60008": [
+   "Environment/Climate"
+  ],
+  "60009": [
+   "Environment/Climate"
+  ],
+  "60010": [
+   "Environment/Climate"
+  ],
+  "60011": [
+   "Environment/Climate"
+  ],
+  "60012": [
+   "Environment/Climate",
+   "Energy"
+  ],
+  "60013": [
+   "Environment/Climate"
+  ],
+  "60014": [
+   "Environment/Climate",
+   "Government Reform"
+  ],
+  "60015": [
+   "Environment/Climate"
+  ],
+  "60016": [
+   "Environment/Climate"
+  ],
+  "60017": [
+   "Environment/Climate"
+  ],
+  "60018": [
+   "Environment/Climate"
+  ],
+  "60019": [
+   "Transportation & Infrastructure"
+  ],
+  "60020": [
+   "Environment/Climate",
+   "Government Reform"
+  ],
+  "60021": [
+   "Environment/Climate",
+   "Government Reform"
+  ],
+  "60022": [
+   "Environment/Climate",
+   "Government Reform"
+  ],
+  "60023": [
+   "Transportation & Infrastructure"
+  ],
+  "60024": [
+   "Environment/Climate",
+   "Transportation & Infrastructure"
+  ],
+  "60025": [
+   "Other"
+  ],
+  "60026": [
+   "Environment/Climate",
+   "Government Reform"
+  ],
+  "70001": [
+   "Tax"
+  ],
+  "70101": [
+   "Tax"
+  ],
+  "70102": [
+   "Tax"
+  ],
+  "70103": [
+   "Tax",
+   "Seniors & Social Security"
+  ],
+  "70104": [
+   "Tax",
+   "Families & Children"
+  ],
+  "70105": [
+   "Tax",
+   "Small Business"
+  ],
+  "70106": [
+   "Tax"
+  ],
+  "70107": [
+   "Tax"
+  ],
+  "70108": [
+   "Tax",
+   "Housing"
+  ],
+  "70109": [
+   "Tax"
+  ],
+  "70110": [
+   "Tax",
+   "Education & Student Loans"
+  ],
+  "70111": [
+   "Tax"
+  ],
+  "70112": [
+   "Tax",
+   "Transportation & Infrastructure"
+  ],
+  "70113": [
+   "Tax",
+   "Defense & National Security"
+  ],
+  "70114": [
+   "Tax"
+  ],
+  "70115": [
+   "Tax",
+   "Families & Children"
+  ],
+  "70116": [
+   "Tax",
+   "Seniors & Social Security"
+  ],
+  "70117": [
+   "Tax",
+   "Education & Student Loans"
+  ],
+  "70118": [
+   "Tax",
+   "Defense & National Security"
+  ],
+  "70119": [
+   "Tax",
+   "Education & Student Loans"
+  ],
+  "70120": [
+   "Tax"
+  ],
+  "70201": [
+   "Tax",
+   "Labor & Jobs"
+  ],
+  "70202": [
+   "Tax",
+   "Labor & Jobs"
+  ],
+  "70203": [
+   "Tax"
+  ],
+  "70204": [
+   "Tax",
+   "Families & Children"
+  ],
+  "70301": [
+   "Tax",
+   "Small Business",
+   "Agriculture"
+  ],
+  "70302": [
+   "Tax",
+   "Small Business"
+  ],
+  "70303": [
+   "Tax",
+   "Small Business"
+  ],
+  "70304": [
+   "Tax",
+   "Families & Children",
+   "Labor & Jobs"
+  ],
+  "70305": [
+   "Tax",
+   "Small Business"
+  ],
+  "70306": [
+   "Tax",
+   "Small Business"
+  ],
+  "70307": [
+   "Tax",
+   "Labor & Jobs"
+  ],
+  "70308": [
+   "Tax",
+   "Labor & Jobs"
+  ],
+  "70309": [
+   "Tax",
+   "Transportation & Infrastructure"
+  ],
+  "70311": [
+   "Tax",
+   "Trade"
+  ],
+  "70312": [
+   "Tax",
+   "Trade"
+  ],
+  "70313": [
+   "Tax",
+   "Trade"
+  ],
+  "70321": [
+   "Tax",
+   "Trade"
+  ],
+  "70322": [
+   "Tax",
+   "Trade"
+  ],
+  "70323": [
+   "Tax",
+   "Trade"
+  ],
+  "70331": [
+   "Tax"
+  ],
+  "70341": [
+   "Tax"
+  ],
+  "70342": [
+   "Tax"
+  ],
+  "70351": [
+   "Tax"
+  ],
+  "70352": [
+   "Tax"
+  ],
+  "70353": [
+   "Tax"
+  ],
+  "70354": [
+   "Tax"
+  ],
+  "70401": [
+   "Tax",
+   "Families & Children"
+  ],
+  "70402": [
+   "Tax",
+   "Families & Children"
+  ],
+  "70403": [
+   "Tax",
+   "Families & Children"
+  ],
+  "70404": [
+   "Tax",
+   "Families & Children"
+  ],
+  "70405": [
+   "Tax",
+   "Families & Children"
+  ],
+  "70411": [
+   "Tax",
+   "Education & Student Loans"
+  ],
+  "70412": [
+   "Tax",
+   "Education & Student Loans"
+  ],
+  "70413": [
+   "Tax",
+   "Education & Student Loans"
+  ],
+  "70414": [
+   "Tax",
+   "Education & Student Loans"
+  ],
+  "70415": [
+   "Tax",
+   "Education & Student Loans"
+  ],
+  "70416": [
+   "Tax",
+   "Labor & Jobs"
+  ],
+  "70421": [
+   "Tax",
+   "Housing"
+  ],
+  "70422": [
+   "Tax",
+   "Housing"
+  ],
+  "70423": [
+   "Tax",
+   "Small Business"
+  ],
+  "70424": [
+   "Tax"
+  ],
+  "70425": [
+   "Tax"
+  ],
+  "70426": [
+   "Tax"
+  ],
+  "70427": [
+   "Tax",
+   "Trade"
+  ],
+  "70428": [
+   "Tax",
+   "Agriculture"
+  ],
+  "70429": [
+   "Tax"
+  ],
+  "70430": [
+   "Tax",
+   "Housing"
+  ],
+  "70431": [
+   "Tax",
+   "Small Business"
+  ],
+  "70432": [
+   "Tax",
+   "Small Business"
+  ],
+  "70433": [
+   "Tax",
+   "Small Business"
+  ],
+  "70434": [
+   "Tax"
+  ],
+  "70435": [
+   "Tax",
+   "Agriculture"
+  ],
+  "70436": [
+   "Tax",
+   "Public Safety",
+   "Gun Control"
+  ],
+  "70437": [
+   "Tax",
+   "Agriculture"
+  ],
+  "70438": [
+   "Tax",
+   "Public Safety"
+  ],
+  "70439": [
+   "Tax",
+   "Housing"
+  ],
+  "70501": [
+   "Tax",
+   "Environment/Climate",
+   "Transportation & Infrastructure"
+  ],
+  "70502": [
+   "Tax",
+   "Environment/Climate",
+   "Transportation & Infrastructure"
+  ],
+  "70503": [
+   "Tax",
+   "Environment/Climate",
+   "Transportation & Infrastructure"
+  ],
+  "70504": [
+   "Tax",
+   "Environment/Climate",
+   "Energy"
+  ],
+  "70505": [
+   "Tax",
+   "Environment/Climate",
+   "Energy"
+  ],
+  "70506": [
+   "Tax",
+   "Environment/Climate",
+   "Energy"
+  ],
+  "70507": [
+   "Tax",
+   "Environment/Climate",
+   "Energy"
+  ],
+  "70508": [
+   "Tax",
+   "Environment/Climate",
+   "Housing"
+  ],
+  "70509": [
+   "Tax",
+   "Environment/Climate",
+   "Energy"
+  ],
+  "70510": [
+   "Tax",
+   "Environment/Climate",
+   "Energy"
+  ],
+  "70511": [
+   "Tax",
+   "Environment/Climate",
+   "Energy"
+  ],
+  "70512": [
+   "Tax",
+   "Environment/Climate",
+   "Energy"
+  ],
+  "70513": [
+   "Tax",
+   "Energy",
+   "Environment/Climate"
+  ],
+  "70514": [
+   "Tax",
+   "Environment/Climate",
+   "Energy"
+  ],
+  "70515": [
+   "Tax",
+   "Environment/Climate"
+  ],
+  "70521": [
+   "Tax",
+   "Energy",
+   "Agriculture"
+  ],
+  "70522": [
+   "Tax",
+   "Environment/Climate"
+  ],
+  "70523": [
+   "Tax",
+   "Energy"
+  ],
+  "70524": [
+   "Tax",
+   "Energy"
+  ],
+  "70525": [
+   "Tax",
+   "Energy"
+  ],
+  "70531": [
+   "Tax",
+   "Trade"
+  ],
+  "70601": [
+   "Tax",
+   "Small Business"
+  ],
+  "70602": [
+   "Tax"
+  ],
+  "70603": [
+   "Tax",
+   "Labor & Jobs"
+  ],
+  "70604": [
+   "Tax",
+   "Immigration"
+  ],
+  "70605": [
+   "Tax"
+  ],
+  "70606": [
+   "Tax",
+   "Education & Student Loans"
+  ],
+  "70607": [
+   "Tax"
+  ],
+  "71101": [
+   "Health Care",
+   "Seniors & Social Security"
+  ],
+  "71102": [
+   "Health Care",
+   "Food & Income Assistance"
+  ],
+  "71103": [
+   "Health Care",
+   "Government Reform",
+   "Food & Income Assistance"
+  ],
+  "71104": [
+   "Health Care",
+   "Food & Income Assistance"
+  ],
+  "71105": [
+   "Health Care"
+  ],
+  "71106": [
+   "Health Care",
+   "Food & Income Assistance"
+  ],
+  "71107": [
+   "Health Care",
+   "Food & Income Assistance"
+  ],
+  "71108": [
+   "Health Care",
+   "Agriculture",
+   "Seniors & Social Security"
+  ],
+  "71109": [
+   "Health Care",
+   "Immigration",
+   "Food & Income Assistance"
+  ],
+  "71110": [
+   "Health Care",
+   "Immigration"
+  ],
+  "71111": [
+   "Health Care",
+   "Seniors & Social Security"
+  ],
+  "71112": [
+   "Health Care",
+   "Food & Income Assistance"
+  ],
+  "71113": [
+   "Health Care",
+   "Families & Children"
+  ],
+  "71114": [
+   "Health Care"
+  ],
+  "71115": [
+   "Health Care",
+   "Tax"
+  ],
+  "71116": [
+   "Health Care"
+  ],
+  "71117": [
+   "Tax",
+   "Health Care"
+  ],
+  "71118": [
+   "Health Care",
+   "Government Reform"
+  ],
+  "71119": [
+   "Health Care",
+   "Food & Income Assistance"
+  ],
+  "71120": [
+   "Health Care"
+  ],
+  "71121": [
+   "Health Care",
+   "Seniors & Social Security"
+  ],
+  "71201": [
+   "Immigration",
+   "Health Care",
+   "Seniors & Social Security"
+  ],
+  "71202": [
+   "Health Care"
+  ],
+  "71203": [
+   "Health Care"
+  ],
+  "71301": [
+   "Health Care",
+   "Immigration",
+   "Tax"
+  ],
+  "71302": [
+   "Health Care",
+   "Immigration",
+   "Tax"
+  ],
+  "71303": [
+   "Tax",
+   "Health Care",
+   "Government Reform"
+  ],
+  "71304": [
+   "Tax",
+   "Health Care"
+  ],
+  "71305": [
+   "Health Care",
+   "Tax"
+  ],
+  "71306": [
+   "Tax",
+   "Health Care"
+  ],
+  "71307": [
+   "Tax",
+   "Health Care"
+  ],
+  "71308": [
+   "Tax",
+   "Health Care"
+  ],
+  "71401": [
+   "Health Care",
+   "Defense & National Security",
+   "AI & Technology"
+  ],
+  "72001": [
+   "Other"
+  ],
+  "73001": [
+   "Food & Income Assistance",
+   "Labor & Jobs"
+  ],
+  "80001": [
+   "Agriculture",
+   "Education & Student Loans",
+   "Small Business"
+  ],
+  "81001": [
+   "Education & Student Loans"
+  ],
+  "82001": [
+   "Education & Student Loans"
+  ],
+  "82002": [
+   "Education & Student Loans"
+  ],
+  "82003": [
+   "Education & Student Loans"
+  ],
+  "82004": [
+   "Education & Student Loans"
+  ],
+  "82005": [
+   "Education & Student Loans"
+  ],
+  "83001": [
+   "Education & Student Loans"
+  ],
+  "83002": [
+   "Education & Student Loans",
+   "Labor & Jobs"
+  ],
+  "83003": [
+   "Education & Student Loans"
+  ],
+  "83004": [
+   "Education & Student Loans"
+  ],
+  "84001": [
+   "Education & Student Loans"
+  ],
+  "85001": [
+   "Education & Student Loans"
+  ],
+  "85002": [
+   "Education & Student Loans"
+  ],
+  "86001": [
+   "Other"
+  ],
+  "87001": [
+   "Immigration",
+   "Families & Children"
+  ],
+  "90001": [
+   "Immigration",
+   "Defense & National Security"
+  ],
+  "90002": [
+   "Immigration",
+   "Defense & National Security"
+  ],
+  "90003": [
+   "Immigration"
+  ],
+  "90004": [
+   "Immigration",
+   "Defense & National Security",
+   "AI & Technology"
+  ],
+  "90005": [
+   "Immigration",
+   "Defense & National Security",
+   "Public Safety"
+  ],
+  "90006": [
+   "Public Safety"
+  ],
+  "90007": [
+   "Immigration",
+   "Defense & National Security"
+  ],
+  "90101": [
+   "Health Care",
+   "Government Reform"
+  ],
+  "90102": [
+   "Government Reform"
+  ],
+  "90103": [
+   "Government Reform"
+  ],
+  "100001": [
+   "Immigration"
+  ],
+  "100002": [
+   "Immigration"
+  ],
+  "100003": [
+   "Immigration",
+   "Labor & Jobs"
+  ],
+  "100004": [
+   "Immigration"
+  ],
+  "100005": [
+   "Immigration",
+   "Families & Children"
+  ],
+  "100006": [
+   "Immigration"
+  ],
+  "100007": [
+   "Immigration"
+  ],
+  "100008": [
+   "Immigration"
+  ],
+  "100009": [
+   "Immigration"
+  ],
+  "100010": [
+   "Immigration",
+   "Labor & Jobs"
+  ],
+  "100011": [
+   "Immigration",
+   "Labor & Jobs"
+  ],
+  "100012": [
+   "Immigration",
+   "Labor & Jobs"
+  ],
+  "100013": [
+   "Immigration",
+   "Government Reform"
+  ],
+  "100014": [
+   "Immigration",
+   "Transportation & Infrastructure"
+  ],
+  "100015": [
+   "Immigration",
+   "Government Reform"
+  ],
+  "100016": [
+   "Immigration",
+   "Public Safety"
+  ],
+  "100017": [
+   "Immigration",
+   "Public Safety"
+  ],
+  "100018": [
+   "Immigration"
+  ],
+  "100051": [
+   "Immigration",
+   "Public Safety"
+  ],
+  "100052": [
+   "Immigration",
+   "Public Safety"
+  ],
+  "100053": [
+   "Public Safety"
+  ],
+  "100054": [
+   "Immigration",
+   "Government Reform",
+   "Public Safety"
+  ],
+  "100055": [
+   "Immigration",
+   "Public Safety"
+  ],
+  "100056": [
+   "Public Safety"
+  ],
+  "100057": [
+   "Public Safety"
+  ],
+  "100101": [
+   "Government Reform"
+  ],
+  "100102": [
+   "Government Reform"
+  ],
+  "100201": [
+   "Health Care"
+  ],
+  "100202": [
+   "Health Care",
+   "Defense & National Security"
+  ],
+  "100203": [
+   "Health Care",
+   "Labor & Jobs"
+  ],
+  "100204": [
+   "Health Care",
+   "Defense & National Security"
+  ],
+  "100205": [
+   "Health Care"
+  ]
+ },
+ "coverage": {
+  "sections_tagged": 309,
+  "untagged": [],
+  "unknown_labels": [],
+  "batch_failures": []
+ }
+}

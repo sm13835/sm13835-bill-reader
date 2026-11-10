@@ -7,6 +7,9 @@
 secrets.*
 credentials.json
 
+# Uploaded bills and their briefs: possibly unreleased drafts, kept on this computer only
+data/uploads/
+
 # AI Agent Local State / Logs (keep curated logs in journal/)
 .claude/
 .codex/

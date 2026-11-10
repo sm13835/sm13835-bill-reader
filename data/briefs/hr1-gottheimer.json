@@ -1,4 +1,6 @@
 {
+  "member_id": "gottheimer",
+  "district_id": "NJ-5",
   "generated_at": "2026-11-09T14:18:25.059Z",
   "models": {
     "screen": "anthropic/claude-haiku-5.5",

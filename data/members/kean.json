@@ -1,0 +1,121 @@
+{
+  "id": "kean",
+  "name": "Tom Kean Jr.",
+  "title": "Rep.",
+  "party": "R",
+  "district": "NJ-7",
+  "congress": "119th",
+  "bioguide_id": "K000398",
+  "note": null,
+  "votes_on_bill": [
+    {
+      "date": "2025-05-22",
+      "question": "On Passage (House version)",
+      "roll": 145,
+      "vote": "Yea",
+      "url": "https://clerk.house.gov/evs/2025/roll145.xml"
+    },
+    {
+      "date": "2025-07-03",
+      "question": "On Motion to Concur in the Senate Amendment (final bill)",
+      "roll": 190,
+      "vote": "Aye",
+      "url": "https://clerk.house.gov/evs/2025/roll190.xml"
+    }
+  ],
+  "promises": [
+    {
+      "id": "salt-no-vote-2024",
+      "topic": "SALT: no vote on a bill without an increase",
+      "strength": "Explicit vote pledge",
+      "date": "2024-01-31",
+      "scope": "Stated generally: any bill that does not raise the SALT cap",
+      "source_type": "Official press release",
+      "quote": "On a bill that does not raise the SALT Cap Deduction, I am a NO vote.",
+      "url": "https://kean.house.gov/media/press-releases/kean-statement-tax-bill-vote"
+    },
+    {
+      "id": "salt-any-tax-bill",
+      "topic": "SALT: promise on any tax bill",
+      "strength": "Explicit commitment",
+      "date": "2025-06-05 (describing a promise made in 2023)",
+      "scope": "Any tax bill",
+      "source_type": "Letter to Senators Booker and Kim",
+      "quote": "I made a promise to my constituents, colleagues, and party that if a tax bill came before me without an increase in the SALT Deduction, it would not have my support.",
+      "url": "https://kean.house.gov/sites/evo-subsites/kean.house.gov/files/evo-media-document/06.05.2025-tkj-letter-to-sens-booker-and-kim-re-salt.pdf"
+    },
+    {
+      "id": "salt-reconciliation-pledge",
+      "topic": "SALT: pledge on the reconciliation bill",
+      "strength": "Explicit vote pledge",
+      "date": "2025-06-05",
+      "scope": "The House reconciliation bill that became H.R. 1",
+      "source_type": "Letter to Senators Booker and Kim",
+      "quote": "As the House started work on its reconciliation bill, I similarly made clear that if it did not include SALT relief, I would vote no.",
+      "url": "https://kean.house.gov/sites/evo-subsites/kean.house.gov/files/evo-media-document/06.05.2025-tkj-letter-to-sens-booker-and-kim-re-salt.pdf",
+      "about_bill": "hr1"
+    },
+    {
+      "id": "salt-floor-not-ceiling",
+      "topic": "SALT: $20,000 is the floor, not the ceiling",
+      "strength": "Stated position",
+      "date": "2024-02-14",
+      "scope": "Said about H.R. 7160, which would have raised the cap to $20,000 for joint filers; a goal for SALT relief generally",
+      "source_type": "House floor speech (official release)",
+      "quote": "Let me be clear, this legislation is the floor, not the ceiling, for the SALT relief we can and must fight to deliver for New Jersey families.",
+      "url": "https://kean.house.gov/media/press-releases/kean-speaks-house-floor-support-raising-salt-cap"
+    },
+    {
+      "id": "medicaid-every-beneficiary",
+      "topic": "Medicaid for every intended beneficiary",
+      "strength": "Stated position",
+      "date": "2025-05-22",
+      "scope": "Said about the House-passed version of H.R. 1",
+      "source_type": "Official press release",
+      "quote": "On healthcare, we protected Medicaid for every intended beneficiary in New Jersey and across the country and stopped illegal immigrants from stealing taxpayer-funded benefits.",
+      "url": "https://kean.house.gov/media/press-releases/kean-applauds-passage-house-reconciliation-package",
+      "about_bill": "hr1"
+    },
+    {
+      "id": "medicaid-supplemental-payments",
+      "topic": "Medicaid supplemental payments to NJ providers",
+      "strength": "Stated position",
+      "date": "2025-07-03",
+      "scope": "Said about the final H.R. 1 on the day of the vote",
+      "source_type": "Official press release",
+      "quote": "I also voted to protect New Jersey’s expansion of certain critical supplemental payments they receive from the federal government—an important financing tool that hospitals, nursing homes, and other health care providers rely on to serve Medicaid patients.",
+      "url": "https://kean.house.gov/media/press-releases/kean-supports-passage-full-reconciliation-bill",
+      "about_bill": "hr1"
+    },
+    {
+      "id": "medicaid-never-lose-access",
+      "topic": "Medicaid: no loss of access to care",
+      "strength": "General position",
+      "date": "2025-07-31",
+      "scope": "General; said after H.R. 1 became law",
+      "source_type": "Official press release",
+      "quote": "America’s most vulnerable should never lose access to care because of waste, fraud, or abuse.",
+      "url": "https://kean.house.gov/media/press-releases/congressman-kean-recognizes-medicaids-60th-anniversary-reaffirms-commitment"
+    },
+    {
+      "id": "campaign-cost-healthcare",
+      "topic": "Cost of living and healthcare",
+      "strength": "Campaign message",
+      "date": "2026-11-10 (date viewed)",
+      "scope": "General",
+      "source_type": "Campaign website",
+      "quote": "I am an independent leader standing up for what is right for New Jersey – working to lower the cost of living, protect healthcare, strengthen our communities, and ensure America is strong at home and around the world.",
+      "url": "https://tomkean.com/"
+    }
+  ],
+  "sources": [
+    {
+      "name": "Clerk of the House, roll calls 145 and 190 (2025)",
+      "url": "https://clerk.house.gov/Votes"
+    },
+    {
+      "name": "Rep. Kean official press releases, June 2025 letter, and campaign website",
+      "url": "https://kean.house.gov/media/press-releases"
+    }
+  ]
+}

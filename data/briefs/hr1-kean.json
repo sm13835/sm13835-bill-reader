@@ -1,0 +1,4270 @@
+{
+  "member_id": "kean",
+  "district_id": "NJ-7",
+  "generated_at": "2026-11-10T16:47:27.956Z",
+  "models": {
+    "screen": "anthropic/claude-haiku-5.5",
+    "deep": "anthropic/claude-sonnet-5.5"
+  },
+  "bill_pdf_url": "https://www.govinfo.gov/content/pkg/BILLS-119hr1enr/pdf/BILLS-119hr1enr.pdf",
+  "overview": {
+    "what_it_does": [
+      {
+        "text": "Temporarily raises the cap on deducting state and local taxes from $10,000 to $40,000 for 2025, with 1% yearly growth through 2029, then returns it to $10,000 in 2030. The increase is smaller for filers with income above $500,000.",
+        "sources": [
+          {
+            "section_id": "70120",
+            "page": 98
+          }
+        ]
+      },
+      {
+        "text": "Makes the 2017-era lower income tax rates and the larger standard deduction permanent, and raises the child tax credit to $2,200 per child. Filers who itemize get little added benefit from the standard deduction change.",
+        "sources": [
+          {
+            "section_id": "70101",
+            "page": 87
+          },
+          {
+            "section_id": "70102",
+            "page": 87
+          },
+          {
+            "section_id": "70104",
+            "page": 89
+          }
+        ]
+      },
+      {
+        "text": "Trims the value of itemized deductions, including state and local taxes, mortgage interest and charity, for filers in the top 37% bracket. It also keeps the $750,000 mortgage interest cap, adds a 0.5%-of-income floor on charitable deductions for itemizers, and makes the higher alternative minimum tax exemption permanent while phasing it out faster for very high earners.",
+        "sources": [
+          {
+            "section_id": "70111",
+            "page": 93
+          },
+          {
+            "section_id": "70108",
+            "page": 92
+          },
+          {
+            "section_id": "70425",
+            "page": 164
+          },
+          {
+            "section_id": "70107",
+            "page": 91
+          }
+        ]
+      },
+      {
+        "text": "Adds temporary deductions through 2028 for seniors, tips, overtime and new U.S.-assembled car loan interest, each of which shrinks as income rises.",
+        "sources": [
+          {
+            "section_id": "70103",
+            "page": 88
+          },
+          {
+            "section_id": "70201",
+            "page": 99
+          },
+          {
+            "section_id": "70202",
+            "page": 103
+          },
+          {
+            "section_id": "70203",
+            "page": 105
+          }
+        ]
+      },
+      {
+        "text": "Changes Medicaid funding and eligibility rules for expansion states like New Jersey. It caps extra hospital payments and provider taxes, adds work requirements and six-month renewals, shortens back-coverage, and ends federal matching funds for many lawfully present immigrants.",
+        "sources": [
+          {
+            "section_id": "71116",
+            "page": 232
+          },
+          {
+            "section_id": "71115",
+            "page": 230
+          },
+          {
+            "section_id": "71119",
+            "page": 235
+          },
+          {
+            "section_id": "71107",
+            "page": 224
+          },
+          {
+            "section_id": "71112",
+            "page": 227
+          },
+          {
+            "section_id": "71109",
+            "page": 226
+          }
+        ]
+      },
+      {
+        "text": "Ends several clean energy tax credits, including those for home solar, home energy upgrades, and new wind and solar projects. It also expands business tax breaks such as full equipment expensing and immediate deduction of U.S. research costs.",
+        "sources": [
+          {
+            "section_id": "70506",
+            "page": 180
+          },
+          {
+            "section_id": "70505",
+            "page": 180
+          },
+          {
+            "section_id": "70513",
+            "page": 199
+          },
+          {
+            "section_id": "70301",
+            "page": 117
+          },
+          {
+            "section_id": "70302",
+            "page": 119
+          }
+        ]
+      }
+    ],
+    "district_bottom_line": "For this high-income, high-property-tax suburban district, the larger SALT cap and permanent lower rates are the most direct household tax items among the provisions reviewed. The SALT increase shrinks above $500,000 of income, top-bracket itemizers lose part of their deductions, and the Medicaid changes could strain New Jersey's budget and local hospitals, though the text does not say by how much.",
+    "dropped_bullets": 0
+  },
+  "items": [
+    {
+      "effect": "helps",
+      "importance": 8,
+      "headline": "Raises the state and local tax deduction cap to $40,000, temporarily",
+      "plain_english": "For 2025 the cap on deducting state and local taxes, including property taxes, rises from $10,000 to $40,000. It grows 1% a year through 2029 and then drops back to $10,000 in 2030. Filers with income above $500,000 get a smaller increase, though never below $10,000.",
+      "who_in_district": "Homeowners who itemize and pay property and state income taxes above $10,000 gain the most, and very high earners over the $500,000 income threshold gain less.",
+      "district_facts": [
+        "median_property_tax",
+        "owner_occupied_pct",
+        "median_household_income",
+        "occ_management_pct"
+      ],
+      "bill_quote": "in the case of any taxable year beginning in calendar year 2025, $40,000",
+      "section_id": "70120",
+      "section_header": "Limitation on individual deductions for certain state and local taxes, etc",
+      "issues": [
+        "Tax"
+      ]
+    },
+    {
+      "effect": "helps",
+      "importance": 8,
+      "headline": "Makes 2017-era lower income tax rates permanent for district taxpayers",
+      "plain_english": "The lower individual income tax rates set in 2017 were due to expire after 2025. This section removes that end date, so the rates continue for tax years starting in 2026 and later, and families avoid the scheduled rate increase. It also makes a technical change to how some tax brackets are adjusted for inflation.",
+      "who_in_district": "Most households in this high-income, mostly white-collar district would keep the current rate structure, including the many middle- and upper-income families in management and professional jobs.",
+      "district_facts": [
+        "median_household_income",
+        "occ_management_pct",
+        "owner_occupied_pct"
+      ],
+      "bill_quote": "The amendments made by this section shall apply to taxable years beginning after December 31, 2025.",
+      "section_id": "70101",
+      "section_header": "Extension and enhancement of reduced rates",
+      "issues": [
+        "Tax"
+      ]
+    },
+    {
+      "effect": "hurts",
+      "importance": 6,
+      "headline": "Caps extra Medicaid payments to hospitals, shrinking them over time",
+      "plain_english": "Some states pay hospitals and other providers extra Medicaid money on top of regular rates. This section caps those payments at 100% of the Medicare rate in states that have expanded Medicaid, which includes New Jersey. Non-expansion states get a higher 110% cap. Existing payments are grandfathered at first, then cut by 10 percentage points each year starting in 2028 until they reach the cap, which could reduce what local hospitals and nursing homes receive for Medicaid patients.",
+      "who_in_district": "Local hospitals, nursing homes and the roughly 41,192 residents on Medicaid or similar coverage are most exposed, and the district's large senior population may feel any strain on nursing and hospital care.",
+      "district_facts": [
+        "medicaid_coverage_pct",
+        "seniors_voting_age_pct",
+        "median_age",
+        "poverty_pct"
+      ],
+      "bill_quote": "the total amount of such payment shall be reduced by 10 percentage points each year until the total payment rate for such service is equal to the rate for such service specified in subsection (a)",
+      "section_id": "71116",
+      "section_header": "State directed payments",
+      "issues": [
+        "Health Care"
+      ]
+    },
+    {
+      "effect": "mixed",
+      "importance": 6,
+      "headline": "Caps state Medicaid provider taxes and lowers the limit for New Jersey from 2028",
+      "plain_english": "New Jersey is an expansion state, so it could not add new provider taxes. Its existing taxes would be held at current levels, and the allowed ceiling would fall from 5.5% of net patient revenue in 2028 to 3.5% by 2032. Taxes on nursing homes and similar facilities are kept at their current levels rather than stepped down. Whether the state or its hospitals lose money depends on how far above the ceiling its taxes sit, and the bill text does not say.",
+      "who_in_district": "Medicaid enrollees, hospitals and other providers that depend on state Medicaid financing, and nursing home residents, who are a notable concern in a district where 25.4% of voting-age citizens are 65 or older.",
+      "district_facts": [
+        "medicaid_coverage_pct",
+        "seniors_voting_age_pct",
+        "poverty_pct",
+        "median_age"
+      ],
+      "bill_quote": "if, on the date of enactment of this subparagraph, the expansion State or unit of local government in such State has not enacted or does not impose a tax with respect to such class, 0 percent.",
+      "section_id": "71115",
+      "section_header": "Provider taxes",
+      "issues": [
+        "Health Care",
+        "Tax"
+      ]
+    },
+    {
+      "effect": "helps",
+      "importance": 6,
+      "headline": "Child tax credit made permanent and raised to $2,200 per child",
+      "plain_english": "The larger child tax credit would no longer expire after 2025. It rises from $2,000 to $2,200 per child and is adjusted for inflation after 2025. Parents must now give a Social Security number for themselves (at least one spouse on a joint return) and for each child, and the child's number must be issued to a U.S. citizen or under certain work-authorized categories.",
+      "who_in_district": "Families with children in this high-income, mostly owner-occupied district gain from the higher credit, but the Social Security number rule could cost some immigrant households, especially among the 14.0% of residents who are Hispanic and the 8.9% who are Asian, the credit for their children.",
+      "district_facts": [
+        "median_household_income",
+        "avg_household_size",
+        "race_hispanic_pct",
+        "race_asian_pct",
+        "poverty_pct",
+        "median_age"
+      ],
+      "bill_quote": "No credit shall be allowed under this section to a taxpayer with respect to any qualifying child unless the taxpayer includes on the return of tax for the taxable year",
+      "section_id": "70104",
+      "section_header": "Extension and enhancement of increased child tax credit",
+      "issues": [
+        "Tax",
+        "Families & Children"
+      ]
+    },
+    {
+      "effect": "helps",
+      "importance": 5,
+      "headline": "Makes the larger standard deduction permanent and raises it for 2025",
+      "plain_english": "The bigger standard deduction, which was set to expire after 2025, would continue with no end date. The section also raises its base amounts from $18,000 to $23,625 and from $12,000 to $15,750, starting with 2025 tax years. Filers who take the standard deduction get a larger tax cut. Households that itemize, which is common where property taxes are high, get little or no added benefit. This section does not change the SALT cap.",
+      "who_in_district": "Renters, retirees, and moderate-income households who take the standard deduction gain most, while many high-property-tax homeowners who itemize gain less.",
+      "district_facts": [
+        "median_household_income",
+        "owner_occupied_pct",
+        "median_property_tax",
+        "seniors_voting_age_pct",
+        "median_age"
+      ],
+      "bill_quote": "by striking $18,000 both places it appears in subparagraphs (A)(i) and (B)(ii) and inserting $23,625,",
+      "section_id": "70102",
+      "section_header": "Extension and enhancement of increased standard deduction",
+      "issues": [
+        "Tax"
+      ]
+    },
+    {
+      "effect": "helps",
+      "importance": 5,
+      "headline": "Companies can again deduct U.S. research costs immediately, which suits the district's professional economy",
+      "plain_english": "The section lets businesses deduct U.S.-based research and software development costs in the year they are spent, instead of spreading them over five years. Foreign research stays on a 15-year schedule. Small businesses can apply the change back to 2022, and all firms can deduct leftover amounts from 2022–2024 research. The section doesn't touch SALT or Medicaid.",
+      "who_in_district": "Research-heavy employers and small businesses, plus the many district workers in management, business, science and arts jobs, are the most likely to benefit; how much it reaches wages or jobs is uncertain.",
+      "district_facts": [
+        "occ_management_pct",
+        "median_household_income",
+        "work_from_home_pct"
+      ],
+      "bill_quote": "there shall be allowed as a deduction any domestic research or experimental expenditures which are paid or incurred by the taxpayer during the taxable year.",
+      "section_id": "70302",
+      "section_header": "Full expensing of domestic research and experimental expenditures",
+      "issues": [
+        "Tax",
+        "Small Business"
+      ]
+    },
+    {
+      "effect": "mixed",
+      "importance": 5,
+      "headline": "Makes the $750,000 mortgage interest cap permanent and keeps mortgage insurance deductible",
+      "plain_english": "The bill removes the 2025 end date on the current mortgage interest limit, so the lower cap stays in place rather than reverting to the older, higher one. It also keeps mortgage insurance premiums treated as deductible interest. Homeowners with larger mortgages gain no relief from the cap, while those with low down payments keep a deduction.",
+      "who_in_district": "Homeowners, who are 76.4% of households in a high-income, high-property-tax district, are affected most. Those with large mortgages face the permanent cap, and those paying mortgage insurance may benefit.",
+      "district_facts": [
+        "owner_occupied_pct",
+        "median_household_income",
+        "median_property_tax"
+      ],
+      "bill_quote": "Mortgage insurance premiums treated as interest Clause (iv) of subparagraph (E) shall not apply.",
+      "section_id": "70108",
+      "section_header": "Extension and modification of limitation on deduction for qualified residence interest",
+      "issues": [
+        "Tax",
+        "Housing"
+      ]
+    },
+    {
+      "effect": "hurts",
+      "importance": 5,
+      "headline": "Home solar and clean energy tax credit ends after 2025",
+      "plain_english": "This section cuts off the 30 percent federal tax credit for homeowners' clean energy upgrades, such as rooftop solar, for any spending after December 31, 2025. It had been set to run through 2034, so the cut removes years of expected savings. Households that wanted to install systems later will pay full price.",
+      "who_in_district": "Homeowners in this largely owner-occupied, higher-income district who were considering solar or similar upgrades are affected most, while renters and the few lower-income households would see little direct change.",
+      "district_facts": [
+        "owner_occupied_pct",
+        "median_household_income",
+        "median_property_tax"
+      ],
+      "bill_quote": "Section 25D(h) is amended by striking to property placed in service after December 31, 2034 and inserting with respect to any expenditures made after December 31, 2025.",
+      "section_id": "70506",
+      "section_header": "Termination of residential clean energy credit",
+      "issues": [
+        "Tax",
+        "Environment/Climate",
+        "Energy"
+      ]
+    },
+    {
+      "effect": "mixed",
+      "importance": 5,
+      "headline": "Adds a temporary $6,000 senior deduction; keeps the personal exemption at zero",
+      "plain_english": "Through 2028, each taxpayer 65 or older can deduct $6,000, or $12,000 for a couple where both qualify. The deduction shrinks by 6 cents for every dollar of income above $75,000 for single filers or $150,000 for joint filers, so it disappears entirely $100,000 above those lines. The section also ends the old per-person personal exemption for good, so it never returns after 2025. Seniors and each qualifying person need a Social Security number on the return.",
+      "who_in_district": "Seniors with moderate incomes get a clear benefit, but many in this high-income district will get a reduced deduction or none, and larger families lose the chance of the exemption coming back.",
+      "district_facts": [
+        "seniors_voting_age_pct",
+        "median_household_income",
+        "median_age",
+        "avg_household_size"
+      ],
+      "bill_quote": "In the case of a taxable year beginning before January 1, 2029, there shall be allowed a deduction in an amount equal to $6,000 for each qualified individual with respect to the taxpayer.",
+      "section_id": "70103",
+      "section_header": "Termination of deduction for personal exemptions other than temporary senior deduction",
+      "issues": [
+        "Tax",
+        "Seniors & Social Security"
+      ]
+    },
+    {
+      "effect": "mixed",
+      "importance": 5,
+      "headline": "Medicaid expansion adults must show 80 hours monthly work or study",
+      "plain_english": "Starting in 2027, adults 19-64 covered through Medicaid expansion must show 80 hours a month of work, service, or school, or equivalent income. Many are exempt, including parents of children 13 and under, people with disabilities, and the medically frail. Others who can't show compliance after a 30-day notice lose coverage, though states get $200 million in grants to build verification systems.",
+      "who_in_district": "Roughly 41,000 district residents have Medicaid or other means-tested coverage, and the working-age expansion adults among them would face paperwork and some risk of losing coverage, while many already work or qualify for an exemption.",
+      "district_facts": [
+        "medicaid_coverage_pct",
+        "poverty_pct",
+        "occ_service_pct",
+        "median_household_income",
+        "snap_households_pct"
+      ],
+      "bill_quote": "If a State is unable to verify that an applicable individual has met the requirement to demonstrate community engagement under paragraph (1)",
+      "section_id": "71119",
+      "section_header": "Requirement for States to establish Medicaid community engagement requirements for certain individuals",
+      "issues": [
+        "Health Care",
+        "Food & Income Assistance"
+      ]
+    },
+    {
+      "effect": "helps",
+      "importance": 5,
+      "headline": "Higher child-care credit rate for working families, including many middle-income households",
+      "plain_english": "Starting in 2026, this raises the share of child and dependent care costs that families can claim as a tax credit. The top rate goes from 35% to 50%. Families keep at least 35% until income passes $75,000 ($150,000 for joint filers), then the rate phases down to a 20% floor. Joint filers near this district's median income would stay in the higher-rate range, while higher earners see little change.",
+      "who_in_district": "Working parents and people paying for care of a dependent, especially married couples with income under about $150,000, benefit most, though the district's older population (median age 43.6) means fewer households have young children.",
+      "district_facts": [
+        "median_household_income",
+        "median_age",
+        "avg_household_size",
+        "occ_management_pct",
+        "work_from_home_pct",
+        "seniors_voting_age_pct"
+      ],
+      "bill_quote": "the term applicable percentage means 50 percent— (A) reduced (but not below 35 percent) by 1 percentage point for each $2,000 or fraction thereof",
+      "section_id": "70405",
+      "section_header": "Enhancement of child and dependent care tax credit",
+      "issues": [
+        "Tax",
+        "Families & Children"
+      ]
+    },
+    {
+      "effect": "mixed",
+      "importance": 4,
+      "headline": "Ends clean power credit for new wind and solar; district exposure is limited",
+      "plain_english": "Wind and solar projects that start construction after a date about a year after enactment, and are placed in service after 2027, lose the clean electricity production credit. All remaining projects face new limits on Chinese and other foreign-linked equipment and ownership, backed by tougher penalties. Nuclear projects get easier access to a bonus credit. The bill text does not give district-level numbers for costs or savings.",
+      "who_in_district": "Homeowners considering rooftop solar and developers of new solar or wind projects would be affected most, while the district's mostly white-collar workforce has little direct stake in the energy industry.",
+      "district_facts": [
+        "owner_occupied_pct",
+        "median_household_income",
+        "occ_management_pct",
+        "median_property_tax"
+      ],
+      "bill_quote": "This section shall not apply with respect to any applicable facility placed in service after December 31, 2027.",
+      "section_id": "70512",
+      "section_header": "Termination and restrictions on clean electricity production credit",
+      "issues": [
+        "Tax",
+        "Environment/Climate",
+        "Energy"
+      ]
+    },
+    {
+      "effect": "hurts",
+      "importance": 4,
+      "headline": "Ends clean-power tax credit for new wind and solar projects",
+      "plain_english": "This section ends a federal tax credit for wind and solar power projects placed in service after 2027, though battery storage at those sites is exempt. It also denies the credit for leased home solar and wind equipment, and adds limits on foreign-linked companies. Fuel cells get a 30 percent credit under the section. Overall, new solar and wind in the district would likely cost more to build or offer.",
+      "who_in_district": "Homeowners who might lease rooftop solar, and the companies that build and finance solar projects, are most affected in a district where most homes are owner-occupied.",
+      "district_facts": [
+        "owner_occupied_pct",
+        "median_household_income"
+      ],
+      "bill_quote": "This section shall not apply to any qualified property placed in service by the taxpayer after December 31, 2027, which is part of an applicable facility.",
+      "section_id": "70513",
+      "section_header": "Termination and restrictions on clean electricity investment credit",
+      "issues": [
+        "Tax",
+        "Energy",
+        "Environment/Climate"
+      ]
+    },
+    {
+      "effect": "mixed",
+      "importance": 4,
+      "headline": "Limits state Medicaid provider taxes that charge Medicaid-heavy providers more",
+      "plain_english": "The section bars states from taxing hospitals, nursing homes, or other providers at higher rates because they serve more Medicaid patients, or from taxing Medicaid business more heavily than non-Medicaid business. Taxes like that would no longer count as acceptable for federal Medicaid matching purposes. States may get up to 3 fiscal years to adjust. The section doesn't say how New Jersey's taxes would be affected, so any effect on local hospitals and nursing homes depends on how the state's current taxes are built.",
+      "who_in_district": "Local hospitals, nursing homes, and the roughly 41,192 residents on Medicaid or similar coverage could be affected if New Jersey has to restructure its provider taxes and that changes the money available to providers.",
+      "district_facts": [
+        "medicaid_coverage_pct",
+        "seniors_voting_age_pct",
+        "median_age"
+      ],
+      "bill_quote": "a tax is not considered to be generally redistributive if any of the following conditions apply",
+      "section_id": "71117",
+      "section_header": "Requirements regarding waiver of uniform tax requirement for Medicaid provider tax",
+      "issues": [
+        "Tax",
+        "Health Care"
+      ]
+    },
+    {
+      "effect": "mixed",
+      "importance": 4,
+      "headline": "Pauses Biden-era Medicaid enrollment simplification rules through 2034",
+      "plain_english": "The section blocks the federal government from putting into effect parts of a 2024 rule that made it easier to apply for and stay enrolled in Medicaid, CHIP, and the Basic Health Program. These parts stay on hold until September 30, 2034. Fewer eligible people may be enrolled, and the paperwork burden on states stays as it is.",
+      "who_in_district": "Roughly 41,192 residents on Medicaid or similar coverage, plus the families, hospitals, and nursing homes that depend on them, are the people most likely to notice any change.",
+      "district_facts": [
+        "medicaid_coverage_pct",
+        "poverty_pct",
+        "median_household_income",
+        "seniors_voting_age_pct"
+      ],
+      "bill_quote": "shall not, during the period beginning on the date of the enactment of this section and ending September 30, 2034, implement, administer, or enforce the amendments made by the provisions of the final rule",
+      "section_id": "71102",
+      "section_header": "Moratorium on implementation of rule relating to eligibility and enrollment for Medicaid, CHIP, and the Basic Health Program",
+      "issues": [
+        "Health Care",
+        "Food & Income Assistance"
+      ]
+    },
+    {
+      "effect": "hurts",
+      "importance": 4,
+      "headline": "Medicaid expansion adults must renew coverage every six months starting 2027",
+      "plain_english": "Adults covered through Medicaid expansion would have to prove they still qualify twice a year instead of once. More paperwork means some people who still qualify may lose coverage because of missed notices or forms. The bill does not say how many people in the district this would affect.",
+      "who_in_district": "Low-income working-age adults on expansion Medicaid, a small group in a district where 5.3% of residents (41,192 people) have Medicaid or other means-tested coverage.",
+      "district_facts": [
+        "medicaid_coverage_pct",
+        "poverty_pct",
+        "occ_service_pct",
+        "median_household_income"
+      ],
+      "bill_quote": "a State shall make such a redetermination once every 6 months for the following individuals: (I) Individuals enrolled under subsection (a)(10)(A)(i)(VIII).",
+      "section_id": "71107",
+      "section_header": "Eligibility redeterminations",
+      "issues": [
+        "Health Care",
+        "Food & Income Assistance"
+      ]
+    },
+    {
+      "effect": "hurts",
+      "importance": 4,
+      "headline": "Shorter back-coverage window for new Medicaid enrollees leaves some medical bills uncovered",
+      "plain_english": "Today Medicaid can pay for care received up to three months before someone applies. For applications made after 2026, that drops to one month for people covered under the Affordable Care Act's Medicaid expansion and two months for everyone else, with a two-month limit for CHIP too. Residents who sign up late, such as after a sudden illness or hospital stay, could be left with bills Medicaid would once have paid. Hospitals and nursing homes could also absorb more unpaid care.",
+      "who_in_district": "The roughly 41,192 residents on Medicaid or similar coverage, and low-income families or seniors who apply only after an emergency or nursing home stay, would be most affected.",
+      "district_facts": [
+        "medicaid_coverage_pct",
+        "poverty_pct",
+        "seniors_voting_age_pct"
+      ],
+      "bill_quote": "such assistance will be made available to the individual for care and services included under the plan and furnished in or after the month before the month in which the individual made application",
+      "section_id": "71112",
+      "section_header": "Reducing State Medicaid costs",
+      "issues": [
+        "Health Care",
+        "Food & Income Assistance"
+      ]
+    },
+    {
+      "effect": "mixed",
+      "importance": 4,
+      "headline": "Marketplace enrollees must verify eligibility before getting premium tax credits",
+      "plain_english": "Starting in 2028, people buying marketplace health plans would get premium tax credits only for months after the exchange verifies their income, family size, immigration status, other coverage, and residence. Months before verification can still count if the applicant verifies them later. The bill also requires exchanges to offer a pre-enrollment verification process by August 1. This could screen out ineligible claims, but it adds paperwork and could delay or interrupt help for eligible people.",
+      "who_in_district": "Marketplace enrollees in this relatively affluent district, which has a low poverty rate and few Medicaid recipients, would face new verification steps, with the most exposure among self-employed, gig, and lower-income workers who buy their own coverage.",
+      "district_facts": [
+        "median_household_income",
+        "poverty_pct",
+        "medicaid_coverage_pct",
+        "occ_management_pct",
+        "work_from_home_pct"
+      ],
+      "bill_quote": "The term coverage month shall not include, with respect to any individual covered by a qualified health plan enrolled in through an Exchange, any month beginning before the Exchange verifies",
+      "section_id": "71303",
+      "section_header": "Requiring verification of eligibility for premium tax credit",
+      "issues": [
+        "Tax",
+        "Health Care",
+        "Government Reform"
+      ]
+    },
+    {
+      "effect": "hurts",
+      "importance": 4,
+      "headline": "Federal Medicaid and CHIP money cut off for many lawfully present immigrants",
+      "plain_english": "Starting October 1, 2026, the federal government would pay a state for Medicaid or CHIP only for U.S. citizens, green card holders, Cuban and Haitian entrants, and residents covered by Compact of Free Association agreements. Lawfully present immigrants in other categories, such as refugees and asylees, would lose federal matching funds. New Jersey would either have to cover them with its own money or drop their coverage. People here illegally are already barred, so this section does not change their status.",
+      "who_in_district": "Lawfully present non-citizens outside the listed groups, and the clinics and hospitals that treat them, would be most affected in a district where 5.3% of residents (41,192 people) have Medicaid or similar coverage.",
+      "district_facts": [
+        "medicaid_coverage_pct",
+        "poverty_pct"
+      ],
+      "bill_quote": "in no event shall payment be made to a State under this section for medical assistance furnished to an individual unless such individual is",
+      "section_id": "71109",
+      "section_header": "Alien Medicaid eligibility",
+      "issues": [
+        "Health Care",
+        "Immigration",
+        "Food & Income Assistance"
+      ]
+    },
+    {
+      "effect": "helps",
+      "importance": 4,
+      "headline": "Widens and adds a small floor to the pass-through business deduction",
+      "plain_english": "Owners of pass-through businesses (sole proprietors, partnerships, S corporations) can take a deduction on business income. This section raises the income range over which the deduction's wage and property limits phase in, from $100,000 to $150,000 for joint filers. It also guarantees at least a $400 deduction for owners who actively work in a business earning $1,000 or more. Higher-earning owners and very small active business owners both come out ahead.",
+      "who_in_district": "Self-employed people, professional-practice owners and small business owners in a high-income, management-heavy district gain most, while wage earners see no direct change.",
+      "district_facts": [
+        "median_household_income",
+        "occ_management_pct"
+      ],
+      "bill_quote": "In the case of an applicable taxpayer for any taxable year, the deduction allowed under subsection (a) for the taxable year shall be equal to the greater of",
+      "section_id": "70105",
+      "section_header": "Extension and enhancement of deduction for qualified business income",
+      "issues": [
+        "Tax",
+        "Small Business"
+      ]
+    },
+    {
+      "effect": "mixed",
+      "importance": 4,
+      "headline": "Overtime pay deduction helps hourly workers, but fewer in this high-income district",
+      "plain_english": "Workers can deduct the overtime premium (the extra half-time portion) they earn, up to $12,500 ($25,000 for joint filers), from 2025 through 2028. The deduction shrinks for incomes above $150,000 ($300,000 joint) and requires a Social Security number and joint filing for married couples. Only the premium portion of overtime counts, and the benefit ends after 2028.",
+      "who_in_district": "Hourly service, office, construction and production workers who earn overtime would benefit, while the many higher-earning management and professional households in the district may see the deduction reduced or phased out.",
+      "district_facts": [
+        "median_household_income",
+        "occ_service_pct",
+        "occ_sales_office_pct",
+        "occ_construction_pct",
+        "occ_production_pct",
+        "occ_management_pct"
+      ],
+      "bill_quote": "The amount allowed as a deduction under this section for any taxable year shall not exceed $12,500 ($25,000 in the case of a joint return).",
+      "section_id": "70202",
+      "section_header": "No tax on overtime",
+      "issues": [
+        "Tax",
+        "Labor & Jobs"
+      ]
+    },
+    {
+      "effect": "mixed",
+      "importance": 4,
+      "headline": "Keeps higher AMT exemptions but speeds up phase-out for top earners",
+      "plain_english": "The alternative minimum tax is a parallel tax calculation that can catch higher earners. This section makes the larger exemption permanent instead of letting it expire after 2025. That likely keeps most upper-middle-income families out of the AMT. It also makes the exemption shrink at 50 percent instead of 25 percent for very high earners, with the phase-out starting at $1,000,000 (indexed from 2025), so the biggest earners lose more of the exemption.",
+      "who_in_district": "Most affected are well-off homeowners, especially those with large property tax bills who could otherwise be exposed to the AMT, while households with very high incomes lose part of the exemption sooner.",
+      "district_facts": [
+        "median_household_income",
+        "median_property_tax",
+        "owner_occupied_pct",
+        "occ_management_pct"
+      ],
+      "bill_quote": "calendar year 2025, in the case of the $1,000,000 amount in subparagraph (A)(ii)(I).",
+      "section_id": "70107",
+      "section_header": "Extension of increased alternative minimum tax exemption amounts and modification of phaseout thresholds",
+      "issues": [
+        "Tax"
+      ]
+    },
+    {
+      "effect": "hurts",
+      "importance": 4,
+      "headline": "Itemizing donors lose the first 0.5% of income in charitable deductions",
+      "plain_english": "Starting in 2026, people who itemize can deduct charitable gifts only to the extent they exceed 0.5 percent of their contribution base (roughly their income). Gifts under that threshold produce no tax benefit, though the disallowed amount can be carried forward to later years. This raises the after-tax cost of giving for itemizers.",
+      "who_in_district": "Itemizing, higher-income homeowners who give to charity are most affected, and this district has many of them given its high incomes and heavy property taxes.",
+      "district_facts": [
+        "median_household_income",
+        "median_property_tax",
+        "owner_occupied_pct",
+        "occ_management_pct",
+        "seniors_voting_age_pct"
+      ],
+      "bill_quote": "shall be allowed only to the extent that the aggregate of such contributions exceeds 0.5 percent of the taxpayer's contribution base for the taxable year",
+      "section_id": "70425",
+      "section_header": "0.5 percent floor on deduction of contributions made by individuals",
+      "issues": [
+        "Tax"
+      ]
+    },
+    {
+      "effect": "hurts",
+      "importance": 4,
+      "headline": "Home energy upgrade tax credit ends seven years early",
+      "plain_english": "The section ends the federal tax credit for energy-efficient home improvements for items placed in service after December 31, 2025. Under current law the credit would have run through 2032. Homeowners in the district who plan upgrades after 2025 would lose that tax break. The second part is a technical edit to the oil furnace and boiler rules.",
+      "who_in_district": "Homeowners, who are 76.4% of households in the district, would lose a tax incentive for efficiency upgrades, though the higher median household income of $132,702 suggests many could pay for upgrades without it.",
+      "district_facts": [
+        "owner_occupied_pct",
+        "median_household_income"
+      ],
+      "bill_quote": "Section 25C(h) is amended by striking placed in service and all that follows through December 31, 2032 and inserting placed in service after December 31, 2025",
+      "section_id": "70505",
+      "section_header": "Termination of energy efficient home improvement credit",
+      "issues": [
+        "Tax",
+        "Environment/Climate",
+        "Energy"
+      ]
+    },
+    {
+      "effect": "mixed",
+      "importance": 4,
+      "headline": "Tipped workers get a temporary deduction; few in this affluent district likely benefit",
+      "plain_english": "From 2025 through 2028, workers can deduct up to $25,000 a year in cash tips from taxable income, whether or not they itemize. The deduction shrinks for individuals earning over $150,000 ($300,000 on a joint return) and requires a Social Security number and a joint return for married couples. The bill also extends an employer tip credit to hair, nail, esthetics and spa businesses, and adds new tip-reporting duties for employers and payers.",
+      "who_in_district": "Servers, bartenders, hair and nail stylists and similar tipped workers, who sit within the 12.3% of district workers in service jobs, would get the biggest benefit, while the high-income households at the top of the district's income range would get little or nothing.",
+      "district_facts": [
+        "occ_service_pct",
+        "median_household_income",
+        "poverty_pct",
+        "occ_management_pct",
+        "population"
+      ],
+      "bill_quote": "There shall be allowed as a deduction an amount equal to the qualified tips received during the taxable year that are included on statements furnished to the individual",
+      "section_id": "70201",
+      "section_header": "No tax on tips",
+      "issues": [
+        "Tax",
+        "Labor & Jobs"
+      ]
+    },
+    {
+      "effect": "mixed",
+      "importance": 4,
+      "headline": "Permanent 100% expensing helps district businesses but is not the SALT relief he pledged",
+      "plain_english": "This section lets businesses deduct the full cost of equipment and other qualifying property in the year they buy it. It makes that rule permanent for property acquired after January 19, 2025. Businesses that invest get a tax break, but it does nothing for household taxes like property taxes or the SALT cap.",
+      "who_in_district": "Owners of businesses that buy equipment and other qualifying property gain most, and the 55.3% of workers in management, business, science and arts jobs include many who work for or own such firms.",
+      "district_facts": [
+        "occ_management_pct",
+        "occ_construction_pct",
+        "occ_production_pct",
+        "median_household_income"
+      ],
+      "bill_quote": "in paragraph (1)(A), by striking the applicable percentage and inserting 100 percent, and (B) by striking paragraphs (6) and (8).",
+      "section_id": "70301",
+      "section_header": "Full expensing for certain business property",
+      "issues": [
+        "Tax",
+        "Small Business",
+        "Agriculture"
+      ]
+    },
+    {
+      "effect": "helps",
+      "importance": 4,
+      "headline": "Small businesses can write off more equipment purchases immediately",
+      "plain_english": "This section raises the amount of equipment a business can deduct in the year it buys it, from $1,000,000 to $2,500,000. The point at which the deduction starts to phase out rises from $2,500,000 to $4,000,000 of purchases. The change applies to property placed in service in tax years beginning after December 31, 2024.",
+      "who_in_district": "Owners of small and mid-sized businesses in the district that buy equipment, such as contractors, medical and professional offices, and manufacturers, would benefit most, though they are a minority of workers.",
+      "district_facts": [
+        "occ_management_pct",
+        "occ_construction_pct",
+        "occ_production_pct",
+        "median_household_income",
+        "owner_occupied_pct"
+      ],
+      "bill_quote": "in paragraph (1), by striking $1,000,000 and inserting $2,500,000, and (2) in paragraph (2), by striking $2,500,000 and inserting $4,000,000.",
+      "section_id": "70306",
+      "section_header": "Increased dollar limitations for expensing of certain depreciable business assets",
+      "issues": [
+        "Tax",
+        "Small Business"
+      ]
+    },
+    {
+      "effect": "helps",
+      "importance": 4,
+      "headline": "Raises tax-free dependent care account limit from $5,000 to $7,500",
+      "plain_english": "Workers whose employers offer a dependent care assistance account can set aside up to $7,500 in pre-tax money for child or dependent care, up from $5,000. The limit for married people filing separately rises from $2,500 to $3,750. The change starts in tax year 2026.",
+      "who_in_district": "Working families with young children or dependents at employers that offer these accounts benefit most, especially higher earners in a district where 55.3% of workers are in management, business, science and arts jobs.",
+      "district_facts": [
+        "median_household_income",
+        "occ_management_pct",
+        "avg_household_size",
+        "poverty_pct",
+        "median_age"
+      ],
+      "bill_quote": "Section 129(a)(2)(A) is amended by striking $5,000 ($2,500 and inserting $7,500 ($3,750.",
+      "section_id": "70404",
+      "section_header": "Enhancement of the dependent care assistance program",
+      "issues": [
+        "Tax",
+        "Families & Children"
+      ]
+    },
+    {
+      "effect": "helps",
+      "importance": 4,
+      "headline": "529 savings accounts can cover more K-12 costs, with a higher limit",
+      "plain_english": "Families can use 529 accounts tax-free for more K-12 costs: curriculum, books, online materials, outside tutoring, test fees, dual enrollment, and therapies for students with disabilities. The yearly cap on K-12 withdrawals doubles from $10,000 to $20,000 starting in 2026. Only families with money to put into these accounts benefit directly.",
+      "who_in_district": "Homeowning, higher-income families with school-age children, including those in private or religious schools or using tutoring and test prep, are best placed to use the expanded accounts.",
+      "district_facts": [
+        "median_household_income",
+        "owner_occupied_pct",
+        "occ_management_pct",
+        "poverty_pct",
+        "median_age"
+      ],
+      "bill_quote": "Tuition for tutoring or educational classes outside of the home, including at a tutoring facility, but only if the tutor or instructor is not related to the student",
+      "section_id": "70413",
+      "section_header": "Additional expenses treated as qualified higher education expenses for purposes of 529 accounts",
+      "issues": [
+        "Tax",
+        "Education & Student Loans"
+      ]
+    },
+    {
+      "effect": "mixed",
+      "importance": 4,
+      "headline": "Dollar-for-dollar credit for private school scholarship gifts, only if New Jersey opts in",
+      "plain_english": "Individuals could claim a federal tax credit of up to $1,700 for cash gifts to approved groups that fund K-12 scholarships. The scholarships go to students in households earning up to 300 percent of area median income, and they would be tax-free to families. The credit is available only if New Jersey's governor chooses to take part, so nothing changes here unless the state opts in. Scholarship gifts would also no longer count as charitable deductions.",
+      "who_in_district": "Higher-income donors and middle-income families who want scholarship help would gain if New Jersey opts in, while families who rely on public schools would see no direct benefit.",
+      "district_facts": [
+        "median_household_income",
+        "poverty_pct",
+        "avg_household_size"
+      ],
+      "bill_quote": "The credit allowed under subsection (a) to any taxpayer for any taxable year shall not exceed $1,700.",
+      "section_id": "70411",
+      "section_header": "Tax credit for contributions of individuals to scholarship granting organizations",
+      "issues": [
+        "Tax",
+        "Education & Student Loans"
+      ]
+    },
+    {
+      "effect": "mixed",
+      "importance": 4,
+      "headline": "Makes bigger low-income housing credit allocation permanent and eases bond financing test",
+      "plain_english": "The section makes permanent a larger yearly pool of federal low-income housing tax credits for states, set at 12 percent above the normal level starting in 2026. It also lowers the share of a building that must be paid for with tax-exempt bonds, from 50 percent to 25 percent, to qualify for credits outside the state cap. More affordable apartments could be built or rehabbed in New Jersey, but the section does not say how many would come to this district.",
+      "who_in_district": "Low- and moderate-income renters, including the 5.2% of residents below the poverty line, and developers and investors in affordable housing would be the most directly affected, in a district where 76.4% of homes are owner-occupied.",
+      "district_facts": [
+        "poverty_pct",
+        "owner_occupied_pct",
+        "median_household_income",
+        "occ_service_pct"
+      ],
+      "bill_quote": "25 percent or more of the aggregate basis of such building and the land on which the building is located is financed by 1 or more obligations described in subparagraph (A)",
+      "section_id": "70422",
+      "section_header": "Permanent enhancement of low-income housing tax credit",
+      "issues": [
+        "Tax",
+        "Housing"
+      ]
+    },
+    {
+      "effect": "hurts",
+      "importance": 4,
+      "headline": "Pauses rules that made Medicare Savings Program enrollment easier, through 2034",
+      "plain_english": "The section bars the federal government from putting into effect a 2023 rule that streamlined how people sign up for Medicare Savings Programs. These programs help low-income seniors and people with disabilities pay Medicare costs. Enrollment would stay harder for those who qualify, and the bill text gives no figures on how many people are affected.",
+      "who_in_district": "Low-income seniors and people with disabilities in the district who would qualify for help with Medicare costs, a small group in a district where 5.2% of residents are below the poverty line and 25.4% of voting-age citizens are 65 or older.",
+      "district_facts": [
+        "poverty_pct",
+        "seniors_voting_age_pct",
+        "medicaid_coverage_pct",
+        "median_household_income"
+      ],
+      "bill_quote": "shall not, during the period beginning on the date of the enactment of this section and ending September 30, 2034, implement, administer, or enforce the amendments made by the provisions of the final rule",
+      "section_id": "71101",
+      "section_header": "Moratorium on implementation of rule relating to eligibility and enrollment in Medicare Savings Programs",
+      "issues": [
+        "Health Care",
+        "Seniors & Social Security"
+      ]
+    },
+    {
+      "effect": "mixed",
+      "importance": 4,
+      "headline": "Medicaid eligibility-error penalties could pressure New Jersey's budget starting in 2030",
+      "plain_english": "Starting in fiscal year 2030, the federal government could cut its Medicaid payments to a state when payments made for ineligible people, or without enough information to confirm eligibility, exceed 3% of payments. Limiting waivers and counting missing-paperwork cases make a penalty more likely. That could strain New Jersey's budget, and it could also lead to more paperwork checks that cause eligible people to lose coverage.",
+      "who_in_district": "The roughly 41,192 residents on Medicaid or similar coverage, along with the hospitals and nursing homes that serve them, would be most exposed, though the district's Medicaid share is small.",
+      "district_facts": [
+        "medicaid_coverage_pct",
+        "poverty_pct",
+        "seniors_voting_age_pct",
+        "median_household_income"
+      ],
+      "bill_quote": "the period at the end and inserting , or payments where insufficient information is available to confirm eligibility",
+      "section_id": "71106",
+      "section_header": "Payment reduction related to certain erroneous excess payments under Medicaid",
+      "issues": [
+        "Health Care",
+        "Food & Income Assistance"
+      ]
+    },
+    {
+      "effect": "hurts",
+      "importance": 4,
+      "headline": "One-year Medicaid payment ban on certain abortion-providing family planning clinics",
+      "plain_english": "For one year after enactment, Medicaid cannot pay certain nonprofit family planning and reproductive health providers that offer abortions beyond the rape, incest and life-endangering exceptions. The ban applies to providers that received more than $800,000 in Medicaid payments in fiscal year 2023. The section does not name any provider, and it gives no data on whether any are in the district. Medicaid patients who use a covered provider would have to go elsewhere for that care, or the provider would have to cover the loss.",
+      "who_in_district": "The people most affected are Medicaid enrollees, about 41,192 residents, who get family planning or reproductive health care from a covered provider, along with any such clinics serving the district.",
+      "district_facts": [
+        "medicaid_coverage_pct",
+        "poverty_pct"
+      ],
+      "bill_quote": "shall be used to make payments to a prohibited entity for items and services furnished during the 1-year period beginning on the date of the enactment of this Act",
+      "section_id": "71113",
+      "section_header": "Federal payments to prohibited entities",
+      "issues": [
+        "Health Care",
+        "Families & Children"
+      ]
+    },
+    {
+      "effect": "mixed",
+      "importance": 4,
+      "headline": "Medicaid waivers must be cost-neutral to Washington starting 2027",
+      "plain_english": "Starting in 2027, CMS can approve, renew, or change a state's Medicaid waiver project only if its chief actuary certifies the project won't raise federal spending. Spending on services a state could already cover under its regular Medicaid plan counts as the baseline, which makes it harder for a waiver to clear the test. Waivers that fail could be blocked or scaled back, while any savings a state achieves would be taken into account in the next approval period.",
+      "who_in_district": "The roughly 41,192 residents on Medicaid or similar coverage, and the hospitals and providers serving them, would be affected only if New Jersey's waiver programs can't meet the cost-neutrality test.",
+      "district_facts": [
+        "medicaid_coverage_pct",
+        "poverty_pct",
+        "seniors_voting_age_pct",
+        "median_household_income"
+      ],
+      "bill_quote": "the Secretary may not approve an application for (or renewal or amendment of) an experimental, pilot, or demonstration project undertaken under subsection (a)",
+      "section_id": "71118",
+      "section_header": "Requiring budget neutrality for Medicaid demonstration projects under section 1115",
+      "issues": [
+        "Health Care",
+        "Government Reform"
+      ]
+    },
+    {
+      "effect": "hurts",
+      "importance": 3,
+      "headline": "Trims the value of itemized deductions for top-bracket filers only",
+      "plain_english": "Taxpayers in the highest (37%) income bracket would lose part of the tax benefit from deductions such as state and local taxes, mortgage interest and charity. The reduction is 2/37 of the deductions, or of the income above the start of that bracket if that is smaller. Filers below that bracket are not touched.",
+      "who_in_district": "Only a small group of very high earners, such as top executives and business owners in this affluent, high-property-tax district, would see a smaller deduction benefit, and most households would see no change.",
+      "district_facts": [
+        "median_household_income",
+        "median_property_tax",
+        "owner_occupied_pct",
+        "occ_management_pct"
+      ],
+      "bill_quote": "the amount of the itemized deductions otherwise allowable for the taxable year (determined without regard to this section) shall be reduced by 2/37 of the lesser of",
+      "section_id": "70111",
+      "section_header": "Limitation on tax benefit of itemized deductions",
+      "issues": [
+        "Tax"
+      ]
+    },
+    {
+      "effect": "mixed",
+      "importance": 3,
+      "headline": "Payment apps report only larger sellers to the IRS again",
+      "plain_english": "This section restores the older rule that payment apps and online marketplaces report a seller's earnings to the IRS only above $20,000 and more than 200 transactions. Casual sellers and side-gig earners below those levels would get fewer tax forms and less paperwork, and backup withholding would follow the same thresholds. The income is still taxable, but the IRS would see less of it automatically.",
+      "who_in_district": "Residents who sell online, do occasional gig work, or work from home would benefit most from less paperwork, while the change matters little to the large share of salaried professionals.",
+      "district_facts": [
+        "work_from_home_pct",
+        "occ_management_pct",
+        "occ_sales_office_pct",
+        "median_household_income"
+      ],
+      "bill_quote": "the amount which would otherwise be reported under subsection (a)(2) with respect to such transactions exceeds $20,000, and",
+      "section_id": "70432",
+      "section_header": "Repeal of revision to de minimis rules for third party network transactions",
+      "issues": [
+        "Tax",
+        "Small Business"
+      ]
+    },
+    {
+      "effect": "helps",
+      "importance": 3,
+      "headline": "Storm and fire losses stay deductible, now including state-declared disasters",
+      "plain_english": "Under current law, individuals can deduct uninsured losses from disasters only if the federal government declares them, and that rule was set to expire after 2025. This section makes the rule permanent and also covers disasters that the Governor and the Treasury Secretary agree are severe enough, even without a federal declaration. A New Jersey family hit by a flood, storm or fire could claim a deduction in more cases.",
+      "who_in_district": "Homeowners in the district, about 76.4% of homes, who suffer uninsured storm, flood or fire damage in a year with a state-declared disaster but no federal declaration.",
+      "district_facts": [
+        "owner_occupied_pct",
+        "median_property_tax",
+        "median_household_income"
+      ],
+      "bill_quote": "any natural catastrophe (including any hurricane, tornado, storm, high water, wind-driven water, tidal wave, tsunami, earthquake, volcanic eruption, landslide, mudslide, snowstorm, or drought), or, regardless of cause, any fire, flood, or explosion",
+      "section_id": "70109",
+      "section_header": "Extension and modification of limitation on casualty loss deduction",
+      "issues": [
+        "Tax"
+      ]
+    },
+    {
+      "effect": "helps",
+      "importance": 3,
+      "headline": "Car loan interest deduction helps many NJ-7 households buying new U.S.-assembled cars",
+      "plain_english": "For 2025 through 2028, buyers can deduct up to $10,000 a year in interest on a loan for a new personal vehicle that was assembled in the U.S., even if they don't itemize. The deduction shrinks by $200 for every $1,000 of income over $100,000 ($200,000 for joint filers) and disappears at high incomes. Used cars, leases, and vehicles assembled abroad don't qualify, and lenders must report the interest.",
+      "who_in_district": "Middle- and upper-middle-income households in the district who finance a new U.S.-assembled vehicle benefit most, while higher earners lose part or all of the deduction and used-car or foreign-assembled buyers get nothing.",
+      "district_facts": [
+        "median_household_income",
+        "owner_occupied_pct",
+        "occ_management_pct",
+        "occ_sales_office_pct",
+        "occ_service_pct",
+        "commute_transit_pct",
+        "work_from_home_pct"
+      ],
+      "bill_quote": "reduced (but not below zero) by $200 for each $1,000 (or portion thereof) by which the modified adjusted gross income of the taxpayer for the taxable year exceeds $100,000 ($200,000 in the case of a joint return)",
+      "section_id": "70203",
+      "section_header": "No tax on car loan interest",
+      "issues": [
+        "Tax"
+      ]
+    },
+    {
+      "effect": "mixed",
+      "importance": 3,
+      "headline": "New child investment accounts with $1,000 federal seed for births 2025-2028",
+      "plain_english": "The section creates tax-advantaged investment accounts for children under 18. Families can put in up to $5,000 a year, and employers can add up to $2,500 tax-free. Children born from 2025 through 2028 who are U.S. citizens with a Social Security number can get a $1,000 federal deposit. Money is locked until the year the child turns 18 and must go into low-cost U.S. stock index funds. Families with spare cash and employer participation gain the most.",
+      "who_in_district": "Higher-income, mostly owner-occupied households with young children and professional employers (55.3% in management/professional jobs) are best placed to use the accounts, while the 5.2% of residents below poverty are less likely to have money to add.",
+      "district_facts": [
+        "median_household_income",
+        "occ_management_pct",
+        "owner_occupied_pct",
+        "poverty_pct",
+        "avg_household_size"
+      ],
+      "bill_quote": "who is born after December 31, 2024, and before January 1, 2029, (2) with respect to whom no prior election has been made under this section by such individual or any other individual, and (3) who is a United States citizen.",
+      "section_id": "70204",
+      "section_header": "Trump accounts and contribution pilot program",
+      "issues": [
+        "Tax",
+        "Families & Children"
+      ]
+    },
+    {
+      "effect": "helps",
+      "importance": 3,
+      "headline": "Lets indebted businesses deduct more interest; RV dealers get added relief",
+      "plain_english": "Starting with tax years that begin after 2024, the section sets the cap on business interest deductions so that it is figured on income before depreciation and amortization. That usually raises the cap, so companies with significant debt can deduct more interest. It also lets dealers of towable campers and trailers count their inventory loan interest under the special floor plan financing rule.",
+      "who_in_district": "The benefit goes to owners of debt-financed or equipment-heavy businesses, such as contractors, manufacturers, and vehicle or RV dealers, rather than to typical wage earners.",
+      "district_facts": [
+        "occ_management_pct",
+        "occ_construction_pct",
+        "occ_production_pct"
+      ],
+      "bill_quote": "Such term shall also include any trailer or camper which is designed to provide temporary living quarters for recreational, camping, or seasonal use and is designed to be towed by, or affixed to, a motor vehicle.",
+      "section_id": "70303",
+      "section_header": "Modification of limitation on business interest",
+      "issues": [
+        "Tax",
+        "Small Business"
+      ]
+    },
+    {
+      "effect": "mixed",
+      "importance": 3,
+      "headline": "Full first-year write-off for new factory buildings, with limited local reach",
+      "plain_english": "The section lets manufacturers deduct the full cost of new factory buildings, including those for agricultural or chemical production, in the year the building is first used. This applies only to construction that starts between January 20, 2025 and the end of 2028, and the building must be in use by 2031. Offices, research space, parking, and sales areas are excluded, and landlords cannot claim it for buildings leased to others. The deduction is recaptured if the building is switched to another use within 10 years.",
+      "who_in_district": "Manufacturers and other production businesses that build or buy new plant space would benefit, but only 7.5% of district workers are in production and transportation jobs, and most work in management, business, science and arts (55.3%).",
+      "district_facts": [
+        "occ_production_pct",
+        "occ_management_pct",
+        "occ_construction_pct",
+        "median_household_income"
+      ],
+      "bill_quote": "the depreciation deduction provided by section 167(a) for the taxable year in which such property is placed in service shall include an allowance equal to 100 percent of the adjusted basis of the qualified production property",
+      "section_id": "70307",
+      "section_header": "Special depreciation allowance for qualified production property",
+      "issues": [
+        "Tax",
+        "Labor & Jobs"
+      ]
+    },
+    {
+      "effect": "mixed",
+      "importance": 3,
+      "headline": "Permanent, broader leave credit for employers, but state-required leave doesn't count",
+      "plain_english": "The section removes the credit's expiration date and widens it. Employers could claim it on insurance premiums as well as wages paid during leave, and employees would qualify after 6 months on the job instead of a year. Leave that a state or local government pays for or requires does not count toward the credit, so employers in states with their own leave mandates may get less from it.",
+      "who_in_district": "Employers in the district, and the roughly 55% of workers in management, business, science and arts jobs plus the sales, office and service workforce, could see more employer-offered leave, while much of the benefit may be offset where state law already covers leave.",
+      "district_facts": [
+        "occ_management_pct",
+        "occ_sales_office_pct",
+        "occ_service_pct",
+        "median_household_income"
+      ],
+      "bill_quote": "shall not be taken into account in determining the amount of the paid family and medical leave credit under subsection (a).",
+      "section_id": "70304",
+      "section_header": "Extension and enhancement of paid family and medical leave credit",
+      "issues": [
+        "Tax",
+        "Families & Children",
+        "Labor & Jobs"
+      ]
+    },
+    {
+      "effect": "helps",
+      "importance": 3,
+      "headline": "Bigger tax credit for employers who provide child care",
+      "plain_english": "The bill raises the federal credit for employers that pay for child care for their workers. It goes from 25% to 40% of qualifying costs, or 50% for small businesses, and the cap rises to $500,000, or $600,000 for small businesses. It also lets employers get the credit when they use a middleman to arrange care or share a facility with others. These changes apply to spending after December 31, 2025.",
+      "who_in_district": "Working parents and employers in a district where 55.3% of workers are in management, business, science and arts jobs and 15.7% work from home, though only employers that choose to fund child care would use the credit.",
+      "district_facts": [
+        "occ_management_pct",
+        "median_household_income",
+        "avg_household_size",
+        "work_from_home_pct",
+        "median_age"
+      ],
+      "bill_quote": "The credit allowable under subsection (a) for any taxable year shall not exceed $500,000 ($600,000 in the case of an eligible small business).",
+      "section_id": "70401",
+      "section_header": "Enhancement of employer-provided child care credit",
+      "issues": [
+        "Tax",
+        "Families & Children"
+      ]
+    },
+    {
+      "effect": "mixed",
+      "importance": 3,
+      "headline": "Changes how big companies' foreign profits are taxed; little direct local effect",
+      "plain_english": "This section renames the minimum tax on foreign subsidiaries' profits and ends the rule that exempted a set return on their physical assets abroad. It also renames the export-income deduction and removes the old asset-based wording from it. Companies that keep factories and equipment overseas could owe more, and the section does not give rates or dollar amounts. The changes start with tax years after December 31, 2025.",
+      "who_in_district": "Residents are affected only indirectly, mainly white-collar workers and shareholders tied to multinational employers, because the section taxes corporations rather than households.",
+      "district_facts": [
+        "occ_management_pct",
+        "median_household_income"
+      ],
+      "bill_quote": "Section 951A, as amended by the preceding provisions of this Act, is amended by striking subsections (b) and (d) and by redesignating subsections (c), (e), and (f) as subsections (b), (c), and (d), respectively.",
+      "section_id": "70323",
+      "section_header": "Rules related to deemed intangible income",
+      "issues": [
+        "Tax",
+        "Trade"
+      ]
+    },
+    {
+      "effect": "helps",
+      "importance": 3,
+      "headline": "Employer student loan help stays tax-free and grows with inflation",
+      "plain_english": "Employers can keep paying up to $5,250 a year toward an employee's student loans without it counting as taxable income. That break was set to end for payments after 2025, and this makes it permanent. From 2027 on, the $5,250 limit rises with inflation.",
+      "who_in_district": "Workers with student loans at employers that offer repayment help, especially the large share of professional and managerial workers in this high-income, well-educated district.",
+      "district_facts": [
+        "occ_management_pct",
+        "median_household_income",
+        "median_age"
+      ],
+      "bill_quote": "In the case of any taxable year beginning after 2026, both of the $5,250 amounts in subsection (a)(2) shall each be increased by an amount equal to",
+      "section_id": "70412",
+      "section_header": "Exclusion for employer payments of student loans",
+      "issues": [
+        "Tax",
+        "Education & Student Loans"
+      ]
+    },
+    {
+      "effect": "mixed",
+      "importance": 3,
+      "headline": "Opportunity zone tax breaks become permanent; limited direct fit for affluent NJ-7",
+      "plain_english": "This section makes the opportunity zone program permanent. It re-picks eligible low-income census tracts every 10 years, starting in 2026, and offers investors a capital gains tax deferral with larger breaks for rural funds. It also adds new reporting rules and public data reports. NJ-7 is a high-income suburban district, so it likely has few qualifying tracts. Any benefit would come from investment in those tracts, and the tighter eligibility test and rural bonus mostly point elsewhere.",
+      "who_in_district": "Residents of any low-income tracts in the district and investors who put capital gains into opportunity funds could be affected, but most of the district's households are well above the income cutoffs.",
+      "district_facts": [
+        "median_household_income",
+        "poverty_pct",
+        "occ_management_pct",
+        "snap_households_pct"
+      ],
+      "bill_quote": "A designation as a qualified opportunity zone shall remain in effect for the period beginning on the applicable start date and ending on the day before the date that is 10 years after the applicable start date.",
+      "section_id": "70421",
+      "section_header": "Permanent renewal and enhancement of opportunity zones",
+      "issues": [
+        "Tax",
+        "Housing"
+      ]
+    },
+    {
+      "effect": "mixed",
+      "importance": 3,
+      "headline": "Bigger, faster tax break for selling small-company stock favors few residents",
+      "plain_english": "The section lets investors in qualifying small companies exclude part of their profit from tax after 3 years instead of 5. It also raises the cap on excluded gain per company from $10 million to $15 million and lifts the company asset limit from $50 million to $75 million. The benefit goes mainly to founders, early employees and investors who sell stock at a large gain.",
+      "who_in_district": "Founders, startup employees and investors in this high-income, management-heavy district (median household income $132,702; 55.3% of workers in management, business, science and arts) could gain, while most residents would see no direct change.",
+      "district_facts": [
+        "median_household_income",
+        "occ_management_pct",
+        "poverty_pct"
+      ],
+      "bill_quote": "the applicable percentage of any gain from the sale or exchange of qualified small business stock acquired after the applicable date and held for at least 3 years.",
+      "section_id": "70431",
+      "section_header": "Expansion of qualified small business stock gain exclusion",
+      "issues": [
+        "Tax",
+        "Small Business"
+      ]
+    },
+    {
+      "effect": "hurts",
+      "importance": 3,
+      "headline": "Commercial clean vehicle tax credit ends years earlier than planned",
+      "plain_english": "The section moves the end date of the tax credit for businesses that buy qualifying clean commercial vehicles from the end of 2032 to September 30, 2025. Local businesses and fleets that planned to buy electric vans or trucks after that date would lose the credit, which makes those vehicles more expensive to buy. The section does not touch household taxes or benefits, so the effect is limited to businesses that buy these vehicles.",
+      "who_in_district": "Small businesses, contractors, delivery and trucking operators, and other fleet owners in the district's construction, maintenance, production and transportation trades would be most affected.",
+      "district_facts": [
+        "occ_construction_pct",
+        "occ_production_pct",
+        "occ_management_pct"
+      ],
+      "bill_quote": "Section 45W(g) is amended by striking December 31, 2032 and inserting September 30, 2025.",
+      "section_id": "70503",
+      "section_header": "Termination of qualified commercial clean vehicles credit",
+      "issues": [
+        "Tax",
+        "Environment/Climate",
+        "Transportation & Infrastructure"
+      ]
+    },
+    {
+      "effect": "hurts",
+      "importance": 3,
+      "headline": "Ends faster tax write-offs for new clean power projects",
+      "plain_english": "The section removes the quick five-year depreciation schedule that clean electricity projects could use. It applies to projects that begin construction after December 31, 2024. Developers would write off costs more slowly, which can make new projects costlier to build and could eventually raise power costs. The effect on this district is indirect.",
+      "who_in_district": "The most exposed are construction and maintenance workers and local businesses that build or buy solar, storage, or other clean power projects, while homeowners are mostly unaffected directly.",
+      "district_facts": [
+        "occ_construction_pct",
+        "median_household_income"
+      ],
+      "bill_quote": "The amendments made by subsection (a) shall apply to property the construction of which begins after December 31, 2024.",
+      "section_id": "70509",
+      "section_header": "Termination of cost recovery for energy property",
+      "issues": [
+        "Tax",
+        "Environment/Climate",
+        "Energy"
+      ]
+    },
+    {
+      "effect": "hurts",
+      "importance": 3,
+      "headline": "Permanent cap on business losses trims write-offs for some owners",
+      "plain_english": "Business owners who file as individuals, such as sole proprietors, partners, and S-corporation owners, can only use a limited amount of business losses against other income, like wages or investment gains. This section removes the 2028 expiration, so the limit becomes permanent. It also resets the starting year for the yearly inflation adjustment, so the limit grows from a newer base and may be lower than under current law. Owners with large losses would pay more tax sooner.",
+      "who_in_district": "The people most affected are higher-income owners of pass-through businesses, professional practices, and real estate or investment ventures, and only those with large business losses, in a district where 55.3% of workers are in management, business, science and arts jobs.",
+      "district_facts": [
+        "median_household_income",
+        "occ_management_pct"
+      ],
+      "bill_quote": "Section 461(l)(1) is amended by striking and before January 1, 2029, each place it appears.",
+      "section_id": "70601",
+      "section_header": "Modification and extension of limitation on excess business losses of noncorporate taxpayers",
+      "issues": [
+        "Tax",
+        "Small Business"
+      ]
+    },
+    {
+      "effect": "mixed",
+      "importance": 3,
+      "headline": "Cracks down on COVID payroll-credit promoters and closes the claim window",
+      "plain_english": "The section fines paid preparers who promote the COVID employee retention credit without checking eligibility, at $1,000 per failure. It also bars any new credit claims filed after January 31, 2024, and gives the IRS six years to audit claims. Employers with legitimate claims already on file are unaffected, but anyone who hasn't filed loses the chance.",
+      "who_in_district": "Small and mid-sized employers in the district that claimed or planned to claim the credit, and the tax and payroll firms that advised them, are most directly affected, in a district where 55.3% of workers are in management, business, science and arts jobs.",
+      "district_facts": [
+        "occ_management_pct",
+        "median_household_income",
+        "occ_sales_office_pct"
+      ],
+      "bill_quote": "no credit under section 3134 of the Internal Revenue Code of 1986 shall be allowed, and no refund with respect to any such credit shall be made, after the date of the enactment of this Act, unless a claim for such credit or refund was filed by the taxpayer on or before January 31, 2024.",
+      "section_id": "70605",
+      "section_header": "Enforcement provisions with respect to COVID-related employee retention credits",
+      "issues": [
+        "Tax"
+      ]
+    },
+    {
+      "effect": "mixed",
+      "importance": 3,
+      "headline": "Caps federal share of emergency Medicaid for certain immigrants starting October 2026",
+      "plain_english": "Starting October 1, 2026, the federal government would pay no more than the state's regular Medicaid share for emergency care given to certain non-citizens. Currently, states that expanded Medicaid, as New Jersey did, can get a higher federal share for this care. Citizens' benefits do not change directly, but New Jersey may have to cover more of these costs or pass them on to hospitals.",
+      "who_in_district": "The most exposed are local hospitals and the state budget, since emergency care for these patients would still be provided but with less federal money behind it; the roughly 5.3% of residents on Medicaid or similar coverage are not directly affected.",
+      "district_facts": [
+        "medicaid_coverage_pct"
+      ],
+      "bill_quote": "furnished to an alien described in paragraph (1) of such subsection shall not exceed the Federal medical assistance percentage determined under subsection (b) for such State",
+      "section_id": "71110",
+      "section_header": "Expansion FMAP for emergency Medicaid",
+      "issues": [
+        "Health Care",
+        "Immigration"
+      ]
+    },
+    {
+      "effect": "neutral",
+      "importance": 2,
+      "headline": "Technical foreign tax credit change mostly affects multinational corporations, not households",
+      "plain_english": "This section changes how multinational companies divide their deductions between U.S. and foreign income when they figure the foreign tax credit. Interest and research costs would no longer be counted against foreign income of their overseas subsidiaries, and other deductions would count only if directly tied to that income. Any effect on residents would come indirectly through employers, and it does not touch SALT, Medicaid, or other household items.",
+      "who_in_district": "The most direct effect falls on multinational corporations with overseas subsidiaries, and the district's large management, business, science and arts workforce may include employees of such firms, but residents' tax bills are not directly changed.",
+      "district_facts": [
+        "occ_management_pct",
+        "median_household_income"
+      ],
+      "bill_quote": "no amount of interest expense or research and experimental expenditures to such income, and (C) any other deduction to such income only if such deduction is directly allocable to such income.",
+      "section_id": "70311",
+      "section_header": "Modifications related to foreign tax credit limitation",
+      "issues": [
+        "Tax",
+        "Trade"
+      ]
+    },
+    {
+      "effect": "mixed",
+      "importance": 2,
+      "headline": "Permanently ends bike-commuting perk; transit benefit limits may rise slightly",
+      "plain_english": "The section removes the tax-free bicycle commuting reimbursement for good. It was already suspended through 2025 and would otherwise have come back in 2026. It also moves the inflation base year for the transit and parking benefit limits from 1998 to 1997, which could nudge those limits up a little. The tax-free transit and commuter rail benefits themselves stay in place.",
+      "who_in_district": "The people most affected are the roughly 19,606 transit commuters, including commuter rail riders, who use employer transit benefits, and the few who bike to work and would have gotten reimbursed.",
+      "district_facts": [
+        "commute_transit_pct",
+        "commute_rail_pct",
+        "work_from_home_pct"
+      ],
+      "bill_quote": "by striking (other than a qualified bicycle commuting reimbursement) in paragraph (4),",
+      "section_id": "70112",
+      "section_header": "Extension and modification of qualified transportation fringe benefits",
+      "issues": [
+        "Tax",
+        "Transportation & Infrastructure"
+      ]
+    },
+    {
+      "effect": "neutral",
+      "importance": 2,
+      "headline": "Technical corporate tax change on foreign-income deduction; little direct district effect",
+      "plain_english": "This section changes how certain multinational companies figure the income that qualifies for a special deduction on foreign-related income. Gains from selling intangible property (such as patents) and other depreciable property would no longer count toward the deduction, and the rules for which expenses reduce that income are tightened. It does not touch SALT, Medicaid, or other household-level provisions.",
+      "who_in_district": "Any effect would fall on multinational corporations and their shareholders, and only indirectly on the district's many management and professional workers (55.3%).",
+      "district_facts": [
+        "occ_management_pct",
+        "median_household_income"
+      ],
+      "bill_quote": "any income and gain from the sale or other disposition (including pursuant to the deemed sale or other deemed disposition or a transaction subject to section 367(d)) of— (aa) intangible property",
+      "section_id": "70322",
+      "section_header": "Determination of deduction eligible income",
+      "issues": [
+        "Tax",
+        "Trade"
+      ]
+    },
+    {
+      "effect": "mixed",
+      "importance": 2,
+      "headline": "Raises 1099 reporting threshold from $600 to $2,000, indexed to inflation",
+      "plain_english": "Businesses would only have to send tax forms (like 1099s) to contractors and others they pay once payments reach more than $2,000 a year, up from $600. The threshold would rise with inflation after 2026. Small businesses and freelancers would have less paperwork, but fewer small payments would be reported to the IRS.",
+      "who_in_district": "Small business owners and the many management, professional and self-employed workers in the district would see less paperwork, while freelancers with small side income would have fewer forms documenting it.",
+      "district_facts": [
+        "occ_management_pct",
+        "work_from_home_pct",
+        "median_household_income"
+      ],
+      "bill_quote": "Section 6041(a) is amended by striking $600 and inserting $2,000.",
+      "section_id": "70433",
+      "section_header": "Increase in threshold for requiring information reporting with respect to certain payees",
+      "issues": [
+        "Tax",
+        "Small Business"
+      ]
+    },
+    {
+      "effect": "mixed",
+      "importance": 2,
+      "headline": "1% tax on cash remittances; bank-funded transfers exempt",
+      "plain_english": "Starting in 2026, anyone sending money abroad using cash, a money order, or a cashier's check pays a 1% tax, collected by the transfer company. Transfers paid from a bank account or with a U.S.-issued debit or credit card are exempt. Because most of the district's households are higher-income and likely use bank-linked methods, few residents would be affected, but cash senders would pay more.",
+      "who_in_district": "Cash-based senders, such as immigrant families in the district's Hispanic (14.0%) and Asian (8.9%) communities who wire money abroad, would pay the 1% tax, while most residents using bank accounts or cards would not.",
+      "district_facts": [
+        "race_hispanic_pct",
+        "race_asian_pct",
+        "median_household_income",
+        "occ_service_pct"
+      ],
+      "bill_quote": "The tax imposed under subsection (a) shall apply only to any remittance transfer for which the sender provides cash, a money order, a cashier's check, or any other similar physical instrument",
+      "section_id": "70604",
+      "section_header": "Excise tax on certain remittance transfers",
+      "issues": [
+        "Tax",
+        "Immigration"
+      ]
+    },
+    {
+      "effect": "neutral",
+      "importance": 2,
+      "headline": "Medicaid duplicate-enrollment checks start 2027; little direct effect expected in NJ-7",
+      "plain_english": "Starting in 2027, states must regularly check enrollees' addresses against sources like the Postal Service change-of-address list and health plan records. By October 2029, states must also use a new federal system to catch people enrolled in Medicaid or CHIP in more than one state, and drop them from a state where they no longer live. Most people are unaffected, though anyone who moves out of state without updating their address could lose coverage in the old state.",
+      "who_in_district": "The roughly 41,192 residents on Medicaid or other means-tested coverage could be affected, mainly those who recently moved or whose address records are out of date, but most should see no change.",
+      "district_facts": [
+        "medicaid_coverage_pct",
+        "poverty_pct",
+        "snap_households_pct"
+      ],
+      "bill_quote": "for the taking of appropriate action (as determined by the Secretary) to identify whether such an individual resides in the State and disenroll an individual from the State plan of such State if such individual does not reside in such State",
+      "section_id": "71103",
+      "section_header": "Reducing duplicate enrollment under the Medicaid and CHIP programs",
+      "issues": [
+        "Health Care",
+        "Government Reform",
+        "Food & Income Assistance"
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "name": "Tax",
+      "sections": [
+        {
+          "section_id": "10306",
+          "header": "Equitable treatment of certain entities",
+          "page": 20
+        },
+        {
+          "section_id": "70001",
+          "header": "References to the Internal Revenue Code of 1986, etc",
+          "page": 87
+        },
+        {
+          "section_id": "70101",
+          "header": "Extension and enhancement of reduced rates",
+          "page": 87
+        },
+        {
+          "section_id": "70102",
+          "header": "Extension and enhancement of increased standard deduction",
+          "page": 87
+        },
+        {
+          "section_id": "70103",
+          "header": "Termination of deduction for personal exemptions other than temporary senior deduction",
+          "page": 88
+        },
+        {
+          "section_id": "70104",
+          "header": "Extension and enhancement of increased child tax credit",
+          "page": 89
+        },
+        {
+          "section_id": "70105",
+          "header": "Extension and enhancement of deduction for qualified business income",
+          "page": 90
+        },
+        {
+          "section_id": "70106",
+          "header": "Extension and enhancement of increased estate and gift tax exemption amounts",
+          "page": 91
+        },
+        {
+          "section_id": "70107",
+          "header": "Extension of increased alternative minimum tax exemption amounts and modification of phaseout thresholds",
+          "page": 91
+        },
+        {
+          "section_id": "70108",
+          "header": "Extension and modification of limitation on deduction for qualified residence interest",
+          "page": 92
+        },
+        {
+          "section_id": "70109",
+          "header": "Extension and modification of limitation on casualty loss deduction",
+          "page": 92
+        },
+        {
+          "section_id": "70110",
+          "header": "Termination of miscellaneous itemized deductions other than educator expenses",
+          "page": 93
+        },
+        {
+          "section_id": "70111",
+          "header": "Limitation on tax benefit of itemized deductions",
+          "page": 93
+        },
+        {
+          "section_id": "70112",
+          "header": "Extension and modification of qualified transportation fringe benefits",
+          "page": 94
+        },
+        {
+          "section_id": "70113",
+          "header": "Extension and modification of limitation on deduction and exclusion for moving expenses",
+          "page": 94
+        },
+        {
+          "section_id": "70114",
+          "header": "Extension and modification of limitation on wagering losses",
+          "page": 95
+        },
+        {
+          "section_id": "70115",
+          "header": "Extension and enhancement of increased limitation on contributions to ABLE accounts",
+          "page": 95
+        },
+        {
+          "section_id": "70116",
+          "header": "Extension and enhancement of savers credit allowed for ABLE contributions",
+          "page": 95
+        },
+        {
+          "section_id": "70117",
+          "header": "Extension of rollovers from qualified tuition programs to ABLE accounts permitted",
+          "page": 96
+        },
+        {
+          "section_id": "70118",
+          "header": "Extension of treatment of certain individuals performing services in the Sinai Peninsula and enhancement to include additional areas",
+          "page": 96
+        },
+        {
+          "section_id": "70119",
+          "header": "Extension and modification of exclusion from gross income of student loans discharged on account of death or disability",
+          "page": 97
+        },
+        {
+          "section_id": "70120",
+          "header": "Limitation on individual deductions for certain state and local taxes, etc",
+          "page": 98
+        },
+        {
+          "section_id": "70201",
+          "header": "No tax on tips",
+          "page": 99
+        },
+        {
+          "section_id": "70202",
+          "header": "No tax on overtime",
+          "page": 103
+        },
+        {
+          "section_id": "70203",
+          "header": "No tax on car loan interest",
+          "page": 105
+        },
+        {
+          "section_id": "70204",
+          "header": "Trump accounts and contribution pilot program",
+          "page": 108
+        },
+        {
+          "section_id": "70301",
+          "header": "Full expensing for certain business property",
+          "page": 117
+        },
+        {
+          "section_id": "70302",
+          "header": "Full expensing of domestic research and experimental expenditures",
+          "page": 119
+        },
+        {
+          "section_id": "70303",
+          "header": "Modification of limitation on business interest",
+          "page": 124
+        },
+        {
+          "section_id": "70304",
+          "header": "Extension and enhancement of paid family and medical leave credit",
+          "page": 124
+        },
+        {
+          "section_id": "70305",
+          "header": "Exceptions from limitations on deduction for business meals",
+          "page": 126
+        },
+        {
+          "section_id": "70306",
+          "header": "Increased dollar limitations for expensing of certain depreciable business assets",
+          "page": 126
+        },
+        {
+          "section_id": "70307",
+          "header": "Special depreciation allowance for qualified production property",
+          "page": 127
+        },
+        {
+          "section_id": "70308",
+          "header": "Enhancement of advanced manufacturing investment credit",
+          "page": 130
+        },
+        {
+          "section_id": "70309",
+          "header": "Spaceports are treated like airports under exempt facility bond rules",
+          "page": 130
+        },
+        {
+          "section_id": "70311",
+          "header": "Modifications related to foreign tax credit limitation",
+          "page": 131
+        },
+        {
+          "section_id": "70312",
+          "header": "Modifications to determination of deemed paid credit for taxes properly attributable to tested income",
+          "page": 132
+        },
+        {
+          "section_id": "70313",
+          "header": "Sourcing certain income from the sale of inventory produced in the United States",
+          "page": 132
+        },
+        {
+          "section_id": "70321",
+          "header": "Modification of deduction for foreign-derived deduction eligible income and net CFC tested income",
+          "page": 133
+        },
+        {
+          "section_id": "70322",
+          "header": "Determination of deduction eligible income",
+          "page": 133
+        },
+        {
+          "section_id": "70323",
+          "header": "Rules related to deemed intangible income",
+          "page": 134
+        },
+        {
+          "section_id": "70331",
+          "header": "Extension and modification of base erosion minimum tax amount",
+          "page": 135
+        },
+        {
+          "section_id": "70341",
+          "header": "Coordination of business interest limitation with interest capitalization provisions",
+          "page": 136
+        },
+        {
+          "section_id": "70342",
+          "header": "Definition of adjusted taxable income for business interest limitation",
+          "page": 137
+        },
+        {
+          "section_id": "70351",
+          "header": "Permanent extension of look-thru rule for related controlled foreign corporations",
+          "page": 137
+        },
+        {
+          "section_id": "70352",
+          "header": "Repeal of election for 1-month deferral in determination of taxable year of specified foreign corporations",
+          "page": 137
+        },
+        {
+          "section_id": "70353",
+          "header": "Restoration of limitation on downward attribution of stock ownership in applying constructive ownership rules",
+          "page": 138
+        },
+        {
+          "section_id": "70354",
+          "header": "Modifications to pro rata share rules",
+          "page": 139
+        },
+        {
+          "section_id": "70401",
+          "header": "Enhancement of employer-provided child care credit",
+          "page": 141
+        },
+        {
+          "section_id": "70402",
+          "header": "Enhancement of adoption credit",
+          "page": 142
+        },
+        {
+          "section_id": "70403",
+          "header": "Recognizing Indian tribal governments for purposes of determining whether a child has special needs for purposes of the adoption credit",
+          "page": 143
+        },
+        {
+          "section_id": "70404",
+          "header": "Enhancement of the dependent care assistance program",
+          "page": 143
+        },
+        {
+          "section_id": "70405",
+          "header": "Enhancement of child and dependent care tax credit",
+          "page": 143
+        },
+        {
+          "section_id": "70411",
+          "header": "Tax credit for contributions of individuals to scholarship granting organizations",
+          "page": 144
+        },
+        {
+          "section_id": "70412",
+          "header": "Exclusion for employer payments of student loans",
+          "page": 147
+        },
+        {
+          "section_id": "70413",
+          "header": "Additional expenses treated as qualified higher education expenses for purposes of 529 accounts",
+          "page": 147
+        },
+        {
+          "section_id": "70414",
+          "header": "Certain postsecondary credentialing expenses treated as qualified higher education expenses for purposes of 529 accounts",
+          "page": 148
+        },
+        {
+          "section_id": "70415",
+          "header": "Modification of excise tax on investment income of certain private colleges and universities",
+          "page": 150
+        },
+        {
+          "section_id": "70416",
+          "header": "Expanding application of tax on excess compensation within tax-exempt organizations",
+          "page": 152
+        },
+        {
+          "section_id": "70421",
+          "header": "Permanent renewal and enhancement of opportunity zones",
+          "page": 152
+        },
+        {
+          "section_id": "70422",
+          "header": "Permanent enhancement of low-income housing tax credit",
+          "page": 163
+        },
+        {
+          "section_id": "70423",
+          "header": "Permanent extension of new markets tax credit",
+          "page": 164
+        },
+        {
+          "section_id": "70424",
+          "header": "Permanent and expanded reinstatement of partial deduction for charitable contributions of individuals who do not elect to itemize",
+          "page": 164
+        },
+        {
+          "section_id": "70425",
+          "header": "0.5 percent floor on deduction of contributions made by individuals",
+          "page": 164
+        },
+        {
+          "section_id": "70426",
+          "header": "1-percent floor on deduction of charitable contributions made by corporations",
+          "page": 166
+        },
+        {
+          "section_id": "70427",
+          "header": "Permanent increase in limitation on cover over of tax on distilled spirits",
+          "page": 167
+        },
+        {
+          "section_id": "70428",
+          "header": "Nonprofit community development activities in remote native villages",
+          "page": 167
+        },
+        {
+          "section_id": "70429",
+          "header": "Adjustment of charitable deduction for certain expenses incurred in support of Native Alaskan subsistence whaling",
+          "page": 168
+        },
+        {
+          "section_id": "70430",
+          "header": "Exception to percentage of completion method of accounting for certain residential construction contracts",
+          "page": 168
+        },
+        {
+          "section_id": "70431",
+          "header": "Expansion of qualified small business stock gain exclusion",
+          "page": 169
+        },
+        {
+          "section_id": "70432",
+          "header": "Repeal of revision to de minimis rules for third party network transactions",
+          "page": 172
+        },
+        {
+          "section_id": "70433",
+          "header": "Increase in threshold for requiring information reporting with respect to certain payees",
+          "page": 172
+        },
+        {
+          "section_id": "70434",
+          "header": "Treatment of certain qualified sound recording productions",
+          "page": 173
+        },
+        {
+          "section_id": "70435",
+          "header": "Exclusion of interest on loans secured by rural or agricultural real property",
+          "page": 174
+        },
+        {
+          "section_id": "70436",
+          "header": "Reduction of transfer and manufacturing taxes for certain devices",
+          "page": 176
+        },
+        {
+          "section_id": "70437",
+          "header": "Treatment of capital gains from the sale of certain farmland property",
+          "page": 177
+        },
+        {
+          "section_id": "70438",
+          "header": "Extension of rules for treatment of certain disaster-related personal casualty losses",
+          "page": 179
+        },
+        {
+          "section_id": "70439",
+          "header": "Restoration of taxable REIT subsidiary asset test",
+          "page": 179
+        },
+        {
+          "section_id": "70501",
+          "header": "Termination of previously-owned clean vehicle credit",
+          "page": 179
+        },
+        {
+          "section_id": "70502",
+          "header": "Termination of clean vehicle credit",
+          "page": 179
+        },
+        {
+          "section_id": "70503",
+          "header": "Termination of qualified commercial clean vehicles credit",
+          "page": 180
+        },
+        {
+          "section_id": "70504",
+          "header": "Termination of alternative fuel vehicle refueling property credit",
+          "page": 180
+        },
+        {
+          "section_id": "70505",
+          "header": "Termination of energy efficient home improvement credit",
+          "page": 180
+        },
+        {
+          "section_id": "70506",
+          "header": "Termination of residential clean energy credit",
+          "page": 180
+        },
+        {
+          "section_id": "70507",
+          "header": "Termination of energy efficient commercial buildings deduction",
+          "page": 180
+        },
+        {
+          "section_id": "70508",
+          "header": "Termination of new energy efficient home credit",
+          "page": 180
+        },
+        {
+          "section_id": "70509",
+          "header": "Termination of cost recovery for energy property",
+          "page": 180
+        },
+        {
+          "section_id": "70510",
+          "header": "Modifications of zero-emission nuclear power production credit",
+          "page": 181
+        },
+        {
+          "section_id": "70511",
+          "header": "Termination of clean hydrogen production credit",
+          "page": 181
+        },
+        {
+          "section_id": "70512",
+          "header": "Termination and restrictions on clean electricity production credit",
+          "page": 181
+        },
+        {
+          "section_id": "70513",
+          "header": "Termination and restrictions on clean electricity investment credit",
+          "page": 199
+        },
+        {
+          "section_id": "70514",
+          "header": "Phase-out and restrictions on advanced manufacturing production credit",
+          "page": 202
+        },
+        {
+          "section_id": "70515",
+          "header": "Restriction on the extension of advanced energy project credit program",
+          "page": 205
+        },
+        {
+          "section_id": "70521",
+          "header": "Extension and modification of clean fuel production credit",
+          "page": 205
+        },
+        {
+          "section_id": "70522",
+          "header": "Restrictions on carbon oxide sequestration credit",
+          "page": 208
+        },
+        {
+          "section_id": "70523",
+          "header": "Intangible drilling and development costs taken into account for purposes of computing adjusted financial statement income",
+          "page": 210
+        },
+        {
+          "section_id": "70524",
+          "header": "Income from hydrogen storage, carbon capture, advanced nuclear, hydropower, and geothermal energy added to qualifying income of certain publicly traded partnerships",
+          "page": 210
+        },
+        {
+          "section_id": "70525",
+          "header": "Allow for payments to certain individuals who dye fuel",
+          "page": 211
+        },
+        {
+          "section_id": "70531",
+          "header": "Modifications to de minimis entry privilege for commercial shipments",
+          "page": 212
+        },
+        {
+          "section_id": "70601",
+          "header": "Modification and extension of limitation on excess business losses of noncorporate taxpayers",
+          "page": 212
+        },
+        {
+          "section_id": "70602",
+          "header": "Treatment of payments from partnerships to partners for property or services",
+          "page": 213
+        },
+        {
+          "section_id": "70603",
+          "header": "Excessive employee remuneration from controlled group members and allocation of deduction",
+          "page": 213
+        },
+        {
+          "section_id": "70604",
+          "header": "Excise tax on certain remittance transfers",
+          "page": 214
+        },
+        {
+          "section_id": "70605",
+          "header": "Enforcement provisions with respect to COVID-related employee retention credits",
+          "page": 215
+        },
+        {
+          "section_id": "70606",
+          "header": "Social security number requirement for American Opportunity and Lifetime Learning credits",
+          "page": 218
+        },
+        {
+          "section_id": "70607",
+          "header": "Task force on the replacement of Direct File",
+          "page": 218
+        },
+        {
+          "section_id": "71115",
+          "header": "Provider taxes",
+          "page": 230
+        },
+        {
+          "section_id": "71117",
+          "header": "Requirements regarding waiver of uniform tax requirement for Medicaid provider tax",
+          "page": 233
+        },
+        {
+          "section_id": "71301",
+          "header": "Permitting premium tax credit only for certain individuals",
+          "page": 250
+        },
+        {
+          "section_id": "71302",
+          "header": "Disallowing premium tax credit during periods of medicaid ineligibility due to alien status",
+          "page": 251
+        },
+        {
+          "section_id": "71303",
+          "header": "Requiring verification of eligibility for premium tax credit",
+          "page": 252
+        },
+        {
+          "section_id": "71304",
+          "header": "Disallowing premium tax credit in case of certain coverage enrolled in during special enrollment period",
+          "page": 253
+        },
+        {
+          "section_id": "71305",
+          "header": "Eliminating limitation on recapture of advance payment of premium tax credit",
+          "page": 253
+        },
+        {
+          "section_id": "71306",
+          "header": "Permanent extension of safe harbor for absence of deductible for telehealth services",
+          "page": 254
+        },
+        {
+          "section_id": "71307",
+          "header": "Allowance of bronze and catastrophic plans in connection with health savings accounts",
+          "page": 254
+        },
+        {
+          "section_id": "71308",
+          "header": "Treatment of direct primary care service arrangements",
+          "page": 254
+        }
+      ]
+    },
+    {
+      "name": "Environment/Climate",
+      "sections": [
+        {
+          "section_id": "10201",
+          "header": "Rescission of amounts for forestry",
+          "page": 14
+        },
+        {
+          "section_id": "10601",
+          "header": "Conservation",
+          "page": 36
+        },
+        {
+          "section_id": "30002",
+          "header": "Rescission of funds for Green and Resilient Retrofit Program for Multifamily Housing",
+          "page": 55
+        },
+        {
+          "section_id": "40006",
+          "header": "Corporate average fuel economy civil penalties",
+          "page": 65
+        },
+        {
+          "section_id": "40008",
+          "header": "Rescission of certain amounts for the National Oceanic and Atmospheric Administration",
+          "page": 65
+        },
+        {
+          "section_id": "40010",
+          "header": "Treatment of unobligated funds for alternative fuel and low-emission aviation technology",
+          "page": 66
+        },
+        {
+          "section_id": "50101",
+          "header": "Onshore oil and gas leasing",
+          "page": 66
+        },
+        {
+          "section_id": "50103",
+          "header": "Royalties on extracted methane",
+          "page": 71
+        },
+        {
+          "section_id": "50301",
+          "header": "Timber sales and long-term contracting for the Forest Service and the Bureau of Land Management",
+          "page": 75
+        },
+        {
+          "section_id": "50302",
+          "header": "Renewable energy fees on Federal land",
+          "page": 77
+        },
+        {
+          "section_id": "50303",
+          "header": "Renewable energy revenue sharing",
+          "page": 79
+        },
+        {
+          "section_id": "50304",
+          "header": "Rescission of National Park Service and Bureau of Land Management funds",
+          "page": 80
+        },
+        {
+          "section_id": "50402",
+          "header": "Repeals; rescissions",
+          "page": 81
+        },
+        {
+          "section_id": "50403",
+          "header": "Energy dominance financing",
+          "page": 81
+        },
+        {
+          "section_id": "60001",
+          "header": "Rescission of funding for clean heavy-duty vehicles",
+          "page": 83
+        },
+        {
+          "section_id": "60002",
+          "header": "Repeal of Greenhouse Gas Reduction Fund",
+          "page": 83
+        },
+        {
+          "section_id": "60003",
+          "header": "Rescission of funding for diesel emissions reductions",
+          "page": 84
+        },
+        {
+          "section_id": "60004",
+          "header": "Rescission of funding to address air pollution",
+          "page": 84
+        },
+        {
+          "section_id": "60005",
+          "header": "Rescission of funding to address air pollution at schools",
+          "page": 84
+        },
+        {
+          "section_id": "60006",
+          "header": "Rescission of funding for the low emissions electricity program",
+          "page": 84
+        },
+        {
+          "section_id": "60007",
+          "header": "Rescission of funding for section 211(o) of the Clean Air Act",
+          "page": 84
+        },
+        {
+          "section_id": "60008",
+          "header": "Rescission of funding for implementation of the American Innovation and Manufacturing Act",
+          "page": 84
+        },
+        {
+          "section_id": "60009",
+          "header": "Rescission of funding for enforcement technology and public information",
+          "page": 84
+        },
+        {
+          "section_id": "60010",
+          "header": "Rescission of funding for greenhouse gas corporate reporting",
+          "page": 84
+        },
+        {
+          "section_id": "60011",
+          "header": "Rescission of funding for environmental product declaration assistance",
+          "page": 84
+        },
+        {
+          "section_id": "60012",
+          "header": "Rescission of funding for methane emissions and waste reduction incentive program for petroleum and natural gas systems",
+          "page": 84
+        },
+        {
+          "section_id": "60013",
+          "header": "Rescission of funding for greenhouse gas air pollution plans and implementation grants",
+          "page": 85
+        },
+        {
+          "section_id": "60014",
+          "header": "Rescission of funding for environmental protection agency efficient, accurate, and timely reviews",
+          "page": 85
+        },
+        {
+          "section_id": "60015",
+          "header": "Rescission of funding for low-embodied carbon labeling for construction materials",
+          "page": 85
+        },
+        {
+          "section_id": "60016",
+          "header": "Rescission of funding for environmental and climate justice block grants",
+          "page": 85
+        },
+        {
+          "section_id": "60017",
+          "header": "Rescission of funding for ESA recovery plans",
+          "page": 85
+        },
+        {
+          "section_id": "60018",
+          "header": "Rescission of funding for environmental and climate data collection",
+          "page": 85
+        },
+        {
+          "section_id": "60020",
+          "header": "Rescission of funding for Federal building assistance",
+          "page": 85
+        },
+        {
+          "section_id": "60021",
+          "header": "Rescission of funding for low-carbon materials for Federal buildings",
+          "page": 85
+        },
+        {
+          "section_id": "60022",
+          "header": "Rescission of funding for GSA emerging and sustainable technologies",
+          "page": 85
+        },
+        {
+          "section_id": "60024",
+          "header": "Rescission of low-carbon transportation materials grants",
+          "page": 86
+        },
+        {
+          "section_id": "60026",
+          "header": "Project sponsor opt-in fees for environmental reviews",
+          "page": 86
+        },
+        {
+          "section_id": "70501",
+          "header": "Termination of previously-owned clean vehicle credit",
+          "page": 179
+        },
+        {
+          "section_id": "70502",
+          "header": "Termination of clean vehicle credit",
+          "page": 179
+        },
+        {
+          "section_id": "70503",
+          "header": "Termination of qualified commercial clean vehicles credit",
+          "page": 180
+        },
+        {
+          "section_id": "70504",
+          "header": "Termination of alternative fuel vehicle refueling property credit",
+          "page": 180
+        },
+        {
+          "section_id": "70505",
+          "header": "Termination of energy efficient home improvement credit",
+          "page": 180
+        },
+        {
+          "section_id": "70506",
+          "header": "Termination of residential clean energy credit",
+          "page": 180
+        },
+        {
+          "section_id": "70507",
+          "header": "Termination of energy efficient commercial buildings deduction",
+          "page": 180
+        },
+        {
+          "section_id": "70508",
+          "header": "Termination of new energy efficient home credit",
+          "page": 180
+        },
+        {
+          "section_id": "70509",
+          "header": "Termination of cost recovery for energy property",
+          "page": 180
+        },
+        {
+          "section_id": "70510",
+          "header": "Modifications of zero-emission nuclear power production credit",
+          "page": 181
+        },
+        {
+          "section_id": "70511",
+          "header": "Termination of clean hydrogen production credit",
+          "page": 181
+        },
+        {
+          "section_id": "70512",
+          "header": "Termination and restrictions on clean electricity production credit",
+          "page": 181
+        },
+        {
+          "section_id": "70513",
+          "header": "Termination and restrictions on clean electricity investment credit",
+          "page": 199
+        },
+        {
+          "section_id": "70514",
+          "header": "Phase-out and restrictions on advanced manufacturing production credit",
+          "page": 202
+        },
+        {
+          "section_id": "70515",
+          "header": "Restriction on the extension of advanced energy project credit program",
+          "page": 205
+        },
+        {
+          "section_id": "70522",
+          "header": "Restrictions on carbon oxide sequestration credit",
+          "page": 208
+        }
+      ]
+    },
+    {
+      "name": "Health Care",
+      "sections": [
+        {
+          "section_id": "10107",
+          "header": "National education and obesity prevention grant program",
+          "page": 14
+        },
+        {
+          "section_id": "71101",
+          "header": "Moratorium on implementation of rule relating to eligibility and enrollment in Medicare Savings Programs",
+          "page": 219
+        },
+        {
+          "section_id": "71102",
+          "header": "Moratorium on implementation of rule relating to eligibility and enrollment for Medicaid, CHIP, and the Basic Health Program",
+          "page": 219
+        },
+        {
+          "section_id": "71103",
+          "header": "Reducing duplicate enrollment under the Medicaid and CHIP programs",
+          "page": 220
+        },
+        {
+          "section_id": "71104",
+          "header": "Ensuring deceased individuals do not remain enrolled",
+          "page": 222
+        },
+        {
+          "section_id": "71105",
+          "header": "Ensuring deceased providers do not remain enrolled",
+          "page": 223
+        },
+        {
+          "section_id": "71106",
+          "header": "Payment reduction related to certain erroneous excess payments under Medicaid",
+          "page": 224
+        },
+        {
+          "section_id": "71107",
+          "header": "Eligibility redeterminations",
+          "page": 224
+        },
+        {
+          "section_id": "71108",
+          "header": "Revising home equity limit for determining eligibility for long-term care services under the Medicaid program",
+          "page": 225
+        },
+        {
+          "section_id": "71109",
+          "header": "Alien Medicaid eligibility",
+          "page": 226
+        },
+        {
+          "section_id": "71110",
+          "header": "Expansion FMAP for emergency Medicaid",
+          "page": 227
+        },
+        {
+          "section_id": "71111",
+          "header": "Moratorium on implementation of rule relating to staffing standards for long-term care facilities under the Medicare and Medicaid programs",
+          "page": 227
+        },
+        {
+          "section_id": "71112",
+          "header": "Reducing State Medicaid costs",
+          "page": 227
+        },
+        {
+          "section_id": "71113",
+          "header": "Federal payments to prohibited entities",
+          "page": 229
+        },
+        {
+          "section_id": "71114",
+          "header": "Sunsetting increased FMAP incentive",
+          "page": 230
+        },
+        {
+          "section_id": "71115",
+          "header": "Provider taxes",
+          "page": 230
+        },
+        {
+          "section_id": "71116",
+          "header": "State directed payments",
+          "page": 232
+        },
+        {
+          "section_id": "71117",
+          "header": "Requirements regarding waiver of uniform tax requirement for Medicaid provider tax",
+          "page": 233
+        },
+        {
+          "section_id": "71118",
+          "header": "Requiring budget neutrality for Medicaid demonstration projects under section 1115",
+          "page": 235
+        },
+        {
+          "section_id": "71119",
+          "header": "Requirement for States to establish Medicaid community engagement requirements for certain individuals",
+          "page": 235
+        },
+        {
+          "section_id": "71120",
+          "header": "Modifying cost sharing requirements for certain expansion individuals under the Medicaid program",
+          "page": 244
+        },
+        {
+          "section_id": "71121",
+          "header": "Making certain adjustments to coverage of home or community-based services under Medicaid",
+          "page": 246
+        },
+        {
+          "section_id": "71201",
+          "header": "Limiting Medicare coverage of certain individuals",
+          "page": 248
+        },
+        {
+          "section_id": "71202",
+          "header": "Temporary payment increase under the medicare physician fee schedule to account for exceptional circumstances",
+          "page": 249
+        },
+        {
+          "section_id": "71203",
+          "header": "Expanding and clarifying the exclusion for orphan drugs under the Drug Price Negotiation Program",
+          "page": 249
+        },
+        {
+          "section_id": "71301",
+          "header": "Permitting premium tax credit only for certain individuals",
+          "page": 250
+        },
+        {
+          "section_id": "71302",
+          "header": "Disallowing premium tax credit during periods of medicaid ineligibility due to alien status",
+          "page": 251
+        },
+        {
+          "section_id": "71303",
+          "header": "Requiring verification of eligibility for premium tax credit",
+          "page": 252
+        },
+        {
+          "section_id": "71304",
+          "header": "Disallowing premium tax credit in case of certain coverage enrolled in during special enrollment period",
+          "page": 253
+        },
+        {
+          "section_id": "71305",
+          "header": "Eliminating limitation on recapture of advance payment of premium tax credit",
+          "page": 253
+        },
+        {
+          "section_id": "71306",
+          "header": "Permanent extension of safe harbor for absence of deductible for telehealth services",
+          "page": 254
+        },
+        {
+          "section_id": "71307",
+          "header": "Allowance of bronze and catastrophic plans in connection with health savings accounts",
+          "page": 254
+        },
+        {
+          "section_id": "71308",
+          "header": "Treatment of direct primary care service arrangements",
+          "page": 254
+        },
+        {
+          "section_id": "71401",
+          "header": "Rural Health Transformation Program",
+          "page": 256
+        },
+        {
+          "section_id": "90101",
+          "header": "FEHB improvements",
+          "page": 291
+        },
+        {
+          "section_id": "100201",
+          "header": "Extension of fund",
+          "page": 323
+        },
+        {
+          "section_id": "100202",
+          "header": "Claims relating to atmospheric testing",
+          "page": 323
+        },
+        {
+          "section_id": "100203",
+          "header": "Claims relating to uranium mining",
+          "page": 325
+        },
+        {
+          "section_id": "100204",
+          "header": "Claims relating to Manhattan Project waste",
+          "page": 327
+        },
+        {
+          "section_id": "100205",
+          "header": "Limitations on claims",
+          "page": 330
+        }
+      ]
+    },
+    {
+      "name": "Energy",
+      "sections": [
+        {
+          "section_id": "10103",
+          "header": "Availability of standard utility allowances based on receipt of energy assistance",
+          "page": 12
+        },
+        {
+          "section_id": "10605",
+          "header": "Energy",
+          "page": 38
+        },
+        {
+          "section_id": "20005",
+          "header": "Enhancement of Department of Defense resources for scaling low-cost weapons into production",
+          "page": 48
+        },
+        {
+          "section_id": "20008",
+          "header": "Enhancement of resources for nuclear forces",
+          "page": 50
+        },
+        {
+          "section_id": "40006",
+          "header": "Corporate average fuel economy civil penalties",
+          "page": 65
+        },
+        {
+          "section_id": "40010",
+          "header": "Treatment of unobligated funds for alternative fuel and low-emission aviation technology",
+          "page": 66
+        },
+        {
+          "section_id": "50101",
+          "header": "Onshore oil and gas leasing",
+          "page": 66
+        },
+        {
+          "section_id": "50102",
+          "header": "Offshore oil and gas leasing",
+          "page": 68
+        },
+        {
+          "section_id": "50103",
+          "header": "Royalties on extracted methane",
+          "page": 71
+        },
+        {
+          "section_id": "50104",
+          "header": "Alaska oil and gas leasing",
+          "page": 71
+        },
+        {
+          "section_id": "50105",
+          "header": "National Petroleum Reserve–Alaska",
+          "page": 72
+        },
+        {
+          "section_id": "50201",
+          "header": "Coal leasing",
+          "page": 73
+        },
+        {
+          "section_id": "50202",
+          "header": "Coal royalty",
+          "page": 74
+        },
+        {
+          "section_id": "50203",
+          "header": "Leases for known recoverable coal resources",
+          "page": 75
+        },
+        {
+          "section_id": "50204",
+          "header": "Authorization to mine Federal coal",
+          "page": 75
+        },
+        {
+          "section_id": "50302",
+          "header": "Renewable energy fees on Federal land",
+          "page": 77
+        },
+        {
+          "section_id": "50303",
+          "header": "Renewable energy revenue sharing",
+          "page": 79
+        },
+        {
+          "section_id": "50401",
+          "header": "Strategic Petroleum Reserve",
+          "page": 81
+        },
+        {
+          "section_id": "50402",
+          "header": "Repeals; rescissions",
+          "page": 81
+        },
+        {
+          "section_id": "50403",
+          "header": "Energy dominance financing",
+          "page": 81
+        },
+        {
+          "section_id": "50404",
+          "header": "Transformational artificial intelligence models",
+          "page": 82
+        },
+        {
+          "section_id": "60006",
+          "header": "Rescission of funding for the low emissions electricity program",
+          "page": 84
+        },
+        {
+          "section_id": "60007",
+          "header": "Rescission of funding for section 211(o) of the Clean Air Act",
+          "page": 84
+        },
+        {
+          "section_id": "60012",
+          "header": "Rescission of funding for methane emissions and waste reduction incentive program for petroleum and natural gas systems",
+          "page": 84
+        },
+        {
+          "section_id": "70504",
+          "header": "Termination of alternative fuel vehicle refueling property credit",
+          "page": 180
+        },
+        {
+          "section_id": "70505",
+          "header": "Termination of energy efficient home improvement credit",
+          "page": 180
+        },
+        {
+          "section_id": "70506",
+          "header": "Termination of residential clean energy credit",
+          "page": 180
+        },
+        {
+          "section_id": "70507",
+          "header": "Termination of energy efficient commercial buildings deduction",
+          "page": 180
+        },
+        {
+          "section_id": "70509",
+          "header": "Termination of cost recovery for energy property",
+          "page": 180
+        },
+        {
+          "section_id": "70510",
+          "header": "Modifications of zero-emission nuclear power production credit",
+          "page": 181
+        },
+        {
+          "section_id": "70511",
+          "header": "Termination of clean hydrogen production credit",
+          "page": 181
+        },
+        {
+          "section_id": "70512",
+          "header": "Termination and restrictions on clean electricity production credit",
+          "page": 181
+        },
+        {
+          "section_id": "70513",
+          "header": "Termination and restrictions on clean electricity investment credit",
+          "page": 199
+        },
+        {
+          "section_id": "70514",
+          "header": "Phase-out and restrictions on advanced manufacturing production credit",
+          "page": 202
+        },
+        {
+          "section_id": "70521",
+          "header": "Extension and modification of clean fuel production credit",
+          "page": 205
+        },
+        {
+          "section_id": "70523",
+          "header": "Intangible drilling and development costs taken into account for purposes of computing adjusted financial statement income",
+          "page": 210
+        },
+        {
+          "section_id": "70524",
+          "header": "Income from hydrogen storage, carbon capture, advanced nuclear, hydropower, and geothermal energy added to qualifying income of certain publicly traded partnerships",
+          "page": 210
+        },
+        {
+          "section_id": "70525",
+          "header": "Allow for payments to certain individuals who dye fuel",
+          "page": 211
+        }
+      ]
+    },
+    {
+      "name": "Immigration",
+      "sections": [
+        {
+          "section_id": "10108",
+          "header": "Alien SNAP eligibility",
+          "page": 14
+        },
+        {
+          "section_id": "20011",
+          "header": "Improving Department of Defense border support and counter-drug missions",
+          "page": 54
+        },
+        {
+          "section_id": "70604",
+          "header": "Excise tax on certain remittance transfers",
+          "page": 214
+        },
+        {
+          "section_id": "71109",
+          "header": "Alien Medicaid eligibility",
+          "page": 226
+        },
+        {
+          "section_id": "71110",
+          "header": "Expansion FMAP for emergency Medicaid",
+          "page": 227
+        },
+        {
+          "section_id": "71201",
+          "header": "Limiting Medicare coverage of certain individuals",
+          "page": 248
+        },
+        {
+          "section_id": "71301",
+          "header": "Permitting premium tax credit only for certain individuals",
+          "page": 250
+        },
+        {
+          "section_id": "71302",
+          "header": "Disallowing premium tax credit during periods of medicaid ineligibility due to alien status",
+          "page": 251
+        },
+        {
+          "section_id": "87001",
+          "header": "Potential sponsor vetting for unaccompanied alien children appropriation",
+          "page": 285
+        },
+        {
+          "section_id": "90001",
+          "header": "Border infrastructure and wall system",
+          "page": 286
+        },
+        {
+          "section_id": "90002",
+          "header": "U.S. Customs and Border Protection personnel, fleet vehicles, and facilities",
+          "page": 287
+        },
+        {
+          "section_id": "90003",
+          "header": "Detention capacity",
+          "page": 287
+        },
+        {
+          "section_id": "90004",
+          "header": "Border security, technology, and screening",
+          "page": 288
+        },
+        {
+          "section_id": "90005",
+          "header": "State and local assistance",
+          "page": 288
+        },
+        {
+          "section_id": "90007",
+          "header": "Department of Homeland Security appropriations for border support",
+          "page": 290
+        },
+        {
+          "section_id": "100001",
+          "header": "Applicability of the immigration laws",
+          "page": 293
+        },
+        {
+          "section_id": "100002",
+          "header": "Asylum fee",
+          "page": 293
+        },
+        {
+          "section_id": "100003",
+          "header": "Employment authorization document fees",
+          "page": 294
+        },
+        {
+          "section_id": "100004",
+          "header": "Immigration parole fee",
+          "page": 296
+        },
+        {
+          "section_id": "100005",
+          "header": "Special immigrant juvenile fee",
+          "page": 297
+        },
+        {
+          "section_id": "100006",
+          "header": "Temporary protected status fee",
+          "page": 298
+        },
+        {
+          "section_id": "100007",
+          "header": "Visa integrity fee",
+          "page": 299
+        },
+        {
+          "section_id": "100008",
+          "header": "Form I–94 fee",
+          "page": 299
+        },
+        {
+          "section_id": "100009",
+          "header": "Annual asylum fee",
+          "page": 300
+        },
+        {
+          "section_id": "100010",
+          "header": "Fee relating to renewal and extension of employment authorization for parolees",
+          "page": 301
+        },
+        {
+          "section_id": "100011",
+          "header": "Fee relating to renewal or extension of employment authorization for asylum applicants",
+          "page": 301
+        },
+        {
+          "section_id": "100012",
+          "header": "Fee relating to renewal and extension of employment authorization for aliens granted temporary protected status",
+          "page": 302
+        },
+        {
+          "section_id": "100013",
+          "header": "Fees relating to applications for adjustment of status",
+          "page": 303
+        },
+        {
+          "section_id": "100014",
+          "header": "Electronic System for Travel Authorization fee",
+          "page": 311
+        },
+        {
+          "section_id": "100015",
+          "header": "Electronic Visa Update System fee",
+          "page": 311
+        },
+        {
+          "section_id": "100016",
+          "header": "Fee for aliens ordered removed in absentia",
+          "page": 313
+        },
+        {
+          "section_id": "100017",
+          "header": "Inadmissible alien apprehension fee",
+          "page": 313
+        },
+        {
+          "section_id": "100018",
+          "header": "Amendment to authority to apply for asylum",
+          "page": 314
+        },
+        {
+          "section_id": "100051",
+          "header": "Appropriation for the Department of Homeland Security",
+          "page": 314
+        },
+        {
+          "section_id": "100052",
+          "header": "Appropriation for U.S. Immigration and Customs Enforcement",
+          "page": 316
+        },
+        {
+          "section_id": "100054",
+          "header": "Appropriation for the Department of Justice",
+          "page": 318
+        },
+        {
+          "section_id": "100055",
+          "header": "Bridging Immigration-related Deficits Experienced Nationwide Reimbursement Fund",
+          "page": 321
+        }
+      ]
+    },
+    {
+      "name": "Agriculture",
+      "sections": [
+        {
+          "section_id": "10201",
+          "header": "Rescission of amounts for forestry",
+          "page": 14
+        },
+        {
+          "section_id": "10301",
+          "header": "Effective reference price; reference price",
+          "page": 15
+        },
+        {
+          "section_id": "10302",
+          "header": "Base acres",
+          "page": 15
+        },
+        {
+          "section_id": "10303",
+          "header": "Producer election",
+          "page": 18
+        },
+        {
+          "section_id": "10304",
+          "header": "Price loss coverage",
+          "page": 19
+        },
+        {
+          "section_id": "10305",
+          "header": "Agriculture risk coverage",
+          "page": 19
+        },
+        {
+          "section_id": "10306",
+          "header": "Equitable treatment of certain entities",
+          "page": 20
+        },
+        {
+          "section_id": "10307",
+          "header": "Payment limitations",
+          "page": 21
+        },
+        {
+          "section_id": "10308",
+          "header": "Adjusted gross income limitation",
+          "page": 21
+        },
+        {
+          "section_id": "10309",
+          "header": "Marketing loans",
+          "page": 22
+        },
+        {
+          "section_id": "10310",
+          "header": "Repayment of marketing loans",
+          "page": 23
+        },
+        {
+          "section_id": "10311",
+          "header": "Economic adjustment assistance for textile mills",
+          "page": 25
+        },
+        {
+          "section_id": "10312",
+          "header": "Sugar program updates",
+          "page": 25
+        },
+        {
+          "section_id": "10313",
+          "header": "Dairy policy updates",
+          "page": 28
+        },
+        {
+          "section_id": "10314",
+          "header": "Implementation",
+          "page": 29
+        },
+        {
+          "section_id": "10401",
+          "header": "Supplemental agricultural disaster assistance",
+          "page": 30
+        },
+        {
+          "section_id": "10501",
+          "header": "Beginning farmer and rancher benefit",
+          "page": 32
+        },
+        {
+          "section_id": "10502",
+          "header": "Area-based crop insurance coverage and affordability",
+          "page": 33
+        },
+        {
+          "section_id": "10503",
+          "header": "Administrative and operating expense adjustments",
+          "page": 33
+        },
+        {
+          "section_id": "10504",
+          "header": "Premium support",
+          "page": 35
+        },
+        {
+          "section_id": "10505",
+          "header": "Program compliance and integrity",
+          "page": 35
+        },
+        {
+          "section_id": "10506",
+          "header": "Reviews, compliance, and integrity",
+          "page": 35
+        },
+        {
+          "section_id": "10507",
+          "header": "Poultry insurance pilot program",
+          "page": 35
+        },
+        {
+          "section_id": "10601",
+          "header": "Conservation",
+          "page": 36
+        },
+        {
+          "section_id": "10602",
+          "header": "Supplemental agricultural trade promotion program",
+          "page": 37
+        },
+        {
+          "section_id": "10604",
+          "header": "Research",
+          "page": 38
+        },
+        {
+          "section_id": "10605",
+          "header": "Energy",
+          "page": 38
+        },
+        {
+          "section_id": "10606",
+          "header": "Horticulture",
+          "page": 39
+        },
+        {
+          "section_id": "10607",
+          "header": "Miscellaneous",
+          "page": 39
+        },
+        {
+          "section_id": "50301",
+          "header": "Timber sales and long-term contracting for the Forest Service and the Bureau of Land Management",
+          "page": 75
+        },
+        {
+          "section_id": "70301",
+          "header": "Full expensing for certain business property",
+          "page": 117
+        },
+        {
+          "section_id": "70428",
+          "header": "Nonprofit community development activities in remote native villages",
+          "page": 167
+        },
+        {
+          "section_id": "70435",
+          "header": "Exclusion of interest on loans secured by rural or agricultural real property",
+          "page": 174
+        },
+        {
+          "section_id": "70437",
+          "header": "Treatment of capital gains from the sale of certain farmland property",
+          "page": 177
+        },
+        {
+          "section_id": "70521",
+          "header": "Extension and modification of clean fuel production credit",
+          "page": 205
+        },
+        {
+          "section_id": "71108",
+          "header": "Revising home equity limit for determining eligibility for long-term care services under the Medicaid program",
+          "page": 225
+        },
+        {
+          "section_id": "80001",
+          "header": "Exemption of certain assets",
+          "page": 262
+        }
+      ]
+    },
+    {
+      "name": "Defense & National Security",
+      "sections": [
+        {
+          "section_id": "20001",
+          "header": "Enhancement of Department of Defense resources for improving the quality of life for military personnel",
+          "page": 41
+        },
+        {
+          "section_id": "20002",
+          "header": "Enhancement of Department of Defense resources for shipbuilding",
+          "page": 42
+        },
+        {
+          "section_id": "20003",
+          "header": "Enhancement of Department of Defense resources for integrated air and missile defense",
+          "page": 44
+        },
+        {
+          "section_id": "20004",
+          "header": "Enhancement of Department of Defense resources for munitions and defense supply chain resiliency",
+          "page": 44
+        },
+        {
+          "section_id": "20005",
+          "header": "Enhancement of Department of Defense resources for scaling low-cost weapons into production",
+          "page": 48
+        },
+        {
+          "section_id": "20006",
+          "header": "Enhancement of Department of Defense resources for improving the efficiency and cybersecurity of the Department of Defense",
+          "page": 49
+        },
+        {
+          "section_id": "20007",
+          "header": "Enhancement of Department of Defense resources for air superiority",
+          "page": 50
+        },
+        {
+          "section_id": "20008",
+          "header": "Enhancement of resources for nuclear forces",
+          "page": 50
+        },
+        {
+          "section_id": "20009",
+          "header": "Enhancement of Department of Defense resources to improve capabilities of United States Indo-Pacific Command",
+          "page": 52
+        },
+        {
+          "section_id": "20010",
+          "header": "Enhancement of Department of Defense resources for improving the readiness of the Department of Defense",
+          "page": 53
+        },
+        {
+          "section_id": "20011",
+          "header": "Improving Department of Defense border support and counter-drug missions",
+          "page": 54
+        },
+        {
+          "section_id": "20012",
+          "header": "Department of Defense oversight",
+          "page": 54
+        },
+        {
+          "section_id": "20013",
+          "header": "Military construction projects authorized",
+          "page": 54
+        },
+        {
+          "section_id": "30004",
+          "header": "Appropriations for Defense Production Act",
+          "page": 55
+        },
+        {
+          "section_id": "40001",
+          "header": "Coast Guard mission readiness",
+          "page": 56
+        },
+        {
+          "section_id": "40002",
+          "header": "Spectrum auctions",
+          "page": 57
+        },
+        {
+          "section_id": "50401",
+          "header": "Strategic Petroleum Reserve",
+          "page": 81
+        },
+        {
+          "section_id": "70113",
+          "header": "Extension and modification of limitation on deduction and exclusion for moving expenses",
+          "page": 94
+        },
+        {
+          "section_id": "70118",
+          "header": "Extension of treatment of certain individuals performing services in the Sinai Peninsula and enhancement to include additional areas",
+          "page": 96
+        },
+        {
+          "section_id": "71401",
+          "header": "Rural Health Transformation Program",
+          "page": 256
+        },
+        {
+          "section_id": "90001",
+          "header": "Border infrastructure and wall system",
+          "page": 286
+        },
+        {
+          "section_id": "90002",
+          "header": "U.S. Customs and Border Protection personnel, fleet vehicles, and facilities",
+          "page": 287
+        },
+        {
+          "section_id": "90004",
+          "header": "Border security, technology, and screening",
+          "page": 288
+        },
+        {
+          "section_id": "90005",
+          "header": "State and local assistance",
+          "page": 288
+        },
+        {
+          "section_id": "90007",
+          "header": "Department of Homeland Security appropriations for border support",
+          "page": 290
+        },
+        {
+          "section_id": "100202",
+          "header": "Claims relating to atmospheric testing",
+          "page": 323
+        },
+        {
+          "section_id": "100204",
+          "header": "Claims relating to Manhattan Project waste",
+          "page": 327
+        }
+      ]
+    },
+    {
+      "name": "Education & Student Loans",
+      "sections": [
+        {
+          "section_id": "60005",
+          "header": "Rescission of funding to address air pollution at schools",
+          "page": 84
+        },
+        {
+          "section_id": "70110",
+          "header": "Termination of miscellaneous itemized deductions other than educator expenses",
+          "page": 93
+        },
+        {
+          "section_id": "70117",
+          "header": "Extension of rollovers from qualified tuition programs to ABLE accounts permitted",
+          "page": 96
+        },
+        {
+          "section_id": "70119",
+          "header": "Extension and modification of exclusion from gross income of student loans discharged on account of death or disability",
+          "page": 97
+        },
+        {
+          "section_id": "70411",
+          "header": "Tax credit for contributions of individuals to scholarship granting organizations",
+          "page": 144
+        },
+        {
+          "section_id": "70412",
+          "header": "Exclusion for employer payments of student loans",
+          "page": 147
+        },
+        {
+          "section_id": "70413",
+          "header": "Additional expenses treated as qualified higher education expenses for purposes of 529 accounts",
+          "page": 147
+        },
+        {
+          "section_id": "70414",
+          "header": "Certain postsecondary credentialing expenses treated as qualified higher education expenses for purposes of 529 accounts",
+          "page": 148
+        },
+        {
+          "section_id": "70415",
+          "header": "Modification of excise tax on investment income of certain private colleges and universities",
+          "page": 150
+        },
+        {
+          "section_id": "70606",
+          "header": "Social security number requirement for American Opportunity and Lifetime Learning credits",
+          "page": 218
+        },
+        {
+          "section_id": "80001",
+          "header": "Exemption of certain assets",
+          "page": 262
+        },
+        {
+          "section_id": "81001",
+          "header": "Establishment of loan limits for graduate and professional students and parent borrowers; termination of graduate and professional PLUS loans",
+          "page": 263
+        },
+        {
+          "section_id": "82001",
+          "header": "Loan repayment",
+          "page": 266
+        },
+        {
+          "section_id": "82002",
+          "header": "Deferment; forbearance",
+          "page": 277
+        },
+        {
+          "section_id": "82003",
+          "header": "Loan rehabilitation",
+          "page": 277
+        },
+        {
+          "section_id": "82004",
+          "header": "Public service loan forgiveness",
+          "page": 277
+        },
+        {
+          "section_id": "82005",
+          "header": "Student loan servicing",
+          "page": 278
+        },
+        {
+          "section_id": "83001",
+          "header": "Eligibility",
+          "page": 278
+        },
+        {
+          "section_id": "83002",
+          "header": "Workforce Pell Grants",
+          "page": 279
+        },
+        {
+          "section_id": "83003",
+          "header": "Pell shortfall",
+          "page": 282
+        },
+        {
+          "section_id": "83004",
+          "header": "Federal Pell Grant exclusion relating to other grant aid",
+          "page": 282
+        },
+        {
+          "section_id": "84001",
+          "header": "Ineligibility based on low earning outcomes",
+          "page": 282
+        },
+        {
+          "section_id": "85001",
+          "header": "Delay of rule relating to borrower defense to repayment",
+          "page": 284
+        },
+        {
+          "section_id": "85002",
+          "header": "Delay of rule relating to closed school discharges",
+          "page": 285
+        }
+      ]
+    },
+    {
+      "name": "Government Reform",
+      "sections": [
+        {
+          "section_id": "10105",
+          "header": "Matching funds requirements",
+          "page": 12
+        },
+        {
+          "section_id": "10106",
+          "header": "Administrative cost sharing",
+          "page": 14
+        },
+        {
+          "section_id": "20006",
+          "header": "Enhancement of Department of Defense resources for improving the efficiency and cybersecurity of the Department of Defense",
+          "page": 49
+        },
+        {
+          "section_id": "20012",
+          "header": "Department of Defense oversight",
+          "page": 54
+        },
+        {
+          "section_id": "30001",
+          "header": "Funding cap for the Bureau of Consumer Financial Protection",
+          "page": 55
+        },
+        {
+          "section_id": "30003",
+          "header": "Securities and Exchange Commission Reserve Fund",
+          "page": 55
+        },
+        {
+          "section_id": "40007",
+          "header": "Payments for lease of Metropolitan Washington Airports",
+          "page": 65
+        },
+        {
+          "section_id": "60014",
+          "header": "Rescission of funding for environmental protection agency efficient, accurate, and timely reviews",
+          "page": 85
+        },
+        {
+          "section_id": "60020",
+          "header": "Rescission of funding for Federal building assistance",
+          "page": 85
+        },
+        {
+          "section_id": "60021",
+          "header": "Rescission of funding for low-carbon materials for Federal buildings",
+          "page": 85
+        },
+        {
+          "section_id": "60022",
+          "header": "Rescission of funding for GSA emerging and sustainable technologies",
+          "page": 85
+        },
+        {
+          "section_id": "60026",
+          "header": "Project sponsor opt-in fees for environmental reviews",
+          "page": 86
+        },
+        {
+          "section_id": "71103",
+          "header": "Reducing duplicate enrollment under the Medicaid and CHIP programs",
+          "page": 220
+        },
+        {
+          "section_id": "71118",
+          "header": "Requiring budget neutrality for Medicaid demonstration projects under section 1115",
+          "page": 235
+        },
+        {
+          "section_id": "71303",
+          "header": "Requiring verification of eligibility for premium tax credit",
+          "page": 252
+        },
+        {
+          "section_id": "90101",
+          "header": "FEHB improvements",
+          "page": 291
+        },
+        {
+          "section_id": "90102",
+          "header": "Pandemic Response Accountability Committee",
+          "page": 292
+        },
+        {
+          "section_id": "90103",
+          "header": "Appropriation for the Office of Management and Budget",
+          "page": 292
+        },
+        {
+          "section_id": "100013",
+          "header": "Fees relating to applications for adjustment of status",
+          "page": 303
+        },
+        {
+          "section_id": "100015",
+          "header": "Electronic Visa Update System fee",
+          "page": 311
+        },
+        {
+          "section_id": "100054",
+          "header": "Appropriation for the Department of Justice",
+          "page": 318
+        },
+        {
+          "section_id": "100101",
+          "header": "Appropriation to the Administrative Office of the United States Courts",
+          "page": 323
+        },
+        {
+          "section_id": "100102",
+          "header": "Appropriation to the Federal Judicial Center",
+          "page": 323
+        }
+      ]
+    },
+    {
+      "name": "Food & Income Assistance",
+      "sections": [
+        {
+          "section_id": "10101",
+          "header": "Re-evaluation of thrifty food plan",
+          "page": 9
+        },
+        {
+          "section_id": "10102",
+          "header": "Modifications to SNAP work requirements for able-bodied adults",
+          "page": 10
+        },
+        {
+          "section_id": "10103",
+          "header": "Availability of standard utility allowances based on receipt of energy assistance",
+          "page": 12
+        },
+        {
+          "section_id": "10104",
+          "header": "Restrictions on internet expenses",
+          "page": 12
+        },
+        {
+          "section_id": "10105",
+          "header": "Matching funds requirements",
+          "page": 12
+        },
+        {
+          "section_id": "10106",
+          "header": "Administrative cost sharing",
+          "page": 14
+        },
+        {
+          "section_id": "10107",
+          "header": "National education and obesity prevention grant program",
+          "page": 14
+        },
+        {
+          "section_id": "10108",
+          "header": "Alien SNAP eligibility",
+          "page": 14
+        },
+        {
+          "section_id": "10313",
+          "header": "Dairy policy updates",
+          "page": 28
+        },
+        {
+          "section_id": "10603",
+          "header": "Nutrition",
+          "page": 37
+        },
+        {
+          "section_id": "71102",
+          "header": "Moratorium on implementation of rule relating to eligibility and enrollment for Medicaid, CHIP, and the Basic Health Program",
+          "page": 219
+        },
+        {
+          "section_id": "71103",
+          "header": "Reducing duplicate enrollment under the Medicaid and CHIP programs",
+          "page": 220
+        },
+        {
+          "section_id": "71104",
+          "header": "Ensuring deceased individuals do not remain enrolled",
+          "page": 222
+        },
+        {
+          "section_id": "71106",
+          "header": "Payment reduction related to certain erroneous excess payments under Medicaid",
+          "page": 224
+        },
+        {
+          "section_id": "71107",
+          "header": "Eligibility redeterminations",
+          "page": 224
+        },
+        {
+          "section_id": "71109",
+          "header": "Alien Medicaid eligibility",
+          "page": 226
+        },
+        {
+          "section_id": "71112",
+          "header": "Reducing State Medicaid costs",
+          "page": 227
+        },
+        {
+          "section_id": "71119",
+          "header": "Requirement for States to establish Medicaid community engagement requirements for certain individuals",
+          "page": 235
+        },
+        {
+          "section_id": "73001",
+          "header": "Ending unemployment payments to jobless millionaires",
+          "page": 261
+        }
+      ]
+    },
+    {
+      "name": "Labor & Jobs",
+      "sections": [
+        {
+          "section_id": "10102",
+          "header": "Modifications to SNAP work requirements for able-bodied adults",
+          "page": 10
+        },
+        {
+          "section_id": "20002",
+          "header": "Enhancement of Department of Defense resources for shipbuilding",
+          "page": 42
+        },
+        {
+          "section_id": "20004",
+          "header": "Enhancement of Department of Defense resources for munitions and defense supply chain resiliency",
+          "page": 44
+        },
+        {
+          "section_id": "70201",
+          "header": "No tax on tips",
+          "page": 99
+        },
+        {
+          "section_id": "70202",
+          "header": "No tax on overtime",
+          "page": 103
+        },
+        {
+          "section_id": "70304",
+          "header": "Extension and enhancement of paid family and medical leave credit",
+          "page": 124
+        },
+        {
+          "section_id": "70307",
+          "header": "Special depreciation allowance for qualified production property",
+          "page": 127
+        },
+        {
+          "section_id": "70308",
+          "header": "Enhancement of advanced manufacturing investment credit",
+          "page": 130
+        },
+        {
+          "section_id": "70416",
+          "header": "Expanding application of tax on excess compensation within tax-exempt organizations",
+          "page": 152
+        },
+        {
+          "section_id": "70603",
+          "header": "Excessive employee remuneration from controlled group members and allocation of deduction",
+          "page": 213
+        },
+        {
+          "section_id": "73001",
+          "header": "Ending unemployment payments to jobless millionaires",
+          "page": 261
+        },
+        {
+          "section_id": "83002",
+          "header": "Workforce Pell Grants",
+          "page": 279
+        },
+        {
+          "section_id": "100003",
+          "header": "Employment authorization document fees",
+          "page": 294
+        },
+        {
+          "section_id": "100010",
+          "header": "Fee relating to renewal and extension of employment authorization for parolees",
+          "page": 301
+        },
+        {
+          "section_id": "100011",
+          "header": "Fee relating to renewal or extension of employment authorization for asylum applicants",
+          "page": 301
+        },
+        {
+          "section_id": "100012",
+          "header": "Fee relating to renewal and extension of employment authorization for aliens granted temporary protected status",
+          "page": 302
+        },
+        {
+          "section_id": "100203",
+          "header": "Claims relating to uranium mining",
+          "page": 325
+        }
+      ]
+    },
+    {
+      "name": "Transportation & Infrastructure",
+      "sections": [
+        {
+          "section_id": "40001",
+          "header": "Coast Guard mission readiness",
+          "page": 56
+        },
+        {
+          "section_id": "40003",
+          "header": "Air traffic control improvements",
+          "page": 60
+        },
+        {
+          "section_id": "40004",
+          "header": "Space launch and reentry licensing and permitting user fees",
+          "page": 61
+        },
+        {
+          "section_id": "40005",
+          "header": "Mars missions, Artemis missions, and Moon to Mars program",
+          "page": 62
+        },
+        {
+          "section_id": "40007",
+          "header": "Payments for lease of Metropolitan Washington Airports",
+          "page": 65
+        },
+        {
+          "section_id": "50501",
+          "header": "Water conveyance and surface water storage enhancement",
+          "page": 83
+        },
+        {
+          "section_id": "60001",
+          "header": "Rescission of funding for clean heavy-duty vehicles",
+          "page": 83
+        },
+        {
+          "section_id": "60019",
+          "header": "Rescission of neighborhood access and equity grant program",
+          "page": 85
+        },
+        {
+          "section_id": "60023",
+          "header": "Rescission of environmental review implementation funds",
+          "page": 86
+        },
+        {
+          "section_id": "60024",
+          "header": "Rescission of low-carbon transportation materials grants",
+          "page": 86
+        },
+        {
+          "section_id": "70112",
+          "header": "Extension and modification of qualified transportation fringe benefits",
+          "page": 94
+        },
+        {
+          "section_id": "70309",
+          "header": "Spaceports are treated like airports under exempt facility bond rules",
+          "page": 130
+        },
+        {
+          "section_id": "70501",
+          "header": "Termination of previously-owned clean vehicle credit",
+          "page": 179
+        },
+        {
+          "section_id": "70502",
+          "header": "Termination of clean vehicle credit",
+          "page": 179
+        },
+        {
+          "section_id": "70503",
+          "header": "Termination of qualified commercial clean vehicles credit",
+          "page": 180
+        },
+        {
+          "section_id": "100014",
+          "header": "Electronic System for Travel Authorization fee",
+          "page": 311
+        }
+      ]
+    },
+    {
+      "name": "Trade",
+      "sections": [
+        {
+          "section_id": "10309",
+          "header": "Marketing loans",
+          "page": 22
+        },
+        {
+          "section_id": "10310",
+          "header": "Repayment of marketing loans",
+          "page": 23
+        },
+        {
+          "section_id": "10311",
+          "header": "Economic adjustment assistance for textile mills",
+          "page": 25
+        },
+        {
+          "section_id": "10312",
+          "header": "Sugar program updates",
+          "page": 25
+        },
+        {
+          "section_id": "10602",
+          "header": "Supplemental agricultural trade promotion program",
+          "page": 37
+        },
+        {
+          "section_id": "20004",
+          "header": "Enhancement of Department of Defense resources for munitions and defense supply chain resiliency",
+          "page": 44
+        },
+        {
+          "section_id": "40011",
+          "header": "Rescission of amounts appropriated to Public Wireless Supply Chain Innovation Fund",
+          "page": 66
+        },
+        {
+          "section_id": "70311",
+          "header": "Modifications related to foreign tax credit limitation",
+          "page": 131
+        },
+        {
+          "section_id": "70312",
+          "header": "Modifications to determination of deemed paid credit for taxes properly attributable to tested income",
+          "page": 132
+        },
+        {
+          "section_id": "70313",
+          "header": "Sourcing certain income from the sale of inventory produced in the United States",
+          "page": 132
+        },
+        {
+          "section_id": "70321",
+          "header": "Modification of deduction for foreign-derived deduction eligible income and net CFC tested income",
+          "page": 133
+        },
+        {
+          "section_id": "70322",
+          "header": "Determination of deduction eligible income",
+          "page": 133
+        },
+        {
+          "section_id": "70323",
+          "header": "Rules related to deemed intangible income",
+          "page": 134
+        },
+        {
+          "section_id": "70427",
+          "header": "Permanent increase in limitation on cover over of tax on distilled spirits",
+          "page": 167
+        },
+        {
+          "section_id": "70531",
+          "header": "Modifications to de minimis entry privilege for commercial shipments",
+          "page": 212
+        }
+      ]
+    },
+    {
+      "name": "Public Safety",
+      "sections": [
+        {
+          "section_id": "40001",
+          "header": "Coast Guard mission readiness",
+          "page": 56
+        },
+        {
+          "section_id": "70436",
+          "header": "Reduction of transfer and manufacturing taxes for certain devices",
+          "page": 176
+        },
+        {
+          "section_id": "70438",
+          "header": "Extension of rules for treatment of certain disaster-related personal casualty losses",
+          "page": 179
+        },
+        {
+          "section_id": "90005",
+          "header": "State and local assistance",
+          "page": 288
+        },
+        {
+          "section_id": "90006",
+          "header": "Presidential residence protection",
+          "page": 290
+        },
+        {
+          "section_id": "100016",
+          "header": "Fee for aliens ordered removed in absentia",
+          "page": 313
+        },
+        {
+          "section_id": "100017",
+          "header": "Inadmissible alien apprehension fee",
+          "page": 313
+        },
+        {
+          "section_id": "100051",
+          "header": "Appropriation for the Department of Homeland Security",
+          "page": 314
+        },
+        {
+          "section_id": "100052",
+          "header": "Appropriation for U.S. Immigration and Customs Enforcement",
+          "page": 316
+        },
+        {
+          "section_id": "100053",
+          "header": "Appropriation for Federal Law Enforcement Training Centers",
+          "page": 318
+        },
+        {
+          "section_id": "100054",
+          "header": "Appropriation for the Department of Justice",
+          "page": 318
+        },
+        {
+          "section_id": "100055",
+          "header": "Bridging Immigration-related Deficits Experienced Nationwide Reimbursement Fund",
+          "page": 321
+        },
+        {
+          "section_id": "100056",
+          "header": "Appropriation for the Bureau of Prisons",
+          "page": 321
+        },
+        {
+          "section_id": "100057",
+          "header": "Appropriation for the United States Secret Service",
+          "page": 322
+        }
+      ]
+    },
+    {
+      "name": "Families & Children",
+      "sections": [
+        {
+          "section_id": "20001",
+          "header": "Enhancement of Department of Defense resources for improving the quality of life for military personnel",
+          "page": 41
+        },
+        {
+          "section_id": "70104",
+          "header": "Extension and enhancement of increased child tax credit",
+          "page": 89
+        },
+        {
+          "section_id": "70115",
+          "header": "Extension and enhancement of increased limitation on contributions to ABLE accounts",
+          "page": 95
+        },
+        {
+          "section_id": "70204",
+          "header": "Trump accounts and contribution pilot program",
+          "page": 108
+        },
+        {
+          "section_id": "70304",
+          "header": "Extension and enhancement of paid family and medical leave credit",
+          "page": 124
+        },
+        {
+          "section_id": "70401",
+          "header": "Enhancement of employer-provided child care credit",
+          "page": 141
+        },
+        {
+          "section_id": "70402",
+          "header": "Enhancement of adoption credit",
+          "page": 142
+        },
+        {
+          "section_id": "70403",
+          "header": "Recognizing Indian tribal governments for purposes of determining whether a child has special needs for purposes of the adoption credit",
+          "page": 143
+        },
+        {
+          "section_id": "70404",
+          "header": "Enhancement of the dependent care assistance program",
+          "page": 143
+        },
+        {
+          "section_id": "70405",
+          "header": "Enhancement of child and dependent care tax credit",
+          "page": 143
+        },
+        {
+          "section_id": "71113",
+          "header": "Federal payments to prohibited entities",
+          "page": 229
+        },
+        {
+          "section_id": "87001",
+          "header": "Potential sponsor vetting for unaccompanied alien children appropriation",
+          "page": 285
+        },
+        {
+          "section_id": "100005",
+          "header": "Special immigrant juvenile fee",
+          "page": 297
+        }
+      ]
+    },
+    {
+      "name": "Small Business",
+      "sections": [
+        {
+          "section_id": "70105",
+          "header": "Extension and enhancement of deduction for qualified business income",
+          "page": 90
+        },
+        {
+          "section_id": "70301",
+          "header": "Full expensing for certain business property",
+          "page": 117
+        },
+        {
+          "section_id": "70302",
+          "header": "Full expensing of domestic research and experimental expenditures",
+          "page": 119
+        },
+        {
+          "section_id": "70303",
+          "header": "Modification of limitation on business interest",
+          "page": 124
+        },
+        {
+          "section_id": "70305",
+          "header": "Exceptions from limitations on deduction for business meals",
+          "page": 126
+        },
+        {
+          "section_id": "70306",
+          "header": "Increased dollar limitations for expensing of certain depreciable business assets",
+          "page": 126
+        },
+        {
+          "section_id": "70423",
+          "header": "Permanent extension of new markets tax credit",
+          "page": 164
+        },
+        {
+          "section_id": "70431",
+          "header": "Expansion of qualified small business stock gain exclusion",
+          "page": 169
+        },
+        {
+          "section_id": "70432",
+          "header": "Repeal of revision to de minimis rules for third party network transactions",
+          "page": 172
+        },
+        {
+          "section_id": "70433",
+          "header": "Increase in threshold for requiring information reporting with respect to certain payees",
+          "page": 172
+        },
+        {
+          "section_id": "70601",
+          "header": "Modification and extension of limitation on excess business losses of noncorporate taxpayers",
+          "page": 212
+        },
+        {
+          "section_id": "80001",
+          "header": "Exemption of certain assets",
+          "page": 262
+        }
+      ]
+    },
+    {
+      "name": "AI & Technology",
+      "sections": [
+        {
+          "section_id": "20002",
+          "header": "Enhancement of Department of Defense resources for shipbuilding",
+          "page": 42
+        },
+        {
+          "section_id": "20005",
+          "header": "Enhancement of Department of Defense resources for scaling low-cost weapons into production",
+          "page": 48
+        },
+        {
+          "section_id": "20006",
+          "header": "Enhancement of Department of Defense resources for improving the efficiency and cybersecurity of the Department of Defense",
+          "page": 49
+        },
+        {
+          "section_id": "20008",
+          "header": "Enhancement of resources for nuclear forces",
+          "page": 50
+        },
+        {
+          "section_id": "40002",
+          "header": "Spectrum auctions",
+          "page": 57
+        },
+        {
+          "section_id": "40011",
+          "header": "Rescission of amounts appropriated to Public Wireless Supply Chain Innovation Fund",
+          "page": 66
+        },
+        {
+          "section_id": "50404",
+          "header": "Transformational artificial intelligence models",
+          "page": 82
+        },
+        {
+          "section_id": "71401",
+          "header": "Rural Health Transformation Program",
+          "page": 256
+        },
+        {
+          "section_id": "90004",
+          "header": "Border security, technology, and screening",
+          "page": 288
+        }
+      ]
+    },
+    {
+      "name": "Housing",
+      "sections": [
+        {
+          "section_id": "20001",
+          "header": "Enhancement of Department of Defense resources for improving the quality of life for military personnel",
+          "page": 41
+        },
+        {
+          "section_id": "30002",
+          "header": "Rescission of funds for Green and Resilient Retrofit Program for Multifamily Housing",
+          "page": 55
+        },
+        {
+          "section_id": "70108",
+          "header": "Extension and modification of limitation on deduction for qualified residence interest",
+          "page": 92
+        },
+        {
+          "section_id": "70421",
+          "header": "Permanent renewal and enhancement of opportunity zones",
+          "page": 152
+        },
+        {
+          "section_id": "70422",
+          "header": "Permanent enhancement of low-income housing tax credit",
+          "page": 163
+        },
+        {
+          "section_id": "70430",
+          "header": "Exception to percentage of completion method of accounting for certain residential construction contracts",
+          "page": 168
+        },
+        {
+          "section_id": "70439",
+          "header": "Restoration of taxable REIT subsidiary asset test",
+          "page": 179
+        },
+        {
+          "section_id": "70508",
+          "header": "Termination of new energy efficient home credit",
+          "page": 180
+        }
+      ]
+    },
+    {
+      "name": "Seniors & Social Security",
+      "sections": [
+        {
+          "section_id": "70103",
+          "header": "Termination of deduction for personal exemptions other than temporary senior deduction",
+          "page": 88
+        },
+        {
+          "section_id": "70116",
+          "header": "Extension and enhancement of savers credit allowed for ABLE contributions",
+          "page": 95
+        },
+        {
+          "section_id": "71101",
+          "header": "Moratorium on implementation of rule relating to eligibility and enrollment in Medicare Savings Programs",
+          "page": 219
+        },
+        {
+          "section_id": "71108",
+          "header": "Revising home equity limit for determining eligibility for long-term care services under the Medicaid program",
+          "page": 225
+        },
+        {
+          "section_id": "71111",
+          "header": "Moratorium on implementation of rule relating to staffing standards for long-term care facilities under the Medicare and Medicaid programs",
+          "page": 227
+        },
+        {
+          "section_id": "71121",
+          "header": "Making certain adjustments to coverage of home or community-based services under Medicaid",
+          "page": 246
+        },
+        {
+          "section_id": "71201",
+          "header": "Limiting Medicare coverage of certain individuals",
+          "page": 248
+        }
+      ]
+    },
+    {
+      "name": "Foreign Policy",
+      "sections": [
+        {
+          "section_id": "20009",
+          "header": "Enhancement of Department of Defense resources to improve capabilities of United States Indo-Pacific Command",
+          "page": 52
+        }
+      ]
+    },
+    {
+      "name": "Gun Control",
+      "sections": [
+        {
+          "section_id": "70436",
+          "header": "Reduction of transfer and manufacturing taxes for certain devices",
+          "page": 176
+        }
+      ]
+    },
+    {
+      "name": "Other",
+      "sections": [
+        {
+          "section_id": "40009",
+          "header": "Reduction in annual transfers to Travel Promotion Fund",
+          "page": 65
+        },
+        {
+          "section_id": "50305",
+          "header": "Celebrating America's 250th anniversary",
+          "page": 81
+        },
+        {
+          "section_id": "60025",
+          "header": "John F. Kennedy Center for the Performing Arts",
+          "page": 86
+        },
+        {
+          "section_id": "72001",
+          "header": "Modification of limitation on the public debt",
+          "page": 261
+        },
+        {
+          "section_id": "86001",
+          "header": "Garden of Heroes",
+          "page": 285
+        }
+      ]
+    }
+  ],
+  "promise_alerts": [
+    {
+      "promise_id": "medicaid-every-beneficiary",
+      "severity": "possible",
+      "explanation": "The commitment has two parts: protecting Medicaid for \"every intended beneficiary\" and stopping illegal immigrants from getting benefits. The bill partly meets the second part, since people here illegally are already barred from Medicaid and it adds checks such as duplicate-enrollment checks and marketplace eligibility verification. On the first part, it adds work requirements, six-month renewals for expansion adults, a shorter back-coverage window, provider payment caps, and a pause on enrollment-simplification rules, and these could cut coverage for eligible people. Whether that contradicts \"protected Medicaid for every intended beneficiary\" depends on how \"intended beneficiary\" is read, and the statement was also about the House-passed version rather than this text.",
+      "section_ids": [
+        "71119",
+        "71107",
+        "71109",
+        "71116"
+      ]
+    },
+    {
+      "promise_id": "medicaid-never-lose-access",
+      "severity": "possible",
+      "explanation": "The commitment says the most vulnerable should never lose care because of waste, fraud, or abuse. H.R. 1 pairs anti-fraud measures, such as duplicate-enrollment checks, eligibility-error penalties, and marketplace verification, with changes that could cost eligible people coverage. These include 80-hour work requirements, six-month renewals, a shorter back-coverage window, and a pause on enrollment-simplification rules. Whether this conflicts depends on how \"vulnerable\" and \"because of fraud\" are read, since many losses would come from paperwork and eligibility rules rather than a finding of fraud. The commitment was also made after the bill became law and does not name a specific vote.",
+      "section_ids": [
+        "71119",
+        "71107",
+        "71102",
+        "71109"
+      ]
+    },
+    {
+      "promise_id": "medicaid-supplemental-payments",
+      "severity": "possible",
+      "explanation": "The commitment says the member voted to protect New Jersey's expansion of supplemental Medicaid payments to hospitals and nursing homes. The bill partly fits this: existing payments are grandfathered at first (71116), and nursing-home provider taxes are held at current levels rather than stepped down (71115). But the bill also bars new provider taxes in expansion states like New Jersey, lowers the provider-tax ceiling from 2028, and cuts grandfathered payments by 10 percentage points a year from 2028 toward the 100% Medicare cap. Whether this contradicts the commitment depends on which payments he meant and whether New Jersey's expansion falls inside the grandfathering, which the findings do not say.",
+      "section_ids": [
+        "71116",
+        "71115",
+        "71117"
+      ]
+    },
+    {
+      "promise_id": "campaign-cost-healthcare",
+      "severity": "possible",
+      "explanation": "The commitment is a general campaign message (lower the cost of living, protect healthcare, strengthen communities, keep America strong), not a specific pledge on a vote or provision. The bill cuts both ways. It raises the SALT cap, makes the child tax credit and lower tax rates permanent, and expands child-care credits. It also caps Medicaid provider payments and taxes, adds work requirements and six-month renewals, cuts federal funds for some lawfully present immigrants, and ends home energy credits. Whether a YES vote conflicts with 'protect healthcare' and 'lower the cost of living' depends on how those broad phrases are read.",
+      "section_ids": [
+        "71116",
+        "71115",
+        "71119",
+        "70120"
+      ]
+    }
+  ],
+  "coverage": {
+    "not_covered_headers": [
+      "Sec. 71120: Modifying cost sharing requirements for certain expansion individuals under the Medicaid program",
+      "Sec. 71121: Making certain adjustments to coverage of home or community-based services under Medicaid",
+      "Sec. 71301: Permitting premium tax credit only for certain individuals",
+      "Sec. 71306: Permanent extension of safe harbor for absence of deductible for telehealth services",
+      "Sec. 71307: Allowance of bronze and catastrophic plans in connection with health savings accounts",
+      "Sec. 10108: Alien SNAP eligibility",
+      "Sec. 10606: Horticulture",
+      "Sec. 50402: Repeals; rescissions",
+      "Sec. 71111: Moratorium on implementation of rule relating to staffing standards for long-term care facilities under the Medicare and Medicaid programs",
+      "Sec. 71108: Revising home equity limit for determining eligibility for long-term care services under the Medicaid program",
+      "Sec. 71201: Limiting Medicare coverage of certain individuals",
+      "Sec. 71202: Temporary payment increase under the medicare physician fee schedule to account for exceptional circumstances",
+      "Sec. 71304: Disallowing premium tax credit in case of certain coverage enrolled in during special enrollment period",
+      "Sec. 71302: Disallowing premium tax credit during periods of medicaid ineligibility due to alien status",
+      "Sec. 71305: Eliminating limitation on recapture of advance payment of premium tax credit",
+      "Sec. 100051: Appropriation for the Department of Homeland Security",
+      "Sec. 100054: Appropriation for the Department of Justice",
+      "Sec. 10101: Re-evaluation of thrifty food plan",
+      "Sec. 10106: Administrative cost sharing",
+      "Sec. 10102: Modifications to SNAP work requirements for able-bodied adults",
+      "Sec. 10103: Availability of standard utility allowances based on receipt of energy assistance",
+      "Sec. 10105: Matching funds requirements",
+      "Sec. 10601: Conservation",
+      "Sec. 40003: Air traffic control improvements",
+      "Sec. 70502: Termination of clean vehicle credit",
+      "Sec. 82001: Loan repayment",
+      "Sec. 82004: Public service loan forgiveness",
+      "Sec. 81001: Establishment of loan limits for graduate and professional students and parent borrowers; termination of graduate and professional PLUS loans",
+      "Sec. 83002: Workforce Pell Grants",
+      "Sec. 82002: Deferment; forbearance",
+      "Sec. 83001: Eligibility",
+      "Sec. 83003: Pell shortfall",
+      "Sec. 84001: Ineligibility based on low earning outcomes",
+      "Sec. 90006: Presidential residence protection",
+      "Sec. 100052: Appropriation for U.S. Immigration and Customs Enforcement",
+      "Sec. 100055: Bridging Immigration-related Deficits Experienced Nationwide Reimbursement Fund",
+      "Sec. 70424: Permanent and expanded reinstatement of partial deduction for charitable contributions of individuals who do not elect to itemize",
+      "Sec. 10604: Research",
+      "Sec. 70106: Extension and enhancement of increased estate and gift tax exemption amounts",
+      "Sec. 70110: Termination of miscellaneous itemized deductions other than educator expenses",
+      "Sec. 70115: Extension and enhancement of increased limitation on contributions to ABLE accounts",
+      "Sec. 70116: Extension and enhancement of savers credit allowed for ABLE contributions",
+      "Sec. 70117: Extension of rollovers from qualified tuition programs to ABLE accounts permitted",
+      "Sec. 70118: Extension of treatment of certain individuals performing services in the Sinai Peninsula and enhancement to include additional areas",
+      "Sec. 70119: Extension and modification of exclusion from gross income of student loans discharged on account of death or disability",
+      "Sec. 70305: Exceptions from limitations on deduction for business meals",
+      "Sec. 70308: Enhancement of advanced manufacturing investment credit",
+      "Sec. 70312: Modifications to determination of deemed paid credit for taxes properly attributable to tested income",
+      "Sec. 70313: Sourcing certain income from the sale of inventory produced in the United States",
+      "Sec. 70331: Extension and modification of base erosion minimum tax amount",
+      "Sec. 70341: Coordination of business interest limitation with interest capitalization provisions",
+      "Sec. 70342: Definition of adjusted taxable income for business interest limitation",
+      "Sec. 70353: Restoration of limitation on downward attribution of stock ownership in applying constructive ownership rules",
+      "Sec. 70354: Modifications to pro rata share rules",
+      "Sec. 70352: Repeal of election for 1-month deferral in determination of taxable year of specified foreign corporations",
+      "Sec. 70402: Enhancement of adoption credit",
+      "Sec. 70416: Expanding application of tax on excess compensation within tax-exempt organizations",
+      "Sec. 70414: Certain postsecondary credentialing expenses treated as qualified higher education expenses for purposes of 529 accounts",
+      "Sec. 70415: Modification of excise tax on investment income of certain private colleges and universities",
+      "Sec. 70426: 1-percent floor on deduction of charitable contributions made by corporations",
+      "Sec. 70430: Exception to percentage of completion method of accounting for certain residential construction contracts",
+      "Sec. 70434: Treatment of certain qualified sound recording productions",
+      "Sec. 70439: Restoration of taxable REIT subsidiary asset test",
+      "Sec. 70437: Treatment of capital gains from the sale of certain farmland property",
+      "Sec. 70501: Termination of previously-owned clean vehicle credit",
+      "Sec. 70435: Exclusion of interest on loans secured by rural or agricultural real property",
+      "Sec. 70438: Extension of rules for treatment of certain disaster-related personal casualty losses",
+      "Sec. 70504: Termination of alternative fuel vehicle refueling property credit",
+      "Sec. 70507: Termination of energy efficient commercial buildings deduction",
+      "Sec. 70508: Termination of new energy efficient home credit",
+      "Sec. 70510: Modifications of zero-emission nuclear power production credit",
+      "Sec. 70511: Termination of clean hydrogen production credit",
+      "Sec. 70522: Restrictions on carbon oxide sequestration credit",
+      "Sec. 70514: Phase-out and restrictions on advanced manufacturing production credit",
+      "Sec. 70521: Extension and modification of clean fuel production credit",
+      "Sec. 70602: Treatment of payments from partnerships to partners for property or services",
+      "Sec. 71114: Sunsetting increased FMAP incentive",
+      "Sec. 71308: Treatment of direct primary care service arrangements",
+      "Sec. 10310: Repayment of marketing loans",
+      "Sec. 20002: Enhancement of Department of Defense resources for shipbuilding",
+      "Sec. 20003: Enhancement of Department of Defense resources for integrated air and missile defense",
+      "Sec. 20008: Enhancement of resources for nuclear forces",
+      "Sec. 20011: Improving Department of Defense border support and counter-drug missions",
+      "Sec. 20010: Enhancement of Department of Defense resources for improving the readiness of the Department of Defense",
+      "Sec. 40004: Space launch and reentry licensing and permitting user fees",
+      "Sec. 50201: Coal leasing",
+      "Sec. 50202: Coal royalty",
+      "Sec. 50302: Renewable energy fees on Federal land",
+      "Sec. 60002: Repeal of Greenhouse Gas Reduction Fund",
+      "Sec. 70114: Extension and modification of limitation on wagering losses",
+      "Sec. 70113: Extension and modification of limitation on deduction and exclusion for moving expenses",
+      "Sec. 70309: Spaceports are treated like airports under exempt facility bond rules",
+      "Sec. 70321: Modification of deduction for foreign-derived deduction eligible income and net CFC tested income",
+      "Sec. 70351: Permanent extension of look-thru rule for related controlled foreign corporations",
+      "Sec. 70403: Recognizing Indian tribal governments for purposes of determining whether a child has special needs for purposes of the adoption credit",
+      "Sec. 70429: Adjustment of charitable deduction for certain expenses incurred in support of Native Alaskan subsistence whaling",
+      "Sec. 70427: Permanent increase in limitation on cover over of tax on distilled spirits",
+      "Sec. 70428: Nonprofit community development activities in remote native villages",
+      "Sec. 70515: Restriction on the extension of advanced energy project credit program",
+      "Sec. 70523: Intangible drilling and development costs taken into account for purposes of computing adjusted financial statement income",
+      "Sec. 70524: Income from hydrogen storage, carbon capture, advanced nuclear, hydropower, and geothermal energy added to qualifying income of certain publicly traded partnerships",
+      "Sec. 70606: Social security number requirement for American Opportunity and Lifetime Learning credits",
+      "Sec. 70607: Task force on the replacement of Direct File",
+      "Sec. 71104: Ensuring deceased individuals do not remain enrolled",
+      "Sec. 71105: Ensuring deceased providers do not remain enrolled",
+      "Sec. 90004: Border security, technology, and screening",
+      "Sec. 100007: Visa integrity fee",
+      "Sec. 100011: Fee relating to renewal or extension of employment authorization for asylum applicants",
+      "Sec. 100202: Claims relating to atmospheric testing"
+    ],
+    "promise_failures": [],
+    "dropped_alerts": [],
+    "promises_checked": 8,
+    "sections_total": 309,
+    "sections_screened": 309,
+    "screen_failures": [],
+    "flagged": 169,
+    "analyzed": 60,
+    "not_analyzed_due_to_cap": 109,
+    "deep_failures": [],
+    "dropped_by_verification": [],
+    "promises_reviewed": 8,
+    "issue_tagging": {
+      "sections_tagged": 309,
+      "untagged": [],
+      "unknown_labels": [],
+      "batch_failures": []
+    }
+  },
+  "cost_usd": 1.2677
+}

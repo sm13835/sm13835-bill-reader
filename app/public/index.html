@@ -5,15 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bill Reader</title>
   <style>
+    /* The page itself is soft navy, so text sitting directly on it is light. */
     :root {
-      --bg: #f6f5f1; --card: #ffffff; --text: #1a1d21; --muted: #5a6068; --border: #dfddd5;
-      --accent: #1f3a5f; --bad: #a12a22; --bad-bg: #fbeeec; --warn: #8a5a00; --warn-bg: #fdf4e0;
+      --bg: #2f4468; --card: #ffffff; --text: #f3f6fb; --muted: #c5cfdd; --border: #dfddd5;
+      --accent: #e3ebf7; --bad: #a12a22; --bad-bg: #fbeeec; --warn: #8a5a00; --warn-bg: #fdf4e0;
       --good: #1e6b45; --good-bg: #e9f5ee;
+    }
+    /* White surfaces (cards, tables, buttons) switch back to dark text and a navy accent. */
+    .card, .fact, table, .filter-btn, .secondary, .notice {
+      --text: #1a1d21; --muted: #5a6068; --accent: #1f3a5f; --bg: #f6f5f1;
+      color: var(--text);
     }
     * { box-sizing: border-box; }
     body { margin: 0; background: var(--bg); color: var(--text); line-height: 1.55;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-    main { max-width: 1520px; margin: 0 auto; padding: 32px 32px 80px; }
+    /* A large, faint flag fixed in the middle of the screen, behind everything. */
+    .backdrop-flag { position: fixed; top: 50%; left: 50%; width: min(110vw, 1400px); height: auto;
+      transform: translate(-50%, -50%) rotate(-24deg); opacity: 0.07; pointer-events: none; z-index: 0; }
+    main { position: relative; z-index: 1; max-width: 1520px; margin: 0 auto; padding: 32px 32px 80px; }
     header { margin-bottom: 20px; }
     .hero { display: grid; grid-template-columns: 320px minmax(0, 1fr); gap: 32px; align-items: start;
       border-bottom: 2px solid var(--accent); padding-bottom: 20px; }
@@ -71,14 +80,64 @@
     .filter-btn.no-findings { color: var(--muted); border-style: dashed; }
     .filter-icon { width: 16px; height: 16px; flex: none; fill: none; stroke: currentColor; stroke-width: 2;
       stroke-linecap: round; stroke-linejoin: round; }
-    .filter-btn[aria-pressed="true"] { background: var(--accent); color: #fff; border: 1px solid var(--accent); }
+    .filter-btn[aria-pressed="true"] { background: var(--accent); color: #fff; border: 1px solid #fff; }
     .filter-note { margin-top: 12px; }
     .filter-note ul { margin: 8px 0 0; padding-left: 20px; }
     .filter-note li { margin-bottom: 4px; }
+    .auth { max-width: 520px; margin: 48px auto; }
+    .form { display: grid; gap: 6px; padding: 20px; }
+    .form label { font-weight: 700; font-size: 14px; margin-top: 8px; }
+    .form input, .form select { font: inherit; font-size: 16px; padding: 10px 12px; border: 1px solid var(--border);
+      border-radius: 6px; background: var(--card); color: var(--text); width: 100%; }
+    .form input:focus-visible, .form select:focus-visible, .primary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .form select:disabled { color: var(--muted); background: var(--bg); }
+    .primary { font: inherit; font-weight: 700; margin-top: 16px; padding: 12px 16px; min-height: 44px; border: 0; border-radius: 6px;
+      background: var(--accent); color: #fff; cursor: pointer; }
+    .primary:disabled { opacity: 0.45; cursor: not-allowed; }
+    .bills { max-width: 860px; margin: 32px auto; }
+    .bill-list { display: grid; gap: 12px; }
+    .bill-card { display: grid; gap: 4px; text-decoration: none; color: var(--text); margin: 0; }
+    .bill-card:hover { border-color: var(--accent); }
+    .bill-card:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .dropzone { display: grid; justify-items: center; gap: 8px; padding: 32px 20px; text-align: center;
+      border: 2px dashed var(--border); }
+    .dropzone.over { border-color: var(--accent); background: #eef3fa; }
+    .secondary { font: inherit; padding: 8px 14px; min-height: 40px; border-radius: 6px; cursor: pointer;
+      background: var(--card); color: var(--accent); border: 1px solid var(--accent); }
+    .secondary:focus-visible, .linklike:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .section-preview { margin: 0 0 8px; padding-left: 20px; font-size: 14px; }
+    .section-preview li { margin-bottom: 2px; }
+    .linklike { font: inherit; font-size: 12px; background: none; border: 0; padding: 0; margin-right: 6px;
+      color: var(--accent); text-decoration: underline; cursor: pointer; }
+    .bill-text { white-space: pre-wrap; font: inherit; font-size: 14px; margin: 8px 0 12px; }
+    details summary { cursor: pointer; }
+    .notice { background: var(--warn-bg); border: 1px solid var(--warn); border-radius: 6px; padding: 10px 12px; margin: 8px 0 12px; font-size: 15px; }
+    .check { display: flex; gap: 8px; align-items: flex-start; margin: 8px 0; }
+    .check input { margin-top: 5px; width: 18px; height: 18px; flex: none; }
+    .error { color: var(--bad); }
+    .progress { margin: 8px 0 0; padding-left: 20px; }
   </style>
 </head>
 <body>
+  <!-- Decorative flag (official 1.9:1 proportions), drawn faintly behind the page. -->
+  <svg class="backdrop-flag" viewBox="0 0 7410 3900" aria-hidden="true" focusable="false">
+    <defs>
+      <polygon id="star" fill="#fff" points="0,-120 27,-37 114,-37 44,14 71,97 0,46 -71,97 -44,14 -114,-37 -27,-37" />
+      <pattern id="stars-6" width="494" height="420" patternUnits="userSpaceOnUse"><use href="#star" x="247" y="210" /></pattern>
+      <pattern id="stars-5" x="247" y="210" width="494" height="420" patternUnits="userSpaceOnUse"><use href="#star" x="247" y="210" /></pattern>
+    </defs>
+    <rect width="7410" height="3900" fill="#fff" />
+    <g fill="#b22234">
+      <rect y="0" width="7410" height="300" /><rect y="600" width="7410" height="300" /><rect y="1200" width="7410" height="300" />
+      <rect y="1800" width="7410" height="300" /><rect y="2400" width="7410" height="300" /><rect y="3000" width="7410" height="300" />
+      <rect y="3600" width="7410" height="300" />
+    </g>
+    <rect width="2964" height="2100" fill="#3c3b6e" />
+    <rect width="2964" height="2100" fill="url(#stars-6)" />
+    <rect x="247" y="210" width="2470" height="1680" fill="url(#stars-5)" />
+  </svg>
   <main id="app"><p>Loading…</p></main>
+  <script src="/bill-text.js"></script>
   <script>
     const esc = (value) => String(value ?? '').replace(/[&<>"']/g, (c) =>
       ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -181,8 +240,7 @@
       const entry = brief.issues.find((i) => i.name === issue);
       const others = entry.sections.filter((s) => !shown.has(s.section_id));
       const count = `${others.length} section${others.length === 1 ? '' : 's'}`;
-      const sourceLink = (s) => s.page ? link(`${brief.bill_pdf_url}#page=${s.page}`, `Sec. ${s.section_id} (p. ${s.page})`) : `Sec. ${esc(s.section_id)}`;
-      const list = `<ul>${others.map((s) => `<li>${sourceLink(s)}: ${esc(s.header)}</li>`).join('')}</ul>`;
+      const list = `<ul>${others.map((s) => `<li>${sectionRef(s.section_id, s.page)}: ${esc(s.header)}</li>`).join('')}</ul>`;
       if (!findings.length) {
         return `<div class="card alert possible filter-note"><strong>No district finding on ${esc(issue)} yet.</strong>
           The bill has ${count} on this issue, but this brief did not analyze them for your district. That does not mean they have no effect here.${list}</div>`;
@@ -211,9 +269,14 @@
     }
 
     // Written so an empty result can never be read as "no conflict on this issue."
-    function alertsHtml({ brief, promises }, issue) {
+    function alertsHtml({ brief, member }, issue) {
+      const promises = member.promises || [];
       const c = brief.coverage;
       const all = brief.promise_alerts || [];
+      if (!c.promises_reviewed) {
+        return `<h2>Promise alerts if you vote yes</h2>
+          <div class="card">No public commitments have been collected for this member yet, so the bill could not be checked against any. This does not mean no conflict exists.</div>`;
+      }
       const alerts = issue ? all.filter((a) => alertIssues(a, brief.items).includes(issue)) : all;
       const empty = issue && all.length
         ? `No promise alert cites a section on ${esc(issue)}. This does not mean no conflict exists: alerts can only cite sections analyzed in depth, and only ${c.promises_checked} commitments were reviewed.`
@@ -239,10 +302,14 @@
     }
 
     function briefHtml(data) {
-      const { brief } = data;
+      const { brief, member, district, bill } = data;
       if (!brief) {
-        return { details: '', summary: `<div class="card"><h3>No brief generated yet</h3>
-          <p>Add your OpenRouter key to <code>.env</code>, then run <code>node app/analyze.js</code> and reload this page.</p></div>` };
+        const what = bill.kind === 'upload'
+          ? `<p>This bill is saved, with ${bill.section_count} section${bill.section_count === 1 ? '' : 's'} found. It has not been analyzed for ${esc(member.name)} and ${esc(district.id)} yet. Its text is at the bottom of this page.</p>`
+          : `<p>The district profile, election history and votes below are ready. The bill analysis for ${esc(member.name)} and ${esc(district.id)} has not been run.</p>`;
+        return { details: '', summary: `<h2>What this bill does</h2>
+          <div class="card alert possible"><h3>This brief has not been generated yet</h3>${what}</div>
+          <div class="card" id="analyze-panel" aria-live="polite"><p class="meta">Checking what an analysis would cost…</p></div>` };
       }
       const c = brief.coverage;
       const notCovered = c.not_covered_headers || [];
@@ -253,9 +320,10 @@
           ${notCovered.length} sections flagged as relevant to this district were not analyzed in depth, so the findings below may leave out important effects.
           <details><summary>See the sections not covered</summary><ul>${notCovered.map((h) => `<li>${esc(h)}</li>`).join('')}</ul></details></div>` : ''}
         <div class="card"><ul>${brief.overview.what_it_does.map((b) => `<li>${esc(b.text)}
-          <span class="sources">${b.sources.map((s) => link(`${brief.bill_pdf_url}#page=${s.page}`, `Sec. ${s.section_id} (p. ${s.page})`)).join(' ')}</span></li>`).join('')}</ul>
-          <p class="meta">Links open the official bill text on GovInfo at the page where each section begins.</p>
-          <p><strong>For NJ-5:</strong> ${esc(brief.overview.district_bottom_line)}</p></div>`;
+          <span class="sources">${b.sources.map((s) => sectionRef(s.section_id, s.page)).join(' ')}</span></li>`).join('')}</ul>
+          <p class="meta">${bill.kind === 'official' ? 'Links open the official bill text on GovInfo at the page where each section begins.'
+            : bill.pdf_url ? 'Links open your uploaded PDF at the page where each section begins.' : 'Links open each section\'s text at the bottom of this page.'}</p>
+          <p><strong>For ${esc(district.id)}:</strong> ${esc(brief.overview.district_bottom_line)}</p></div>`;
       const details = `
         ${filterHtml(brief, '')}
         <div id="findings">${findingsHtml(data, '')}</div>
@@ -269,64 +337,383 @@
       return { summary, details };
     }
 
-    function mapHtml(map, district) {
-      const party = { D: ['dem', 'Democrat'], R: ['rep', 'Republican'] }[district.party] || ['ind', 'Independent'];
-      const current = map.districts.find((d) => d.id === district.district);
+    const memberLabel = (m) => `${m.title} ${m.name} (${m.party})`;
+
+    function mapHtml(map, member, district) {
+      const party = { D: ['dem', 'Democrat'], R: ['rep', 'Republican'] }[member.party] || ['ind', 'Independent'];
+      const current = map.districts.find((d) => d.id === district.id);
       const others = map.districts.filter((d) => d !== current);
       const path = (d, cls) => `<path class="${cls}" d="${esc(d.path)}"><title>${esc(d.id)}</title></path>`;
       return `<div class="card map-card">
-        <svg viewBox="${esc(map.viewBox)}" role="img" aria-label="Map of New Jersey with ${esc(district.district)} highlighted">
+        <svg viewBox="${esc(map.viewBox)}" role="img" aria-label="Map of New Jersey with ${esc(district.id)} highlighted">
           <path class="state" d="${esc(map.state_path)}" />
           ${others.map((d) => path(d, 'district')).join('')}
           ${path(current, `district current ${party[0]}`)}
           <text class="map-label" x="${current.label_x}" y="${current.label_y}">${esc(current.id)}</text>
         </svg>
         <div class="map-text">
-          <strong>${esc(district.district)}</strong>
-          <p>${esc(district.member)}</p>
+          <strong>${esc(district.id)}</strong>
+          <p>${esc(memberLabel(member))}</p>
+          ${member.note ? `<p class="meta">${esc(member.note)}</p>` : ''}
           <p class="meta">Shaded in the member's party color: ${party[1]}.<br />Boundaries: ${link(map.source_url, 'U.S. Census Bureau')}, 119th Congress.</p>
         </div>
       </div>`;
     }
 
-    function districtHtml(district) {
+    function districtHtml(member, district) {
       const rows = district.elections.map((e, i, all) => {
         const prev = all[i - 1];
         const change = prev ? (e.margin_pts - prev.margin_pts).toFixed(1) : '';
         const sign = (n) => (n > 0 ? '+' : '') + n;
         return `<tr class="${e.new_lines ? 'new-lines' : ''}">
-          <td>${e.year}${e.new_lines ? ' (new lines)' : ''}</td><td>${esc(e.dem)}</td><td class="num">${e.dem_pct}%</td>
-          <td>${esc(e.rep)}</td><td class="num">${e.rep_pct}%</td><td class="num">${e.total_votes.toLocaleString()}</td>
+          <td>${e.year}${e.new_lines ? ' (new lines)' : ''}</td><td>${esc(e.dem || 'No candidate')}</td><td class="num">${e.dem ? e.dem_pct + '%' : '—'}</td>
+          <td>${esc(e.rep || 'No candidate')}</td><td class="num">${e.rep ? e.rep_pct + '%' : '—'}</td><td class="num">${e.total_votes.toLocaleString()}</td>
           <td class="num">D ${sign(e.margin_pts)}</td><td class="num">${change === '' ? '' : (e.new_lines ? 'n/a' : sign(Number(change)))}</td></tr>`;
       }).join('');
       return `
-        <h2>District profile: ${esc(district.district)}</h2>
+        <h2>District profile: ${esc(district.id)}</h2>
         <div class="facts">${district.facts.map((f) => `<div class="fact"><strong>${esc(f.display)}</strong><span class="meta">${esc(f.label)}</span></div>`).join('')}</div>
         <h2>House elections, 2006–2024</h2>
         <div class="scroll"><table><thead><tr><th>Year</th><th>Democrat</th><th class="num">%</th><th>Republican</th><th class="num">%</th>
           <th class="num">Total votes</th><th class="num">Margin</th><th class="num">Change</th></tr></thead><tbody>${rows}</tbody></table></div>
         <p class="meta">District lines were redrawn for 2012 and 2022, so changes across those years are not like-for-like and are not calculated.</p>
         <h2>This member's votes on this bill</h2>
-        <div class="card">${district.votes_on_bill.map((v) => `<p>${esc(v.date)} · ${esc(v.question)}: <strong>${esc(v.vote)}</strong> (${link(v.url, 'Roll Call ' + v.roll)})</p>`).join('')}</div>
-        <p class="meta">Sources: ${district.sources.map((s) => link(s.url, s.name)).join(' · ')}</p>`;
+        <div class="card">${currentBill.kind === 'official'
+          ? member.votes_on_bill.map((v) => `<p>${esc(v.date)} · ${esc(v.question)}: <strong>${esc(v.vote)}</strong> (${link(v.url, 'Roll Call ' + v.roll)})</p>`).join('')
+          : '<p>Not yet voted on.</p>'}</div>
+        <p class="meta">Sources: ${[...district.sources, ...member.sources].map((s) => link(s.url, s.name)).join(' · ')}</p>`;
     }
 
-    fetch('/api/brief').then((r) => r.json()).then((data) => {
+    // ---- Bill references. H.R. 1 links to GovInfo, an uploaded PDF to its saved copy,
+    // and a Word upload (no pages) to the section's text at the bottom of the page.
+    let currentBill = null;
+    function sectionRef(id, page) {
+      if (page && currentBill.pdf_url) return link(`${currentBill.pdf_url}#page=${page}`, `Sec. ${id} (p. ${page})`);
+      if (currentBill.sections) return `<button type="button" class="linklike" data-section="${esc(id)}">Sec. ${esc(id)}</button>`;
+      return `Sec. ${esc(id)}`;
+    }
+
+    function billTextHtml(bill) {
+      if (!bill.sections) return '';
+      return `<h2>Bill text (${bill.sections.length} section${bill.sections.length === 1 ? '' : 's'})</h2>
+        <div class="card">${bill.sections.map((s) => `<details id="sec-${esc(s.id)}"><summary>Sec. ${esc(s.id)}. ${esc(s.header)}${s.page ? ` <span class="meta">p. ${s.page}</span>` : ''}</summary>
+          <pre class="bill-text">${esc(s.text)}</pre></details>`).join('')}</div>`;
+    }
+
+    document.addEventListener('click', (event) => {
+      const button = event.target.closest('[data-section]');
+      if (!button) return;
+      const target = document.getElementById(`sec-${button.dataset.section}`);
+      if (target) { target.open = true; target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+
+    // ---- Reading an uploaded file, in the browser. Libraries load only when needed, from
+    // pinned versions; the integrity hash makes the browser refuse any altered copy.
+    const LIBS = {
+      pdf: [
+        ['https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js', 'sha384-/1qUCSGwTur9vjf/z9lmu/eCUYbpOTgSjmpbMQZ1/CtX2v/WcAIKqRv+U1DUCG6e'],
+        // Loading the worker as a script lets pdf.js run on this page, so it too is hash-checked.
+        ['https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js', 'sha384-SnzOobpRMLXZ52iJvZm/C0fYw0OQemTXzTjIsdsfMcrCtCEe9qgzxTd3RSklO5x2'],
+      ],
+      docx: [['https://cdn.jsdelivr.net/npm/mammoth@1.8.0/mammoth.browser.min.js', 'sha384-/cXAMbzovUIKbBERjPmR3SnPTh8siWr5lsvFYj1Uq4XP0yaJUZJmsh0YXyGv5P0y']],
+    };
+    const loadedScripts = {};
+    function loadScript([src, integrity]) {
+      loadedScripts[src] = loadedScripts[src] || new Promise((resolve, reject) => {
+        const script = document.createElement('script');
+        script.src = src;
+        script.integrity = integrity;
+        script.crossOrigin = 'anonymous';
+        script.onload = resolve;
+        script.onerror = () => reject(new Error('Could not load the file reader. Check your internet connection.'));
+        document.head.appendChild(script);
+      });
+      return loadedScripts[src];
+    }
+
+    async function pdfPages(buffer) {
+      for (const lib of LIBS.pdf) await loadScript(lib);
+      const pdf = await pdfjsLib.getDocument({ data: new Uint8Array(buffer.slice(0)) }).promise;
+      const pages = [];
+      for (let n = 1; n <= pdf.numPages; n++) {
+        const content = await (await pdf.getPage(n)).getTextContent();
+        pages.push(BillText.pageLines(content.items.map((i) => ({
+          str: i.str, x: i.transform[4], y: i.transform[5], w: i.width,
+          rotated: Math.abs(i.transform[1]) > 0.01 || Math.abs(i.transform[2]) > 0.01,
+        }))));
+      }
+      return pages;
+    }
+
+    async function docxPages(buffer) {
+      await loadScript(LIBS.docx[0]);
+      const { value } = await mammoth.extractRawText({ arrayBuffer: buffer });
+      return [value.split('\n').map((l) => l.trim()).filter(Boolean)];
+    }
+
+    const fileType = (file) => (/\.pdf$/i.test(file.name) ? 'pdf' : /\.docx$/i.test(file.name) ? 'docx' : null);
+    const readAsBase64 = (file) => new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = () => resolve(String(reader.result).split(',')[1] || '');
+      reader.onerror = () => reject(new Error('Could not read the file.'));
+      reader.readAsDataURL(file);
+    });
+
+    // ---- Screens: sign-in → setup → brief. The address bar keeps the current screen,
+    // e.g. #/brief/kean/NJ-7, so a refresh stays put.
+    const app = document.getElementById('app');
+    const go = (hash) => { location.hash = hash; };
+    const lastName = (m) => m.name.replace(/ Jr\.$/, '').split(' ').slice(-1)[0];
+
+    function loginView() {
+      app.innerHTML = `<div class="auth">
+        <div class="kicker">Bill Reader</div>
+        <h1>Sign in</h1>
+        <p class="meta">Plain-English briefs on House bills, personalized to your district and public commitments.</p>
+        <div class="card alert possible"><strong>Prototype only.</strong> There is no real sign-in yet. Anything you type is accepted,
+          and it is not checked, saved or sent anywhere.</div>
+        <form id="login" class="card form" novalidate>
+          <label for="email">Office email</label>
+          <input id="email" type="email" autocomplete="off" placeholder="name@mail.house.gov" />
+          <label for="password">Password</label>
+          <input id="password" type="password" autocomplete="off" />
+          <button type="submit" class="primary">Sign in</button>
+        </form>
+      </div>`;
+      document.getElementById('login').addEventListener('submit', (event) => {
+        event.preventDefault(); // Nothing typed is read or sent.
+        go('#/setup');
+      });
+    }
+
+    async function setupView() {
+      const { members } = await (await fetch('/api/members')).json();
+      const byName = [...members].sort((a, b) => lastName(a).localeCompare(lastName(b)));
+      app.innerHTML = `<div class="auth">
+        <div class="kicker">Bill Reader · New Jersey delegation, 119th Congress</div>
+        <h1>Set up your office</h1>
+        <p class="meta">Choose the member you work for, then their district. Member data (votes and public commitments) and district data (Census and elections) come from separate sources.</p>
+        <form id="setup" class="card form">
+          <label for="member">1. Member</label>
+          <select id="member"><option value="">Choose a member…</option>
+            ${byName.map((m) => `<option value="${esc(m.id)}">${esc(memberLabel(m))}</option>`).join('')}</select>
+          <label for="district">2. District</label>
+          <select id="district" disabled><option value="">Choose a member first</option></select>
+          <p id="member-status" class="meta" aria-live="polite"></p>
+          <button type="submit" class="primary" id="continue" disabled>Continue to H.R. 1 brief</button>
+        </form>
+        <p class="meta"><a href="#/login">Sign out</a></p>
+      </div>`;
+      const memberSelect = document.getElementById('member');
+      const districtSelect = document.getElementById('district');
+      const status = document.getElementById('member-status');
+      const button = document.getElementById('continue');
+      memberSelect.addEventListener('change', () => {
+        const m = members.find((x) => x.id === memberSelect.value);
+        districtSelect.disabled = !m;
+        districtSelect.innerHTML = m
+          ? `<option value="">Choose a district…</option><option value="${esc(m.district)}">${esc(m.district)}</option>`
+          : '<option value="">Choose a member first</option>';
+        status.textContent = m ? `${m.note ? m.note + ' ' : ''}${m.has_brief ? 'H.R. 1 brief ready.' : 'District data ready; the H.R. 1 brief has not been generated yet.'}` : '';
+        button.disabled = true;
+      });
+      districtSelect.addEventListener('change', () => { button.disabled = !districtSelect.value; });
+      document.getElementById('setup').addEventListener('submit', (event) => {
+        event.preventDefault();
+        go(`#/bills/${encodeURIComponent(memberSelect.value)}/${encodeURIComponent(districtSelect.value)}`);
+      });
+    }
+
+    // ---- Choose a bill: H.R. 1, earlier uploads, or drop in a new one.
+    async function billsView(memberId, districtId) {
+      const [{ members }, { bills }] = await Promise.all([
+        fetch('/api/members').then((r) => r.json()),
+        fetch(`/api/bills?member=${encodeURIComponent(memberId)}`).then((r) => r.json()),
+      ]);
+      const member = members.find((m) => m.id === memberId && m.district === districtId);
+      if (!member) { go('#/setup'); return; }
+      const base = `#/brief/${encodeURIComponent(memberId)}/${encodeURIComponent(districtId)}`;
+      app.innerHTML = `<div class="bills">
+        <div class="kicker">Prototype · ${esc(memberLabel(member))}, ${esc(districtId)} · <a href="#/setup">Switch member</a> · <a href="#/login">Sign out</a></div>
+        <h1>Choose a bill</h1>
+        <div class="bill-list">${bills.map((b) => `<a class="card bill-card" href="${base}/${esc(b.id)}">
+          <strong>${esc(b.title)}</strong>
+          <span class="meta">${esc(b.status)}${b.section_count ? ` · ${b.section_count} section${b.section_count === 1 ? '' : 's'}` : ''}${b.created_at ? ` · uploaded ${esc(b.created_at.slice(0, 10))}` : ''}</span>
+          <span class="meta">${b.has_brief ? `Brief ready for ${esc(member.name)}` : `Not analyzed for ${esc(member.name)} yet`}</span></a>`).join('')}</div>
+        <h2>Upload a new bill</h2>
+        <div class="card dropzone" id="drop">
+          <strong>Drag and drop a bill here</strong>
+          <span class="meta">PDF or Word (.docx), up to 15 MB. Saved only on this computer.</span>
+          <button type="button" class="secondary" id="choose">Choose a file</button>
+          <input type="file" id="file" accept=".pdf,.docx" hidden />
+        </div>
+        <div id="preview" aria-live="polite"></div>
+      </div>`;
+
+      const drop = document.getElementById('drop');
+      const input = document.getElementById('file');
+      const preview = document.getElementById('preview');
+      document.getElementById('choose').addEventListener('click', () => input.click());
+      input.addEventListener('change', () => input.files[0] && readBill(input.files[0]));
+      drop.addEventListener('dragover', (event) => { event.preventDefault(); drop.classList.add('over'); });
+      drop.addEventListener('dragleave', () => drop.classList.remove('over'));
+      drop.addEventListener('drop', (event) => {
+        event.preventDefault();
+        drop.classList.remove('over');
+        if (event.dataTransfer.files[0]) readBill(event.dataTransfer.files[0]);
+      });
+
+      async function readBill(file) {
+        const type = fileType(file);
+        const fail = (message) => { preview.innerHTML = `<div class="card alert possible">${esc(message)}</div>`; };
+        if (!type) return fail('Only PDF and Word (.docx) files are supported. For an older .doc file, save it as .docx first.');
+        if (file.size > 15 * 1024 * 1024) return fail('This file is larger than 15 MB.');
+        preview.innerHTML = '<div class="card">Reading the file…</div>';
+        let pages, result;
+        try {
+          const buffer = await file.arrayBuffer();
+          pages = type === 'pdf' ? await pdfPages(buffer) : await docxPages(buffer);
+          result = BillText.fromPages(pages);
+        } catch (error) {
+          return fail(`Could not read this file: ${error.message}`);
+        }
+        const s = result.sections;
+        preview.innerHTML = `<form class="card form" id="save">
+          <h3>${esc(file.name)}</h3>
+          <p>${result.method === 'headings'
+            ? `Found <strong>${s.length} section${s.length === 1 ? '' : 's'}</strong> by their headings${type === 'pdf' ? ` across ${pages.length} page${pages.length === 1 ? '' : 's'}` : ''}.`
+            : `<strong>No section headings found</strong> (like "SEC. 2."), so the text was cut into ${s.length} numbered part${s.length === 1 ? '' : 's'}. Findings will cite parts instead of sections.`}
+            ${result.skipped_chars ? ' The title page and enacting clause before the first section are not included.' : ''}</p>
+          <ul class="section-preview">${s.slice(0, 8).map((x) => `<li>Sec. ${esc(x.id)}. ${esc(x.header)}</li>`).join('')}${s.length > 8 ? `<li class="meta">…and ${s.length - 8} more</li>` : ''}</ul>
+          <label for="title">Name this bill</label>
+          <input id="title" maxlength="120" required autocomplete="off" />
+          <p class="meta">The file is saved on this computer only, and is not sent anywhere. Analyzing it will be a separate step.</p>
+          <button type="submit" class="primary" id="save-btn">Save bill</button>
+          <p id="save-error" class="meta" role="alert"></p>
+        </form>`;
+        document.getElementById('title').focus();
+        document.getElementById('save').addEventListener('submit', async (event) => {
+          event.preventDefault();
+          const title = document.getElementById('title').value.trim();
+          const error = document.getElementById('save-error');
+          if (!title) { error.textContent = 'Give the bill a name.'; return; }
+          const button = document.getElementById('save-btn');
+          button.disabled = true;
+          button.textContent = 'Saving…';
+          try {
+            const response = await fetch('/api/bills', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ title, file_type: type, file_name: file.name, file_base64: await readAsBase64(file), pages }),
+            });
+            const body = await response.json();
+            if (!response.ok) throw new Error(body.error);
+            go(`${base}/${encodeURIComponent(body.bill.id)}`);
+          } catch (e) {
+            error.textContent = `Could not save: ${e.message}`;
+            button.disabled = false;
+            button.textContent = 'Save bill';
+          }
+        });
+      }
+    }
+
+    async function briefView(memberId, districtId, billId) {
+      app.innerHTML = '<p>Loading…</p>';
+      const response = await fetch(`/api/brief?member=${encodeURIComponent(memberId)}&district=${encodeURIComponent(districtId)}&bill=${encodeURIComponent(billId || 'hr1')}`);
+      const data = await response.json();
+      if (!response.ok) {
+        app.innerHTML = `<div class="auth"><div class="card alert possible">${esc(data.error)}</div><p><a href="#/setup">Back to setup</a></p></div>`;
+        return;
+      }
+      currentBill = data.bill;
       const { summary, details } = briefHtml(data);
-      document.getElementById('app').innerHTML = `
+      const source = data.bill.kind === 'official' ? 'enrolled bill text' : `uploaded ${data.bill.file_type === 'pdf' ? 'PDF' : 'Word document'}, not yet voted on`;
+      app.innerHTML = `
         <div class="hero"><div>
         <header>
-          <div class="kicker">Prototype · no login · viewing as ${esc(data.district.member)}, ${esc(data.district.district)}</div>
-          <h1>H.R. 1: One Big Beautiful Bill Act</h1>
-          <div class="kicker">Personalized brief for ${esc(data.district.district)}, enrolled bill text</div>
+          <div class="kicker">Prototype · viewing as ${esc(memberLabel(data.member))}, ${esc(data.district.id)} ·
+            <a href="#/bills/${encodeURIComponent(memberId)}/${encodeURIComponent(districtId)}">Switch bill</a> ·
+            <a href="#/setup">Switch member</a> · <a href="#/login">Sign out</a></div>
+          <h1>${esc(data.bill.title)}</h1>
+          <div class="kicker">Personalized brief for ${esc(data.district.id)}, ${esc(source)}</div>
         </header>
-        ${mapHtml(data.map, data.district)}
+        ${mapHtml(data.map, data.member, data.district)}
         </div><div>${summary}</div></div>
-        ${details}${districtHtml(data.district)}`;
+        ${details}${districtHtml(data.member, data.district)}${billTextHtml(data.bill)}`;
       if (data.brief) wireFilter(data);
-    }).catch((error) => {
-      document.getElementById('app').textContent = 'Could not load the brief: ' + error.message;
-    });
+      else wireAnalyze(data);
+    }
+
+    // ---- The paid Analyze step. Shows the estimate and a hard cap, says where the text goes,
+    // and needs an explicit "I agree" before the button works. The server re-checks the cap.
+    async function wireAnalyze({ member, district, bill }) {
+      const panel = document.getElementById('analyze-panel');
+      const query = `member=${encodeURIComponent(member.id)}&bill=${encodeURIComponent(bill.id)}`;
+      const money = (n) => `$${Number(n).toFixed(2)}`;
+      const status = await (await fetch(`/api/analyze/status?${query}`)).json();
+      if (status.job && status.job.status === 'running') return watch();
+      const est = await (await fetch(`/api/estimate?${query}`)).json();
+      const blocked = !est.has_key ? 'There is no OpenRouter key in .env. Add one and restart the server.'
+        : est.busy ? 'Another analysis is running. Wait for it to finish, then reload this page.'
+        : est.available !== null && est.available < est.cap
+          ? `Not enough credits: your balance is ${money(est.available)}, and this run is allowed to spend up to ${money(est.cap)}. Add credits on OpenRouter or analyze a shorter bill.`
+          : '';
+      panel.innerHTML = `<h3>Analyze this bill for ${esc(member.name)}</h3>
+        <p>Estimated cost: <strong>about ${money(est.estimate)}</strong>. The run stops itself at <strong>${money(est.cap)}</strong>, so it cannot cost more than that.
+          ${est.available !== null ? `Your OpenRouter balance is ${money(est.available)}.` : ''}</p>
+        <p class="meta">A short bill takes about a minute; a bill as long as H.R. 1 takes about five.</p>
+        <div class="notice"><strong>Before you analyze:</strong> the bill text, this district's facts and the member's public commitments are sent to OpenRouter and Anthropic, where AI models read them. Do not analyze a confidential draft unless your office allows it.</div>
+        ${status.job && status.job.status === 'error' ? `<p class="error">The last attempt stopped: ${esc(status.job.error)}</p>` : ''}
+        ${blocked ? `<p class="error">${esc(blocked)}</p>` : `
+        <label class="check"><input type="checkbox" id="consent" /> I understand where the text goes, and I agree to spend up to ${money(est.cap)}.</label>
+        <button type="button" class="primary" id="analyze" disabled>Analyze, up to ${money(est.cap)}</button>`}
+        <p id="analyze-msg" class="error" role="alert"></p>`;
+      if (blocked) return;
+      const consent = document.getElementById('consent');
+      const button = document.getElementById('analyze');
+      consent.addEventListener('change', () => { button.disabled = !consent.checked; });
+      button.addEventListener('click', async () => {
+        button.disabled = true;
+        const response = await fetch('/api/analyze', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ member: member.id, district: district.id, bill: bill.id, accepted_cap: est.cap }),
+        });
+        const result = await response.json();
+        if (!response.ok) {
+          document.getElementById('analyze-msg').textContent = result.error;
+          button.disabled = !consent.checked;
+          return;
+        }
+        watch();
+      });
+
+      async function watch() {
+        while (document.body.contains(panel)) {
+          const { job } = await (await fetch(`/api/analyze/status?${query}`)).json();
+          if (!job) return wireAnalyze({ member, district, bill });
+          panel.innerHTML = `<h3>Analyzing for ${esc(member.name)}…</h3>
+            <p class="meta">Capped at ${money(job.cap)}. You can leave this page; the run continues while the server is running.</p>
+            <ol class="progress">${job.progress.map((p) => `<li>${esc(p)}</li>`).join('')}</ol>`;
+          if (job.status === 'done') return route();
+          if (job.status === 'error') return wireAnalyze({ member, district, bill });
+          await new Promise((resolve) => setTimeout(resolve, 2000));
+        }
+      }
+    }
+
+    function route() {
+      const [, view, a, b, c] = location.hash.split('/').map((part) => decodeURIComponent(part || ''));
+      const shown = view === 'setup' ? setupView()
+        : view === 'bills' ? billsView(a, b)
+        : view === 'brief' ? briefView(a, b, c)
+        : loginView();
+      Promise.resolve(shown).catch((error) => { app.textContent = 'Could not load: ' + error.message; });
+      window.scrollTo(0, 0);
+    }
+    window.addEventListener('hashchange', route);
+    route();
   </script>
 </body>
 </html>

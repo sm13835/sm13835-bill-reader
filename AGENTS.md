@@ -9,8 +9,9 @@
 
 ## 2. Commands
 - **Install dependencies:** None. Requires Node 24. For model runs: `cp .env.example .env`, then add your key.
-- **Generate a brief (paid model calls):** `node app/analyze.js`
-- **Run locally:** `node app/server.js`, then open http://localhost:3000
+- **Generate a brief (paid model calls):** use the Analyze button on a bill's page, or `node app/analyze.js --member <id> [--bill <bill id>]`, where `<id>` is a file name in `data/members` (e.g. `kean`) and the bill defaults to H.R. 1. Each run shows an estimate and stops at its own cap (never above $3). Member data (votes, commitments) is in `data/members/`, district data (Census, elections) in `data/districts/`, H.R. 1 briefs in `data/briefs/`.
+- **Uploaded bills:** saved in `data/uploads/<id>/` (original file, sections, briefs). Git ignores this folder because uploads may be unreleased drafts. The page reads PDF and Word files in the browser with pdf.js 3.11.174 and mammoth 1.8.0, loaded from public CDNs with integrity hashes.
+- **Run locally:** `node app/server.js`, then open http://localhost:3000 (prototype sign-in accepts anything)
 - **Run deterministic tests:** `node --test`
 - **Run model evals:** Not built yet (planned for Build 4, Track A).
 

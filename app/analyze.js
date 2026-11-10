@@ -1,23 +1,34 @@
-// Generates the personalized bill brief. Run with: node app/analyze.js
+// Generates one member's personalized bill brief. Run with: node app/analyze.js --member kean
+// (the id is a file name in data/members). Add --bill <id> for an uploaded bill; the default
+// is H.R. 1. The page's Analyze button runs the same pipeline through the server.
 //
 // How it works:
 //   1. Screen: a cheap model reads EVERY section against the district and promises.
 //   2. Analyze: a stronger model reads only the sections flagged in step 1.
 //   3. Verify: plain code drops anything whose citations do not check out.
 //   4. Overview: the plain-English summary, written only from what survived step 3.
-//   5. Issues: a cheap model sorts every section by issue, which drives the page's filters.
+//   5. Issues: a cheap model sorts every section by issue once per bill (data/hr1-issues.json),
+//      and every member's brief reuses it for the page's filters.
 //
-// To add issues to an existing brief without a full run: node app/analyze.js --tags-only
+// Other commands, without a full run:
+//   node app/analyze.js --member <id> --overview-only   rewrite one brief's summary
+//   node app/analyze.js --tags-only                     re-sort the bill by issue for all briefs
 const fs = require('fs');
 const path = require('path');
+const { getBill } = require('./bills.js');
 
 const ROOT = path.join(__dirname, '..');
 const DATA = path.join(ROOT, 'data');
 const SCREEN_MODEL = 'anthropic/claude-haiku-5.5';
 const DEEP_MODEL = 'anthropic/claude-sonnet-5.5';
 const MAX_DEEP_SECTIONS = 60; // Caps the expensive step on any one bill.
-const MAX_RUN_COST_USD = 3; // Hard stop: no model call starts once a run has spent this.
+const MAX_RUN_COST_USD = 3; // No run may ever be allowed to spend more than this.
 const DEEP_RESERVE_USD = 0.5; // Section analysis stops early so promise checks can still run.
+// OpenRouter prices per token, checked 2026-11-10. Used only to estimate a run before it starts.
+const PRICES = {
+  'anthropic/claude-haiku-5.5': { input: 0.1e-6, output: 0.5e-6 },
+  'anthropic/claude-sonnet-5.5': { input: 2e-6, output: 10e-6 },
+};
 const CONCURRENCY = 10;
 const DEEP_MODEL_GAP_MS = 3500; // About 17 requests a minute; new accounts are limited to 20.
 const DIRECT_STRENGTHS = new Set(['Explicit vote pledge', 'Explicit commitment']);
@@ -59,12 +70,12 @@ const ISSUES = [
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 let runCost = 0;
 
-// Compare quotes without being fooled by curly quotes, dashes, or line breaks.
+// Compare quotes without being fooled by quote marks, dashes, or line breaks. Quote marks
+// and dashes are dropped entirely: bills nest quotes (‘‘ ’’) that models often leave out,
+// and PDF text cannot tell a line-break hyphen ("re-" + "turn") from a real one.
 function normalize(text) {
   return String(text)
-    .replace(/[‘’]/g, "'")
-    .replace(/[“”]/g, '"')
-    .replace(/[–—]/g, '-')
+    .replace(/['"`‘’“”\-–—]/g, '')
     .replace(/\s+/g, ' ')
     .trim()
     .toLowerCase();
@@ -99,9 +110,13 @@ function verifyItems(items, { sections, facts }) {
   return { verified, dropped };
 }
 
+// A commitment made about one specific bill (about_bill), or marked as about another
+// bill (other_bill), cannot be a direct conflict with a different bill.
+const aboutOtherBill = (promise, billId) => Boolean(promise.other_bill || (promise.about_bill && promise.about_bill !== billId));
+
 // Whole-bill promise verdicts must cite analyzed sections. Only an explicit pledge
 // that covers this bill can be a "direct" conflict, whatever the model said.
-function verifyAlerts(verdicts, { promises, items }) {
+function verifyAlerts(verdicts, { promises, items, billId = 'hr1' }) {
   const promisesById = new Map(promises.map((p) => [p.id, p]));
   const analyzed = new Set(items.map((i) => i.section_id));
   const alerts = [];
@@ -119,7 +134,7 @@ function verifyAlerts(verdicts, { promises, items }) {
       dropped.push({ promise_id: v.promise_id, reason: 'cites no analyzed section' });
       continue;
     }
-    const canBeDirect = DIRECT_STRENGTHS.has(promise.strength) && !promise.other_bill;
+    const canBeDirect = DIRECT_STRENGTHS.has(promise.strength) && !aboutOtherBill(promise, billId);
     alerts.push({
       promise_id: v.promise_id,
       severity: v.verdict === 'direct' && canBeDirect ? 'direct' : 'possible',
@@ -132,18 +147,19 @@ function verifyAlerts(verdicts, { promises, items }) {
 
 // Each summary bullet must name the analyzed sections behind it. Invented section
 // references are removed, and a bullet left with no real source is not shown.
+// A Word upload has no pages, so a source can have a section but no page.
 function verifyOverview(overview, { items, pages }) {
   const analyzed = new Set(items.map((i) => i.section_id));
   const what_it_does = [];
   let dropped_bullets = 0;
 
   for (const bullet of overview.what_it_does || []) {
-    const ids = [...new Set(bullet.section_ids || [])].filter((id) => analyzed.has(id) && pages[id]);
+    const ids = [...new Set(bullet.section_ids || [])].filter((id) => analyzed.has(id));
     if (ids.length === 0) {
       dropped_bullets++;
       continue;
     }
-    what_it_does.push({ text: bullet.text, sources: ids.map((id) => ({ section_id: id, page: pages[id] })) });
+    what_it_does.push({ text: bullet.text, sources: ids.map((id) => ({ section_id: id, page: pages[id] ?? null })) });
   }
   return { what_it_does, district_bottom_line: overview.district_bottom_line, dropped_bullets };
 }
@@ -157,11 +173,13 @@ function verifyIssueTags(tags, sections) {
   const unknownLabels = new Set();
 
   for (const tag of tags) {
-    if (!known.has(tag.id)) continue;
+    // Models sometimes echo a short section number as 1 or "Section 1" rather than "1".
+    const id = String(tag.id ?? '').trim().replace(/^(section|sec\.?)\s*/i, '');
+    if (!known.has(id)) continue;
     const labels = [...new Set(tag.issues || [])];
     labels.filter((label) => !allowed.has(label)).forEach((label) => unknownLabels.add(label));
     const specific = labels.filter((label) => allowed.has(label) && label !== OTHER_ISSUE);
-    bySection[tag.id] = specific.length ? specific.slice(0, MAX_ISSUES_PER_SECTION) : [OTHER_ISSUE];
+    bySection[id] = specific.length ? specific.slice(0, MAX_ISSUES_PER_SECTION) : [OTHER_ISSUE];
   }
   const untagged = sections.filter((s) => !bySection[s.id]).map((s) => s.id);
   return { bySection, untagged, unknown_labels: [...unknownLabels] };
@@ -242,12 +260,12 @@ async function mapLimit(items, fn, minGapMs = 0) {
   return { results, failures };
 }
 
-function promptContext(district, promises) {
+function promptContext(member, district, promises) {
   const facts = district.facts.map((f) => `${f.key}: ${f.label} = ${f.display}`).join('\n');
   const list = promises
     .map((p) => `${p.id} [${p.strength}; ${p.date}; scope: ${p.scope}] "${p.quote}"`)
     .join('\n');
-  return `MEMBER: ${district.member}, ${district.district}\n\nDISTRICT FACTS:\n${facts}\n\nPUBLIC COMMITMENTS:\n${list}`;
+  return `MEMBER: ${memberLabel(member)}, ${district.id}\n\nDISTRICT FACTS:\n${facts}\n\nPUBLIC COMMITMENTS:\n${list || 'None collected yet.'}`;
 }
 
 const DATA_ONLY =
@@ -280,43 +298,84 @@ async function checkAvailableCredits() {
 
 const readData = (name) => JSON.parse(fs.readFileSync(path.join(DATA, name), 'utf8'));
 
-function loadInputs() {
+// Member data (who they are, votes, commitments) and district data (Census, elections)
+// live in separate files. File names are built only from checked ids.
+const MEMBER_ID = /^[a-z][a-z-]{1,40}$/;
+const memberLabel = (m) => `${m.title} ${m.name} (${m.party})`;
+const districtFile = (id) => {
+  const match = /^([A-Z]{2})-(\d{1,2})$/.exec(id);
+  if (!match) throw new Error(`Invalid district id: ${id}`);
+  return `districts/${match[1].toLowerCase()}-${match[2].padStart(2, '0')}.json`;
+};
+
+function loadMember(memberId) {
+  if (!MEMBER_ID.test(memberId || '') || !fs.existsSync(path.join(DATA, 'members', `${memberId}.json`))) {
+    throw new Error(`Unknown member "${memberId}". Use a file name from data/members, e.g. --member kean`);
+  }
+  return readData(`members/${memberId}.json`);
+}
+
+function loadInputs(memberId, billId = 'hr1') {
+  const member = loadMember(memberId);
+  const bill = getBill(billId);
+  if (!bill) throw new Error(`Unknown bill "${billId}"`);
   return {
-    sections: readData('hr1-sections.json'),
-    district: readData('nj05.json'),
-    promises: readData('promises.json'),
-    pageMap: readData('hr1-pages.json'),
+    bill,
+    sections: bill.loadSections(),
+    pages: bill.pages,
+    member,
+    district: readData(districtFile(member.district)),
+    promises: member.promises || [],
   };
 }
 
 const findingsText = (items) =>
   items.map((i) => `${i.section_id} [${i.effect}] ${i.headline}: ${i.plain_english}`).join('\n');
 
-async function writeOverview(sections, items, pageMap) {
-  console.log('Writing overview...');
+const round = (n) => Math.round(n * 100) / 100;
+
+// Estimates a run's cost before it starts, from section lengths and current prices.
+// It assumes the worst case: the longest sections are the ones analyzed in depth.
+// The cap is the most the run is allowed to spend; it stops itself there.
+function estimateCost({ sections, promiseCount, contextChars, needsIssues }) {
+  const price = (model, inputChars, outputTokens) =>
+    (inputChars / 4) * PRICES[model].input + outputTokens * PRICES[model].output;
+  const system = contextChars + 1000;
+  const screen = sections.reduce((sum, s) => sum + price(SCREEN_MODEL, system + s.text.length, 80), 0);
+  const deepSections = [...sections].sort((a, b) => b.text.length - a.text.length).slice(0, MAX_DEEP_SECTIONS);
+  const deep = deepSections.reduce((sum, s) => sum + price(DEEP_MODEL, system + s.text.length, 500), 0);
+  const findingsChars = deepSections.length * 450 + 1500;
+  const promises = promiseCount * price(DEEP_MODEL, findingsChars, 350);
+  const overview = price(DEEP_MODEL, findingsChars, 800);
+  const allChars = sections.reduce((sum, s) => sum + s.text.length, 0);
+  const issues = needsIssues ? price(SCREEN_MODEL, allChars + tagBatches(sections).length * 3000, sections.length * 30) : 0;
+  // Token counts from character length run low; 1.4 matches the two real H.R. 1 runs
+  // (Kean $1.27, Gottheimer about $1.15 before issue sorting).
+  const estimate = (screen + deep + promises + overview + issues) * 1.4;
+  const cap = Math.min(MAX_RUN_COST_USD, Math.max(0.25, estimate * 1.5 + 0.05));
+  return { estimate: round(Math.max(0.01, estimate)), cap: round(cap) };
+}
+
+// The estimate for one member and bill, as the page shows it before anyone confirms.
+function estimateFor(memberId, billId) {
+  const { bill, sections, member, district, promises } = loadInputs(memberId, billId);
+  return estimateCost({
+    sections,
+    promiseCount: promises.length,
+    contextChars: promptContext(member, district, promises).length,
+    needsIssues: !fs.existsSync(bill.issuesFile),
+  });
+}
+
+async function writeOverview(bill, sections, items, pages, spendLimit) {
+  const parts = [...new Set(sections.map((s) => s.part).filter(Boolean))];
   const overview = await callModel(
     DEEP_MODEL,
     `You write the plain-English opening of a bill brief for a member of Congress. No jargon. Do not recommend a vote. Use only the information provided. Do not imply the findings cover the entire bill. ${DATA_ONLY}`,
-    `Bill: H.R. 1 (119th Congress)\nMajor parts: ${[...new Set(sections.map((s) => s.part))].join('; ')}\n\nVerified findings (each line starts with its section id):\n${findingsText(items)}\n\nReturn {"what_it_does":[{"text":"one short bullet","section_ids":["every section id from the findings that this bullet relies on, at most 6"]}],"district_bottom_line":"two sentences on what matters most for this district"}\nWrite 4-6 bullets. Section numbers belong only in section_ids, never in the text.`
+    `Bill: ${bill.title}${bill.kind === 'upload' ? ' (uploaded by the office; not yet voted on)' : ''}\n${parts.length ? `Major parts: ${parts.join('; ')}\n` : ''}\nVerified findings (each line starts with its section id):\n${findingsText(items)}\n\nReturn {"what_it_does":[{"text":"one short bullet","section_ids":["every section id from the findings that this bullet relies on, at most 6"]}],"district_bottom_line":"two sentences on what matters most for this district"}\nWrite ${items.length < 4 ? '1-3' : '4-6'} bullets. Section numbers belong only in section_ids, never in the text.`,
+    spendLimit
   );
-  return verifyOverview(overview, { items, pages: pageMap.pages });
-}
-
-// Redoes only the summary from the saved findings: one model call instead of a full run.
-async function regenerateOverview() {
-  const available = await checkAvailableCredits();
-  if (available < 0.25) {
-    console.error(`Stopped: only $${available.toFixed(2)} in credits remains.`);
-    process.exit(1);
-  }
-  const { sections, pageMap } = loadInputs();
-  const file = path.join(DATA, 'brief-hr1.json');
-  const brief = JSON.parse(fs.readFileSync(file, 'utf8'));
-  brief.overview = await writeOverview(sections, brief.items, pageMap);
-  brief.bill_pdf_url = pageMap.pdf_url;
-  brief.cost_usd = Number((brief.cost_usd + runCost).toFixed(4));
-  fs.writeFileSync(file, JSON.stringify(brief, null, 2));
-  console.log(`Done. ${brief.overview.what_it_does.length} bullets, ${brief.overview.dropped_bullets} dropped, this update cost $${runCost.toFixed(4)}`);
+  return verifyOverview(overview, { items, pages });
 }
 
 // Groups sections so no request is too long. A section larger than the limit goes alone, uncut.
@@ -338,10 +397,8 @@ function tagBatches(sections, maxCount = TAG_BATCH_SIZE, maxChars = TAG_BATCH_CH
 }
 
 // Sorts every section in the bill by issue, in batches. A failed batch is recorded, not fatal.
-async function tagSections(sections, pageMap) {
-  console.log(`Sorting ${sections.length} sections by issue...`);
+async function tagSections(sections, pages, spendLimit = runCost + MAX_TAG_COST_USD) {
   const batches = tagBatches(sections);
-  const spendLimit = runCost + MAX_TAG_COST_USD;
   const { results, failures } = await mapLimit(
     batches,
     async (batch) => {
@@ -356,73 +413,55 @@ async function tagSections(sections, pageMap) {
   const { bySection, untagged, unknown_labels } = verifyIssueTags(results.flat(), sections);
   return {
     bySection,
-    issues: buildIssueIndex(bySection, sections, pageMap.pages),
+    issues: buildIssueIndex(bySection, sections, pages),
     coverage: { sections_tagged: sections.length - untagged.length, untagged, unknown_labels, batch_failures: failures },
   };
 }
 
-// Adds issues to the saved brief. Existing findings and alerts are left as they are.
-async function regenerateIssues() {
-  const available = await checkAvailableCredits();
-  if (available < 0.25) {
-    console.error(`Stopped: only $${available.toFixed(2)} in credits remains.`);
-    process.exit(1);
-  }
-  const { sections, pageMap } = loadInputs();
-  const file = path.join(DATA, 'brief-hr1.json');
-  const brief = JSON.parse(fs.readFileSync(file, 'utf8'));
-  const tagged = await tagSections(sections, pageMap);
-  if (tagged.coverage.untagged.length) {
-    console.error(`Stopped: ${tagged.coverage.untagged.length} sections could not be sorted, so the saved brief was not changed. This attempt cost $${runCost.toFixed(4)}`);
-    process.exit(1);
-  }
-  brief.items = withIssues(brief.items, tagged.bySection);
-  brief.issues = tagged.issues;
-  brief.coverage.issue_tagging = tagged.coverage;
-  brief.cost_usd = Number((brief.cost_usd + runCost).toFixed(4));
-  fs.writeFileSync(file, JSON.stringify(brief, null, 2));
-  console.log(`Done. ${tagged.coverage.sections_tagged} of ${sections.length} sections sorted into ${tagged.issues.length} issues, this update cost $${runCost.toFixed(4)}`);
+// Issues belong to the bill, not the member, so they are sorted once and shared by every brief.
+function savedIssues(bill, sections, pages) {
+  if (!fs.existsSync(bill.issuesFile)) return null;
+  const saved = JSON.parse(fs.readFileSync(bill.issuesFile, 'utf8'));
+  return { bySection: saved.by_section, issues: buildIssueIndex(saved.by_section, sections, pages), coverage: saved.coverage };
 }
 
-async function main() {
-  try {
-    process.loadEnvFile(path.join(ROOT, '.env'));
-  } catch {
-    // Falls through to the key check below.
-  }
-  if (!process.env.OPENROUTER_API_KEY || process.env.OPENROUTER_API_KEY.includes('replace-with')) {
-    console.error('Missing OPENROUTER_API_KEY. Run: cp .env.example .env, then add your key to .env');
-    process.exit(1);
-  }
+function saveIssues(bill, tagged) {
+  fs.writeFileSync(bill.issuesFile, JSON.stringify({ model: SCREEN_MODEL, by_section: tagged.bySection, coverage: tagged.coverage }, null, 1));
+}
 
-  if (process.argv.includes('--overview-only')) {
-    await regenerateOverview();
-    return;
-  }
-  if (process.argv.includes('--tags-only')) {
-    await regenerateIssues();
-    return;
-  }
-
+async function requireCredits(needed) {
   const available = await checkAvailableCredits();
-  if (available < MAX_RUN_COST_USD) {
-    console.error(`Stopped: $${available.toFixed(2)} in credits is below the $${MAX_RUN_COST_USD} needed for a run.`);
-    process.exit(1);
+  if (available < needed) {
+    throw new Error(`Not enough OpenRouter credits: $${available.toFixed(2)} available, and this may need up to $${needed.toFixed(2)}.`);
   }
+  return available;
+}
 
-  const { sections, district, promises, pageMap } = loadInputs();
-  const context = promptContext(district, promises);
+// The whole pipeline for one member and one bill. Saves and returns the brief.
+// Runs one at a time: the spending counter is shared, and the server allows one job at once.
+async function runAnalysis({ memberId, billId = 'hr1', onProgress = (message) => console.log(message) }) {
+  const { bill, sections, pages, member, district, promises } = loadInputs(memberId, billId);
+  const context = promptContext(member, district, promises);
+  const { estimate, cap } = estimateCost({
+    sections,
+    promiseCount: promises.length,
+    contextChars: context.length,
+    needsIssues: !fs.existsSync(bill.issuesFile),
+  });
+  runCost = 0;
+  await requireCredits(cap);
+  const analysisLimit = cap - Math.min(DEEP_RESERVE_USD, cap * 0.3);
+  const stageCost = {};
+  const mark = (stage, before) => { stageCost[stage] = round(runCost - before); };
+  onProgress(`Estimated $${estimate.toFixed(2)}, capped at $${cap.toFixed(2)}. Briefing ${memberLabel(member)}, ${district.id}, on ${bill.title}.`);
 
-  console.log(`Screening ${sections.length} sections...`);
+  let before = runCost;
+  onProgress(`Screening ${sections.length} section${sections.length === 1 ? '' : 's'}…`);
   const screen = await mapLimit(sections, async (section) => {
-    const result = await callModel(
-      SCREEN_MODEL,
-      screenSystem(context),
-      `Section ${section.id}: ${section.header}\n\n${section.text}`,
-      MAX_RUN_COST_USD - DEEP_RESERVE_USD
-    );
+    const result = await callModel(SCREEN_MODEL, screenSystem(context), `Section ${section.id}: ${section.header}\n\n${section.text}`, analysisLimit);
     return { section, ...result };
   });
+  mark('screen', before);
 
   // Most relevant first, so a cap or spending limit cuts the least important sections.
   const rank = { high: 2, medium: 1 };
@@ -432,52 +471,71 @@ async function main() {
     .sort((a, b) => (rank[b.relevance] || 0) - (rank[a.relevance] || 0) || promiseCount(b) - promiseCount(a));
   const toAnalyze = flagged.slice(0, MAX_DEEP_SECTIONS).map((r) => r.section);
   const notReached = flagged.slice(MAX_DEEP_SECTIONS).map((r) => r.section);
-  console.log(`Flagged ${flagged.length}; analyzing ${toAnalyze.length} in depth...`);
 
+  before = runCost;
+  onProgress(`Analyzing ${toAnalyze.length} relevant section${toAnalyze.length === 1 ? '' : 's'} in depth…`);
   const deep = await mapLimit(
     toAnalyze,
     async (section) => {
-      const result = await callModel(
-        DEEP_MODEL,
-        deepSystem(context),
-        `Section ${section.id}: ${section.header}\n\n${section.text}`,
-        MAX_RUN_COST_USD - DEEP_RESERVE_USD
-      );
+      const result = await callModel(DEEP_MODEL, deepSystem(context), `Section ${section.id}: ${section.header}\n\n${section.text}`, analysisLimit);
       return { ...result, section_id: section.id, section_header: section.header };
     },
     DEEP_MODEL_GAP_MS
   );
+  mark('deep', before);
 
   const { verified, dropped } = verifyItems(deep.results, { sections, facts: district.facts });
   const items = verified.sort((a, b) => b.importance - a.importance);
   const findings = findingsText(items);
 
-  console.log(`Checking ${promises.length} commitments against the whole bill...`);
+  before = runCost;
+  onProgress(`Checking ${promises.length} commitment${promises.length === 1 ? '' : 's'} against the whole bill…`);
   const verdicts = await mapLimit(
-    promises,
+    items.length ? promises : [],
     async (promise) => {
+      const otherBill = aboutOtherBill(promise, bill.id)
+        ? `; made about a different bill${promise.about_bill ? ` (${getBill(promise.about_bill)?.title || promise.about_bill})` : ''}, not this one`
+        : '';
       const result = await callModel(
         DEEP_MODEL,
         promiseSystem(),
-        `COMMITMENT [${promise.strength}; ${promise.date}; scope: ${promise.scope}]: "${promise.quote}"\n\nVERIFIED FINDINGS:\n${findings}`
+        `BILL: ${bill.title}\nCOMMITMENT [${promise.strength}; ${promise.date}; scope: ${promise.scope}${otherBill}]: "${promise.quote}"\n\nVERIFIED FINDINGS:\n${findings}`,
+        cap
       );
       return { ...result, promise_id: promise.id };
     },
     DEEP_MODEL_GAP_MS
   );
-  const { alerts, dropped: droppedAlerts } = verifyAlerts(verdicts.results, { promises, items });
+  mark('promises', before);
+  const { alerts, dropped: droppedAlerts } = verifyAlerts(verdicts.results, { promises, items, billId: bill.id });
 
   // Written by code so the gaps are always stated, whatever the model produces.
   const failedIds = new Set([...screen.failures, ...deep.failures].map((f) => f.id));
   const notCovered = [...notReached, ...sections.filter((s) => failedIds.has(s.id))];
 
-  const overview = await writeOverview(sections, items, pageMap);
-  const tagged = await tagSections(sections, pageMap);
+  before = runCost;
+  let tagged = savedIssues(bill, sections, pages);
+  if (!tagged) {
+    onProgress('Sorting the bill by issue…');
+    tagged = await tagSections(sections, pages, Math.min(runCost + MAX_TAG_COST_USD, cap));
+    if (!tagged.coverage.untagged.length) saveIssues(bill, tagged);
+  }
+  mark('issues', before);
+
+  before = runCost;
+  onProgress('Writing the summary…');
+  const overview = items.length
+    ? await writeOverview(bill, sections, items, pages, cap)
+    : { what_it_does: [], district_bottom_line: 'No section of this bill was found to materially affect this district, so there is no summary of effects.', dropped_bullets: 0 };
+  mark('overview', before);
 
   const brief = {
+    bill_id: bill.id,
+    member_id: member.id,
+    district_id: district.id,
     generated_at: new Date().toISOString(),
     models: { screen: SCREEN_MODEL, deep: DEEP_MODEL },
-    bill_pdf_url: pageMap.pdf_url,
+    bill_pdf_url: bill.pdf_url,
     overview,
     items: withIssues(items, tagged.bySection),
     issues: tagged.issues,
@@ -498,17 +556,103 @@ async function main() {
       promises_reviewed: promises.length,
       issue_tagging: tagged.coverage,
     },
+    cost_estimate_usd: estimate,
+    cost_cap_usd: cap,
+    cost_by_stage: stageCost,
     cost_usd: Number(runCost.toFixed(4)),
   };
-  fs.writeFileSync(path.join(DATA, 'brief-hr1.json'), JSON.stringify(brief, null, 2));
-  console.log(`Done. ${items.length} verified findings, ${dropped.length} dropped, cost $${brief.cost_usd}`);
+  fs.mkdirSync(path.dirname(bill.briefFile(member.id)), { recursive: true });
+  fs.writeFileSync(bill.briefFile(member.id), JSON.stringify(brief, null, 2));
+  onProgress(`Done. ${items.length} verified findings, ${dropped.length} dropped, cost $${brief.cost_usd}.`);
+  return brief;
+}
+
+// Redoes only the summary from saved findings: one model call instead of a full run.
+async function regenerateOverview(memberId, billId) {
+  const { bill, sections, pages } = loadInputs(memberId, billId);
+  runCost = 0;
+  await requireCredits(0.25);
+  const file = bill.briefFile(memberId);
+  const brief = JSON.parse(fs.readFileSync(file, 'utf8'));
+  brief.overview = await writeOverview(bill, sections, brief.items, pages, 0.25);
+  brief.bill_pdf_url = bill.pdf_url;
+  brief.cost_usd = Number((brief.cost_usd + runCost).toFixed(4));
+  fs.writeFileSync(file, JSON.stringify(brief, null, 2));
+  console.log(`Done. ${brief.overview.what_it_does.length} bullets, ${brief.overview.dropped_bullets} dropped, this update cost $${runCost.toFixed(4)}`);
+}
+
+// Re-sorts H.R. 1 by issue and applies the result to every saved H.R. 1 brief.
+// Existing findings and alerts are left as they are.
+async function regenerateIssues() {
+  runCost = 0;
+  await requireCredits(MAX_TAG_COST_USD);
+  const bill = getBill('hr1');
+  const sections = bill.loadSections();
+  const tagged = await tagSections(sections, bill.pages);
+  if (tagged.coverage.untagged.length) {
+    throw new Error(`${tagged.coverage.untagged.length} sections could not be sorted, so no saved brief was changed. This attempt cost $${runCost.toFixed(4)}`);
+  }
+  saveIssues(bill, tagged);
+  const files = fs.readdirSync(path.join(DATA, 'briefs')).filter((f) => f.endsWith('.json'));
+  for (const name of files) {
+    const file = path.join(DATA, 'briefs', name);
+    const brief = JSON.parse(fs.readFileSync(file, 'utf8'));
+    brief.items = withIssues(brief.items, tagged.bySection);
+    brief.issues = tagged.issues;
+    brief.coverage.issue_tagging = tagged.coverage;
+    fs.writeFileSync(file, JSON.stringify(brief, null, 2));
+  }
+  console.log(`Done. ${tagged.coverage.sections_tagged} of ${sections.length} sections sorted into ${tagged.issues.length} issues and applied to ${files.length} briefs. Cost $${runCost.toFixed(4)}`);
+}
+
+function loadKey() {
+  try {
+    process.loadEnvFile(path.join(ROOT, '.env'));
+  } catch {
+    // Falls through to the key check below.
+  }
+  return Boolean(process.env.OPENROUTER_API_KEY && !process.env.OPENROUTER_API_KEY.includes('replace-with'));
+}
+
+const argValue = (flag) => {
+  const i = process.argv.indexOf(flag);
+  return i >= 0 ? process.argv[i + 1] : undefined;
+};
+
+async function main() {
+  if (!loadKey()) {
+    console.error('Missing OPENROUTER_API_KEY. Run: cp .env.example .env, then add your key to .env');
+    process.exit(1);
+  }
+  if (process.argv.includes('--tags-only')) return regenerateIssues();
+  const memberId = argValue('--member');
+  const billId = argValue('--bill') || 'hr1';
+  if (process.argv.includes('--overview-only')) return regenerateOverview(memberId, billId);
+  await runAnalysis({ memberId, billId });
 }
 
 if (require.main === module) {
   main().catch((error) => {
-    console.error(error);
+    console.error(error.message || error);
     process.exit(1);
   });
 }
 
-module.exports = { normalize, verifyItems, verifyAlerts, verifyOverview, verifyIssueTags, buildIssueIndex, withIssues, tagBatches };
+module.exports = {
+  normalize,
+  verifyItems,
+  verifyAlerts,
+  verifyOverview,
+  verifyIssueTags,
+  buildIssueIndex,
+  withIssues,
+  tagBatches,
+  tagSections,
+  loadInputs,
+  districtFile,
+  estimateCost,
+  estimateFor,
+  runAnalysis,
+  loadKey,
+  checkAvailableCredits,
+};

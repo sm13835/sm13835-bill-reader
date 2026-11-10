@@ -1,7 +1,6 @@
 {
-  "member": "Rep. Josh Gottheimer (D)",
-  "party": "D",
-  "district": "NJ-5",
+  "id": "NJ-5",
+  "state": "New Jersey",
   "facts": [
     {
       "key": "population",
@@ -168,7 +167,7 @@
       "key": "margin_2024",
       "label": "2024 House race margin",
       "value": 11.3,
-      "display": "Gottheimer +11.3 points",
+      "display": "Gottheimer (D) +11.3 points",
       "source": "Clerk of the House"
     },
     {
@@ -247,7 +246,7 @@
     },
     {
       "year": 2016,
-      "dem": "Josh Gottheimer",
+      "dem": "Joshua S. Gottheimer",
       "dem_votes": 172587,
       "rep": "Scott Garrett",
       "rep_votes": 157690,
@@ -309,22 +308,6 @@
       "rep_pct": 43.3,
       "margin_pts": 11.3,
       "new_lines": false
-    }
-  ],
-  "votes_on_bill": [
-    {
-      "date": "2025-05-22",
-      "question": "On Passage (House version)",
-      "roll": 145,
-      "vote": "Nay",
-      "url": "https://clerk.house.gov/evs/2025/roll145.xml"
-    },
-    {
-      "date": "2025-07-03",
-      "question": "On Motion to Concur in the Senate Amendment (final bill)",
-      "roll": 190,
-      "vote": "No",
-      "url": "https://clerk.house.gov/evs/2025/roll190.xml"
     }
   ],
   "infrastructure": [

@@ -1,0 +1,324 @@
+{
+  "id": "NJ-10",
+  "state": "New Jersey",
+  "facts": [
+    {
+      "key": "population",
+      "label": "Total population",
+      "value": 800200.0,
+      "display": "800,200",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "median_age",
+      "label": "Median age",
+      "value": 37.3,
+      "display": "37.3 years",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "median_household_income",
+      "label": "Median household income",
+      "value": 76594.0,
+      "display": "$76,594",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "avg_household_size",
+      "label": "Average household size",
+      "value": 2.67,
+      "display": "2.67",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "median_property_tax",
+      "label": "Median annual real estate taxes (owner-occupied homes)",
+      "value": 10000,
+      "display": "$10,000 or more (the Census top bracket)",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "owner_occupied_pct",
+      "label": "Homes that are owner-occupied",
+      "value": 40.5,
+      "display": "40.5%",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "snap_households_pct",
+      "label": "Households receiving SNAP",
+      "value": 18.0,
+      "display": "18.0% (52,703 households)",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "medicaid_coverage_pct",
+      "label": "Residents with Medicaid or other means-tested coverage",
+      "value": 20.9,
+      "display": "20.9% (165,383 people)",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "poverty_pct",
+      "label": "Residents below the poverty line",
+      "value": 14.5,
+      "display": "14.5%",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "seniors_voting_age_pct",
+      "label": "Citizens of voting age who are 65 or older",
+      "value": 21.2,
+      "display": "21.2%",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "veterans_pct",
+      "label": "Civilian adults who are veterans",
+      "value": 2.6,
+      "display": "2.6% (15,962 veterans)",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "race_white_pct",
+      "label": "White, non-Hispanic",
+      "value": 17.5,
+      "display": "17.5%",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "race_asian_pct",
+      "label": "Asian, non-Hispanic",
+      "value": 6.7,
+      "display": "6.7%",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "race_black_pct",
+      "label": "Black, non-Hispanic",
+      "value": 46.0,
+      "display": "46.0%",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "race_hispanic_pct",
+      "label": "Hispanic or Latino, any race",
+      "value": 24.4,
+      "display": "24.4%",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "occ_management_pct",
+      "label": "Workers in management, business, science and arts",
+      "value": 38.9,
+      "display": "38.9%",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "occ_service_pct",
+      "label": "Workers in service occupations",
+      "value": 21.2,
+      "display": "21.2%",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "occ_sales_office_pct",
+      "label": "Workers in sales and office occupations",
+      "value": 19.9,
+      "display": "19.9%",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "occ_construction_pct",
+      "label": "Workers in construction and maintenance",
+      "value": 6.3,
+      "display": "6.3%",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "occ_production_pct",
+      "label": "Workers in production and transportation",
+      "value": 13.6,
+      "display": "13.6%",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "commute_transit_pct",
+      "label": "Commuters using public transit",
+      "value": 21.3,
+      "display": "21.3% (81,316 people)",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "commute_rail_pct",
+      "label": "Commuters using commuter rail",
+      "value": 2.9,
+      "display": "2.9%",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "work_from_home_pct",
+      "label": "Workers who work from home",
+      "value": 11.4,
+      "display": "11.4%",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "margin_2024",
+      "label": "2024 House race margin",
+      "value": 21.3,
+      "display": "McIver (D) +21.3 points",
+      "source": "Clerk of the House"
+    },
+    {
+      "key": "turnout_2024",
+      "label": "2024 House votes as a share of citizens of voting age",
+      "value": 47.7,
+      "display": "47.7% (245,465 votes)",
+      "source": "Clerk of the House; ACS 2024 citizen voting-age population"
+    }
+  ],
+  "elections": [
+    {
+      "year": 2006,
+      "dem": "Donald M. Payne",
+      "dem_votes": 90264,
+      "rep": null,
+      "rep_votes": 0,
+      "other_votes": 0,
+      "total_votes": 90264,
+      "dem_pct": 100.0,
+      "rep_pct": 0.0,
+      "margin_pts": 100.0,
+      "new_lines": false
+    },
+    {
+      "year": 2008,
+      "dem": "Donald M. Payne",
+      "dem_votes": 169945,
+      "rep": null,
+      "rep_votes": 0,
+      "other_votes": 1848,
+      "total_votes": 171793,
+      "dem_pct": 98.9,
+      "rep_pct": 0.0,
+      "margin_pts": 98.9,
+      "new_lines": false
+    },
+    {
+      "year": 2010,
+      "dem": "Donald M. Payne",
+      "dem_votes": 95299,
+      "rep": "Michael J. Alonso",
+      "rep_votes": 14357,
+      "other_votes": 2221,
+      "total_votes": 111877,
+      "dem_pct": 85.2,
+      "rep_pct": 12.8,
+      "margin_pts": 72.3,
+      "new_lines": false
+    },
+    {
+      "year": 2012,
+      "dem": "Donald M. Payne, Jr.",
+      "dem_votes": 201435,
+      "rep": "Brian C. Kelemen",
+      "rep_votes": 24271,
+      "other_votes": 4354,
+      "total_votes": 230060,
+      "dem_pct": 87.6,
+      "rep_pct": 10.5,
+      "margin_pts": 77.0,
+      "new_lines": true
+    },
+    {
+      "year": 2014,
+      "dem": "Donald M. Payne, Jr.",
+      "dem_votes": 95734,
+      "rep": "Yolanda Dentley",
+      "rep_votes": 14154,
+      "other_votes": 2235,
+      "total_votes": 112123,
+      "dem_pct": 85.4,
+      "rep_pct": 12.6,
+      "margin_pts": 72.8,
+      "new_lines": false
+    },
+    {
+      "year": 2016,
+      "dem": "Donald M. Payne, Jr.",
+      "dem_votes": 190856,
+      "rep": "David H. Pinckney",
+      "rep_votes": 26450,
+      "other_votes": 5465,
+      "total_votes": 222771,
+      "dem_pct": 85.7,
+      "rep_pct": 11.9,
+      "margin_pts": 73.8,
+      "new_lines": false
+    },
+    {
+      "year": 2018,
+      "dem": "Donald M. Payne, Jr.",
+      "dem_votes": 2018,
+      "rep": "Agha Khan",
+      "rep_votes": 175253,
+      "other_votes": 24299,
+      "total_votes": 201570,
+      "dem_pct": 1.0,
+      "rep_pct": 86.9,
+      "margin_pts": -85.9,
+      "new_lines": false
+    },
+    {
+      "year": 2020,
+      "dem": "Donald M. Payne, Jr.",
+      "dem_votes": 241522,
+      "rep": "Jennifer Zinone",
+      "rep_votes": 40298,
+      "other_votes": 8189,
+      "total_votes": 290009,
+      "dem_pct": 83.3,
+      "rep_pct": 13.9,
+      "margin_pts": 69.4,
+      "new_lines": false
+    },
+    {
+      "year": 2022,
+      "dem": "Donald M. Payne, Jr.",
+      "dem_votes": 100710,
+      "rep": "David H. Pinckney",
+      "rep_votes": 25993,
+      "other_votes": 3004,
+      "total_votes": 129707,
+      "dem_pct": 77.6,
+      "rep_pct": 20.0,
+      "margin_pts": 57.6,
+      "new_lines": true
+    },
+    {
+      "year": 2024,
+      "dem": "LaMonica McIver",
+      "dem_votes": 54405,
+      "rep": "Carmen Bucco",
+      "rep_votes": 2024,
+      "other_votes": 189036,
+      "total_votes": 245465,
+      "dem_pct": 22.2,
+      "rep_pct": 0.8,
+      "margin_pts": 21.3,
+      "new_lines": false
+    }
+  ],
+  "infrastructure": [],
+  "sources": [
+    {
+      "name": "Census ACS 2024 1-year, via Census Reporter",
+      "url": "https://censusreporter.org/profiles/50000US3410/"
+    },
+    {
+      "name": "Clerk of the House, Statistics of the Congressional Election (2006-2024)",
+      "url": "https://history.house.gov/Institution/Election-Statistics/"
+    }
+  ]
+}

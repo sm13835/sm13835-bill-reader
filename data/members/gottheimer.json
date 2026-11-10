@@ -1,0 +1,118 @@
+{
+  "id": "gottheimer",
+  "name": "Josh Gottheimer",
+  "title": "Rep.",
+  "party": "D",
+  "district": "NJ-5",
+  "congress": "119th",
+  "bioguide_id": "G000583",
+  "note": null,
+  "votes_on_bill": [
+    {
+      "date": "2025-05-22",
+      "question": "On Passage (House version)",
+      "roll": 145,
+      "vote": "Nay",
+      "url": "https://clerk.house.gov/evs/2025/roll145.xml"
+    },
+    {
+      "date": "2025-07-03",
+      "question": "On Motion to Concur in the Senate Amendment (final bill)",
+      "roll": 190,
+      "vote": "No",
+      "url": "https://clerk.house.gov/evs/2025/roll190.xml"
+    }
+  ],
+  "promises": [
+    {
+      "id": "salt-2021-reconciliation",
+      "topic": "SALT",
+      "strength": "Explicit vote pledge",
+      "date": "2021-09-17",
+      "scope": "The 2021 reconciliation package (Build Back Better), not H.R. 1",
+      "other_bill": true,
+      "source_type": "Official press release",
+      "quote": "We will only vote for a reconciliation package on the house floor that reinstates SALT.",
+      "url": "https://gottheimer.house.gov/posts/release-new-jersey-congressional-delegation-members-fighting-to-repeal-the-cap-on-salt-deduction-oppose-reconciliation-unless-salt-deduction-restored"
+    },
+    {
+      "id": "salt-no-dice",
+      "topic": "SALT",
+      "strength": "Explicit vote pledge",
+      "date": "2021-04-19",
+      "scope": "Stated generally: any changes to the tax code affecting families",
+      "source_type": "Official press release",
+      "quote": "But if there are changes to the tax code that impact our families without reinstating SALT, my view is simple: No SALT? No Dice.",
+      "url": "https://gottheimer.house.gov/posts/release-gottheimer-the-new-jersey-chamber-of-commerce-stand-united-to-fight-to-restore-the-salt-deduction-invest-in-infrastructure"
+    },
+    {
+      "id": "salt-full-restoration-2025",
+      "topic": "SALT",
+      "strength": "Stated goal",
+      "date": "2024-02-12",
+      "scope": "Full SALT restoration for the 2025 tax year",
+      "source_type": "Official press release",
+      "quote": "It is a down payment on our way to fully restoring the full deduction in 2025.",
+      "url": "https://gottheimer.house.gov/posts/release-gottheimer-fights-to-pass-salt-cap-expansion-in-the-house"
+    },
+    {
+      "id": "protect-medicaid-snap",
+      "topic": "Medicaid, CHIP and SNAP",
+      "strength": "Explicit commitment",
+      "date": "2025-02-13",
+      "scope": "Said about the House budget blueprint that led to H.R. 1",
+      "source_type": "Official statement",
+      "quote": "I will fight tooth and nail to protect the programs that Jersey families depend on.",
+      "url": "https://gottheimer.house.gov/posts/gottheimer-statement-on-house-gop-budget-proposal",
+      "about_bill": "hr1"
+    },
+    {
+      "id": "lower-costs-cut-taxes",
+      "topic": "Costs and taxes",
+      "strength": "General position",
+      "date": "2025-05-23",
+      "scope": "Said about the House-passed version of H.R. 1",
+      "source_type": "Official press release",
+      "quote": "We need to defend our Jersey Values, lower costs, and cut taxes, not create more chaos and abandon vulnerable seniors and hungry children.",
+      "url": "https://gottheimer.house.gov/posts/release-gottheimer-slams-devastating-cuts-to-jersey-seniors-children-and-families-in-extreme-right-budget-bill",
+      "about_bill": "hr1"
+    },
+    {
+      "id": "lower-taxes-affordability",
+      "topic": "Costs and taxes",
+      "strength": "General commitment",
+      "date": "2024-02-12",
+      "scope": "General",
+      "source_type": "Official press release",
+      "quote": "On all fronts, I’ll keep fighting every day in Congress for lower taxes for our families and small businesses, and to make life more affordable for Jersey.",
+      "url": "https://gottheimer.house.gov/posts/release-gottheimer-fights-to-pass-salt-cap-expansion-in-the-house"
+    },
+    {
+      "id": "solar-energy",
+      "topic": "Clean energy",
+      "strength": "Stated position",
+      "date": "2025-05-23",
+      "scope": "Said about the House-passed version of H.R. 1",
+      "source_type": "Official press release",
+      "quote": "the bill defunds key investments in alternative energy, including solar projects that we need to grow our energy supply in Jersey",
+      "url": "https://gottheimer.house.gov/posts/release-gottheimer-slams-devastating-cuts-to-jersey-seniors-children-and-families-in-extreme-right-budget-bill",
+      "about_bill": "hr1"
+    },
+    {
+      "id": "campaign-lower-taxes",
+      "topic": "Costs and taxes",
+      "strength": "Campaign message",
+      "date": "2026-11-09 (date viewed)",
+      "scope": "General",
+      "source_type": "Campaign website",
+      "quote": "You sent me to Congress to fight for lower taxes and Jersey Values.",
+      "url": "https://joshgottheimer.com/"
+    }
+  ],
+  "sources": [
+    {
+      "name": "Clerk of the House, roll calls 145 and 190 (2025)",
+      "url": "https://clerk.house.gov/Votes"
+    }
+  ]
+}

@@ -169,3 +169,36 @@ test('batches keep every section, whole and in order, within the limits', () => 
   assert.deepStrictEqual(batches.flatMap((b) => b.sections), sections);
   assert.strictEqual(batches[2].sections[0].text.length, 500);
 });
+
+test('a pledge made about H.R. 1 can be direct on H.R. 1 but only possible on another bill', () => {
+  const inputs = { items: [{ section_id: '70120' }], promises: [{ id: 'hr1-pledge', strength: 'Explicit vote pledge', about_bill: 'hr1' }] };
+  assert.strictEqual(verifyAlerts([verdict('hr1-pledge')], { ...inputs, billId: 'hr1' }).alerts[0].severity, 'direct');
+  assert.strictEqual(verifyAlerts([verdict('hr1-pledge')], { ...inputs, billId: 'u0123456789ab' }).alerts[0].severity, 'possible');
+});
+
+test('a summary bullet from a Word upload keeps its source even with no page number', () => {
+  const overview = { what_it_does: [{ text: 'x', section_ids: ['70120'] }] };
+  const result = verifyOverview(overview, { items: [{ section_id: '70120' }], pages: {} });
+  assert.deepStrictEqual(result.what_it_does[0].sources, [{ section_id: '70120', page: null }]);
+});
+
+const { estimateCost } = require('../app/analyze.js');
+const fakeSections = (n, chars) => Array.from({ length: n }, (_, i) => ({ id: String(i), header: 'h', part: '', text: 'x'.repeat(chars) }));
+
+test('the cost estimate grows with the bill, and its cap stays within $0.25 to $3', () => {
+  const small = estimateCost({ sections: fakeSections(1, 3000), promiseCount: 8, contextChars: 5000, needsIssues: true });
+  const large = estimateCost({ sections: fakeSections(300, 3000), promiseCount: 8, contextChars: 5000, needsIssues: true });
+  assert.ok(small.estimate < large.estimate);
+  assert.strictEqual(small.cap, 0.25);
+  assert.ok(large.cap > large.estimate && large.cap <= 3);
+  const huge = estimateCost({ sections: fakeSections(2000, 20000), promiseCount: 8, contextChars: 5000, needsIssues: true });
+  assert.strictEqual(huge.cap, 3);
+});
+
+test('a section number echoed as 1 or "Section 1" still matches its section', () => {
+  const sections = [{ id: '1', header: 'One' }, { id: '2', header: 'Two' }, { id: '3', header: 'Three' }];
+  const tags = [{ id: 1, issues: ['Tax'] }, { id: 'Section 2', issues: ['Tax'] }, { id: 'Sec. 3', issues: ['Tax'] }];
+  const { bySection, untagged } = verifyIssueTags(tags, sections);
+  assert.deepStrictEqual(Object.keys(bySection), ['1', '2', '3']);
+  assert.deepStrictEqual(untagged, []);
+});

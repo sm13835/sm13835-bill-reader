@@ -1,0 +1,324 @@
+{
+  "id": "NJ-6",
+  "state": "New Jersey",
+  "facts": [
+    {
+      "key": "population",
+      "label": "Total population",
+      "value": 786792.0,
+      "display": "786,792",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "median_age",
+      "label": "Median age",
+      "value": 39.0,
+      "display": "39.0 years",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "median_household_income",
+      "label": "Median household income",
+      "value": 104316.0,
+      "display": "$104,316",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "avg_household_size",
+      "label": "Average household size",
+      "value": 2.62,
+      "display": "2.62",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "median_property_tax",
+      "label": "Median annual real estate taxes (owner-occupied homes)",
+      "value": 9159.0,
+      "display": "$9,159",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "owner_occupied_pct",
+      "label": "Homes that are owner-occupied",
+      "value": 59.4,
+      "display": "59.4%",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "snap_households_pct",
+      "label": "Households receiving SNAP",
+      "value": 8.9,
+      "display": "8.9% (25,802 households)",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "medicaid_coverage_pct",
+      "label": "Residents with Medicaid or other means-tested coverage",
+      "value": 12.6,
+      "display": "12.6% (98,615 people)",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "poverty_pct",
+      "label": "Residents below the poverty line",
+      "value": 9.5,
+      "display": "9.5%",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "seniors_voting_age_pct",
+      "label": "Citizens of voting age who are 65 or older",
+      "value": 22.8,
+      "display": "22.8%",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "veterans_pct",
+      "label": "Civilian adults who are veterans",
+      "value": 3.2,
+      "display": "3.2% (20,018 veterans)",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "race_white_pct",
+      "label": "White, non-Hispanic",
+      "value": 40.4,
+      "display": "40.4%",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "race_asian_pct",
+      "label": "Asian, non-Hispanic",
+      "value": 18.2,
+      "display": "18.2%",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "race_black_pct",
+      "label": "Black, non-Hispanic",
+      "value": 10.2,
+      "display": "10.2%",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "race_hispanic_pct",
+      "label": "Hispanic or Latino, any race",
+      "value": 27.2,
+      "display": "27.2%",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "occ_management_pct",
+      "label": "Workers in management, business, science and arts",
+      "value": 46.4,
+      "display": "46.4%",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "occ_service_pct",
+      "label": "Workers in service occupations",
+      "value": 13.9,
+      "display": "13.9%",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "occ_sales_office_pct",
+      "label": "Workers in sales and office occupations",
+      "value": 19.2,
+      "display": "19.2%",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "occ_construction_pct",
+      "label": "Workers in construction and maintenance",
+      "value": 6.6,
+      "display": "6.6%",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "occ_production_pct",
+      "label": "Workers in production and transportation",
+      "value": 13.8,
+      "display": "13.8%",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "commute_transit_pct",
+      "label": "Commuters using public transit",
+      "value": 7.1,
+      "display": "7.1% (28,710 people)",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "commute_rail_pct",
+      "label": "Commuters using commuter rail",
+      "value": 3.2,
+      "display": "3.2%",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "work_from_home_pct",
+      "label": "Workers who work from home",
+      "value": 13.4,
+      "display": "13.4%",
+      "source": "ACS 2024 1-year estimates"
+    },
+    {
+      "key": "margin_2024",
+      "label": "2024 House race margin",
+      "value": 15.7,
+      "display": "Pallone (D) +15.7 points",
+      "source": "Clerk of the House"
+    },
+    {
+      "key": "turnout_2024",
+      "label": "2024 House votes as a share of citizens of voting age",
+      "value": 56.6,
+      "display": "56.6% (303,681 votes)",
+      "source": "Clerk of the House; ACS 2024 citizen voting-age population"
+    }
+  ],
+  "elections": [
+    {
+      "year": 2006,
+      "dem": "Frank Pallone, Jr.",
+      "dem_votes": 98615,
+      "rep": "Leigh-Ann Bellew",
+      "rep_votes": 43539,
+      "other_votes": 1619,
+      "total_votes": 143773,
+      "dem_pct": 68.6,
+      "rep_pct": 30.3,
+      "margin_pts": 38.3,
+      "new_lines": false
+    },
+    {
+      "year": 2008,
+      "dem": "Frank Pallone, Jr.",
+      "dem_votes": 164077,
+      "rep": "Robert E. McLeod",
+      "rep_votes": 77469,
+      "other_votes": 3531,
+      "total_votes": 245077,
+      "dem_pct": 66.9,
+      "rep_pct": 31.6,
+      "margin_pts": 35.3,
+      "new_lines": false
+    },
+    {
+      "year": 2010,
+      "dem": "Frank Pallone, Jr.",
+      "dem_votes": 81933,
+      "rep": "Anna C. Little",
+      "rep_votes": 65413,
+      "other_votes": 2316,
+      "total_votes": 149662,
+      "dem_pct": 54.7,
+      "rep_pct": 43.7,
+      "margin_pts": 11.0,
+      "new_lines": false
+    },
+    {
+      "year": 2012,
+      "dem": "Frank Pallone, Jr.",
+      "dem_votes": 151782,
+      "rep": "Anna Little",
+      "rep_votes": 84360,
+      "other_votes": 3496,
+      "total_votes": 239638,
+      "dem_pct": 63.3,
+      "rep_pct": 35.2,
+      "margin_pts": 28.1,
+      "new_lines": true
+    },
+    {
+      "year": 2014,
+      "dem": ".",
+      "dem_votes": 1376,
+      "rep": "Anthony E. Wilkinson",
+      "rep_votes": 46891,
+      "other_votes": 72190,
+      "total_votes": 120457,
+      "dem_pct": 1.1,
+      "rep_pct": 38.9,
+      "margin_pts": -37.8,
+      "new_lines": false
+    },
+    {
+      "year": 2016,
+      "dem": "Frank Pallone, Jr.",
+      "dem_votes": 167895,
+      "rep": "Brent Sonnek-Schmelz",
+      "rep_votes": 91908,
+      "other_votes": 3632,
+      "total_votes": 263435,
+      "dem_pct": 63.7,
+      "rep_pct": 34.9,
+      "margin_pts": 28.8,
+      "new_lines": false
+    },
+    {
+      "year": 2018,
+      "dem": "Frank Pallone, Jr.",
+      "dem_votes": 140752,
+      "rep": "Richard J. Pezzullo",
+      "rep_votes": 80443,
+      "other_votes": 0,
+      "total_votes": 221195,
+      "dem_pct": 63.6,
+      "rep_pct": 36.4,
+      "margin_pts": 27.3,
+      "new_lines": false
+    },
+    {
+      "year": 2020,
+      "dem": "Frank Pallone, Jr.",
+      "dem_votes": 199648,
+      "rep": "Christian Onuoha",
+      "rep_votes": 126760,
+      "other_votes": 0,
+      "total_votes": 326408,
+      "dem_pct": 61.2,
+      "rep_pct": 38.8,
+      "margin_pts": 22.3,
+      "new_lines": false
+    },
+    {
+      "year": 2022,
+      "dem": "Frank Pallone, Jr.",
+      "dem_votes": 106238,
+      "rep": "Susan M. Kiley",
+      "rep_votes": 75839,
+      "other_votes": 2842,
+      "total_votes": 184919,
+      "dem_pct": 57.5,
+      "rep_pct": 41.0,
+      "margin_pts": 16.4,
+      "new_lines": true
+    },
+    {
+      "year": 2024,
+      "dem": "Frank Pallone, Jr.",
+      "dem_votes": 170275,
+      "rep": "Scott Fegler",
+      "rep_votes": 122519,
+      "other_votes": 10887,
+      "total_votes": 303681,
+      "dem_pct": 56.1,
+      "rep_pct": 40.3,
+      "margin_pts": 15.7,
+      "new_lines": false
+    }
+  ],
+  "infrastructure": [],
+  "sources": [
+    {
+      "name": "Census ACS 2024 1-year, via Census Reporter",
+      "url": "https://censusreporter.org/profiles/50000US3406/"
+    },
+    {
+      "name": "Clerk of the House, Statistics of the Congressional Election (2006-2024)",
+      "url": "https://history.house.gov/Institution/Election-Statistics/"
+    }
+  ]
+}
